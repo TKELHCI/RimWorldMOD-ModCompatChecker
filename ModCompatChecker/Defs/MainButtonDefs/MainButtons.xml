@@ -4,7 +4,7 @@
     <defName>ModCompatChecker</defName>
     <label>兼容检查</label>
     <description>打开 MOD 兼容性分析工具，检测 Harmony 冲突、Def 覆盖和依赖问题，支持 AI 智能诊断。</description>
-    <buttonIcon>UI/Icons/ModCompatIcon</buttonIcon>
+    <iconPath>UI/Icons/ModCompatIcon</iconPath>
     <workerClass>ModCompatChecker.Core.MainButtonWorker_ModCompat</workerClass>
     <order>99</order>
   </MainButtonDef>

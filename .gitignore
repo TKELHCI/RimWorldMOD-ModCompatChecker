@@ -1,8 +1,25 @@
-﻿**/obj/
-**/bin/
+﻿# Compiled binaries
 *.dll
+*.exe
 *.pdb
+
+# Build outputs
+bin/
+obj/
+
+# IDE
+.vs/
+.vscode/
 *.user
 *.suo
-.vs/
-ScanCache.json
+
+# OS
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Temp files
+*_test*.txt
+*temp*
+*.bak
+*.tmp

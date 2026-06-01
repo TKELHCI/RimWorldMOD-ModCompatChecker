@@ -27,7 +27,7 @@ AI 分析免责声明
 ⚠ 实验性项目 · 可能存在未知 bug · 请备份存档
 ━━━━━━━━━━━━━━━━━━━━━━
 
-附：CrashAnalyzer（独立崩溃分析工具）已从本 MOD 分离，可单独下载（需自行配置 API Key）：[GitHub 链接待补充]
+源码与独立崩溃分析工具 CrashAnalyzer：https://github.com/TKELHCI/RimWorldMOD-ModCompatChecker
 
 ━━━━━━━━━━━━━━━━━━━━━━
 本 MOD 由秋羽雪绪主导需求与迭代方向，Codex（OpenAI 的 AI 编码助手）生成代码框架，人工负责测试调试与优化。
