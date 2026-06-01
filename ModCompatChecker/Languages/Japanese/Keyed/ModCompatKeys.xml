@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ModCompatChecker.AIAnalysisFailed>AI Analysis failed: </ModCompatChecker.AIAnalysisFailed>
+  <ModCompatChecker.AIAnalysisNeedsAPIKey>AI分析にはAPIキーが必要</ModCompatChecker.AIAnalysisNeedsAPIKey>
+  <ModCompatChecker.AIAnalyze>AI分析</ModCompatChecker.AIAnalyze>
+  <ModCompatChecker.AIBatchAnalyze>AI一括分析</ModCompatChecker.AIBatchAnalyze>
+  <ModCompatChecker.AINeedsAPIKey>AI機能にはAPIキーが必要</ModCompatChecker.AINeedsAPIKey>
+  <ModCompatChecker.AINeedsAPIKeyDetail>AI分析にはAPI設定でキーが必要</ModCompatChecker.AINeedsAPIKeyDetail>
+  <ModCompatChecker.APIEndpoint>API Endpoint:</ModCompatChecker.APIEndpoint>
+  <ModCompatChecker.APIKeyLabel>API Key:</ModCompatChecker.APIKeyLabel>
+  <ModCompatChecker.APISettings>API設定</ModCompatChecker.APISettings>
+  <ModCompatChecker.APISettingsLabel>API Settings</ModCompatChecker.APISettingsLabel>
+  <ModCompatChecker.AnalysisCancelled>Analysis cancelled by user</ModCompatChecker.AnalysisCancelled>
+  <ModCompatChecker.AnalysisTimeout>Analysis Timeout: </ModCompatChecker.AnalysisTimeout>
+  <ModCompatChecker.Analyzing>分析中...</ModCompatChecker.Analyzing>
+  <ModCompatChecker.AnalyzingShort>Analyzing</ModCompatChecker.AnalyzingShort>
+  <ModCompatChecker.AnalyzingSpace>Analyzing </ModCompatChecker.AnalyzingSpace>
+  <ModCompatChecker.BackgroundScanning>Background scanning...</ModCompatChecker.BackgroundScanning>
+  <ModCompatChecker.CancelAnalysis>分析を中止</ModCompatChecker.CancelAnalysis>
+  <ModCompatChecker.Clipboard>クリップボード</ModCompatChecker.Clipboard>
+  <ModCompatChecker.ClipboardEmpty>クリップボードが空です</ModCompatChecker.ClipboardEmpty>
+  <ModCompatChecker.CompatAnalysis>互換性分析</ModCompatChecker.CompatAnalysis>
+  <ModCompatChecker.Complete>完了</ModCompatChecker.Complete>
+  <ModCompatChecker.CopyResult>結果をコピー</ModCompatChecker.CopyResult>
+  <ModCompatChecker.CostEstimate>費用見積もり</ModCompatChecker.CostEstimate>
+  <ModCompatChecker.CurrentModel>現在のモデル：</ModCompatChecker.CurrentModel>
+  <ModCompatChecker.CurrentModelShort>Current Model</ModCompatChecker.CurrentModelShort>
+  <ModCompatChecker.Custom>カスタム</ModCompatChecker.Custom>
+  <ModCompatChecker.CustomModel>カスタムモデル</ModCompatChecker.CustomModel>
+  <ModCompatChecker.CustomModelId>Custom Model ID:</ModCompatChecker.CustomModelId>
+  <ModCompatChecker.CustomQuantity>Custom Count:</ModCompatChecker.CustomQuantity>
+  <ModCompatChecker.Def>Def</ModCompatChecker.Def>
+  <ModCompatChecker.DefLabel>Def: </ModCompatChecker.DefLabel>
+  <ModCompatChecker.DepIssueSeeSummary>See summary for dependency issues</ModCompatChecker.DepIssueSeeSummary>
+  <ModCompatChecker.DepSort>依存並び替え</ModCompatChecker.DepSort>
+  <ModCompatChecker.Dependency>Dependency</ModCompatChecker.Dependency>
+  <ModCompatChecker.DetectedMissingMods>不足している可能性のあるMOD：</ModCompatChecker.DetectedMissingMods>
+  <ModCompatChecker.Error>Error: </ModCompatChecker.Error>
+  <ModCompatChecker.ErrorLogTitle>エラーログ分析</ModCompatChecker.ErrorLogTitle>
+  <ModCompatChecker.Failed>Failed: </ModCompatChecker.Failed>
+  <ModCompatChecker.Features>Features</ModCompatChecker.Features>
+  <ModCompatChecker.FollowUpAnalysis>追加分析</ModCompatChecker.FollowUpAnalysis>
+  <ModCompatChecker.Harmony>Harmony</ModCompatChecker.Harmony>
+  <ModCompatChecker.InvalidRequest>Invalid request</ModCompatChecker.InvalidRequest>
+  <ModCompatChecker.LogFile>ログファイル</ModCompatChecker.LogFile>
+  <ModCompatChecker.MainTitle>MOD 互換性チェッカー</ModCompatChecker.MainTitle>
+  <ModCompatChecker.ModCompatAnalysis>MOD Compatibility Analysis</ModCompatChecker.ModCompatAnalysis>
+  <ModCompatChecker.ModCountSep> MOD · </ModCompatChecker.ModCountSep>
+  <ModCompatChecker.NeedAPI>APIキー必要</ModCompatChecker.NeedAPI>
+  <ModCompatChecker.NeedAPIKey>APIキー必要</ModCompatChecker.NeedAPIKey>
+  <ModCompatChecker.NoDefConflict>Def上書き競合は見つかりません</ModCompatChecker.NoDefConflict>
+  <ModCompatChecker.NoDepIssue>依存問題は見つかりません</ModCompatChecker.NoDepIssue>
+  <ModCompatChecker.NoErrorContent>分析可能なエラー内容がありません</ModCompatChecker.NoErrorContent>
+  <ModCompatChecker.NoHarmonyConflict>Harmonyパッチ競合は見つかりません</ModCompatChecker.NoHarmonyConflict>
+  <ModCompatChecker.OpenCompatChecker>Open Compatibility Checker</ModCompatChecker.OpenCompatChecker>
+  <ModCompatChecker.OpenUnifiedWindow>Open Unified Window</ModCompatChecker.OpenUnifiedWindow>
+  <ModCompatChecker.Patch>Patch: </ModCompatChecker.Patch>
+  <ModCompatChecker.PleaseConfigAIKey>MOD設定でAI APIキーを設定してください</ModCompatChecker.PleaseConfigAIKey>
+  <ModCompatChecker.PleaseConfigAPI>API設定でキーを設定してください</ModCompatChecker.PleaseConfigAPI>
+  <ModCompatChecker.ProblemCount> 件の問題</ModCompatChecker.ProblemCount>
+  <ModCompatChecker.Quantity>数：</ModCompatChecker.Quantity>
+  <ModCompatChecker.QuantityShort>Count</ModCompatChecker.QuantityShort>
+  <ModCompatChecker.QuickAsk>クイック質問</ModCompatChecker.QuickAsk>
+  <ModCompatChecker.QuickEntry>Quick Entry (same as bottom tab bar):</ModCompatChecker.QuickEntry>
+  <ModCompatChecker.ReadClipboard>クリップボードを読む</ModCompatChecker.ReadClipboard>
+  <ModCompatChecker.Rescan>再スキャン</ModCompatChecker.Rescan>
+  <ModCompatChecker.RiskHigh>⚠ High Risk</ModCompatChecker.RiskHigh>
+  <ModCompatChecker.RiskLow>ℹ Low Risk</ModCompatChecker.RiskLow>
+  <ModCompatChecker.RiskMedium>⚡ Medium Risk</ModCompatChecker.RiskMedium>
+  <ModCompatChecker.RuntimeLog>実行時ログ</ModCompatChecker.RuntimeLog>
+  <ModCompatChecker.ScanComplete>スキャン完了</ModCompatChecker.ScanComplete>
+  <ModCompatChecker.ScanCompleteDetail>スキャン完了 · </ModCompatChecker.ScanCompleteDetail>
+  <ModCompatChecker.ScanHint>「スキャン開始」をクリックしてMOD互換性を検出</ModCompatChecker.ScanHint>
+  <ModCompatChecker.Scanning>スキャン中...</ModCompatChecker.Scanning>
+  <ModCompatChecker.SearchRequiredMod>必須MODを検索</ModCompatChecker.SearchRequiredMod>
+  <ModCompatChecker.Seconds> sec</ModCompatChecker.Seconds>
+  <ModCompatChecker.SelectAll>全て選択</ModCompatChecker.SelectAll>
+  <ModCompatChecker.Send>送信</ModCompatChecker.Send>
+  <ModCompatChecker.SendFollowUp>追加質問を送信</ModCompatChecker.SendFollowUp>
+  <ModCompatChecker.StartAIAnalysis>AI分析を開始</ModCompatChecker.StartAIAnalysis>
+  <ModCompatChecker.StartScan>スキャン開始</ModCompatChecker.StartScan>
+  <ModCompatChecker.Target>Target: </ModCompatChecker.Target>
+  <ModCompatChecker.TestConnection>接続テスト</ModCompatChecker.TestConnection>
+  <ModCompatChecker.Type>Type: </ModCompatChecker.Type>
+  <ModCompatChecker.ViewOnSteam>Steamで見る</ModCompatChecker.ViewOnSteam>
+  <ModCompatChecker.WebSearch>ウェブ検索</ModCompatChecker.WebSearch>
+  <ModCompatChecker.XPath>xpath: </ModCompatChecker.XPath>
+  <ModCompatChecker.TimeCost>時間：</ModCompatChecker.TimeCost>
+  <ModCompatChecker.SecondsLabel> 秒</ModCompatChecker.SecondsLabel>
+  <ModCompatChecker.Items> 件</ModCompatChecker.Items>
+  <ModCompatChecker.SecondsUnit> sec</ModCompatChecker.SecondsUnit>
+  <ModCompatChecker.ErrorPrefix>エラー：</ModCompatChecker.ErrorPrefix>
+  <ModCompatChecker.FailedPrefix>失敗：</ModCompatChecker.FailedPrefix>
+  <ModCompatChecker.NetworkError>ネットワークエラー：</ModCompatChecker.NetworkError>
+  <ModCompatChecker.RequestTimeout>リクエストタイムアウト（</ModCompatChecker.RequestTimeout>
+  <ModCompatChecker.AutoCancelled>秒）、自動終了。</ModCompatChecker.AutoCancelled>
+  <ModCompatChecker.ResponseTimeout>応答タイムアウト（</ModCompatChecker.ResponseTimeout>
+  <ModCompatChecker.AnalysisCancelledNL>分析がキャンセルされました
+</ModCompatChecker.AnalysisCancelledNL>
+  <ModCompatChecker.TimeCostNL>
+
+Time: </ModCompatChecker.TimeCostNL>
+  <ModCompatChecker.AIAnalysisFailedPrefix>AI分析失敗：</ModCompatChecker.AIAnalysisFailedPrefix>
+  <ModCompatChecker.FollowUpFailed>Follow-up failed: </ModCompatChecker.FollowUpFailed>
+  <ModCompatChecker.UserQuestion>User question: </ModCompatChecker.UserQuestion>
+  <ModCompatChecker.CurrentScanResult>Current scan results: </ModCompatChecker.CurrentScanResult>
+  <ModCompatChecker.RecentErrorAnalysis>Recent error analysis: </ModCompatChecker.RecentErrorAnalysis>
+  <ModCompatChecker.QuickAskPrompt>Answer concisely based on context. If insufficient, answer directly.</ModCompatChecker.QuickAskPrompt>
+  <ModCompatChecker.ConciselyAnswer>Answer concisely.</ModCompatChecker.ConciselyAnswer>
+  <ModCompatChecker.PreviousAnalysis>Previous analysis:
+</ModCompatChecker.PreviousAnalysis>
+  <ModCompatChecker.FollowUpQuestion>Follow-up: </ModCompatChecker.FollowUpQuestion>
+  <ModCompatChecker.PreviousAnalysisResult>Previous analysis result:
+</ModCompatChecker.PreviousAnalysisResult>
+  <ModCompatChecker.UserFollowUp>User follow-up:</ModCompatChecker.UserFollowUp>
+  <ModCompatChecker.FollowUpPrompt>Answer concisely, within 100 words.</ModCompatChecker.FollowUpPrompt>
+  <ModCompatChecker.ClipboardHint>クリップボードを読むか手動で貼り付け</ModCompatChecker.ClipboardHint>
+  <ModCompatChecker.ClipboardEmptyDetail>クリップボードが空です。エラー内容をコピーしてください</ModCompatChecker.ClipboardEmptyDetail>
+  <ModCompatChecker.NotSet>未設定</ModCompatChecker.NotSet>
+  <ModCompatChecker.Testing>テスト中...</ModCompatChecker.Testing>
+  <ModCompatChecker.EnterAPIKey>最初にAPIキーを入力してください</ModCompatChecker.EnterAPIKey>
+  <ModCompatChecker.ConnectionSuccess>接続成功！</ModCompatChecker.ConnectionSuccess>
+  <ModCompatChecker.ConnectionFailed>接続失敗：</ModCompatChecker.ConnectionFailed>
+  <ModCompatChecker.MaxOf>最大 </ModCompatChecker.MaxOf>
+  <ModCompatChecker.APIKey>API Key</ModCompatChecker.APIKey>
+  <ModCompatChecker.UI179>⚙ API 設定</ModCompatChecker.UI179>
+  <ModCompatChecker.UI180>[*] 互換性分析</ModCompatChecker.UI180>
+  <ModCompatChecker.UI181>[!] エラー分析</ModCompatChecker.UI181>
+  <ModCompatChecker.UI182>[?] クイック質問</ModCompatChecker.UI182>
+  <ModCompatChecker.SettingsCategory>互換性チェッカー</ModCompatChecker.SettingsCategory>
+  <ModCompatChecker.AuthError>API Key が無効です</ModCompatChecker.AuthError>
+  <ModCompatChecker.RateLimit>リクエストが多すぎます</ModCompatChecker.RateLimit>
+  <ModCompatChecker.ServerError>サーバーエラー</ModCompatChecker.ServerError>
+  <ModCompatChecker.ModelOllama>Ollama ローカル (Llama 3.2)</ModCompatChecker.ModelOllama>
+</LanguageData>

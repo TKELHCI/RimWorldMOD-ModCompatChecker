@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ModCompatChecker.AIAnalysisFailed>AI Analysis failed: </ModCompatChecker.AIAnalysisFailed>
+  <ModCompatChecker.AIAnalysisNeedsAPIKey>AI Analysis requires API Key</ModCompatChecker.AIAnalysisNeedsAPIKey>
+  <ModCompatChecker.AIAnalyze>AI Analyze</ModCompatChecker.AIAnalyze>
+  <ModCompatChecker.AIBatchAnalyze>AI Batch Analyze</ModCompatChecker.AIBatchAnalyze>
+  <ModCompatChecker.AINeedsAPIKey>AI requires API Key</ModCompatChecker.AINeedsAPIKey>
+  <ModCompatChecker.AINeedsAPIKeyDetail>AI Analysis requires API Key configured in Settings</ModCompatChecker.AINeedsAPIKeyDetail>
+  <ModCompatChecker.APIEndpoint>API Endpoint:</ModCompatChecker.APIEndpoint>
+  <ModCompatChecker.APIKeyLabel>API Key:</ModCompatChecker.APIKeyLabel>
+  <ModCompatChecker.APISettings>API Settings</ModCompatChecker.APISettings>
+  <ModCompatChecker.APISettingsLabel>API Settings</ModCompatChecker.APISettingsLabel>
+  <ModCompatChecker.AnalysisCancelled>Analysis cancelled by user</ModCompatChecker.AnalysisCancelled>
+  <ModCompatChecker.AnalysisTimeout>Analysis Timeout: </ModCompatChecker.AnalysisTimeout>
+  <ModCompatChecker.Analyzing>Analyzing...</ModCompatChecker.Analyzing>
+  <ModCompatChecker.AnalyzingShort>Analyzing</ModCompatChecker.AnalyzingShort>
+  <ModCompatChecker.AnalyzingSpace>Analyzing </ModCompatChecker.AnalyzingSpace>
+  <ModCompatChecker.BackgroundScanning>Background scanning...</ModCompatChecker.BackgroundScanning>
+  <ModCompatChecker.CancelAnalysis>Cancel Analysis</ModCompatChecker.CancelAnalysis>
+  <ModCompatChecker.Clipboard>Clipboard</ModCompatChecker.Clipboard>
+  <ModCompatChecker.ClipboardEmpty>Clipboard is empty</ModCompatChecker.ClipboardEmpty>
+  <ModCompatChecker.CompatAnalysis>Compatibility Analysis</ModCompatChecker.CompatAnalysis>
+  <ModCompatChecker.Complete>Complete</ModCompatChecker.Complete>
+  <ModCompatChecker.CopyResult>Copy Result</ModCompatChecker.CopyResult>
+  <ModCompatChecker.CostEstimate>Cost Estimate</ModCompatChecker.CostEstimate>
+  <ModCompatChecker.CurrentModel>Current Model:</ModCompatChecker.CurrentModel>
+  <ModCompatChecker.CurrentModelShort>Current Model</ModCompatChecker.CurrentModelShort>
+  <ModCompatChecker.Custom>Custom</ModCompatChecker.Custom>
+  <ModCompatChecker.CustomModel>Custom Model</ModCompatChecker.CustomModel>
+  <ModCompatChecker.CustomModelId>Custom Model ID:</ModCompatChecker.CustomModelId>
+  <ModCompatChecker.CustomQuantity>Custom Count:</ModCompatChecker.CustomQuantity>
+  <ModCompatChecker.Def>Def</ModCompatChecker.Def>
+  <ModCompatChecker.DefLabel>Def: </ModCompatChecker.DefLabel>
+  <ModCompatChecker.DepIssueSeeSummary>See summary for dependency issues</ModCompatChecker.DepIssueSeeSummary>
+  <ModCompatChecker.DepSort>Dep Sort</ModCompatChecker.DepSort>
+  <ModCompatChecker.Dependency>Dependency</ModCompatChecker.Dependency>
+  <ModCompatChecker.DetectedMissingMods>Detected potentially missing MODs:</ModCompatChecker.DetectedMissingMods>
+  <ModCompatChecker.Error>Error: </ModCompatChecker.Error>
+  <ModCompatChecker.ErrorLogTitle>Error Log Analysis</ModCompatChecker.ErrorLogTitle>
+  <ModCompatChecker.Failed>Failed: </ModCompatChecker.Failed>
+  <ModCompatChecker.Features>Features</ModCompatChecker.Features>
+  <ModCompatChecker.FollowUpAnalysis>Follow-up Analysis</ModCompatChecker.FollowUpAnalysis>
+  <ModCompatChecker.Harmony>Harmony</ModCompatChecker.Harmony>
+  <ModCompatChecker.InvalidRequest>Invalid request</ModCompatChecker.InvalidRequest>
+  <ModCompatChecker.LogFile>Log File</ModCompatChecker.LogFile>
+  <ModCompatChecker.MainTitle>MOD Compatibility Checker</ModCompatChecker.MainTitle>
+  <ModCompatChecker.ModCompatAnalysis>MOD Compatibility Analysis</ModCompatChecker.ModCompatAnalysis>
+  <ModCompatChecker.ModCountSep> MOD · </ModCompatChecker.ModCountSep>
+  <ModCompatChecker.NeedAPI>API Key Required</ModCompatChecker.NeedAPI>
+  <ModCompatChecker.NeedAPIKey>API Key Required</ModCompatChecker.NeedAPIKey>
+  <ModCompatChecker.NoDefConflict>No Def override conflicts found</ModCompatChecker.NoDefConflict>
+  <ModCompatChecker.NoDepIssue>No dependency issues found</ModCompatChecker.NoDepIssue>
+  <ModCompatChecker.NoErrorContent>No analyzable error content</ModCompatChecker.NoErrorContent>
+  <ModCompatChecker.NoHarmonyConflict>No Harmony patch conflicts found</ModCompatChecker.NoHarmonyConflict>
+  <ModCompatChecker.OpenCompatChecker>Open Compatibility Checker</ModCompatChecker.OpenCompatChecker>
+  <ModCompatChecker.OpenUnifiedWindow>Open Unified Window</ModCompatChecker.OpenUnifiedWindow>
+  <ModCompatChecker.Patch>Patch: </ModCompatChecker.Patch>
+  <ModCompatChecker.PleaseConfigAIKey>Please configure AI API Key in MOD Settings</ModCompatChecker.PleaseConfigAIKey>
+  <ModCompatChecker.PleaseConfigAPI>Please configure Key in API Settings</ModCompatChecker.PleaseConfigAPI>
+  <ModCompatChecker.ProblemCount> issues</ModCompatChecker.ProblemCount>
+  <ModCompatChecker.Quantity>Count:</ModCompatChecker.Quantity>
+  <ModCompatChecker.QuantityShort>Count</ModCompatChecker.QuantityShort>
+  <ModCompatChecker.QuickAsk>Quick Ask</ModCompatChecker.QuickAsk>
+  <ModCompatChecker.QuickEntry>Quick Entry (same as bottom tab bar):</ModCompatChecker.QuickEntry>
+  <ModCompatChecker.ReadClipboard>Read Clipboard</ModCompatChecker.ReadClipboard>
+  <ModCompatChecker.Rescan>Rescan</ModCompatChecker.Rescan>
+  <ModCompatChecker.RiskHigh>⚠ High Risk</ModCompatChecker.RiskHigh>
+  <ModCompatChecker.RiskLow>ℹ Low Risk</ModCompatChecker.RiskLow>
+  <ModCompatChecker.RiskMedium>⚡ Medium Risk</ModCompatChecker.RiskMedium>
+  <ModCompatChecker.RuntimeLog>Runtime Log</ModCompatChecker.RuntimeLog>
+  <ModCompatChecker.ScanComplete>Scan Complete</ModCompatChecker.ScanComplete>
+  <ModCompatChecker.ScanCompleteDetail>Scan Complete · </ModCompatChecker.ScanCompleteDetail>
+  <ModCompatChecker.ScanHint>Click 「Start Scan」 to detect MOD compatibility issues</ModCompatChecker.ScanHint>
+  <ModCompatChecker.Scanning>Scanning...</ModCompatChecker.Scanning>
+  <ModCompatChecker.SearchRequiredMod>Search Required Mods</ModCompatChecker.SearchRequiredMod>
+  <ModCompatChecker.Seconds> sec</ModCompatChecker.Seconds>
+  <ModCompatChecker.SelectAll>Select All</ModCompatChecker.SelectAll>
+  <ModCompatChecker.Send>Send</ModCompatChecker.Send>
+  <ModCompatChecker.SendFollowUp>Send Follow-up</ModCompatChecker.SendFollowUp>
+  <ModCompatChecker.StartAIAnalysis>Start AI Analysis</ModCompatChecker.StartAIAnalysis>
+  <ModCompatChecker.StartScan>Start Scan</ModCompatChecker.StartScan>
+  <ModCompatChecker.Target>Target: </ModCompatChecker.Target>
+  <ModCompatChecker.TestConnection>Test Connection</ModCompatChecker.TestConnection>
+  <ModCompatChecker.Type>Type: </ModCompatChecker.Type>
+  <ModCompatChecker.ViewOnSteam>View on Steam</ModCompatChecker.ViewOnSteam>
+  <ModCompatChecker.WebSearch>Web Search</ModCompatChecker.WebSearch>
+  <ModCompatChecker.XPath>xpath: </ModCompatChecker.XPath>
+  <ModCompatChecker.TimeCost>Time: </ModCompatChecker.TimeCost>
+  <ModCompatChecker.SecondsLabel> sec</ModCompatChecker.SecondsLabel>
+  <ModCompatChecker.Items> items</ModCompatChecker.Items>
+  <ModCompatChecker.SecondsUnit> sec</ModCompatChecker.SecondsUnit>
+  <ModCompatChecker.ErrorPrefix>Error: </ModCompatChecker.ErrorPrefix>
+  <ModCompatChecker.FailedPrefix>Failed: </ModCompatChecker.FailedPrefix>
+  <ModCompatChecker.NetworkError>Network error: </ModCompatChecker.NetworkError>
+  <ModCompatChecker.RequestTimeout>Request timeout (</ModCompatChecker.RequestTimeout>
+  <ModCompatChecker.AutoCancelled>s), automatically cancelled.</ModCompatChecker.AutoCancelled>
+  <ModCompatChecker.ResponseTimeout>Response timeout (</ModCompatChecker.ResponseTimeout>
+  <ModCompatChecker.AnalysisCancelledNL>Analysis cancelled
+</ModCompatChecker.AnalysisCancelledNL>
+  <ModCompatChecker.TimeCostNL>
+
+Time: </ModCompatChecker.TimeCostNL>
+  <ModCompatChecker.AIAnalysisFailedPrefix>AI Analysis failed: </ModCompatChecker.AIAnalysisFailedPrefix>
+  <ModCompatChecker.FollowUpFailed>Follow-up failed: </ModCompatChecker.FollowUpFailed>
+  <ModCompatChecker.UserQuestion>User question: </ModCompatChecker.UserQuestion>
+  <ModCompatChecker.CurrentScanResult>Current scan results: </ModCompatChecker.CurrentScanResult>
+  <ModCompatChecker.RecentErrorAnalysis>Recent error analysis: </ModCompatChecker.RecentErrorAnalysis>
+  <ModCompatChecker.QuickAskPrompt>Answer concisely based on context. If insufficient, answer directly.</ModCompatChecker.QuickAskPrompt>
+  <ModCompatChecker.ConciselyAnswer>Answer concisely.</ModCompatChecker.ConciselyAnswer>
+  <ModCompatChecker.PreviousAnalysis>Previous analysis:
+</ModCompatChecker.PreviousAnalysis>
+  <ModCompatChecker.FollowUpQuestion>Follow-up: </ModCompatChecker.FollowUpQuestion>
+  <ModCompatChecker.PreviousAnalysisResult>Previous analysis result:
+</ModCompatChecker.PreviousAnalysisResult>
+  <ModCompatChecker.UserFollowUp>User follow-up:</ModCompatChecker.UserFollowUp>
+  <ModCompatChecker.FollowUpPrompt>Answer concisely, within 100 words.</ModCompatChecker.FollowUpPrompt>
+  <ModCompatChecker.ClipboardHint>Click Read Clipboard or paste manually</ModCompatChecker.ClipboardHint>
+  <ModCompatChecker.ClipboardEmptyDetail>Clipboard is empty, please copy error content first</ModCompatChecker.ClipboardEmptyDetail>
+  <ModCompatChecker.NotSet>Not set</ModCompatChecker.NotSet>
+  <ModCompatChecker.Testing>Testing...</ModCompatChecker.Testing>
+  <ModCompatChecker.EnterAPIKey>Please enter API Key first</ModCompatChecker.EnterAPIKey>
+  <ModCompatChecker.ConnectionSuccess>Connection successful!</ModCompatChecker.ConnectionSuccess>
+  <ModCompatChecker.ConnectionFailed>Connection failed: </ModCompatChecker.ConnectionFailed>
+  <ModCompatChecker.APIKey>API Key</ModCompatChecker.APIKey>
+  <ModCompatChecker.MaxOf>Max of </ModCompatChecker.MaxOf>
+  <ModCompatChecker.UI179>⚙ API Settings</ModCompatChecker.UI179>
+  <ModCompatChecker.UI180>[*] Compatibility Analysis</ModCompatChecker.UI180>
+  <ModCompatChecker.UI181>[!] Error Log Analysis</ModCompatChecker.UI181>
+  <ModCompatChecker.UI182>[?] Quick Ask</ModCompatChecker.UI182>
+  <ModCompatChecker.SettingsCategory>Compatibility Checker</ModCompatChecker.SettingsCategory>
+  <ModCompatChecker.AuthError>Invalid or denied API Key</ModCompatChecker.AuthError>
+  <ModCompatChecker.RateLimit>Too many requests, try again later</ModCompatChecker.RateLimit>
+  <ModCompatChecker.ServerError>Server error</ModCompatChecker.ServerError>
+  <ModCompatChecker.ModelOllama>Ollama Local (Llama 3.2)</ModCompatChecker.ModelOllama>
+</LanguageData>

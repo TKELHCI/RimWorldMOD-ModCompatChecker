@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ModCompatChecker.AIAnalysisFailed>AI 分析失敗：</ModCompatChecker.AIAnalysisFailed>
+  <ModCompatChecker.AIAnalysisNeedsAPIKey>AI分析需設定API Key</ModCompatChecker.AIAnalysisNeedsAPIKey>
+  <ModCompatChecker.AIAnalyze>AI 分析</ModCompatChecker.AIAnalyze>
+  <ModCompatChecker.AIBatchAnalyze>AI 批量分析</ModCompatChecker.AIBatchAnalyze>
+  <ModCompatChecker.AINeedsAPIKey>AI功能需設定API Key</ModCompatChecker.AINeedsAPIKey>
+  <ModCompatChecker.AINeedsAPIKeyDetail>AI分析需在 API 設定中設定 Key</ModCompatChecker.AINeedsAPIKeyDetail>
+  <ModCompatChecker.APIEndpoint>API Endpoint:</ModCompatChecker.APIEndpoint>
+  <ModCompatChecker.APIKeyLabel>API Key:</ModCompatChecker.APIKeyLabel>
+  <ModCompatChecker.APISettings>API 設定</ModCompatChecker.APISettings>
+  <ModCompatChecker.APISettingsLabel>API Settings</ModCompatChecker.APISettingsLabel>
+  <ModCompatChecker.AnalysisCancelled>分析已被使用者終止</ModCompatChecker.AnalysisCancelled>
+  <ModCompatChecker.AnalysisTimeout>Analysis Timeout: </ModCompatChecker.AnalysisTimeout>
+  <ModCompatChecker.Analyzing>分析中...</ModCompatChecker.Analyzing>
+  <ModCompatChecker.AnalyzingShort>分析中</ModCompatChecker.AnalyzingShort>
+  <ModCompatChecker.AnalyzingSpace>分析中 </ModCompatChecker.AnalyzingSpace>
+  <ModCompatChecker.BackgroundScanning>背景掃描中...</ModCompatChecker.BackgroundScanning>
+  <ModCompatChecker.CancelAnalysis>終止分析</ModCompatChecker.CancelAnalysis>
+  <ModCompatChecker.Clipboard>剪貼簿</ModCompatChecker.Clipboard>
+  <ModCompatChecker.ClipboardEmpty>剪貼簿為空</ModCompatChecker.ClipboardEmpty>
+  <ModCompatChecker.CompatAnalysis>相容性分析</ModCompatChecker.CompatAnalysis>
+  <ModCompatChecker.Complete>完成</ModCompatChecker.Complete>
+  <ModCompatChecker.CopyResult>複製結果</ModCompatChecker.CopyResult>
+  <ModCompatChecker.CostEstimate>費用估算</ModCompatChecker.CostEstimate>
+  <ModCompatChecker.CurrentModel>當前模型：</ModCompatChecker.CurrentModel>
+  <ModCompatChecker.CurrentModelShort>當前模型</ModCompatChecker.CurrentModelShort>
+  <ModCompatChecker.Custom>自訂</ModCompatChecker.Custom>
+  <ModCompatChecker.CustomModel>自訂模型</ModCompatChecker.CustomModel>
+  <ModCompatChecker.CustomModelId>Custom Model ID:</ModCompatChecker.CustomModelId>
+  <ModCompatChecker.CustomQuantity>Custom Count:</ModCompatChecker.CustomQuantity>
+  <ModCompatChecker.Def>Def</ModCompatChecker.Def>
+  <ModCompatChecker.DefLabel>Def: </ModCompatChecker.DefLabel>
+  <ModCompatChecker.DepIssueSeeSummary>依賴問題請檢視摘要</ModCompatChecker.DepIssueSeeSummary>
+  <ModCompatChecker.DepSort>依賴排序</ModCompatChecker.DepSort>
+  <ModCompatChecker.Dependency>Dependency</ModCompatChecker.Dependency>
+  <ModCompatChecker.DetectedMissingMods>檢測到以下可能缺失的 MOD：</ModCompatChecker.DetectedMissingMods>
+  <ModCompatChecker.Error>錯誤：</ModCompatChecker.Error>
+  <ModCompatChecker.ErrorLogTitle>報錯日誌分析</ModCompatChecker.ErrorLogTitle>
+  <ModCompatChecker.Failed>失敗：</ModCompatChecker.Failed>
+  <ModCompatChecker.Features>Features</ModCompatChecker.Features>
+  <ModCompatChecker.FollowUpAnalysis>追問分析</ModCompatChecker.FollowUpAnalysis>
+  <ModCompatChecker.Harmony>Harmony</ModCompatChecker.Harmony>
+  <ModCompatChecker.InvalidRequest>無效請求</ModCompatChecker.InvalidRequest>
+  <ModCompatChecker.LogFile>日誌檔案</ModCompatChecker.LogFile>
+  <ModCompatChecker.MainTitle>MOD 相容性檢查器</ModCompatChecker.MainTitle>
+  <ModCompatChecker.ModCompatAnalysis>MOD Compatibility Analysis</ModCompatChecker.ModCompatAnalysis>
+  <ModCompatChecker.ModCountSep> MOD · </ModCompatChecker.ModCountSep>
+  <ModCompatChecker.NeedAPI>需設定API</ModCompatChecker.NeedAPI>
+  <ModCompatChecker.NeedAPIKey>需設定API Key</ModCompatChecker.NeedAPIKey>
+  <ModCompatChecker.NoDefConflict>未發現 Def 覆蓋衝突</ModCompatChecker.NoDefConflict>
+  <ModCompatChecker.NoDepIssue>未發現依賴問題</ModCompatChecker.NoDepIssue>
+  <ModCompatChecker.NoErrorContent>沒有可分析的錯誤內容</ModCompatChecker.NoErrorContent>
+  <ModCompatChecker.NoHarmonyConflict>未發現 Harmony 補丁衝突</ModCompatChecker.NoHarmonyConflict>
+  <ModCompatChecker.OpenCompatChecker>開啟相容性檢查器</ModCompatChecker.OpenCompatChecker>
+  <ModCompatChecker.OpenUnifiedWindow>開啟統一視窗</ModCompatChecker.OpenUnifiedWindow>
+  <ModCompatChecker.Patch>Patch: </ModCompatChecker.Patch>
+  <ModCompatChecker.PleaseConfigAIKey>請先在 MOD 設定中設定 AI API Key</ModCompatChecker.PleaseConfigAIKey>
+  <ModCompatChecker.PleaseConfigAPI>請先在 API 設定中設定 Key</ModCompatChecker.PleaseConfigAPI>
+  <ModCompatChecker.ProblemCount> 個問題</ModCompatChecker.ProblemCount>
+  <ModCompatChecker.Quantity>數量：</ModCompatChecker.Quantity>
+  <ModCompatChecker.QuantityShort>數量</ModCompatChecker.QuantityShort>
+  <ModCompatChecker.QuickAsk>快速提問</ModCompatChecker.QuickAsk>
+  <ModCompatChecker.QuickEntry>快捷入口（與右下角標籤欄一致）：</ModCompatChecker.QuickEntry>
+  <ModCompatChecker.ReadClipboard>讀取剪貼簿</ModCompatChecker.ReadClipboard>
+  <ModCompatChecker.Rescan>重新掃描</ModCompatChecker.Rescan>
+  <ModCompatChecker.RiskHigh>⚠ High Risk</ModCompatChecker.RiskHigh>
+  <ModCompatChecker.RiskLow>ℹ Low Risk</ModCompatChecker.RiskLow>
+  <ModCompatChecker.RiskMedium>⚡ Medium Risk</ModCompatChecker.RiskMedium>
+  <ModCompatChecker.RuntimeLog>執行時日誌</ModCompatChecker.RuntimeLog>
+  <ModCompatChecker.ScanComplete>掃描完成</ModCompatChecker.ScanComplete>
+  <ModCompatChecker.ScanCompleteDetail>掃描完成 · </ModCompatChecker.ScanCompleteDetail>
+  <ModCompatChecker.ScanHint>點擊「開始掃描」檢測 MOD 相容性問題</ModCompatChecker.ScanHint>
+  <ModCompatChecker.Scanning>掃描中...</ModCompatChecker.Scanning>
+  <ModCompatChecker.SearchRequiredMod>搜尋必需MOD</ModCompatChecker.SearchRequiredMod>
+  <ModCompatChecker.Seconds> sec</ModCompatChecker.Seconds>
+  <ModCompatChecker.SelectAll>全選</ModCompatChecker.SelectAll>
+  <ModCompatChecker.Send>發送</ModCompatChecker.Send>
+  <ModCompatChecker.SendFollowUp>發送追問</ModCompatChecker.SendFollowUp>
+  <ModCompatChecker.StartAIAnalysis>開始 AI 分析</ModCompatChecker.StartAIAnalysis>
+  <ModCompatChecker.StartScan>開始掃描</ModCompatChecker.StartScan>
+  <ModCompatChecker.Target>Target: </ModCompatChecker.Target>
+  <ModCompatChecker.TestConnection>測試連線</ModCompatChecker.TestConnection>
+  <ModCompatChecker.Type>Type: </ModCompatChecker.Type>
+  <ModCompatChecker.ViewOnSteam>在Steam檢視</ModCompatChecker.ViewOnSteam>
+  <ModCompatChecker.WebSearch>聯網搜尋</ModCompatChecker.WebSearch>
+  <ModCompatChecker.XPath>xpath: </ModCompatChecker.XPath>
+  <ModCompatChecker.TimeCost>耗時：</ModCompatChecker.TimeCost>
+  <ModCompatChecker.SecondsLabel> 秒</ModCompatChecker.SecondsLabel>
+  <ModCompatChecker.Items> 項</ModCompatChecker.Items>
+  <ModCompatChecker.SecondsUnit> sec</ModCompatChecker.SecondsUnit>
+  <ModCompatChecker.ErrorPrefix>錯誤：</ModCompatChecker.ErrorPrefix>
+  <ModCompatChecker.FailedPrefix>失敗：</ModCompatChecker.FailedPrefix>
+  <ModCompatChecker.NetworkError>網路錯誤：</ModCompatChecker.NetworkError>
+  <ModCompatChecker.RequestTimeout>請求超時（</ModCompatChecker.RequestTimeout>
+  <ModCompatChecker.AutoCancelled>秒），已自動終止。</ModCompatChecker.AutoCancelled>
+  <ModCompatChecker.ResponseTimeout>回應超時（</ModCompatChecker.ResponseTimeout>
+  <ModCompatChecker.AnalysisCancelledNL>分析已終止
+</ModCompatChecker.AnalysisCancelledNL>
+  <ModCompatChecker.TimeCostNL>
+
+Time: </ModCompatChecker.TimeCostNL>
+  <ModCompatChecker.AIAnalysisFailedPrefix>AI 分析失敗：</ModCompatChecker.AIAnalysisFailedPrefix>
+  <ModCompatChecker.FollowUpFailed>Follow-up failed: </ModCompatChecker.FollowUpFailed>
+  <ModCompatChecker.UserQuestion>User question: </ModCompatChecker.UserQuestion>
+  <ModCompatChecker.CurrentScanResult>Current scan results: </ModCompatChecker.CurrentScanResult>
+  <ModCompatChecker.RecentErrorAnalysis>Recent error analysis: </ModCompatChecker.RecentErrorAnalysis>
+  <ModCompatChecker.QuickAskPrompt>Answer concisely based on context. If insufficient, answer directly.</ModCompatChecker.QuickAskPrompt>
+  <ModCompatChecker.ConciselyAnswer>Answer concisely.</ModCompatChecker.ConciselyAnswer>
+  <ModCompatChecker.PreviousAnalysis>Previous analysis:
+</ModCompatChecker.PreviousAnalysis>
+  <ModCompatChecker.FollowUpQuestion>Follow-up: </ModCompatChecker.FollowUpQuestion>
+  <ModCompatChecker.PreviousAnalysisResult>Previous analysis result:
+</ModCompatChecker.PreviousAnalysisResult>
+  <ModCompatChecker.UserFollowUp>User follow-up:</ModCompatChecker.UserFollowUp>
+  <ModCompatChecker.FollowUpPrompt>Answer concisely, within 100 words.</ModCompatChecker.FollowUpPrompt>
+  <ModCompatChecker.ClipboardHint>點擊讀取剪貼簿或手動貼上</ModCompatChecker.ClipboardHint>
+  <ModCompatChecker.ClipboardEmptyDetail>剪貼簿為空，請先複製報錯內容</ModCompatChecker.ClipboardEmptyDetail>
+  <ModCompatChecker.NotSet>未設定</ModCompatChecker.NotSet>
+  <ModCompatChecker.Testing>測試中...</ModCompatChecker.Testing>
+  <ModCompatChecker.EnterAPIKey>請先輸入 API Key</ModCompatChecker.EnterAPIKey>
+  <ModCompatChecker.ConnectionSuccess>連線成功！</ModCompatChecker.ConnectionSuccess>
+  <ModCompatChecker.ConnectionFailed>連線失敗：</ModCompatChecker.ConnectionFailed>
+  <ModCompatChecker.MaxOf>最多 </ModCompatChecker.MaxOf>
+  <ModCompatChecker.APIKey>API Key</ModCompatChecker.APIKey>
+  <ModCompatChecker.UI179>⚙ API 設定</ModCompatChecker.UI179>
+  <ModCompatChecker.UI180>[*] 相容性分析</ModCompatChecker.UI180>
+  <ModCompatChecker.UI181>[!] 報錯日誌分析</ModCompatChecker.UI181>
+  <ModCompatChecker.UI182>[?] 快速提問</ModCompatChecker.UI182>
+  <ModCompatChecker.SettingsCategory>相容性檢查器</ModCompatChecker.SettingsCategory>
+  <ModCompatChecker.AuthError>API Key 無效或被拒</ModCompatChecker.AuthError>
+  <ModCompatChecker.RateLimit>請求過於頻繁，請稍後再試</ModCompatChecker.RateLimit>
+  <ModCompatChecker.ServerError>伺服器錯誤</ModCompatChecker.ServerError>
+  <ModCompatChecker.ModelOllama>Ollama 本地 (Llama 3.2)</ModCompatChecker.ModelOllama>
+</LanguageData>

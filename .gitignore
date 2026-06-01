@@ -1,0 +1,8 @@
+﻿**/obj/
+**/bin/
+*.dll
+*.pdb
+*.user
+*.suo
+.vs/
+ScanCache.json
