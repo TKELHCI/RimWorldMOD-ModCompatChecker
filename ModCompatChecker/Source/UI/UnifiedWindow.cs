@@ -77,7 +77,7 @@ namespace ModCompatChecker.UI
                         float innerContentH = 3200f;
             ConflictReport repH; lock (_lock) { repH = _report; }
             if (repH != null && _hasScanned)
-                innerContentH = Mathf.Max(3200f, 800f + repH.TotalConflictCount * 130f);
+                innerContentH = Mathf.Max(4200f, 1200f + repH.TotalConflictCount * 140f);
             Widgets.BeginScrollView(scrollRect, ref _scroll, new Rect(0f, 0f, scrollRect.width - 28f, innerContentH));
 
             var inner = new Listing_Standard();
@@ -105,7 +105,10 @@ namespace ModCompatChecker.UI
             if (_showErrorSection)
                 DrawErrorSection(inner, settings);
 
-            if (_showTools) {
+
+            DrawSectionHeader(inner, ref _showTools, "ModCompatChecker.Tools".Translate(), new Color(0.35f, 0.25f, 0.50f));
+            if (_showTools)
+            {
                 listing.Label("ModCompatChecker.AutoSpamToggle".Translate(), -1);
                 var togRect = listing.GetRect(22f);
                 Widgets.CheckboxLabeled(togRect, "ModCompatChecker.EnableAutoSpam".Translate(), ref settings.AutoSpamDetect);
@@ -121,10 +124,33 @@ namespace ModCompatChecker.UI
                 if (Widgets.ButtonText(listing.GetRect(24f), "ModCompatChecker.OpenLogFolder".Translate())) { var p = Core.SpamDetector.GetLogFolderPath(); if (p.Length > 0) System.Diagnostics.Process.Start("explorer.exe", p); }
                 listing.Gap(8f);
             }
+
+            DrawSectionHeader(inner, ref _showAdvanced, "ModCompatChecker.Advanced".Translate(), new Color(0.45f, 0.20f, 0.45f));
+            if (_showAdvanced)
+            {
+                listing.Label("ModCompatChecker.SystemPrompt".Translate(), -1);
+                listing.Gap(2f);
+                var chkRect = listing.GetRect(22f);
+                Widgets.CheckboxLabeled(chkRect, "ModCompatChecker.UseCustomPrompt".Translate(), ref settings.UseCustomSystemPrompt);
+                if (settings.UseCustomSystemPrompt)
+                {
+                    listing.Gap(2f);
+                    var promptRect = listing.GetRect(120f);
+                    settings.CustomSystemPrompt = GUI.TextArea(promptRect, settings.CustomSystemPrompt);
+                    listing.Gap(2f);
+                    if (listing.ButtonText("ModCompatChecker.RestoreDefault".Translate()))
+                    {
+                        var lang = AI.PromptBuilder.GetPromptLanguage();
+                        settings.CustomSystemPrompt = lang == "zh" ? ModCompatSettings.DefaultSystemPromptZh : ModCompatSettings.DefaultSystemPromptEn;
+                    }
+                }
+                listing.Gap(8f);
+            }
+
             inner.End();
             Widgets.EndScrollView();
 
-            // ── Quick-ask bar (fixed at bottom) ──
+            // Quick-ask bar (fixed at bottom)
             listing.Gap(4f);
             var quickRect = listing.GetRect(28f);
             Widgets.DrawBoxSolid(new Rect(quickRect.x - 2f, quickRect.y - 2f, quickRect.width + 4f, quickRect.height + 4f),
@@ -159,7 +185,6 @@ namespace ModCompatChecker.UI
 
             listing.End();
         }
-
         private void DrawSectionHeader(Listing_Standard lst, ref bool expanded, string title, Color? activeColor = null)
         {
             var rect = lst.GetRect(30f);
@@ -791,7 +816,6 @@ namespace ModCompatChecker.UI
         private bool _showUpdates;
         private Vector2 _updateScroll = Vector2.zero;
 
-        private bool _encyclopediaOpen;
         private Vector2 _encycloScroll = Vector2.zero;
         private List<(Core.ErrorEntry Entry, System.Text.RegularExpressions.Match Match)> _encycloMatches;
 

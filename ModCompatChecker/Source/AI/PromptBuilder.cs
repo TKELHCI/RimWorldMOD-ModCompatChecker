@@ -18,7 +18,7 @@ namespace ModCompatChecker.AI
             var sb = new StringBuilder();
             if (language == "zh")
             {
-                sb.AppendLine("你是 RimWorld MOD 兼容性分析专家。请分析以下 Harmony 补丁冲突：");
+                sb.AppendLine(GetSystemPrompt() + "请分析以下 Harmony 补丁冲突：");
                 sb.AppendLine();
                 sb.AppendLine($"MOD A: {conflict.ModNameA} ({conflict.ModPackageIdA})");
                 sb.AppendLine($"MOD B: {conflict.ModNameB} ({conflict.ModPackageIdB})");
@@ -35,7 +35,7 @@ namespace ModCompatChecker.AI
             }
             else
             {
-                sb.AppendLine("You are a RimWorld mod compatibility expert. Analyze this Harmony patch conflict:");
+                sb.AppendLine(GetSystemPrompt() + " Analyze this Harmony patch conflict:");
                 sb.AppendLine();
                 sb.AppendLine($"Mod A: {conflict.ModNameA} ({conflict.ModPackageIdA})");
                 sb.AppendLine($"Mod B: {conflict.ModNameB} ({conflict.ModPackageIdB})");
@@ -61,7 +61,7 @@ namespace ModCompatChecker.AI
             var sb = new StringBuilder();
             if (language == "zh")
             {
-                sb.AppendLine("你是 RimWorld MOD 兼容性分析专家。请分析以下 Def 覆盖冲突：");
+                sb.AppendLine(GetSystemPrompt() + "请分析以下 Def 覆盖冲突：");
                 sb.AppendLine();
                 sb.AppendLine($"MOD A: {conflict.ModNameA} ({conflict.ModPackageIdA})");
                 sb.AppendLine($"MOD B: {conflict.ModNameB} ({conflict.ModPackageIdB})");
@@ -73,7 +73,7 @@ namespace ModCompatChecker.AI
             }
             else
             {
-                sb.AppendLine("You are a RimWorld mod compatibility expert. Analyze this Def override conflict:");
+                sb.AppendLine(GetSystemPrompt() + " Analyze this Def override conflict:");
                 sb.AppendLine();
                 sb.AppendLine($"Mod A: {conflict.ModNameA} ({conflict.ModPackageIdA})");
                 sb.AppendLine($"Mod B: {conflict.ModNameB} ({conflict.ModPackageIdB})");
@@ -94,7 +94,7 @@ namespace ModCompatChecker.AI
             var sb = new StringBuilder();
             if (language == "zh")
             {
-                sb.AppendLine("你是 RimWorld MOD 兼容性分析专家。请分析以下崩溃日志，并结合已检测到的 MOD 冲突给出诊断：");
+                sb.AppendLine(GetSystemPrompt() + "请分析以下崩溃日志，并结合已检测到的 MOD 冲突给出诊断：");
                 sb.AppendLine();
                 sb.AppendLine("=== 崩溃日志 ===");
                 sb.AppendLine(errorStack);
@@ -108,7 +108,7 @@ namespace ModCompatChecker.AI
             }
             else
             {
-                sb.AppendLine("RimWorld mod compatibility expert. Diagnose this crash with conflict data:");
+                sb.AppendLine(GetSystemPrompt() + " Diagnose this crash with conflict data:");
                 sb.AppendLine();
                 sb.AppendLine("=== Crash Log ===");
                 sb.AppendLine(errorStack);
@@ -131,7 +131,7 @@ namespace ModCompatChecker.AI
             var sb = new StringBuilder();
             if (language == "zh")
             {
-                sb.AppendLine("你是 RimWorld MOD 兼容性分析专家。请分析以下依赖问题并给出建议：");
+                sb.AppendLine(GetSystemPrompt() + "请分析以下依赖问题并给出建议：");
                 sb.AppendLine();
                 sb.AppendLine("=== 依赖问题 ===");
                 sb.AppendLine($"MOD: {issue.ModName ?? "未知"}");

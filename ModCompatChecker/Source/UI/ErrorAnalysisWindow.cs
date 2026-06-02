@@ -543,7 +543,10 @@ namespace ModCompatChecker.UI
             TimeoutSeconds = settings.AnalysisTimeoutSeconds;
 
             var sr = r; // capture for closure
-            var thread = new Thread(() =>
+            // Capture translations before entering background thread (Unity-safety)
+            var tCancel = "ModCompatChecker.AnalysisCancelledNL".Translate();
+            var tSec = "ModCompatChecker.SecondsLabel".Translate();
+            var tFail = "ModCompatChecker.AIAnalysisFailedPrefix".Translate();var thread = new Thread(() =>
             {
                 try
                 {
@@ -555,16 +558,16 @@ namespace ModCompatChecker.UI
                     if (!_disposed) lock (_lock)
                     {
                         sr.AiResult = result;
-                        if (sr.CancelRequested) sr.AiResult = "ModCompatChecker.AnalysisCancelledNL".Translate() + sr.AiResult;
+                        if (sr.CancelRequested) sr.AiResult = tCancel + sr.AiResult;
                         if (sr.Stopwatch.Elapsed.TotalSeconds > TimeoutSeconds * 0.8)
-                            sr.AiResult += "\n\n耗时 " + sr.Stopwatch.Elapsed.TotalSeconds.ToString("F1") + "ModCompatChecker.SecondsLabel".Translate();
+                            sr.AiResult += "\n\n耗时 " + sr.Stopwatch.Elapsed.TotalSeconds.ToString("F1") + tSec;
                         // 从AI分析结果中提取关键词用于Steam搜索
                         sr.DetectedDeps = ExtractKeywordsFromAI(result);
                     }
                 }
                 catch (Exception ex)
                 {
-                    if (!_disposed) lock (_lock) { sr.AiResult = "ModCompatChecker.AIAnalysisFailedPrefix".Translate() + ex.Message; }
+                    if (!_disposed) lock (_lock) { sr.AiResult = tFail + ex.Message; }
                     sr.Stopwatch.Stop();
                 }
                 if (!_disposed) lock (_lock) { sr.IsAnalyzing = false; }
@@ -730,7 +733,6 @@ namespace ModCompatChecker.UI
         }
     }
 }
-
 
 
 
