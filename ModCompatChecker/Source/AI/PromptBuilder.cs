@@ -163,6 +163,18 @@ namespace ModCompatChecker.AI
         /// <summary>
         /// 检测游戏语言并返回提示词语言代码 (zh/en)
         /// </summary>
+                /// <summary>
+        /// 获取当前生效的系统预设指令（优先使用用户自定义，否则使用默认）
+        /// </summary>
+        public static string GetSystemPrompt()
+        {
+            var settings = ModCompatChecker.ModCompatMod.Instance?.Settings;
+            if (settings != null && settings.UseCustomSystemPrompt && !string.IsNullOrEmpty(settings.CustomSystemPrompt))
+                return settings.CustomSystemPrompt;
+            var lang = GetPromptLanguage();
+            return lang == "zh" ? ModCompatSettings.DefaultSystemPromptZh : ModCompatSettings.DefaultSystemPromptEn;
+        }
+
         public static string GetPromptLanguage()
         {
             try

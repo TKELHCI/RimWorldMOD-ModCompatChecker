@@ -286,4 +286,10 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.CheckSpam>Check for Repeated Errors</ModCompatChecker.CheckSpam>
   <ModCompatChecker.OpenLogFolder>Open Log Folder</ModCompatChecker.OpenLogFolder>
   <ModCompatChecker.SpamWarning>Spam detected! Same error repeated many times.</ModCompatChecker.SpamWarning>
+  <ModCompatChecker.Advanced>Advanced</ModCompatChecker.Advanced>
+  <ModCompatChecker.SystemPrompt>AI System Prompt</ModCompatChecker.SystemPrompt>
+  <ModCompatChecker.UseCustomPrompt>Use Custom Prompt</ModCompatChecker.UseCustomPrompt>
+  <ModCompatChecker.RestoreDefault>Restore Default</ModCompatChecker.RestoreDefault>
+  <ModCompatChecker.SpamAlert>Spam Detection: repeated error detected</ModCompatChecker.SpamAlert>
+  <ModCompatChecker.AutoSpamToggle>Auto-detect spam errors (every 60s)</ModCompatChecker.AutoSpamToggle>
 </LanguageData>

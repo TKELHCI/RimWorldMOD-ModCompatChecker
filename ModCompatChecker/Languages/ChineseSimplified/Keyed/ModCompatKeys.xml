@@ -277,4 +277,10 @@
   <ModCompatChecker.CheckSpam>检测重复报错</ModCompatChecker.CheckSpam>
   <ModCompatChecker.OpenLogFolder>打开日志文件夹</ModCompatChecker.OpenLogFolder>
   <ModCompatChecker.SpamWarning>检测到刷屏报错！同一报错大量重复。</ModCompatChecker.SpamWarning>
+  <ModCompatChecker.Advanced>高级选项</ModCompatChecker.Advanced>
+  <ModCompatChecker.SystemPrompt>AI 预设指令</ModCompatChecker.SystemPrompt>
+  <ModCompatChecker.UseCustomPrompt>启用自定义预设</ModCompatChecker.UseCustomPrompt>
+  <ModCompatChecker.RestoreDefault>恢复默认</ModCompatChecker.RestoreDefault>
+  <ModCompatChecker.SpamAlert>重复报错检测：发现同一报错大量重复</ModCompatChecker.SpamAlert>
+  <ModCompatChecker.AutoSpamToggle>自动检测刷屏报错（每60秒）</ModCompatChecker.AutoSpamToggle>
 </LanguageData>

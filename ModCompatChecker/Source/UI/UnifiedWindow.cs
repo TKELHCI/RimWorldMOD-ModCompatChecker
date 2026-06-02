@@ -19,7 +19,7 @@ namespace ModCompatChecker.UI
         private Vector2 _scroll = Vector2.zero;
         private readonly object _lock = new object();
         private bool _disposed; private static int _cachedWorldId = -1; private static int _worldCheckFrame;
-        private bool _showSettings = true, _showCompat = true, _showErrorSection, _showTools, _spamChecking;
+        private bool _showSettings = true, _showCompat = true, _showErrorSection, _showTools, _spamChecking, _showAdvanced;
         private readonly SharedSettingsUI.UIState _uiState = new SharedSettingsUI.UIState();
 
         public override Vector2 InitialSize
