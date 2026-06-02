@@ -78,8 +78,6 @@
     <Compile Include="ModCompatSettings.cs" />
     <Compile Include="Core\ConflictReport.cs" />
     <Compile Include="Core\ErrorEncyclopedia.cs" />
-    <Compile Include="Core\UpdateChecker.cs" />
-    <Compile Include="Core\RelationshipAnalyzer.cs" />
     <Compile Include="Core\SpamDetector.cs" />
     <Compile Include="ModCompatGameComponent.cs" />
     <Compile Include="Core\HarmonyAnalyzer.cs" />
@@ -93,7 +91,6 @@
     <Compile Include="UI\UnifiedWindow.cs" />
         <Compile Include="UI\SharedSettingsUI.cs" />
 <Compile Include="Patches\LogCapture.cs" />
-    <Compile Include="UI\MainWindow.cs" />
     <Compile Include="UI\ErrorAnalysisWindow.cs" />
   </ItemGroup>
 

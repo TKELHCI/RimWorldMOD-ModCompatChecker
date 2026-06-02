@@ -1,77 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <ModCompatChecker.AIAnalysisFailed>AI 分析失败: </ModCompatChecker.AIAnalysisFailed>
-  <ModCompatChecker.AIAnalysisNeedsAPIKey>AI分析需配置API Key</ModCompatChecker.AIAnalysisNeedsAPIKey>
   <ModCompatChecker.AIAnalyze>AI 分析</ModCompatChecker.AIAnalyze>
-  <ModCompatChecker.AIAnalyzeAll>AI 批量分析全部</ModCompatChecker.AIAnalyzeAll>
-  <ModCompatChecker.AIAnalyzing>正在分析...</ModCompatChecker.AIAnalyzing>
-  <ModCompatChecker.AIBatchAnalyze>AI 批量分析</ModCompatChecker.AIBatchAnalyze>
-  <ModCompatChecker.AIError>AI 分析失败: {0}</ModCompatChecker.AIError>
   <ModCompatChecker.AINeedsAPIKey>AI功能需配置API Key</ModCompatChecker.AINeedsAPIKey>
   <ModCompatChecker.AINeedsAPIKeyDetail>AI分析需在 API 设置中配置 Key</ModCompatChecker.AINeedsAPIKeyDetail>
-  <ModCompatChecker.AINotConfigured>请先在设置中配置 API Key 和模型</ModCompatChecker.AINotConfigured>
-  <ModCompatChecker.AIResult>分析结果</ModCompatChecker.AIResult>
   <ModCompatChecker.APIEndpoint>API 地址:</ModCompatChecker.APIEndpoint>
   <ModCompatChecker.APIKey>API Key</ModCompatChecker.APIKey>
   <ModCompatChecker.APISettings>AI API 设置</ModCompatChecker.APISettings>
   <ModCompatChecker.APISettingsLabel>API 设置</ModCompatChecker.APISettingsLabel>
   <ModCompatChecker.AnalysisCancelled>分析已被用户终止</ModCompatChecker.AnalysisCancelled>
   <ModCompatChecker.AnalysisTimeout>分析超时: </ModCompatChecker.AnalysisTimeout>
-  <ModCompatChecker.AnalyzeError>分析此报错</ModCompatChecker.AnalyzeError>
   <ModCompatChecker.Analyzing>分析中...</ModCompatChecker.Analyzing>
-  <ModCompatChecker.BackgroundScanning>后台扫描中...</ModCompatChecker.BackgroundScanning>
   <ModCompatChecker.CancelAnalysis>终止分析</ModCompatChecker.CancelAnalysis>
   <ModCompatChecker.Clipboard>剪切板</ModCompatChecker.Clipboard>
   <ModCompatChecker.ClipboardEmpty>剪切板为空</ModCompatChecker.ClipboardEmpty>
   <ModCompatChecker.CompatAnalysis>兼容性分析</ModCompatChecker.CompatAnalysis>
-  <ModCompatChecker.ConflictCount>发现 {0} 个潜在冲突</ModCompatChecker.ConflictCount>
   <ModCompatChecker.CopyResult>复制结果</ModCompatChecker.CopyResult>
   <ModCompatChecker.Custom>自定义</ModCompatChecker.Custom>
-  <ModCompatChecker.CustomEndpoint>自定义地址</ModCompatChecker.CustomEndpoint>
   <ModCompatChecker.CustomModel>自定义模型</ModCompatChecker.CustomModel>
   <ModCompatChecker.CustomModelId>自定义模型 ID:</ModCompatChecker.CustomModelId>
   <ModCompatChecker.CustomQuantity>自定义数量:</ModCompatChecker.CustomQuantity>
-  <ModCompatChecker.DefConflict>{0} 和 {1} 修改了同一个 Def: {2}</ModCompatChecker.DefConflict>
-  <ModCompatChecker.DependencyMissing>{0} 依赖 {1}，但后者未加载</ModCompatChecker.DependencyMissing>
   <ModCompatChecker.DetectedMissingMods>检测到以下可能缺失的 MOD:</ModCompatChecker.DetectedMissingMods>
   <ModCompatChecker.Error>错误: </ModCompatChecker.Error>
-  <ModCompatChecker.ErrorAnalysis>报错分析</ModCompatChecker.ErrorAnalysis>
-  <ModCompatChecker.ErrorLogHint>选择一条近期的报错进行分析</ModCompatChecker.ErrorLogHint>
   <ModCompatChecker.ErrorLogTitle>报错日志分析</ModCompatChecker.ErrorLogTitle>
   <ModCompatChecker.Failed>失败: </ModCompatChecker.Failed>
   <ModCompatChecker.Features>功能</ModCompatChecker.Features>
   <ModCompatChecker.FollowUpAnalysis>追问分析</ModCompatChecker.FollowUpAnalysis>
-  <ModCompatChecker.HarmonyConflict>{0} 和 {1} 同时修补了 {2}.{3}</ModCompatChecker.HarmonyConflict>
   <ModCompatChecker.InvalidRequest>无效请求</ModCompatChecker.InvalidRequest>
-  <ModCompatChecker.LoadOrderIssue>{0} 应在 {1} 之后加载</ModCompatChecker.LoadOrderIssue>
   <ModCompatChecker.LogFile>日志文件</ModCompatChecker.LogFile>
   <ModCompatChecker.MainTitle>MOD 兼容性检查器</ModCompatChecker.MainTitle>
-  <ModCompatChecker.MainWindowTitle>MOD 兼容性分析</ModCompatChecker.MainWindowTitle>
-  <ModCompatChecker.ModCompatAnalysis>MOD 兼容性分析</ModCompatChecker.ModCompatAnalysis>
   <ModCompatChecker.ModelClaudeHaiku>Claude 3 Haiku (快速便宜)</ModCompatChecker.ModelClaudeHaiku>
   <ModCompatChecker.ModelClaudeSonnet>Claude 3.5 Sonnet (最佳推理)</ModCompatChecker.ModelClaudeSonnet>
-  <ModCompatChecker.ModelCustom>自定义模型</ModCompatChecker.ModelCustom>
   <ModCompatChecker.ModelDeepSeekFlash>DeepSeek V4 Flash (推荐 · 快速便宜)</ModCompatChecker.ModelDeepSeekFlash>
   <ModCompatChecker.ModelDeepSeekPro>DeepSeek V4 Pro (深度推理)</ModCompatChecker.ModelDeepSeekPro>
   <ModCompatChecker.ModelGPT4o>GPT-4o (最佳质量)</ModCompatChecker.ModelGPT4o>
   <ModCompatChecker.ModelGPT4oMini>GPT-4o-mini (便宜快速)</ModCompatChecker.ModelGPT4oMini>
-  <ModCompatChecker.ModelSelect>模型选择</ModCompatChecker.ModelSelect>
   <ModCompatChecker.NeedAPI>需配置API</ModCompatChecker.NeedAPI>
   <ModCompatChecker.NeedAPIKey>需配置API Key</ModCompatChecker.NeedAPIKey>
-  <ModCompatChecker.NoConflicts>未发现冲突 ✓</ModCompatChecker.NoConflicts>
   <ModCompatChecker.NoDefConflict>未发现 Def 覆盖冲突</ModCompatChecker.NoDefConflict>
   <ModCompatChecker.NoDepIssue>未发现依赖问题</ModCompatChecker.NoDepIssue>
   <ModCompatChecker.NoErrorContent>没有可分析的错误内容</ModCompatChecker.NoErrorContent>
-  <ModCompatChecker.NoErrors>未找到近期报错</ModCompatChecker.NoErrors>
   <ModCompatChecker.NoHarmonyConflict>未发现 Harmony 补丁冲突</ModCompatChecker.NoHarmonyConflict>
   <ModCompatChecker.OpenCompatChecker>打开兼容性检查器</ModCompatChecker.OpenCompatChecker>
-  <ModCompatChecker.OpenMainWindow>打开兼容性分析</ModCompatChecker.OpenMainWindow>
   <ModCompatChecker.OpenUnifiedWindow>打开统一窗口</ModCompatChecker.OpenUnifiedWindow>
   <ModCompatChecker.Patch>补丁: </ModCompatChecker.Patch>
-  <ModCompatChecker.PatchTypeFinalizer>Finalizer</ModCompatChecker.PatchTypeFinalizer>
-  <ModCompatChecker.PatchTypePostfix>Postfix</ModCompatChecker.PatchTypePostfix>
-  <ModCompatChecker.PatchTypePrefix>Prefix</ModCompatChecker.PatchTypePrefix>
-  <ModCompatChecker.PatchTypeTranspiler>Transpiler ⚠</ModCompatChecker.PatchTypeTranspiler>
   <ModCompatChecker.PleaseConfigAIKey>请先在 MOD 设置中配置 AI API Key</ModCompatChecker.PleaseConfigAIKey>
   <ModCompatChecker.ProblemCount> 个问题</ModCompatChecker.ProblemCount>
   <ModCompatChecker.Quantity>数量:</ModCompatChecker.Quantity>
@@ -82,7 +54,6 @@
   <ModCompatChecker.RiskLow>ℹ 低风险</ModCompatChecker.RiskLow>
   <ModCompatChecker.RiskMedium>⚡ 中风险</ModCompatChecker.RiskMedium>
   <ModCompatChecker.RuntimeLog>运行时日志</ModCompatChecker.RuntimeLog>
-  <ModCompatChecker.ScanButton>开始扫描</ModCompatChecker.ScanButton>
   <ModCompatChecker.ScanComplete>扫描完成</ModCompatChecker.ScanComplete>
   <ModCompatChecker.ScanCompleteDetail>扫描完成 · </ModCompatChecker.ScanCompleteDetail>
   <ModCompatChecker.ScanHint>点击「开始扫描」检测 MOD 兼容性问题</ModCompatChecker.ScanHint>
@@ -94,115 +65,16 @@
   <ModCompatChecker.SettingsCategory>兼容性检查器</ModCompatChecker.SettingsCategory>
   <ModCompatChecker.StartAIAnalysis>开始 AI 分析</ModCompatChecker.StartAIAnalysis>
   <ModCompatChecker.StartScan>开始扫描</ModCompatChecker.StartScan>
-  <ModCompatChecker.TabDef>Def 覆盖冲突</ModCompatChecker.TabDef>
-  <ModCompatChecker.TabDependency>依赖与排序</ModCompatChecker.TabDependency>
-  <ModCompatChecker.TabHarmony>Harmony 补丁冲突</ModCompatChecker.TabHarmony>
   <ModCompatChecker.Target>目标: </ModCompatChecker.Target>
   <ModCompatChecker.TestConnection>测试连接</ModCompatChecker.TestConnection>
-  <ModCompatChecker.TestFailed>连接失败: {0}</ModCompatChecker.TestFailed>
-  <ModCompatChecker.TestSuccess>连接成功！</ModCompatChecker.TestSuccess>
   <ModCompatChecker.Type>类型: </ModCompatChecker.Type>
-  <ModCompatChecker.UI100>请求超时 (</ModCompatChecker.UI100>
-  <ModCompatChecker.UI101>秒)，已自动终止。</ModCompatChecker.UI101>
-  <ModCompatChecker.UI102>响应超时 (</ModCompatChecker.UI102>
-  <ModCompatChecker.UI103>网络错误: </ModCompatChecker.UI103>
-  <ModCompatChecker.UI104>风险等级: {conflict.Risk}</ModCompatChecker.UI104>
-  <ModCompatChecker.UI105>请简要分析：</ModCompatChecker.UI105>
-  <ModCompatChecker.UI106>1. 这个冲突具体会导致什么问题？</ModCompatChecker.UI106>
-  <ModCompatChecker.UI107>2. 哪个 MOD 应该先加载？</ModCompatChecker.UI107>
-  <ModCompatChecker.UI108>3. 有没有已知的兼容补丁或解决方案？</ModCompatChecker.UI108>
-  <ModCompatChecker.UI109>用中文回答，简洁明了，控制在 150 字以内。</ModCompatChecker.UI109>
-  <ModCompatChecker.UI110>请简要分析这个冲突的影响和可能的解决方案。用中文回答，控制在 100 字以内。</ModCompatChecker.UI110>
-  <ModCompatChecker.UI111>=== 崩溃日志 ===</ModCompatChecker.UI111>
-  <ModCompatChecker.UI112>=== 已检测到的 MOD 冲突 ===</ModCompatChecker.UI112>
-  <ModCompatChecker.UI113>Def 冲突: {report.DefConflicts.Count} 个</ModCompatChecker.UI113>
-  <ModCompatChecker.UI114>依赖问题: {report.DependencyIssues.Count} 个</ModCompatChecker.UI114>
-  <ModCompatChecker.UI115>=== 依赖问题 ===</ModCompatChecker.UI115>
-  <ModCompatChecker.UI116>未知</ModCompatChecker.UI116>
-  <ModCompatChecker.UI117>相关依赖: {issue.RelatedPackageId ?? </ModCompatChecker.UI117>
-  <ModCompatChecker.UI118>问题类型: {issue.Type}</ModCompatChecker.UI118>
-  <ModCompatChecker.UI119>风险等级: {issue.Risk}</ModCompatChecker.UI119>
-  <ModCompatChecker.UI120>详情: {issue.ExtraInfo ?? issue.Summary ?? </ModCompatChecker.UI120>
-  <ModCompatChecker.UI121>{a.ModName} 与 {b.ModName} 修改同一个 Def: {a.DefType}/{a.DefName}</ModCompatChecker.UI121>
-  <ModCompatChecker.UI122>{modName} 依赖 {depDisplay}，但后者未加载</ModCompatChecker.UI122>
-  <ModCompatChecker.UI123>{modName} 要求游戏版本 {string.Join(</ModCompatChecker.UI123>
-  <ModCompatChecker.UI124>, supported)}，当前为 {CurrentGameVersion}</ModCompatChecker.UI124>
-  <ModCompatChecker.UI125>{modName} 应在 {node.InnerText.Trim()} 之后加载</ModCompatChecker.UI125>
-  <ModCompatChecker.UI126>{modName} 应在 {node.InnerText.Trim()} 之前加载</ModCompatChecker.UI126>
-  <ModCompatChecker.UI127>需要 MOD: XXX</ModCompatChecker.UI127>
-  <ModCompatChecker.UI128>(?:需要|缺少|缺失|前置|依赖|require|miss|depend)[^\n]{0,20}?[：:\s]*['`</ModCompatChecker.UI128>
-  <ModCompatChecker.UI129>XXX 未加载</ModCompatChecker.UI129>
-  <ModCompatChecker.UI130>XXX 未找到</ModCompatChecker.UI130>
-  <ModCompatChecker.UI131>(?:depends|依赖|requires?)[^\n]{0,30}?[：:\s]*['`</ModCompatChecker.UI131>
-  <ModCompatChecker.UI132>错误</ModCompatChecker.UI132>
-  <ModCompatChecker.UI133>异常</ModCompatChecker.UI133>
-  <ModCompatChecker.UI134>警告</ModCompatChecker.UI134>
-  <ModCompatChecker.UI135>系统</ModCompatChecker.UI135>
-  <ModCompatChecker.UI136>类型</ModCompatChecker.UI136>
-  <ModCompatChecker.UI137>方法</ModCompatChecker.UI137>
-  <ModCompatChecker.UI138>对象</ModCompatChecker.UI138>
-  <ModCompatChecker.UI139>引用</ModCompatChecker.UI139>
-  <ModCompatChecker.UI140>空</ModCompatChecker.UI140>
-  <ModCompatChecker.UI141>费用估算 </ModCompatChecker.UI141>
-  <ModCompatChecker.UI142>分析中... 耗时 </ModCompatChecker.UI142>
-  <ModCompatChecker.UI143>秒</ModCompatChecker.UI143>
-  <ModCompatChecker.UI144>搜索必需MOD (</ModCompatChecker.UI144>
-  <ModCompatChecker.UI145>(最多 </ModCompatChecker.UI145>
-  <ModCompatChecker.UI146>点击读取剪切板或手动粘贴</ModCompatChecker.UI146>
-  <ModCompatChecker.UI147>剪切板为空，请先复制报错内容</ModCompatChecker.UI147>
-  <ModCompatChecker.UI148>分析已被用户终止\n\n</ModCompatChecker.UI148>
-  <ModCompatChecker.UI149>\n\n耗时 </ModCompatChecker.UI149>
-  <ModCompatChecker.UI150>]?\s*(?:not\s+(?:loaded|found|installed)|未加载|未找到|未安装|找不到)</ModCompatChecker.UI150>
-  <ModCompatChecker.UI151>之前的分析结果：\n</ModCompatChecker.UI151>
-  <ModCompatChecker.UI152>\n\n用户追问：</ModCompatChecker.UI152>
-  <ModCompatChecker.UI153>\n\n请针对追问简洁回答，控制在 100 字以内。</ModCompatChecker.UI153>
-  <ModCompatChecker.UI154>追问失败: </ModCompatChecker.UI154>
-  <ModCompatChecker.UI155>点击「开始扫描」检测已加载 MOD 的兼容性问题\n\n</ModCompatChecker.UI155>
-  <ModCompatChecker.UI156>共 {report.TotalConflictCount} 个潜在问题</ModCompatChecker.UI156>
-  <ModCompatChecker.UI157>Harmony 补丁</ModCompatChecker.UI157>
-  <ModCompatChecker.UI158>Def 覆盖</ModCompatChecker.UI158>
-  <ModCompatChecker.UI159>依赖 &amp; 排序</ModCompatChecker.UI159>
-  <ModCompatChecker.UI160>未发现 Harmony 补丁冲突 ✓</ModCompatChecker.UI160>
-  <ModCompatChecker.UI161>目标: {c.TargetType}.{c.TargetMethod}</ModCompatChecker.UI161>
-  <ModCompatChecker.UI162>未发现 Def 覆盖冲突 ✓</ModCompatChecker.UI162>
-  <ModCompatChecker.UI163>未发现依赖问题 ✓</ModCompatChecker.UI163>
-  <ModCompatChecker.UI164>未知问题</ModCompatChecker.UI164>
-  <ModCompatChecker.UI165>类型: {iss.Type}  ·  {iss.ModName}</ModCompatChecker.UI165>
-  <ModCompatChecker.UI166>AI 错误: </ModCompatChecker.UI166>
-  <ModCompatChecker.UI167>分析中: {done}/{total}</ModCompatChecker.UI167>
-  <ModCompatChecker.UI168>完成 ({total} 项)</ModCompatChecker.UI168>
-  <ModCompatChecker.UI169>● 中风险</ModCompatChecker.UI169>
-  <ModCompatChecker.UI170>○ 低风险</ModCompatChecker.UI170>
-  <ModCompatChecker.UI171>\b(Error|错误|Exception|异常):</ModCompatChecker.UI171>
-  <ModCompatChecker.UI172>自定义: {(string.IsNullOrEmpty(settings.CustomModelId) ? </ModCompatChecker.UI172>
-  <ModCompatChecker.UI173> 当前模型: </ModCompatChecker.UI173>
-  <ModCompatChecker.UI174>测试中...</ModCompatChecker.UI174>
-  <ModCompatChecker.UI175>成功</ModCompatChecker.UI175>
-  <ModCompatChecker.UI176>请先输入 API Key</ModCompatChecker.UI176>
-  <ModCompatChecker.UI177>连接成功!</ModCompatChecker.UI177>
-  <ModCompatChecker.UI178>连接失败: </ModCompatChecker.UI178>
   <ModCompatChecker.UI179>⚙ API 设置</ModCompatChecker.UI179>
   <ModCompatChecker.UI180>[*] 兼容性分析</ModCompatChecker.UI180>
   <ModCompatChecker.UI181>[!] 报错日志分析</ModCompatChecker.UI181>
   <ModCompatChecker.UI182>[?] 快速提问</ModCompatChecker.UI182>
-  <ModCompatChecker.UI183>分析中... </ModCompatChecker.UI183>
-  <ModCompatChecker.UI184>分析中: </ModCompatChecker.UI184>
-  <ModCompatChecker.UI185>完成 (</ModCompatChecker.UI185>
-  <ModCompatChecker.UI186> 项)</ModCompatChecker.UI186>
-  <ModCompatChecker.UI187>分析已终止\n</ModCompatChecker.UI187>
-  <ModCompatChecker.UI188>之前的分析：\n</ModCompatChecker.UI188>
-  <ModCompatChecker.UI189>\n\n追问： </ModCompatChecker.UI189>
-  <ModCompatChecker.UI190>\n\n简洁回答。</ModCompatChecker.UI190>
-  <ModCompatChecker.UI191>当前扫描结果: </ModCompatChecker.UI191>
-  <ModCompatChecker.UI192> 个问题。\n</ModCompatChecker.UI192>
-  <ModCompatChecker.UI193>最近报错分析: </ModCompatChecker.UI193>
-  <ModCompatChecker.UI194>用户提问: </ModCompatChecker.UI194>
-  <ModCompatChecker.UI195>\n\n请基于上下文简洁回答。若上下文不足，直接回答即可。</ModCompatChecker.UI195>
-  <ModCompatChecker.VersionMismatch>{0} 要求游戏版本 {1}，但当前为 {2}</ModCompatChecker.VersionMismatch>
   <ModCompatChecker.ViewOnSteam>在Steam查看</ModCompatChecker.ViewOnSteam>
   <ModCompatChecker.WebSearch>联网搜索</ModCompatChecker.WebSearch>
   <ModCompatChecker.AnalyzingSpace>分析中 </ModCompatChecker.AnalyzingSpace>
-  <ModCompatChecker.AnalyzingShort>分析中</ModCompatChecker.AnalyzingShort>
   <ModCompatChecker.TimeCost>耗时 </ModCompatChecker.TimeCost>
   <ModCompatChecker.SecondsLabel>秒</ModCompatChecker.SecondsLabel>
   <ModCompatChecker.Items>项</ModCompatChecker.Items>
@@ -216,9 +88,7 @@
   <ModCompatChecker.ResponseTimeout>响应超时 (</ModCompatChecker.ResponseTimeout>
   <ModCompatChecker.AnalysisCancelledNL>分析已终止
 </ModCompatChecker.AnalysisCancelledNL>
-  <ModCompatChecker.TimeCostNL>
 
-耗时 </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.AIAnalysisFailedPrefix>AI 分析失败: </ModCompatChecker.AIAnalysisFailedPrefix>
   <ModCompatChecker.FollowUpFailed>追问失败: </ModCompatChecker.FollowUpFailed>
   <ModCompatChecker.UserQuestion>用户提问: </ModCompatChecker.UserQuestion>
@@ -251,51 +121,32 @@
   <ModCompatChecker.AuthError>API Key 无效或被拒</ModCompatChecker.AuthError>
   <ModCompatChecker.RateLimit>请求过于频繁，请稍后再试</ModCompatChecker.RateLimit>
   <ModCompatChecker.ServerError>服务器错误</ModCompatChecker.ServerError>
-  <ModCompatChecker.ModelOllama>Ollama 本地 (Llama 3.2)</ModCompatChecker.ModelOllama>
-  <ModCompatChecker.ErrorEncyclopedia>报错百科</ModCompatChecker.ErrorEncyclopedia>
-  <ModCompatChecker.CrashRisk>崩溃风险</ModCompatChecker.CrashRisk>
-  <ModCompatChecker.WarningInfo>警告信息</ModCompatChecker.WarningInfo>
-  <ModCompatChecker.CompatIssue>兼容问题</ModCompatChecker.CompatIssue>
-  <ModCompatChecker.PerfIssue>性能影响</ModCompatChecker.PerfIssue>
-  <ModCompatChecker.CheckUpdates>检测 MOD 更新</ModCompatChecker.CheckUpdates>
-  <ModCompatChecker.UpdateCheckResult>更新检测</ModCompatChecker.UpdateCheckResult>
-  <ModCompatChecker.UpdatesAvailable>发现可更新:</ModCompatChecker.UpdatesAvailable>
-  <ModCompatChecker.CriticalImpact>严重</ModCompatChecker.CriticalImpact>
-  <ModCompatChecker.HighImpact>高影响</ModCompatChecker.HighImpact>
-  <ModCompatChecker.MediumImpact>中等</ModCompatChecker.MediumImpact>
-  <ModCompatChecker.LowImpact>低影响</ModCompatChecker.LowImpact>
-  <ModCompatChecker.RelationshipChain>关系链分析</ModCompatChecker.RelationshipChain>
-  <ModCompatChecker.ModRelationTitle>MOD 关系</ModCompatChecker.ModRelationTitle>
-  <ModCompatChecker.RelDependsOn>依赖</ModCompatChecker.RelDependsOn>
-  <ModCompatChecker.RelDependedBy>被依赖</ModCompatChecker.RelDependedBy>
-  <ModCompatChecker.RelHarmonyConflict>Harmony 冲突</ModCompatChecker.RelHarmonyConflict>
-  <ModCompatChecker.RelDefConflict>Def 冲突</ModCompatChecker.RelDefConflict>
-  <ModCompatChecker.RelLoadOrder>加载顺序</ModCompatChecker.RelLoadOrder>
-  <ModCompatChecker.RelMissing>缺失依赖</ModCompatChecker.RelMissing>
   <ModCompatChecker.Tools>工具箱</ModCompatChecker.Tools>
-  <ModCompatChecker.SpamDetect>重复报错检测</ModCompatChecker.SpamDetect>
   <ModCompatChecker.CheckSpam>检测重复报错</ModCompatChecker.CheckSpam>
   <ModCompatChecker.OpenLogFolder>打开日志文件夹</ModCompatChecker.OpenLogFolder>
-  <ModCompatChecker.SpamWarning>检测到刷屏报错！同一报错大量重复。</ModCompatChecker.SpamWarning>
   <ModCompatChecker.Advanced>高级选项</ModCompatChecker.Advanced>
   <ModCompatChecker.SystemPrompt>AI 预设指令</ModCompatChecker.SystemPrompt>
-  <ModCompatChecker.UseCustomPrompt>启用自定义预设</ModCompatChecker.UseCustomPrompt>
   <ModCompatChecker.RestoreDefault>恢复默认</ModCompatChecker.RestoreDefault>
   <ModCompatChecker.SpamAlert>重复报错检测：发现同一报错大量重复</ModCompatChecker.SpamAlert>
   <ModCompatChecker.AutoSpamToggle>自动检测刷屏报错（每60秒）</ModCompatChecker.AutoSpamToggle>
   <ModCompatChecker.EnableAutoSpam>启用自动检测</ModCompatChecker.EnableAutoSpam>
   <ModCompatChecker.SpamExplain>每60秒检测一次重复报错。防止循环报错撑爆 Player.log（几小时内可达数GB）。发现后以事件弹窗提醒。不影响游戏性能。</ModCompatChecker.SpamExplain>
-  <ModCompatChecker.EncycloManager>报错百科管理</ModCompatChecker.EncycloManager>
-  <ModCompatChecker.Edit>编辑</ModCompatChecker.Edit>
-  <ModCompatChecker.EditingEntry>编辑中:</ModCompatChecker.EditingEntry>
-  <ModCompatChecker.Keyword>关键词</ModCompatChecker.Keyword>
-  <ModCompatChecker.Pattern>匹配模式</ModCompatChecker.Pattern>
-  <ModCompatChecker.ExplanationZh>中文解释</ModCompatChecker.ExplanationZh>
-  <ModCompatChecker.ExplanationEn>英文解释</ModCompatChecker.ExplanationEn>
-  <ModCompatChecker.Save>保存</ModCompatChecker.Save>
   <ModCompatChecker.Cancel>取消</ModCompatChecker.Cancel>
-  <ModCompatChecker.AddEntry>添加条目</ModCompatChecker.AddEntry>
-  <ModCompatChecker.RestoreAllDefaults>恢复全部默认</ModCompatChecker.RestoreAllDefaults>
   <ModCompatChecker.LogFileSize>Player.log 大小:</ModCompatChecker.LogFileSize>
-  <ModCompatChecker.NotAvailable>不可用</ModCompatChecker.NotAvailable>
+  <ModCompatChecker.RefreshSize>刷新大小</ModCompatChecker.RefreshSize>
+  <ModCompatChecker.LogSizeTitle>日志文件大小监控</ModCompatChecker.LogSizeTitle>
+  <ModCompatChecker.LogSizeExplain>启用后每5分钟自动检查Player.log文件大小，超过50MB时变橙色警告（防止循环报错写满C盘）。默认关闭。</ModCompatChecker.LogSizeExplain>
+  <ModCompatChecker.PromptHint>可编辑下方AI预设指令，自定义AI分析风格</ModCompatChecker.PromptHint>
+  <ModCompatChecker.PresetConcise>简洁诊断</ModCompatChecker.PresetConcise>
+  <ModCompatChecker.LogSizeTitle>日志文件大小监控</ModCompatChecker.LogSizeTitle>
+  <ModCompatChecker.LogSizeExplain>启用后每5分钟自动检查Player.log文件大小，超过50MB时变橙色警告。默认关闭。</ModCompatChecker.LogSizeExplain>
+  <ModCompatChecker.PresetRefs>快捷预设（点击替换）：</ModCompatChecker.PresetRefs>
+  <ModCompatChecker.PresetDetailed>详细分析</ModCompatChecker.PresetDetailed>
+  <ModCompatChecker.RefreshSize>刷新大小</ModCompatChecker.RefreshSize>
+  <ModCompatChecker.PresetBeginner>新手友好</ModCompatChecker.PresetBeginner>
+  <ModCompatChecker.PresetBeginnerDesc>用通俗语言解释，适合MOD新手</ModCompatChecker.PresetBeginnerDesc>
+  <ModCompatChecker.PresetConciseDesc>只输出关键冲突和修复建议，简洁明了</ModCompatChecker.PresetConciseDesc>
+  <ModCompatChecker.PresetDetailedDesc>包含冲突原因、影响范围、修复方案、排序建议</ModCompatChecker.PresetDetailedDesc>
+  <ModCompatChecker.Def>Def</ModCompatChecker.Def>
+  <ModCompatChecker.QuickAsk>快速提问</ModCompatChecker.QuickAsk>
 </LanguageData>

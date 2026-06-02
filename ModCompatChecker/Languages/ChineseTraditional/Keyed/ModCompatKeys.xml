@@ -1,21 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <ModCompatChecker.AIAnalysisFailed>AI 分析失敗：</ModCompatChecker.AIAnalysisFailed>
-  <ModCompatChecker.AIAnalysisNeedsAPIKey>AI分析需設定API Key</ModCompatChecker.AIAnalysisNeedsAPIKey>
   <ModCompatChecker.AIAnalyze>AI 分析</ModCompatChecker.AIAnalyze>
-  <ModCompatChecker.AIBatchAnalyze>AI 批量分析</ModCompatChecker.AIBatchAnalyze>
   <ModCompatChecker.AINeedsAPIKey>AI功能需設定API Key</ModCompatChecker.AINeedsAPIKey>
   <ModCompatChecker.AINeedsAPIKeyDetail>AI分析需在 API 設定中設定 Key</ModCompatChecker.AINeedsAPIKeyDetail>
   <ModCompatChecker.APIEndpoint>API Endpoint:</ModCompatChecker.APIEndpoint>
-  <ModCompatChecker.APIKeyLabel>API Key:</ModCompatChecker.APIKeyLabel>
   <ModCompatChecker.APISettings>API 設定</ModCompatChecker.APISettings>
   <ModCompatChecker.APISettingsLabel>API Settings</ModCompatChecker.APISettingsLabel>
   <ModCompatChecker.AnalysisCancelled>分析已被使用者終止</ModCompatChecker.AnalysisCancelled>
   <ModCompatChecker.AnalysisTimeout>Analysis Timeout: </ModCompatChecker.AnalysisTimeout>
   <ModCompatChecker.Analyzing>分析中...</ModCompatChecker.Analyzing>
-  <ModCompatChecker.AnalyzingShort>分析中</ModCompatChecker.AnalyzingShort>
   <ModCompatChecker.AnalyzingSpace>分析中 </ModCompatChecker.AnalyzingSpace>
-  <ModCompatChecker.BackgroundScanning>背景掃描中...</ModCompatChecker.BackgroundScanning>
   <ModCompatChecker.CancelAnalysis>終止分析</ModCompatChecker.CancelAnalysis>
   <ModCompatChecker.Clipboard>剪貼簿</ModCompatChecker.Clipboard>
   <ModCompatChecker.ClipboardEmpty>剪貼簿為空</ModCompatChecker.ClipboardEmpty>
@@ -24,27 +19,21 @@
   <ModCompatChecker.CopyResult>複製結果</ModCompatChecker.CopyResult>
   <ModCompatChecker.CostEstimate>費用估算</ModCompatChecker.CostEstimate>
   <ModCompatChecker.CurrentModel>當前模型：</ModCompatChecker.CurrentModel>
-  <ModCompatChecker.CurrentModelShort>當前模型</ModCompatChecker.CurrentModelShort>
   <ModCompatChecker.Custom>自訂</ModCompatChecker.Custom>
   <ModCompatChecker.CustomModel>自訂模型</ModCompatChecker.CustomModel>
   <ModCompatChecker.CustomModelId>Custom Model ID:</ModCompatChecker.CustomModelId>
   <ModCompatChecker.CustomQuantity>Custom Count:</ModCompatChecker.CustomQuantity>
   <ModCompatChecker.Def>Def</ModCompatChecker.Def>
   <ModCompatChecker.DefLabel>Def: </ModCompatChecker.DefLabel>
-  <ModCompatChecker.DepIssueSeeSummary>依賴問題請檢視摘要</ModCompatChecker.DepIssueSeeSummary>
-  <ModCompatChecker.DepSort>依賴排序</ModCompatChecker.DepSort>
-  <ModCompatChecker.Dependency>Dependency</ModCompatChecker.Dependency>
   <ModCompatChecker.DetectedMissingMods>檢測到以下可能缺失的 MOD：</ModCompatChecker.DetectedMissingMods>
   <ModCompatChecker.Error>錯誤：</ModCompatChecker.Error>
   <ModCompatChecker.ErrorLogTitle>報錯日誌分析</ModCompatChecker.ErrorLogTitle>
   <ModCompatChecker.Failed>失敗：</ModCompatChecker.Failed>
   <ModCompatChecker.Features>Features</ModCompatChecker.Features>
   <ModCompatChecker.FollowUpAnalysis>追問分析</ModCompatChecker.FollowUpAnalysis>
-  <ModCompatChecker.Harmony>Harmony</ModCompatChecker.Harmony>
   <ModCompatChecker.InvalidRequest>無效請求</ModCompatChecker.InvalidRequest>
   <ModCompatChecker.LogFile>日誌檔案</ModCompatChecker.LogFile>
   <ModCompatChecker.MainTitle>MOD 相容性檢查器</ModCompatChecker.MainTitle>
-  <ModCompatChecker.ModCompatAnalysis>MOD Compatibility Analysis</ModCompatChecker.ModCompatAnalysis>
   <ModCompatChecker.ModCountSep> MOD · </ModCompatChecker.ModCountSep>
   <ModCompatChecker.NeedAPI>需設定API</ModCompatChecker.NeedAPI>
   <ModCompatChecker.NeedAPIKey>需設定API Key</ModCompatChecker.NeedAPIKey>
@@ -59,7 +48,6 @@
   <ModCompatChecker.PleaseConfigAPI>請先在 API 設定中設定 Key</ModCompatChecker.PleaseConfigAPI>
   <ModCompatChecker.ProblemCount> 個問題</ModCompatChecker.ProblemCount>
   <ModCompatChecker.Quantity>數量：</ModCompatChecker.Quantity>
-  <ModCompatChecker.QuantityShort>數量</ModCompatChecker.QuantityShort>
   <ModCompatChecker.QuickAsk>快速提問</ModCompatChecker.QuickAsk>
   <ModCompatChecker.QuickEntry>快捷入口（與右下角標籤欄一致）：</ModCompatChecker.QuickEntry>
   <ModCompatChecker.ReadClipboard>讀取剪貼簿</ModCompatChecker.ReadClipboard>
@@ -97,9 +85,7 @@
   <ModCompatChecker.ResponseTimeout>回應超時（</ModCompatChecker.ResponseTimeout>
   <ModCompatChecker.AnalysisCancelledNL>分析已終止
 </ModCompatChecker.AnalysisCancelledNL>
-  <ModCompatChecker.TimeCostNL>
 
-Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.AIAnalysisFailedPrefix>AI 分析失敗：</ModCompatChecker.AIAnalysisFailedPrefix>
   <ModCompatChecker.FollowUpFailed>Follow-up failed: </ModCompatChecker.FollowUpFailed>
   <ModCompatChecker.UserQuestion>User question: </ModCompatChecker.UserQuestion>
@@ -131,180 +117,36 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.AuthError>API Key 無效或被拒</ModCompatChecker.AuthError>
   <ModCompatChecker.RateLimit>請求過於頻繁，請稍後再試</ModCompatChecker.RateLimit>
   <ModCompatChecker.ServerError>伺服器錯誤</ModCompatChecker.ServerError>
-  <ModCompatChecker.ModelOllama>Ollama 本地 (Llama 3.2)</ModCompatChecker.ModelOllama>
-  <ModCompatChecker.AIAnalyzeAll>AI Batch Analyze All</ModCompatChecker.AIAnalyzeAll>
-  <ModCompatChecker.AIAnalyzing>Analyzing...</ModCompatChecker.AIAnalyzing>
-  <ModCompatChecker.AIError>AI analysis failed: {0}</ModCompatChecker.AIError>
-  <ModCompatChecker.AINotConfigured>Please configure API Key and model in Settings first</ModCompatChecker.AINotConfigured>
-  <ModCompatChecker.AIResult>Analysis Result</ModCompatChecker.AIResult>
-  <ModCompatChecker.AnalyzeError>Analyze this error</ModCompatChecker.AnalyzeError>
-  <ModCompatChecker.ConflictCount>{0} potential conflict(s) found</ModCompatChecker.ConflictCount>
-  <ModCompatChecker.CustomEndpoint>Custom Endpoint</ModCompatChecker.CustomEndpoint>
-  <ModCompatChecker.DefConflict>{0} and {1} modified the same Def: {2}</ModCompatChecker.DefConflict>
-  <ModCompatChecker.DependencyMissing>{0} depends on {1}, but it is not loaded</ModCompatChecker.DependencyMissing>
-  <ModCompatChecker.ErrorAnalysis>Error Log Analysis</ModCompatChecker.ErrorAnalysis>
-  <ModCompatChecker.ErrorLogHint>Select a recent error to analyze</ModCompatChecker.ErrorLogHint>
-  <ModCompatChecker.HarmonyConflict>{0} and {1} both patched {2}.{3}</ModCompatChecker.HarmonyConflict>
-  <ModCompatChecker.LoadOrderIssue>{0} should be loaded after {1}</ModCompatChecker.LoadOrderIssue>
-  <ModCompatChecker.MainWindowTitle>Mod Compatibility Analyzer</ModCompatChecker.MainWindowTitle>
-  <ModCompatChecker.NoConflicts>No conflicts found</ModCompatChecker.NoConflicts>
-  <ModCompatChecker.NoErrors>No recent errors found</ModCompatChecker.NoErrors>
-  <ModCompatChecker.OpenMainWindow>Open Compatibility Analyzer</ModCompatChecker.OpenMainWindow>
-  <ModCompatChecker.PatchTypeFinalizer>Finalizer</ModCompatChecker.PatchTypeFinalizer>
-  <ModCompatChecker.PatchTypePostfix>Postfix</ModCompatChecker.PatchTypePostfix>
-  <ModCompatChecker.PatchTypePrefix>Prefix</ModCompatChecker.PatchTypePrefix>
-  <ModCompatChecker.PatchTypeTranspiler>Transpiler</ModCompatChecker.PatchTypeTranspiler>
-  <ModCompatChecker.ScanButton>Start Scan</ModCompatChecker.ScanButton>
-  <ModCompatChecker.TabDef>Def Override Conflicts</ModCompatChecker.TabDef>
-  <ModCompatChecker.TabDependency>Dependencies and Order</ModCompatChecker.TabDependency>
-  <ModCompatChecker.TabHarmony>Harmony Patch Conflicts</ModCompatChecker.TabHarmony>
-  <ModCompatChecker.TestFailed>Connection failed: {0}</ModCompatChecker.TestFailed>
-  <ModCompatChecker.TestSuccess>Connection successful!</ModCompatChecker.TestSuccess>
-  <ModCompatChecker.VersionMismatch>{0} requires game version {1}, but current is {2}</ModCompatChecker.VersionMismatch>
   <ModCompatChecker.ModelClaudeHaiku>Claude 3 Haiku (Fast, Cheap)</ModCompatChecker.ModelClaudeHaiku>
   <ModCompatChecker.ModelClaudeSonnet>Claude 3.5 Sonnet (Best Reasoning)</ModCompatChecker.ModelClaudeSonnet>
-  <ModCompatChecker.ModelCustom>Custom Model</ModCompatChecker.ModelCustom>
   <ModCompatChecker.ModelDeepSeekFlash>DeepSeek V4 Flash (Recommended, Fast, Cheap)</ModCompatChecker.ModelDeepSeekFlash>
   <ModCompatChecker.ModelDeepSeekPro>DeepSeek V4 Pro (Deep Reasoning)</ModCompatChecker.ModelDeepSeekPro>
   <ModCompatChecker.ModelGPT4o>GPT-4o (Best Quality)</ModCompatChecker.ModelGPT4o>
   <ModCompatChecker.ModelGPT4oMini>GPT-4o-mini (Cheap, Fast)</ModCompatChecker.ModelGPT4oMini>
-  <ModCompatChecker.ModelSelect>Model Selection</ModCompatChecker.ModelSelect>
-  <ModCompatChecker.UI174>Testing...</ModCompatChecker.UI174>
-  <ModCompatChecker.UI175>Success</ModCompatChecker.UI175>
-  <ModCompatChecker.UI176>Please enter API Key first</ModCompatChecker.UI176>
-  <ModCompatChecker.UI177>Connection successful!</ModCompatChecker.UI177>
-  <ModCompatChecker.UI178>Connection failed: </ModCompatChecker.UI178>
-  <ModCompatChecker.UI100>Request timed out (</ModCompatChecker.UI100>
-  <ModCompatChecker.UI101>s), auto-cancelled.</ModCompatChecker.UI101>
-  <ModCompatChecker.UI102>Response timed out (</ModCompatChecker.UI102>
-  <ModCompatChecker.UI103>Network error: </ModCompatChecker.UI103>
-  <ModCompatChecker.UI104>Risk level: {conflict.Risk}</ModCompatChecker.UI104>
-  <ModCompatChecker.UI105>Please analyze briefly:</ModCompatChecker.UI105>
-  <ModCompatChecker.UI106>1. What specific problems would this conflict cause?</ModCompatChecker.UI106>
-  <ModCompatChecker.UI107>2. Which mod should be loaded first?</ModCompatChecker.UI107>
-  <ModCompatChecker.UI108>3. Are there known compatibility patches or solutions?</ModCompatChecker.UI108>
-  <ModCompatChecker.UI109>Answer in English, concise, within 150 words.</ModCompatChecker.UI109>
-  <ModCompatChecker.UI110>Briefly analyze the impact and possible solutions for this conflict. Answer in English, within 100 words.</ModCompatChecker.UI110>
-  <ModCompatChecker.UI111>=== Crash Log ===</ModCompatChecker.UI111>
-  <ModCompatChecker.UI112>=== Detected Mod Conflicts ===</ModCompatChecker.UI112>
-  <ModCompatChecker.UI113>Def conflicts: {report.DefConflicts.Count}</ModCompatChecker.UI113>
-  <ModCompatChecker.UI114>Dependency issues: {report.DependencyIssues.Count}</ModCompatChecker.UI114>
-  <ModCompatChecker.UI115>=== Dependency Issues ===</ModCompatChecker.UI115>
-  <ModCompatChecker.UI116>Unknown</ModCompatChecker.UI116>
-  <ModCompatChecker.UI117>Related dependency: {issue.RelatedPackageId ?? </ModCompatChecker.UI117>
-  <ModCompatChecker.UI118>Issue type: {issue.Type}</ModCompatChecker.UI118>
-  <ModCompatChecker.UI119>Risk level: {issue.Risk}</ModCompatChecker.UI119>
-  <ModCompatChecker.UI120>Details: {issue.ExtraInfo ?? issue.Summary ?? </ModCompatChecker.UI120>
-  <ModCompatChecker.UI121>{a.ModName} and {b.ModName} modify the same Def: {a.DefType}/{a.DefName}</ModCompatChecker.UI121>
-  <ModCompatChecker.UI122>{modName} depends on {depDisplay}, but it is not loaded</ModCompatChecker.UI122>
-  <ModCompatChecker.UI123>{modName} requires game version {string.Join(</ModCompatChecker.UI123>
-  <ModCompatChecker.UI124>, supported)}, current version is {CurrentGameVersion}</ModCompatChecker.UI124>
-  <ModCompatChecker.UI125>{modName} should be loaded after {node.InnerText.Trim()}</ModCompatChecker.UI125>
-  <ModCompatChecker.UI126>{modName} should be loaded before {node.InnerText.Trim()}</ModCompatChecker.UI126>
-  <ModCompatChecker.UI127>Required MOD: XXX</ModCompatChecker.UI127>
-  <ModCompatChecker.UI132>Error</ModCompatChecker.UI132>
-  <ModCompatChecker.UI133>Exception</ModCompatChecker.UI133>
-  <ModCompatChecker.UI134>Warning</ModCompatChecker.UI134>
-  <ModCompatChecker.UI135>System</ModCompatChecker.UI135>
-  <ModCompatChecker.UI136>Type</ModCompatChecker.UI136>
-  <ModCompatChecker.UI137>Method</ModCompatChecker.UI137>
-  <ModCompatChecker.UI138>Object</ModCompatChecker.UI138>
-  <ModCompatChecker.UI139>Reference</ModCompatChecker.UI139>
-  <ModCompatChecker.UI140>Null</ModCompatChecker.UI140>
-  <ModCompatChecker.UI141>Cost estimate </ModCompatChecker.UI141>
-  <ModCompatChecker.UI142>Analyzing... elapsed </ModCompatChecker.UI142>
-  <ModCompatChecker.UI143>s</ModCompatChecker.UI143>
-  <ModCompatChecker.UI144>Search required MOD (</ModCompatChecker.UI144>
-  <ModCompatChecker.UI145>(max </ModCompatChecker.UI145>
-  <ModCompatChecker.UI146>Click read clipboard or paste manually</ModCompatChecker.UI146>
-  <ModCompatChecker.UI147>Clipboard is empty. Please copy error content first</ModCompatChecker.UI147>
-  <ModCompatChecker.UI148>Analysis cancelled by user</ModCompatChecker.UI148>
-  <ModCompatChecker.UI149>Elapsed </ModCompatChecker.UI149>
-  <ModCompatChecker.UI151>Previous analysis results:</ModCompatChecker.UI151>
-  <ModCompatChecker.UI152>User follow-up:</ModCompatChecker.UI152>
-  <ModCompatChecker.UI153>Please answer the follow-up question concisely, within 100 words.</ModCompatChecker.UI153>
-  <ModCompatChecker.UI154>Follow-up failed: </ModCompatChecker.UI154>
-  <ModCompatChecker.UI155>Click start scan to detect compatibility issues in loaded mods</ModCompatChecker.UI155>
-  <ModCompatChecker.UI156>Total {report.TotalConflictCount} potential issue(s)</ModCompatChecker.UI156>
-  <ModCompatChecker.UI157>Harmony Patches</ModCompatChecker.UI157>
-  <ModCompatChecker.UI158>Def Overrides</ModCompatChecker.UI158>
-  <ModCompatChecker.UI159>Dependencies and Order</ModCompatChecker.UI159>
-  <ModCompatChecker.UI160>No Harmony patch conflicts found</ModCompatChecker.UI160>
-  <ModCompatChecker.UI161>Target: {c.TargetType}.{c.TargetMethod}</ModCompatChecker.UI161>
-  <ModCompatChecker.UI162>No Def override conflicts found</ModCompatChecker.UI162>
-  <ModCompatChecker.UI163>No dependency issues found</ModCompatChecker.UI163>
-  <ModCompatChecker.UI164>Unknown issue</ModCompatChecker.UI164>
-  <ModCompatChecker.UI165>Type: {iss.Type}  {iss.ModName}</ModCompatChecker.UI165>
-  <ModCompatChecker.UI166>AI Error: </ModCompatChecker.UI166>
-  <ModCompatChecker.UI167>Analyzing: {done}/{total}</ModCompatChecker.UI167>
-  <ModCompatChecker.UI168>Done ({total} items)</ModCompatChecker.UI168>
-  <ModCompatChecker.UI169>Medium risk</ModCompatChecker.UI169>
-  <ModCompatChecker.UI170>Low risk</ModCompatChecker.UI170>
-  <ModCompatChecker.UI172>Custom: {(string.IsNullOrEmpty(settings.CustomModelId) ? </ModCompatChecker.UI172>
-  <ModCompatChecker.UI173> Current model: </ModCompatChecker.UI173>
-  <ModCompatChecker.UI183>Analyzing... </ModCompatChecker.UI183>
-  <ModCompatChecker.UI184>Analyzing: </ModCompatChecker.UI184>
-  <ModCompatChecker.UI185>Done (</ModCompatChecker.UI185>
-  <ModCompatChecker.UI186> items)</ModCompatChecker.UI186>
-  <ModCompatChecker.UI187>Analysis cancelled</ModCompatChecker.UI187>
-  <ModCompatChecker.UI188>Previous analysis:</ModCompatChecker.UI188>
-  <ModCompatChecker.UI189>Follow-up: </ModCompatChecker.UI189>
-  <ModCompatChecker.UI190>Answer concisely.</ModCompatChecker.UI190>
-  <ModCompatChecker.UI191>Current scan result: </ModCompatChecker.UI191>
-  <ModCompatChecker.UI192> issue(s).</ModCompatChecker.UI192>
-  <ModCompatChecker.UI193>Recent error analysis: </ModCompatChecker.UI193>
-  <ModCompatChecker.UI194>User question: </ModCompatChecker.UI194>
-  <ModCompatChecker.UI195>Please answer based on context. If the context is insufficient, just answer directly.</ModCompatChecker.UI195>
-  <ModCompatChecker.UI128>(?:needs|missing|requires?|require|depend)[^\n]{0,20}?[：:\s]*</ModCompatChecker.UI128>
-  <ModCompatChecker.UI129>XXX not loaded</ModCompatChecker.UI129>
-  <ModCompatChecker.UI130>XXX not found</ModCompatChecker.UI130>
-  <ModCompatChecker.UI131>(?:depends|依赖|requires?)[^\n]{0,30}?[：:\s]*</ModCompatChecker.UI131>
-  <ModCompatChecker.UI150>]?\s*(?:not\s+(?:loaded|found|installed)|not found)</ModCompatChecker.UI150>
-  <ModCompatChecker.UI171>\b(Error|错误|Exception|异常):</ModCompatChecker.UI171>
-  <ModCompatChecker.ErrorEncyclopedia>報錯百科</ModCompatChecker.ErrorEncyclopedia>
-  <ModCompatChecker.CrashRisk>崩潰風險</ModCompatChecker.CrashRisk>
-  <ModCompatChecker.WarningInfo>警告資訊</ModCompatChecker.WarningInfo>
-  <ModCompatChecker.CompatIssue>相容問題</ModCompatChecker.CompatIssue>
-  <ModCompatChecker.PerfIssue>效能影響</ModCompatChecker.PerfIssue>
-  <ModCompatChecker.CheckUpdates>檢查 MOD 更新</ModCompatChecker.CheckUpdates>
-  <ModCompatChecker.UpdateCheckResult>更新檢查</ModCompatChecker.UpdateCheckResult>
-  <ModCompatChecker.UpdatesAvailable>發現可更新:</ModCompatChecker.UpdatesAvailable>
-  <ModCompatChecker.CriticalImpact>嚴重</ModCompatChecker.CriticalImpact>
-  <ModCompatChecker.HighImpact>高影響</ModCompatChecker.HighImpact>
-  <ModCompatChecker.MediumImpact>中等</ModCompatChecker.MediumImpact>
-  <ModCompatChecker.LowImpact>低影響</ModCompatChecker.LowImpact>
-  <ModCompatChecker.RelationshipChain>關係鏈分析</ModCompatChecker.RelationshipChain>
-  <ModCompatChecker.ModRelationTitle>MOD 關係</ModCompatChecker.ModRelationTitle>
-  <ModCompatChecker.RelDependsOn>依賴</ModCompatChecker.RelDependsOn>
-  <ModCompatChecker.RelDependedBy>被依賴</ModCompatChecker.RelDependedBy>
-  <ModCompatChecker.RelHarmonyConflict>Harmony 衝突</ModCompatChecker.RelHarmonyConflict>
-  <ModCompatChecker.RelDefConflict>Def 衝突</ModCompatChecker.RelDefConflict>
-  <ModCompatChecker.RelLoadOrder>載入順序</ModCompatChecker.RelLoadOrder>
-  <ModCompatChecker.RelMissing>缺失依賴</ModCompatChecker.RelMissing>
   <ModCompatChecker.Tools>工具箱</ModCompatChecker.Tools>
-  <ModCompatChecker.SpamDetect>重複報錯檢測</ModCompatChecker.SpamDetect>
   <ModCompatChecker.CheckSpam>檢測重複報錯</ModCompatChecker.CheckSpam>
   <ModCompatChecker.OpenLogFolder>開啟日誌資料夾</ModCompatChecker.OpenLogFolder>
-  <ModCompatChecker.SpamWarning>檢測到刷屏報錯！同一報錯大量重複。</ModCompatChecker.SpamWarning>
   <ModCompatChecker.Advanced>進階選項</ModCompatChecker.Advanced>
   <ModCompatChecker.SystemPrompt>AI 預設指令</ModCompatChecker.SystemPrompt>
-  <ModCompatChecker.UseCustomPrompt>啟用自訂預設</ModCompatChecker.UseCustomPrompt>
   <ModCompatChecker.RestoreDefault>恢復預設</ModCompatChecker.RestoreDefault>
   <ModCompatChecker.SpamAlert>重複報錯檢測：發現同一報錯大量重複</ModCompatChecker.SpamAlert>
   <ModCompatChecker.AutoSpamToggle>自動檢測刷屏報錯（每60秒）</ModCompatChecker.AutoSpamToggle>
   <ModCompatChecker.EnableAutoSpam>啟用自動檢測</ModCompatChecker.EnableAutoSpam>
   <ModCompatChecker.SpamExplain>每60秒檢測一次重複報錯。防止循環報錯撐爆 Player.log。發現後以事件彈窗提醒。不影響遊戲效能。</ModCompatChecker.SpamExplain>
-  <ModCompatChecker.EncycloManager>Encyclopedia Manager</ModCompatChecker.EncycloManager>
-  <ModCompatChecker.Edit>Edit</ModCompatChecker.Edit>
-  <ModCompatChecker.EditingEntry>Editing:</ModCompatChecker.EditingEntry>
-  <ModCompatChecker.Keyword>Keyword</ModCompatChecker.Keyword>
-  <ModCompatChecker.Pattern>Pattern</ModCompatChecker.Pattern>
-  <ModCompatChecker.ExplanationZh>Chinese Explanation</ModCompatChecker.ExplanationZh>
-  <ModCompatChecker.ExplanationEn>English Explanation</ModCompatChecker.ExplanationEn>
-  <ModCompatChecker.Save>Save</ModCompatChecker.Save>
   <ModCompatChecker.Cancel>Cancel</ModCompatChecker.Cancel>
-  <ModCompatChecker.AddEntry>Add New Entry</ModCompatChecker.AddEntry>
-  <ModCompatChecker.RestoreAllDefaults>Restore All Defaults</ModCompatChecker.RestoreAllDefaults>
   <ModCompatChecker.LogFileSize>Player.log size:</ModCompatChecker.LogFileSize>
-  <ModCompatChecker.NotAvailable>N/A</ModCompatChecker.NotAvailable>
+  <ModCompatChecker.RefreshSize>重新整理大小</ModCompatChecker.RefreshSize>
+  <ModCompatChecker.LogSizeTitle>日誌檔案大小監控</ModCompatChecker.LogSizeTitle>
+  <ModCompatChecker.LogSizeExplain>啟用後每5分鐘自動檢查Player.log檔案大小，超過50MB時變橙色警告（防止循環報錯寫滿C槽）。預設關閉。</ModCompatChecker.LogSizeExplain>
+  <ModCompatChecker.PromptHint>可編輯下方AI預設指令，自訂AI分析風格</ModCompatChecker.PromptHint>
+  <ModCompatChecker.PresetConcise>簡潔診斷</ModCompatChecker.PresetConcise>
+  <ModCompatChecker.LogSizeTitle>日誌檔案大小監控</ModCompatChecker.LogSizeTitle>
+  <ModCompatChecker.LogSizeExplain>啟用後每5分鐘自動檢查Player.log檔案大小，超過50MB時變橙色警告。預設關閉。</ModCompatChecker.LogSizeExplain>
+  <ModCompatChecker.PresetRefs>快捷預設（點擊替換）：</ModCompatChecker.PresetRefs>
+  <ModCompatChecker.PresetDetailed>詳細分析</ModCompatChecker.PresetDetailed>
+  <ModCompatChecker.RefreshSize>重新整理大小</ModCompatChecker.RefreshSize>
+  <ModCompatChecker.PresetBeginner>新手友善</ModCompatChecker.PresetBeginner>
+  <ModCompatChecker.PresetBeginnerDesc>用通俗語言解釋，適合MOD新手</ModCompatChecker.PresetBeginnerDesc>
+  <ModCompatChecker.PresetConciseDesc>只輸出關鍵衝突和修復建議，簡潔明瞭</ModCompatChecker.PresetConciseDesc>
+  <ModCompatChecker.PresetDetailedDesc>包含衝突原因、影響範圍、修復方案、排序建議</ModCompatChecker.PresetDetailedDesc>
 </LanguageData>

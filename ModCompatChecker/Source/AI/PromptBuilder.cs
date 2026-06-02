@@ -145,7 +145,7 @@ namespace ModCompatChecker.AI
             }
             else
             {
-                sb.AppendLine("RimWorld mod dependency expert. Analyze this dependency issue:");
+                sb.AppendLine(GetSystemPrompt() + " Analyze this dependency issue:");
                 sb.AppendLine();
                 sb.AppendLine("=== Dependency Issue ===");
                 sb.AppendLine($"Mod: {issue.ModName ?? "Unknown"}");

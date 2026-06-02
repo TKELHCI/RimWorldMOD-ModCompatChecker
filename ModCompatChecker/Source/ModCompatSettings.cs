@@ -16,11 +16,18 @@ namespace ModCompatChecker
         public int SelectedModelIndex = 0;
         public int AnalysisTimeoutSeconds = 20;
         public bool AutoSpamDetect = false;
+        public bool ShowLogSizeMonitor = false;
 
         public bool UseCustomSystemPrompt = false;
         public string CustomSystemPrompt = "";
         public const string DefaultSystemPromptZh = "你是 RimWorld MOD 兼容性分析专家。请基于你的知识分析以下 MOD 兼容性问题，给出专业、简洁的诊断和建议。";
         public const string DefaultSystemPromptEn = "You are a RimWorld mod compatibility expert. Based on your knowledge, analyze the following mod compatibility issues and provide professional, concise diagnosis and suggestions.";
+        public const string PresetConciseZh = "你是 RimWorld MOD 兼容性分析专家。请简洁地诊断以下问题，只给出关键冲突和推荐操作，不超过200字。";
+        public const string PresetConciseEn = "You are a RimWorld mod compatibility expert. Diagnose the following concisely: only key conflicts and recommended actions, under 200 words.";
+        public const string PresetDetailedZh = "你是 RimWorld MOD 兼容性分析专家。请详细分析以下问题，包括：1)冲突原因 2)影响范围 3)修复方案 4)MOD排序建议。";
+        public const string PresetDetailedEn = "You are a RimWorld mod compatibility expert. Analyze in detail: 1) Root cause 2) Impact scope 3) Fix suggestions 4) Load order recommendations.";
+        public const string PresetBeginnerZh = "你是 RimWorld MOD 兼容性分析专家。请用通俗易懂的语言解释以下问题，避免技术术语，让MOD新手也能理解。";
+        public const string PresetBeginnerEn = "You are a RimWorld mod compatibility expert. Explain in plain, beginner-friendly language. Avoid technical jargon.";
 
         private readonly SharedSettingsUI.UIState _uiState = new SharedSettingsUI.UIState();
 
@@ -78,6 +85,7 @@ namespace ModCompatChecker
             Scribe_Values.Look(ref SelectedModelIndex, "SelectedModelIndex", 0);
             Scribe_Values.Look(ref AnalysisTimeoutSeconds, "AnalysisTimeoutSeconds", 20);
             Scribe_Values.Look(ref AutoSpamDetect, "AutoSpamDetect", false);
+            Scribe_Values.Look(ref ShowLogSizeMonitor, "ShowLogSizeMonitor", false);
 
             Scribe_Values.Look(ref UseCustomSystemPrompt, "UseCustomSystemPrompt", false);
             Scribe_Values.Look(ref CustomSystemPrompt, "CustomSystemPrompt", "");

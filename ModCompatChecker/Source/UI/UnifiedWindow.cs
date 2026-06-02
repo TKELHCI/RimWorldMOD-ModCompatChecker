@@ -19,7 +19,7 @@ namespace ModCompatChecker.UI
         private Vector2 _scroll = Vector2.zero;
         private readonly object _lock = new object();
         private bool _disposed; private static int _cachedWorldId = -1; private static int _worldCheckFrame;
-        private bool _showSettings = true, _showCompat = true, _showErrorSection, _showTools, _spamChecking, _showAdvanced; private string _editingEncyclo, _encycloEditKeyword, _encycloEditPattern, _encycloEditZh, _encycloEditEn, _encycloEditSev, _encycloEditCat; private Vector2 _encycloScroll;
+        private bool _showSettings, _showCompat, _showErrorSection, _showTools, _spamChecking, _showAdvanced;
         private readonly SharedSettingsUI.UIState _uiState = new SharedSettingsUI.UIState();
 
         public override Vector2 InitialSize
@@ -109,125 +109,75 @@ namespace ModCompatChecker.UI
             DrawSectionHeader(inner, ref _showTools, "ModCompatChecker.Tools".Translate(), new Color(0.35f, 0.25f, 0.50f));
             if (_showTools)
             {
-                listing.Label("ModCompatChecker.AutoSpamToggle".Translate(), -1);
-                var togRect = listing.GetRect(22f);
+                inner.Label("ModCompatChecker.AutoSpamToggle".Translate(), -1);
+                var togRect = inner.GetRect(22f);
                 Widgets.CheckboxLabeled(togRect, "ModCompatChecker.EnableAutoSpam".Translate(), ref settings.AutoSpamDetect);
                 Core.SpamDetector.AutoDetectEnabled = settings.AutoSpamDetect;
-                listing.Gap(2f);
+                inner.Gap(2f);
                 GUI.color = new Color(0.6f, 0.6f, 0.6f);
-                Widgets.Label(listing.GetRect(36f), "ModCompatChecker.SpamExplain".Translate());
+                Widgets.Label(inner.GetRect(36f), "ModCompatChecker.SpamExplain".Translate());
                 GUI.color = Color.white;
-                listing.Gap(4f);
-                if (listing.ButtonText("ModCompatChecker.CheckSpam".Translate())) { Core.SpamDetector.CheckForSpam(); _spamChecking = true; }
-                if (_spamChecking && Core.SpamDetector.ActiveAlerts.Count > 0) { foreach (var a in Core.SpamDetector.ActiveAlerts) { GUI.color = Color.red; Widgets.Label(listing.GetRect(20f), "[" + a.Count + "x] " + a.NormalizedMessage); GUI.color = Color.white; } }
-                listing.Gap(4f);
-                // Log file size
-                Core.SpamDetector.RefreshLogSize();
-                var sizeStr = Core.SpamDetector.GetLogSizeDisplay();
-                var logPath = Core.SpamDetector.LogFilePath;
-                GUI.color = long.TryParse(sizeStr.Replace(" KB","").Replace(" MB","").Replace(" GB","").Replace(" B",""), out long sb) && sb > 50*1024*1024 ? new Color(1f, 0.5f, 0.2f) : new Color(0.5f, 0.7f, 0.5f);
-                Widgets.Label(listing.GetRect(20f), ("ModCompatChecker.LogFileSize".Translate() + " " + sizeStr + (!string.IsNullOrEmpty(logPath) ? "" : " (" + "ModCompatChecker.NotAvailable".Translate().ToString() + ")")).ToString());
-                GUI.color = Color.white;
-
-                if (Widgets.ButtonText(listing.GetRect(24f), "ModCompatChecker.OpenLogFolder".Translate())) { var p = Core.SpamDetector.GetLogFolderPath(); if (p.Length > 0) System.Diagnostics.Process.Start("explorer.exe", p); }
-                listing.Gap(8f);
+                inner.Gap(4f);
+                if (inner.ButtonText("ModCompatChecker.CheckSpam".Translate())) { Core.SpamDetector.CheckForSpam(); _spamChecking = true; }
+                if (_spamChecking && Core.SpamDetector.ActiveAlerts.Count > 0) { foreach (var a in Core.SpamDetector.ActiveAlerts) { GUI.color = Color.red; Widgets.Label(inner.GetRect(20f), "[" + a.Count + "x] " + a.NormalizedMessage); GUI.color = Color.white; } }
+                inner.Gap(4f);
+                // Log file size monitoring
+                inner.Gap(4f);
+                if (Widgets.ButtonText(inner.GetRect(26f), (settings.ShowLogSizeMonitor ? "▼ " : "? ") + "ModCompatChecker.LogSizeTitle".Translate()))
+                    settings.ShowLogSizeMonitor = !settings.ShowLogSizeMonitor;
+                if (settings.ShowLogSizeMonitor)
+                {
+                    GUI.color = new Color(0.6f, 0.6f, 0.6f);
+                    Widgets.Label(inner.GetRect(28f), "ModCompatChecker.LogSizeExplain".Translate());
+                    GUI.color = Color.white;
+                    Core.SpamDetector.RefreshLogSize();
+                    var sizeStr = Core.SpamDetector.GetLogSizeDisplay();
+                    GUI.color = sizeStr.Contains("MB") ? new Color(1f, 0.5f, 0.2f) : new Color(0.5f, 0.7f, 0.5f);
+                    Widgets.Label(inner.GetRect(20f), "ModCompatChecker.LogFileSize".Translate() + ": " + sizeStr);
+                    GUI.color = Color.white;
+                    if (Widgets.ButtonText(inner.GetRect(22f), "ModCompatChecker.RefreshSize".Translate())) { Core.SpamDetector.RefreshLogSize(); }
+                    if (Widgets.ButtonText(inner.GetRect(22f), "ModCompatChecker.OpenLogFolder".Translate())) { var p = Core.SpamDetector.GetLogFolderPath(); if (p.Length > 0) try { System.Diagnostics.Process.Start("explorer.exe", p); } catch { } }
+                }
+                inner.Gap(8f);
             }
 
             DrawSectionHeader(inner, ref _showAdvanced, "ModCompatChecker.Advanced".Translate(), new Color(0.45f, 0.20f, 0.45f));
             if (_showAdvanced)
             {
-                listing.Label("ModCompatChecker.SystemPrompt".Translate(), -1);
-                listing.Gap(2f);
-                var chkRect = listing.GetRect(22f);
-                Widgets.CheckboxLabeled(chkRect, "ModCompatChecker.UseCustomPrompt".Translate(), ref settings.UseCustomSystemPrompt);
-                if (settings.UseCustomSystemPrompt)
-                {
-                    listing.Gap(2f);
-                    var promptRect = listing.GetRect(120f);
-                    settings.CustomSystemPrompt = GUI.TextArea(promptRect, settings.CustomSystemPrompt);
-                    listing.Gap(2f);
-                    if (listing.ButtonText("ModCompatChecker.RestoreDefault".Translate()))
-                    {
-                        var lang = AI.PromptBuilder.GetPromptLanguage();
-                        settings.CustomSystemPrompt = lang == "zh" ? ModCompatSettings.DefaultSystemPromptZh : ModCompatSettings.DefaultSystemPromptEn;
-                    }
-                }
-                listing.Gap(8f);
-                // ── Encyclopedia Manager ──
-                GUI.color = new Color(0.25f, 0.25f, 0.35f);
-                Widgets.DrawBoxSolid(listing.GetRect(2f), GUI.color);
+                inner.Label("ModCompatChecker.SystemPrompt".Translate(), -1);
+                inner.Gap(2f);
+                GUI.color = new Color(0.6f, 0.6f, 0.6f);
+                Widgets.Label(inner.GetRect(28f), "ModCompatChecker.PromptHint".Translate());
                 GUI.color = Color.white;
-                listing.Gap(4f);
-                listing.Label("ModCompatChecker.EncycloManager".Translate(), -1);
-                listing.Gap(2f);
-                var ents = Core.ErrorEncyclopedia.Entries;
-                if (ents != null && ents.Count > 0)
-                {
-                    var encRect = listing.GetRect(Mathf.Min(ents.Count * 52f, 280f));
-                    Widgets.BeginScrollView(encRect, ref _encycloScroll, new Rect(0f, 0f, encRect.width - 28f, ents.Count * 52f));
-                    float ey = 0f;
-                    var toReset = new List<string>();
-                    foreach (var ent in ents)
-                    {
-                        GUI.color = Core.ErrorEncyclopedia.GetSeverityColor(ent.Severity);
-                        Widgets.Label(new Rect(4f, ey, encRect.width - 90f, 18f), "[" + ent.Severity + "] " + ent.Keyword);
-                        GUI.color = Color.white;
-                        if (Widgets.ButtonText(new Rect(encRect.width - 84f, ey, 52f, 18f), "ModCompatChecker.Edit".Translate()))
-                        {
-                            _editingEncyclo = ent.Id;
-                            _encycloEditKeyword = ent.Keyword;
-                            _encycloEditPattern = ent.Pattern;
-                            _encycloEditZh = ent.ExplanationZh;
-                            _encycloEditEn = ent.ExplanationEn;
-                            _encycloEditSev = ent.Severity;
-                            _encycloEditCat = ent.Category;
-                        }
-                        if (Widgets.ButtonText(new Rect(encRect.width - 30f, ey, 26f, 18f), "R"))
-                            toReset.Add(ent.Id);
-                        Widgets.Label(new Rect(8f, ey + 20f, encRect.width - 90f, 28f), Core.ErrorEncyclopedia.GetExplanation(ent));
-                        ey += 52f;
-                    }
-                    Widgets.EndScrollView();
-                    foreach (var id in toReset) Core.ErrorEncyclopedia.ResetEntry(id);
-                }
-                listing.Gap(4f);
-                if (_editingEncyclo != null)
-                {
-                    listing.Label("ModCompatChecker.EditingEntry".Translate() + " " + _editingEncyclo, -1);
-                    listing.Gap(2f);
-                    listing.Label("ModCompatChecker.Keyword".Translate(), -1);
-                    _encycloEditKeyword = listing.TextEntry(_encycloEditKeyword);
-                    listing.Label("ModCompatChecker.Pattern".Translate(), -1);
-                    _encycloEditPattern = listing.TextEntry(_encycloEditPattern);
-                    listing.Label("ModCompatChecker.ExplanationZh".Translate(), -1);
-                    _encycloEditZh = listing.TextEntry(_encycloEditZh);
-                    listing.Label("ModCompatChecker.ExplanationEn".Translate(), -1);
-                    _encycloEditEn = listing.TextEntry(_encycloEditEn);
-                    listing.Gap(2f);
-                    if (listing.ButtonText("ModCompatChecker.Save".Translate()))
-                    {
-                        Core.ErrorEncyclopedia.SaveEntry(new Core.ErrorEntry { Id = _editingEncyclo, Keyword = _encycloEditKeyword, Pattern = _encycloEditPattern, ExplanationZh = _encycloEditZh, ExplanationEn = _encycloEditEn, Severity = _encycloEditSev ?? "medium", Category = _encycloEditCat ?? "warning" });
-                        Core.ErrorEncyclopedia.LoadFromJson();
-                        _editingEncyclo = null;
-                    }
-                    if (listing.ButtonText("ModCompatChecker.Cancel".Translate()))
-                        _editingEncyclo = null;
-                }
-                listing.Gap(4f);
-                if (listing.ButtonText("ModCompatChecker.AddEntry".Translate()))
-                {
-                    var newId = "user_" + DateTime.Now.Ticks;
-                    Core.ErrorEncyclopedia.SaveEntry(new Core.ErrorEntry { Id = newId, Keyword = "New Keyword", Pattern = "NewPattern", ExplanationZh = "说明", ExplanationEn = "Description", Severity = "medium", Category = "warning" });
-                    Core.ErrorEncyclopedia.LoadFromJson();
-                }
-                if (listing.ButtonText("ModCompatChecker.RestoreAllDefaults".Translate()))
-                {
-                    try { File.Delete(Core.ErrorEncyclopedia.UserOverridesPath ?? ""); } catch { }
-                    Core.ErrorEncyclopedia.LoadFromJson();
-                }
-
+                // Resolve current prompt
+                var prompt = string.IsNullOrEmpty(settings.CustomSystemPrompt) ? (AI.PromptBuilder.GetPromptLanguage() == "zh" ? ModCompatSettings.DefaultSystemPromptZh : ModCompatSettings.DefaultSystemPromptEn) : settings.CustomSystemPrompt;
+                var promptRect = inner.GetRect(140f);
+                var edited = GUI.TextArea(promptRect, prompt);
+                if (edited != prompt) { settings.CustomSystemPrompt = edited; settings.UseCustomSystemPrompt = true; }
+                inner.Gap(4f);
+                if (inner.ButtonText("ModCompatChecker.RestoreDefault".Translate()))
+                    { settings.CustomSystemPrompt = ""; settings.UseCustomSystemPrompt = false; }
+                inner.Gap(4f);
+                GUI.color = new Color(0.5f, 0.5f, 0.6f);
+                Widgets.Label(inner.GetRect(20f), "ModCompatChecker.PresetRefs".Translate());
+                GUI.color = Color.white;
+                if (inner.ButtonText("ModCompatChecker.PresetConcise".Translate()))
+                    { settings.CustomSystemPrompt = AI.PromptBuilder.GetPromptLanguage() == "zh" ? ModCompatSettings.PresetConciseZh : ModCompatSettings.PresetConciseEn; settings.UseCustomSystemPrompt = true; }
+                GUI.color = new Color(0.5f, 0.5f, 0.5f);
+                Widgets.Label(inner.GetRect(18f), "  " + "ModCompatChecker.PresetConciseDesc".Translate());
+                GUI.color = Color.white;
+                if (inner.ButtonText("ModCompatChecker.PresetDetailed".Translate()))
+                    { settings.CustomSystemPrompt = AI.PromptBuilder.GetPromptLanguage() == "zh" ? ModCompatSettings.PresetDetailedZh : ModCompatSettings.PresetDetailedEn; settings.UseCustomSystemPrompt = true; }
+                GUI.color = new Color(0.5f, 0.5f, 0.5f);
+                Widgets.Label(inner.GetRect(18f), "  " + "ModCompatChecker.PresetDetailedDesc".Translate());
+                GUI.color = Color.white;
+                if (inner.ButtonText("ModCompatChecker.PresetBeginner".Translate()))
+                    { settings.CustomSystemPrompt = AI.PromptBuilder.GetPromptLanguage() == "zh" ? ModCompatSettings.PresetBeginnerZh : ModCompatSettings.PresetBeginnerEn; settings.UseCustomSystemPrompt = true; }
+                GUI.color = new Color(0.5f, 0.5f, 0.5f);
+                Widgets.Label(inner.GetRect(18f), "  " + "ModCompatChecker.PresetBeginnerDesc".Translate());
+                GUI.color = Color.white;
+                inner.Gap(8f);
             }
-
             inner.End();
             Widgets.EndScrollView();
 
@@ -264,7 +214,6 @@ namespace ModCompatChecker.UI
                 Widgets.EndScrollView();
             }
 
-            listing.End();
         }
         private void DrawSectionHeader(Listing_Standard lst, ref bool expanded, string title, Color? activeColor = null)
         {
@@ -273,7 +222,7 @@ namespace ModCompatChecker.UI
             Widgets.DrawBoxSolid(rect, GUI.color);
             GUI.color = Color.white;
             Widgets.Label(new Rect(rect.x + 10f, rect.y + 5f, rect.width - 20f, 20f),
-                (expanded ? "▼ " : "▶ ") + title);
+                (expanded ? "▼ " : "? ") + title);
             if (Widgets.ButtonInvisible(rect))
                 expanded = !expanded;
             if (expanded)
@@ -426,118 +375,11 @@ namespace ModCompatChecker.UI
                     else if (busy)
                         Widgets.Label(new Rect(btnRect.x + 120f, btnRect.y + 4f, 200f, 20f), status);
                     else if (Widgets.ButtonText(new Rect(btnRect.x + 120f, btnRect.y, 130f, 26f), "AI 批量分析"))
-            listing.Gap(4f);
-            if (listing.ButtonText("ModCompatChecker.CheckUpdates".Translate()))
-            {
-                _updateVersions = Core.UpdateChecker.GetLocalModVersions();
-                Core.UpdateChecker.CheckWorkshopUpdates(_updateVersions, (result) => { if (!_disposed) lock (_lock) { _updateVersions = result; _showUpdates = true; } });
-                _showUpdates = true;
-            }
-
                         StartBatchAnalysis(settings);
                 }
             }
 
 
-
-            // === Relationship Chain ===
-            listing.Gap(4f);
-            GUI.color = new Color(0.2f, 0.4f, 0.6f);
-            if (Widgets.ButtonText(listing.GetRect(28f), "ModCompatChecker.RelationshipChain".Translate()))
-            {
-                ConflictReport repR; lock (_lock) { repR = _report; }
-                if (repR != null && repR.HasConflicts)
-                {
-                    var conflictMods = Core.RelationshipAnalyzer.GetAllConflictingMods(repR);
-                    var modList = new List<string>(conflictMods);
-                    modList.Sort();
-                    var floatOpts = new List<FloatMenuOption>();
-                    foreach (var m in modList)
-                    {
-                        string mn = m;
-                        floatOpts.Add(new FloatMenuOption(mn, () => {
-                            ConflictReport rep; lock (_lock) { rep = _report; }
-                            if (rep != null)
-                            {
-                                _relationship = Core.RelationshipAnalyzer.Analyze(mn, rep);
-                                _relSelectedMod = mn;
-                                _relOpen = true;
-                                _relDepends = true; _relDepended = true; _relHarmony = true; _relDef = true; _relOrder = true;
-                            }
-                        }));
-                    }
-                    if (floatOpts.Count > 0) Find.WindowStack.Add(new FloatMenu(floatOpts));
-                }
-            }
-            GUI.color = Color.white;
-
-            // === Update Check Result ===
-            if (_showUpdates && _updateVersions != null)
-            {
-                listing.Gap(4f);
-                GUI.color = new Color(0.25f, 0.4f, 0.6f);
-                Widgets.DrawBoxSolid(listing.GetRect(2f), GUI.color);
-                GUI.color = Color.white;
-                listing.Gap(4f);
-                listing.Label("ModCompatChecker.UpdateCheckResult".Translate() + " (" + _updateVersions.Count + " MOD)", -1);
-                var updatesFound = _updateVersions.FindAll(v => v.HasUpdate);
-                if (updatesFound.Count > 0)
-                {
-                    GUI.color = new Color(0.9f, 0.6f, 0.1f);
-                    listing.Label("ModCompatChecker.UpdatesAvailable".Translate() + " " + updatesFound.Count, -1);
-                    GUI.color = Color.white;
-                }
-                var ulRect = listing.GetRect(Mathf.Min(_updateVersions.Count * 24f, 200f));
-                Widgets.BeginScrollView(ulRect, ref _updateScroll, new Rect(0f, 0f, ulRect.width - 20f, _updateVersions.Count * 24f));
-                float uy = 0f;
-                foreach (var v in _updateVersions)
-                {
-                    string status = v.HasUpdate ? "[!]" : "[OK]";
-                    GUI.color = v.HasUpdate ? new Color(1f, 0.6f, 0.2f) : new Color(0.4f, 0.7f, 0.4f);
-                    Widgets.Label(new Rect(4f, uy, ulRect.width - 30f, 22f), status + " " + v.Name + "   v" + v.LocalVersion + (v.HasUpdate ? " -> " + v.WorkshopVersion : ""));
-                    GUI.color = Color.white;
-
-            // === Relationship Display ===
-            if (_relOpen && _relationship != null)
-            {
-                listing.Gap(4f);
-                GUI.color = new Color(0.25f, 0.45f, 0.65f);
-                Widgets.DrawBoxSolid(listing.GetRect(2f), GUI.color);
-                GUI.color = Color.white;
-                listing.Gap(4f);
-                Widgets.Label(listing.GetRect(24f), "ModCompatChecker.ModRelationTitle".Translate() + "  " + Truncate(_relationship.ModName, 50));
-
-                var relContentHeight = 0f;
-                if (_relDepends && _relationship.DependsOn.Count > 0) relContentHeight += 22f + _relationship.DependsOn.Count * 20f;
-                if (_relDepended && _relationship.DependedBy.Count > 0) relContentHeight += 22f + _relationship.DependedBy.Count * 20f;
-                if (_relHarmony && _relationship.HarmonyConflictsWith.Count > 0) relContentHeight += 22f + _relationship.HarmonyConflictsWith.Count * 20f;
-                if (_relDef && _relationship.DefConflictsWith.Count > 0) relContentHeight += 22f + _relationship.DefConflictsWith.Count * 20f;
-                if (_relOrder && (_relationship.LoadBefore.Count > 0 || _relationship.LoadAfter.Count > 0)) relContentHeight += 22f + (_relationship.LoadBefore.Count + _relationship.LoadAfter.Count) * 20f;
-                if (_relationship.MissingDeps.Count > 0) relContentHeight += 22f + _relationship.MissingDeps.Count * 20f;
-                if (_relationship.VersionIssues.Count > 0) relContentHeight += 22f + _relationship.VersionIssues.Count * 20f;
-
-                if (relContentHeight > 0)
-                {
-                    var rlHeight = Mathf.Min(relContentHeight + 10f, 300f);
-                    var rlRect = listing.GetRect(rlHeight);
-                    Widgets.BeginScrollView(rlRect, ref _relScroll, new Rect(0f, 0f, rlRect.width - 24f, relContentHeight + 10f));
-                    float ry = 0f;
-
-                    DrawRelSection("ModCompatChecker.RelDependsOn".Translate(), ref _relDepends, _relationship.DependsOn, Color.green, ref ry, rlRect.width - 30f);
-                    DrawRelSection("ModCompatChecker.RelDependedBy".Translate(), ref _relDepended, _relationship.DependedBy, new Color(0.3f, 0.7f, 1f), ref ry, rlRect.width - 30f);
-                    DrawRelSection("ModCompatChecker.RelHarmonyConflict".Translate(), ref _relHarmony, _relationship.HarmonyConflictsWith, new Color(1f, 0.5f, 0.2f), ref ry, rlRect.width - 30f);
-                    DrawRelSection("ModCompatChecker.RelDefConflict".Translate(), ref _relDef, _relationship.DefConflictsWith, new Color(0.9f, 0.3f, 0.3f), ref ry, rlRect.width - 30f);
-                    DrawRelSection("ModCompatChecker.RelLoadOrder".Translate(), ref _relOrder, _relationship.LoadBefore.Select(l => "-> before " + l).Concat(_relationship.LoadAfter.Select(l => "after -> " + l)).ToList(), new Color(0.8f, 0.8f, 0.3f), ref ry, rlRect.width - 30f);
-                    if (_relationship.MissingDeps.Count > 0) DrawRelSection("ModCompatChecker.RelMissing".Translate(), ref _relDepends, _relationship.MissingDeps, Color.red, ref ry, rlRect.width - 30f);
-
-                    Widgets.EndScrollView();
-                }
-            }
-
-                    uy += 24f;
-                }
-                Widgets.EndScrollView();
-            }
 
             listing.Gap(6f);
 
@@ -663,7 +505,7 @@ namespace ModCompatChecker.UI
                 GUI.color = hover ? new Color(0.25f, 0.5f, 0.25f) : new Color(0.15f, 0.35f, 0.15f);
                 Widgets.DrawBoxSolid(hdr, GUI.color);
                 GUI.color = Color.white;
-                string arrow = expanded ? "▼" : "▶";
+                string arrow = expanded ? "▼" : "?";
                 string preview = GetFirstLine(result);
                 Widgets.Label(new Rect(hdr.x + 8f, hdr.y + 2f, hdr.width - 16f, 20f),
                     arrow + " [AI] " + Truncate(preview, 70));
@@ -886,16 +728,6 @@ namespace ModCompatChecker.UI
 
 
         // === Encyclopedia fields ===
-        // === Update checker fields ===
-        // === Relationship analyzer fields ===
-        private string _relSelectedMod = null;
-        private Core.ModRelationship _relationship;
-        private bool _relOpen, _relDepends, _relDepended, _relHarmony, _relDef, _relOrder;
-        private Vector2 _relScroll = Vector2.zero;
-
-        private List<Core.ModVersionInfo> _updateVersions;
-        private bool _showUpdates;
-        private Vector2 _updateScroll = Vector2.zero;
 
         private List<(Core.ErrorEntry Entry, System.Text.RegularExpressions.Match Match)> _encycloMatches;
 
@@ -1503,24 +1335,5 @@ namespace ModCompatChecker.UI
             public bool Selected;
         }
 
-        private void DrawRelSection(string title, ref bool open, List<string> items, Color col, ref float y, float width)
-        {
-            if (items == null || items.Count == 0) return;
-            var headerRect = new Rect(0f, y, width, 20f);
-            GUI.color = col;
-            string arrow = open ? "v" : ">";
-            Widgets.Label(headerRect, arrow + " " + title + " (" + items.Count + ")");
-            GUI.color = Color.white;
-            if (Widgets.ButtonInvisible(headerRect)) open = !open;
-            y += 22f;
-            if (open)
-            {
-                foreach (var item in items)
-                {
-                    Widgets.Label(new Rect(16f, y, width - 20f, 18f), item);
-                    y += 20f;
-                }
-            }
-        }
     }
 }
