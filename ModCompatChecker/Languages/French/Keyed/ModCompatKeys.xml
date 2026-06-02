@@ -140,13 +140,24 @@
   <ModCompatChecker.LogSizeExplain>Lorsque activé, vérifie automatiquement la taille de Player.log toutes les 5 minutes. Devient orange si >50MB (évite que les erreurs répétées ne saturent le disque). Désactivé par défaut.</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PromptHint>Modifiez le prompt système ci-dessous</ModCompatChecker.PromptHint>
   <ModCompatChecker.PresetConcise>Diagnostic concis</ModCompatChecker.PresetConcise>
-  <ModCompatChecker.LogSizeTitle>Surveillance taille journal</ModCompatChecker.LogSizeTitle>
-  <ModCompatChecker.LogSizeExplain>Vérifie Player.log toutes les 5min. Orange si >50MB. Désactivé par défaut.</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PresetRefs>Présélections :</ModCompatChecker.PresetRefs>
   <ModCompatChecker.PresetDetailed>Analyse détaillée</ModCompatChecker.PresetDetailed>
-  <ModCompatChecker.RefreshSize>Actualiser</ModCompatChecker.RefreshSize>
   <ModCompatChecker.PresetBeginner>Débutant</ModCompatChecker.PresetBeginner>
   <ModCompatChecker.PresetBeginnerDesc>Langage simple, adapté aux débutants</ModCompatChecker.PresetBeginnerDesc>
   <ModCompatChecker.PresetConciseDesc>Conflits clés et correctifs, concis</ModCompatChecker.PresetConciseDesc>
   <ModCompatChecker.PresetDetailedDesc>Cause, impact, correctifs, ordre de chargement</ModCompatChecker.PresetDetailedDesc>
+
+  <!-- === Recherche hors ligne === -->
+  <ModCompatChecker.SearchEncyclopedia>Rechercher</ModCompatChecker.SearchEncyclopedia>
+  <ModCompatChecker.AIDirSearch>Recherche IA</ModCompatChecker.AIDirSearch>
+  <ModCompatChecker.FoundEntries>Trouve: </ModCompatChecker.FoundEntries>
+  <ModCompatChecker.AllowAIDirSearch>Autoriser lIA a acceder au repertoire du jeu</ModCompatChecker.AllowAIDirSearch>
+  <ModCompatChecker.AllowAIDirSearchExplain>⚠ RISQUE: lIA peut lire les chemins de fichiers. Activez uniquement si vous faites confiance au fournisseur.</ModCompatChecker.AllowAIDirSearchExplain>
+  <ModCompatChecker.AIDirSearchPrompt>Recherchez dans la base de connaissances RimWorld ce mot-cle derreur: </ModCompatChecker.AIDirSearchPrompt>
+  <ModCompatChecker.AllowAIDirSearchHint>Activer aussi la recherche IA (clé API requise)</ModCompatChecker.AllowAIDirSearchHint>
+  <ModCompatChecker.EncyclopediaFollowUp>Analyse complémentaire</ModCompatChecker.EncyclopediaFollowUp>
+  <ModCompatChecker.ErrorLookup>📖 Analyse / Recherche</ModCompatChecker.ErrorLookup>
+  <ModCompatChecker.ErrorLookupDesc>Collez un journal d'erreur ou un mot-clé. Recherchez dans la base intégrée ou utilisez l'IA.</ModCompatChecker.ErrorLookupDesc>
+  <ModCompatChecker.Thinking>🤔 Réflexion...</ModCompatChecker.Thinking>
+  <ModCompatChecker.ForceStop>Arrêter</ModCompatChecker.ForceStop>
 </LanguageData>

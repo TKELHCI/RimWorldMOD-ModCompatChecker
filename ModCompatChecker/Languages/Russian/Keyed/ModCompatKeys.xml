@@ -140,13 +140,24 @@
   <ModCompatChecker.LogSizeExplain>При включении автоматически проверяет размер Player.log каждые 5 минут. Становится оранжевым при >50МБ (предотвращает заполнение диска повторяющимися ошибками). По умолчанию ВЫКЛ.</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PromptHint>Редактировать системный промпт</ModCompatChecker.PromptHint>
   <ModCompatChecker.PresetConcise>Кратко</ModCompatChecker.PresetConcise>
-  <ModCompatChecker.LogSizeTitle>Мониторинг размера лога</ModCompatChecker.LogSizeTitle>
-  <ModCompatChecker.LogSizeExplain>Проверяет Player.log каждые 5 мин. Оранжевый при >50МБ. По умолчанию ВЫКЛ.</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PresetRefs>Быстрые пресеты:</ModCompatChecker.PresetRefs>
   <ModCompatChecker.PresetDetailed>Подробно</ModCompatChecker.PresetDetailed>
-  <ModCompatChecker.RefreshSize>Обновить</ModCompatChecker.RefreshSize>
   <ModCompatChecker.PresetBeginner>Для новичков</ModCompatChecker.PresetBeginner>
   <ModCompatChecker.PresetBeginnerDesc>Простым языком, для новичков</ModCompatChecker.PresetBeginnerDesc>
   <ModCompatChecker.PresetConciseDesc>Только ключевые конфликты и решения, кратко</ModCompatChecker.PresetConciseDesc>
   <ModCompatChecker.PresetDetailedDesc>Причина, влияние, решения, порядок загрузки</ModCompatChecker.PresetDetailedDesc>
+
+  <!-- === Офлайн-поиск === -->
+  <ModCompatChecker.SearchEncyclopedia>Поиск в энциклопедии</ModCompatChecker.SearchEncyclopedia>
+  <ModCompatChecker.AIDirSearch>AI-поиск</ModCompatChecker.AIDirSearch>
+  <ModCompatChecker.FoundEntries>Найдено: </ModCompatChecker.FoundEntries>
+  <ModCompatChecker.AllowAIDirSearch>Разрешить AI доступ к каталогу игры</ModCompatChecker.AllowAIDirSearch>
+  <ModCompatChecker.AllowAIDirSearchExplain>⚠ РИСК: AI может читать пути к файлам. Включайте только если доверяете провайдеру.</ModCompatChecker.AllowAIDirSearchExplain>
+  <ModCompatChecker.AIDirSearchPrompt>Поиск в базе знаний RimWorld по ключевому слову ошибки: </ModCompatChecker.AIDirSearchPrompt>
+  <ModCompatChecker.AllowAIDirSearchHint>Включить AI-поиск для неизвестных ошибок (нужен API-ключ)</ModCompatChecker.AllowAIDirSearchHint>
+  <ModCompatChecker.EncyclopediaFollowUp>Уточняющий анализ</ModCompatChecker.EncyclopediaFollowUp>
+  <ModCompatChecker.ErrorLookup>📖 Анализ / Поиск ошибок</ModCompatChecker.ErrorLookup>
+  <ModCompatChecker.ErrorLookupDesc>Вставьте лог ошибок или ключевое слово. Поиск по базе или AI-анализ.</ModCompatChecker.ErrorLookupDesc>
+  <ModCompatChecker.Thinking>🤔 Думаю...</ModCompatChecker.Thinking>
+  <ModCompatChecker.ForceStop>Стоп</ModCompatChecker.ForceStop>
 </LanguageData>

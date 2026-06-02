@@ -138,15 +138,49 @@
   <ModCompatChecker.LogSizeExplain>启用后每5分钟自动检查Player.log文件大小，超过50MB时变橙色警告（防止循环报错写满C盘）。默认关闭。</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PromptHint>可编辑下方AI预设指令，自定义AI分析风格</ModCompatChecker.PromptHint>
   <ModCompatChecker.PresetConcise>简洁诊断</ModCompatChecker.PresetConcise>
-  <ModCompatChecker.LogSizeTitle>日志文件大小监控</ModCompatChecker.LogSizeTitle>
-  <ModCompatChecker.LogSizeExplain>启用后每5分钟自动检查Player.log文件大小，超过50MB时变橙色警告。默认关闭。</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PresetRefs>快捷预设（点击替换）：</ModCompatChecker.PresetRefs>
   <ModCompatChecker.PresetDetailed>详细分析</ModCompatChecker.PresetDetailed>
-  <ModCompatChecker.RefreshSize>刷新大小</ModCompatChecker.RefreshSize>
   <ModCompatChecker.PresetBeginner>新手友好</ModCompatChecker.PresetBeginner>
   <ModCompatChecker.PresetBeginnerDesc>用通俗语言解释，适合MOD新手</ModCompatChecker.PresetBeginnerDesc>
   <ModCompatChecker.PresetConciseDesc>只输出关键冲突和修复建议，简洁明了</ModCompatChecker.PresetConciseDesc>
   <ModCompatChecker.PresetDetailedDesc>包含冲突原因、影响范围、修复方案、排序建议</ModCompatChecker.PresetDetailedDesc>
   <ModCompatChecker.Def>Def</ModCompatChecker.Def>
   <ModCompatChecker.QuickAsk>快速提问</ModCompatChecker.QuickAsk>
+
+  <!-- === 离线层查找 === -->
+  <ModCompatChecker.SearchEncyclopedia>搜索百科</ModCompatChecker.SearchEncyclopedia>
+  <ModCompatChecker.AIDirSearch>AI 目录搜索</ModCompatChecker.AIDirSearch>
+  <ModCompatChecker.FoundEntries>找到: </ModCompatChecker.FoundEntries>
+  <ModCompatChecker.AllowAIDirSearch>允许 AI 访问游戏目录进行查找分析</ModCompatChecker.AllowAIDirSearch>
+  <ModCompatChecker.AllowAIDirSearchExplain>⚠ 风险：启用后 AI 提供商可能收到您的游戏目录文件路径和文件名。建议仅在信任的 API 提供商处开启。</ModCompatChecker.AllowAIDirSearchExplain>
+  <ModCompatChecker.AIDirSearchPrompt>在 RimWorld 模组知识库中搜索以下错误关键字: </ModCompatChecker.AIDirSearchPrompt>
+  <ModCompatChecker.AllowAIDirSearchHint>同时启用 AI 搜索未知错误（需配置 API Key）</ModCompatChecker.AllowAIDirSearchHint>
+  <ModCompatChecker.EncyclopediaFollowUp>追问分析</ModCompatChecker.EncyclopediaFollowUp>
+  <ModCompatChecker.ErrorLookup>📖 错误分析/查找</ModCompatChecker.ErrorLookup>
+  <ModCompatChecker.ErrorLookupDesc>粘贴报错日志或关键词，搜索内置知识库或使用 AI 分析未知错误。</ModCompatChecker.ErrorLookupDesc>
+  <ModCompatChecker.Thinking>🤔 思考中...</ModCompatChecker.Thinking>
+  <ModCompatChecker.ForceStop>强制终止</ModCompatChecker.ForceStop>
+
+  <!-- === API 监控 === -->
+  <ModCompatChecker.APIMonitor>📡 API 监控</ModCompatChecker.APIMonitor>
+  <ModCompatChecker.Running>(运行中)</ModCompatChecker.Running>
+  <ModCompatChecker.ForceStopAll>强制终止全部</ModCompatChecker.ForceStopAll>
+  <ModCompatChecker.NoRunningOps>无运行中操作</ModCompatChecker.NoRunningOps>
+  <ModCompatChecker.ClearLog>清除日志</ModCompatChecker.ClearLog>
+  <ModCompatChecker.NoApiLogs>暂无API日志记录</ModCompatChecker.NoApiLogs>
+
+  <!-- === 余额检测 === -->
+  <ModCompatChecker.BalanceCheck>💰 API 余额检测</ModCompatChecker.BalanceCheck>
+  <ModCompatChecker.EnableBalanceCheck>启用定时余额检测（约每5分钟）</ModCompatChecker.EnableBalanceCheck>
+  <ModCompatChecker.BalanceWarningThreshold>警告阈值：</ModCompatChecker.BalanceWarningThreshold>
+  <ModCompatChecker.CheckBalanceNow>立即检测</ModCompatChecker.CheckBalanceNow>
+  <ModCompatChecker.CheckingBalance>正在检测余额...</ModCompatChecker.CheckingBalance>
+  <ModCompatChecker.LastCheck>上次检测：</ModCompatChecker.LastCheck>
+  <ModCompatChecker.CurrentBalance>当前余额：</ModCompatChecker.CurrentBalance>
+  <ModCompatChecker.BalanceLow>⚠ 余额不足 - 建议充值！</ModCompatChecker.BalanceLow>
+  <ModCompatChecker.BalanceCheckHint>余额检测使用相同的 API 端点。目前仅支持 DeepSeek / OpenAI 自动解析余额。</ModCompatChecker.BalanceCheckHint>
+  <ModCompatChecker.BalanceCheckNotSupported>此提供商不支持余额检测</ModCompatChecker.BalanceCheckNotSupported>
+  <ModCompatChecker.BalanceCheckParseError>无法解析余额响应</ModCompatChecker.BalanceCheckParseError>
+  <ModCompatChecker.BalanceWarningTitle>API 余额不足</ModCompatChecker.BalanceWarningTitle>
+  <ModCompatChecker.BalanceWarningLetter>您的 API 余额不足！当前余额：</ModCompatChecker.BalanceWarningLetter>
 </LanguageData>

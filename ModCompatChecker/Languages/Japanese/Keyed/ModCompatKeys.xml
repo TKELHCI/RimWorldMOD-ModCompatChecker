@@ -140,13 +140,24 @@
   <ModCompatChecker.LogSizeExplain>有効にすると5分ごとにPlayer.logのサイズを自動チェック。50MB超でオレンジ警告（繰り返しエラーによるディスク圧迫を防止）。デフォルトはオフ。</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PromptHint>AIシステムプロンプトを編集できます</ModCompatChecker.PromptHint>
   <ModCompatChecker.PresetConcise>簡潔診断</ModCompatChecker.PresetConcise>
-  <ModCompatChecker.LogSizeTitle>ログサイズ監視</ModCompatChecker.LogSizeTitle>
-  <ModCompatChecker.LogSizeExplain>5分ごとにPlayer.logサイズをチェック。50MB超でオレンジ警告。デフォルトはオフ。</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PresetRefs>クイックプリセット：</ModCompatChecker.PresetRefs>
   <ModCompatChecker.PresetDetailed>詳細分析</ModCompatChecker.PresetDetailed>
-  <ModCompatChecker.RefreshSize>更新</ModCompatChecker.RefreshSize>
   <ModCompatChecker.PresetBeginner>初心者向け</ModCompatChecker.PresetBeginner>
   <ModCompatChecker.PresetBeginnerDesc>わかりやすい言葉で、初心者向け</ModCompatChecker.PresetBeginnerDesc>
   <ModCompatChecker.PresetConciseDesc>重要な競合と修正案のみ、簡潔</ModCompatChecker.PresetConciseDesc>
   <ModCompatChecker.PresetDetailedDesc>原因・影響・修正案・ロード順を含む</ModCompatChecker.PresetDetailedDesc>
+
+  <!-- === オフライン検索 === -->
+  <ModCompatChecker.SearchEncyclopedia>百科事典を検索</ModCompatChecker.SearchEncyclopedia>
+  <ModCompatChecker.AIDirSearch>AIディレクトリ検索</ModCompatChecker.AIDirSearch>
+  <ModCompatChecker.FoundEntries>見つかりました: </ModCompatChecker.FoundEntries>
+  <ModCompatChecker.AllowAIDirSearch>AIにゲームディレクトリへのアクセスを許可</ModCompatChecker.AllowAIDirSearch>
+  <ModCompatChecker.AllowAIDirSearchExplain>⚠ リスク: AIがファイルパスを読み取る可能性があります。プロバイダーを信頼できる場合のみ有効にしてください。</ModCompatChecker.AllowAIDirSearchExplain>
+  <ModCompatChecker.AIDirSearchPrompt>RimWorld MODの知識ベースでこのエラーキーワードを検索: </ModCompatChecker.AIDirSearchPrompt>
+  <ModCompatChecker.AllowAIDirSearchHint>未知のエラーをAI検索（APIキーが必要）</ModCompatChecker.AllowAIDirSearchHint>
+  <ModCompatChecker.EncyclopediaFollowUp>追跡分析</ModCompatChecker.EncyclopediaFollowUp>
+  <ModCompatChecker.ErrorLookup>📖 エラー分析 / 検索</ModCompatChecker.ErrorLookup>
+  <ModCompatChecker.ErrorLookupDesc>エラーログやキーワードを貼り付け。内蔵データベースを検索またはAIで分析。</ModCompatChecker.ErrorLookupDesc>
+  <ModCompatChecker.Thinking>🤔 考え中...</ModCompatChecker.Thinking>
+  <ModCompatChecker.ForceStop>強制停止</ModCompatChecker.ForceStop>
 </LanguageData>

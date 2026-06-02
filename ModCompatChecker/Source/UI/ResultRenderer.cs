@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -7,7 +7,7 @@ using Verse;
 namespace ModCompatChecker.UI
 {
     /// <summary>
-    /// 结果渲染：关键词高亮 + 可折叠区域
+    /// 缁撴灉娓叉煋锛氬叧閿瘝楂樹寒 + 鍙姌鍙犲尯鍩?
     /// </summary>
     public static class ResultRenderer
     {
@@ -18,19 +18,19 @@ namespace ModCompatChecker.UI
         private static readonly Color NormalText = new Color(0.85f, 0.85f, 0.85f);
         private static readonly Color DimText = new Color(0.5f, 0.5f, 0.5f);
 
-        // 关键词 / 正则 → 颜色
+        // 鍏抽敭璇?/ 姝ｅ垯 鈫?棰滆壊
         private static readonly List<(Regex pattern, Color color)> HighlightRules =
             new List<(Regex, Color)>
             {
                 (new Regex(@"\b(NullReference|InvalidOperation|Argument|KeyNotFound|IndexOutOfRange|MissingMember|TypeLoad|FileNotFound)Exception\b"), KeywordException),
-                (new Regex(@"(缺少前置|缺少必需品|missing dependency|required mod|not loaded|not found|未加载|未找到|依赖缺失)"), KeywordError),
+                (new Regex(@"(缂哄皯鍓嶇疆|缂哄皯蹇呴渶鍝亅missing dependency|required mod|not loaded|not found|鏈姞杞絴鏈壘鍒皘渚濊禆缂哄け)"), KeywordError),
                 (new Regex(@"""[^""]+\.dll""|[\w/\\]+\.dll|[\w/\\]+\.xml"), KeywordPath),
-                (new Regex(@"\b(Error|错误|Exception|异常):"), KeywordError),
+                (new Regex(@"\b(Error|閿欒|Exception|寮傚父):"), KeywordError),
                 (new Regex(@"\b(Harmony|HugsLib|ModCompatChecker|\w+Mod)\b"), KeywordMod),
             };
 
         /// <summary>
-        /// 渲染带关键词高亮的文本
+        /// 娓叉煋甯﹀叧閿瘝楂樹寒鐨勬枃鏈?
         /// </summary>
         public static void RenderHighlighted(Rect rect, string text)
         {
@@ -56,7 +56,7 @@ namespace ModCompatChecker.UI
 
         private static void RenderLineHighlighted(Rect rect, string line)
         {
-            // 找到所有关键词的区间
+            // 鎵惧埌鎵€鏈夊叧閿瘝鐨勫尯闂?
             var highlights = FindHighlights(line);
 
             if (highlights.Count == 0)
@@ -67,13 +67,13 @@ namespace ModCompatChecker.UI
                 return;
             }
 
-            // 分段渲染
+            // 鍒嗘娓叉煋
             float x = rect.x;
             int lastEnd = 0;
 
             foreach (var h in highlights)
             {
-                // 普通文本段
+                // 鏅€氭枃鏈
                 if (h.Start > lastEnd)
                 {
                     var normal = line.Substring(lastEnd, h.Start - lastEnd);
@@ -83,7 +83,7 @@ namespace ModCompatChecker.UI
                     x = nr.xMax; if (x > rect.xMax - 10f) break;
                 }
 
-                // 高亮段
+                // 楂樹寒娈?
                 var highlighted = line.Substring(h.Start, h.End - h.Start);
                 var hr = new Rect(x, rect.y, Text.CalcSize(highlighted).x + 4f, rect.height);
                 GUI.color = h.Color;
@@ -93,7 +93,7 @@ namespace ModCompatChecker.UI
                 lastEnd = h.End;
             }
 
-            // 剩余普通文本
+            // 鍓╀綑鏅€氭枃鏈?
             if (lastEnd < line.Length)
             {
                 var rest = line.Substring(lastEnd);
@@ -119,7 +119,7 @@ namespace ModCompatChecker.UI
             {
                 foreach (Match m in rule.pattern.Matches(text))
                 {
-                    // 检查是否与已有区间重叠
+                    // 妫€鏌ユ槸鍚︿笌宸叉湁鍖洪棿閲嶅彔
                     bool overlap = false;
                     foreach (var existing in spans)
                         if (m.Index < existing.End && m.Index + m.Length > existing.Start)
@@ -135,19 +135,19 @@ namespace ModCompatChecker.UI
                 }
             }
 
-            // 按位置排序
+            // 鎸変綅缃帓搴?
             spans.Sort((a, b) => a.Start.CompareTo(b.Start));
             return spans;
         }
 
         /// <summary>
-        /// 可折叠区域：返回是否展开
+        /// 鍙姌鍙犲尯鍩燂細杩斿洖鏄惁灞曞紑
         /// </summary>
         public static bool DrawCollapsibleSection(Listing_Standard listing, ref bool expanded,
             string title, float contentHeight, Action drawContent)
         {
             var headerRect = listing.GetRect(28f);
-            GUI.color = expanded ? new Color(0.25f, 0.5f, 0.25f) : new Color(0.18f, 0.18f, 0.18f);
+            GUI.color = expanded ? new Color(0.25f, 0.5f, 0.25f) : new Color(0.48f, 0.48f, 0.52f);
             Widgets.DrawBoxSolid(headerRect, GUI.color);
             GUI.color = Color.white;
 

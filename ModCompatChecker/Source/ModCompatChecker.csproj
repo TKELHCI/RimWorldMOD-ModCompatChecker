@@ -91,7 +91,10 @@
     <Compile Include="UI\UnifiedWindow.cs" />
         <Compile Include="UI\SharedSettingsUI.cs" />
 <Compile Include="Patches\LogCapture.cs" />
-    <Compile Include="UI\ErrorAnalysisWindow.cs" />
+    <Compile Include="UI\ErrorAnalysisWindow.cs" />    <Compile Include="Core\ApiLogMonitor.cs" />
+    <Compile Include="Core\ApiBalanceChecker.cs" />
+
+    <Compile Include="Core\StackTraceAnalyzer.cs" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -102,3 +105,5 @@
           SkipUnchangedFiles="true" />
   </Target>
 </Project>
+
+

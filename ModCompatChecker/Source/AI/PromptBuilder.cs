@@ -6,95 +6,139 @@ using Verse;
 namespace ModCompatChecker.AI
 {
     /// <summary>
-    /// 构建发送给 AI 的提示词
+    /// 构建发送给 AI 的提示词 — 所有输出格式统一为结构化卡片
     /// </summary>
     public static class PromptBuilder
     {
-        /// <summary>
-        /// 为单个 Harmony 冲突构建分析 Prompt
-        /// </summary>
+        private const string FormatZh = @"
+请用以下卡片格式回答（简洁，200字以内）：
+
+━━━━━━━━━━━━━━━━━━━━
+涉及 MOD:
+  • 模组名 (WorkshopID)
+
+诊断:
+  具体问题与影响（1-2句）
+
+建议:
+  • 操作建议（加载顺序/修复/兼容补丁）
+━━━━━━━━━━━━━━━━━━━━";
+
+        private const string FormatEn = @"
+Reply in this card format (concise, under 200 words):
+
+━━━━━━━━━━━━━━━━━━━━
+MODs Involved:
+  • ModName (WorkshopID)
+
+Diagnosis:
+  Specific issue and impact (1-2 sentences)
+
+Suggestions:
+  • Actionable advice (load order / fix / compat patch)
+━━━━━━━━━━━━━━━━━━━━";
+
+        private const string ErrFormatZh = @"
+请用以下卡片格式回答（简洁，200字以内）：
+
+━━━━━━━━━━━━━━━━━━━━
+崩溃原因:
+  (一句话总结)
+
+涉及 MOD:
+  • 模组名 (WorkshopID) — 角色
+
+诊断:
+  具体原因分析
+
+修复建议:
+  • 操作建议
+━━━━━━━━━━━━━━━━━━━━";
+
+        private const string ErrFormatEn = @"
+Reply in this card format (concise, under 200 words):
+
+━━━━━━━━━━━━━━━━━━━━
+Crash Cause:
+  (one sentence)
+
+MODs Involved:
+  • ModName (WorkshopID) — role
+
+Diagnosis:
+  Specific analysis
+
+Fix Suggestions:
+  • Actionable advice
+━━━━━━━━━━━━━━━━━━━━";
+
         public static string BuildHarmonyConflictPrompt(HarmonyConflict conflict, string language)
         {
             var sb = new StringBuilder();
             if (language == "zh")
             {
-                sb.AppendLine(GetSystemPrompt() + "请分析以下 Harmony 补丁冲突：");
+                sb.AppendLine(GetSystemPrompt());
+                sb.AppendLine("Harmony 补丁冲突分析：");
                 sb.AppendLine();
                 sb.AppendLine($"MOD A: {conflict.ModNameA} ({conflict.ModPackageIdA})");
                 sb.AppendLine($"MOD B: {conflict.ModNameB} ({conflict.ModPackageIdB})");
-                sb.AppendLine($"目标方法: {conflict.TargetType}.{conflict.TargetMethod}");
-                sb.AppendLine($"MOD A 使用: {conflict.PatchTypeA}");
-                sb.AppendLine($"MOD B 使用: {conflict.PatchTypeB}");
-                sb.AppendLine($"风险等级: {conflict.Risk}");
-                sb.AppendLine();
-                sb.AppendLine("请简要分析：");
-                sb.AppendLine("1. 这个冲突具体会导致什么问题？");
-                sb.AppendLine("2. 哪个 MOD 应该先加载？");
-                sb.AppendLine("3. 有没有已知的兼容补丁或解决方案？");
-                sb.AppendLine("用中文回答，简洁明了，控制在 150 字以内。");
+                sb.AppendLine($"目标: {conflict.TargetType}.{conflict.TargetMethod}");
+                sb.AppendLine($"补丁类型: A={conflict.PatchTypeA}  B={conflict.PatchTypeB}");
+                sb.AppendLine($"风险: {conflict.Risk}");
+                sb.AppendLine(FormatZh);
             }
             else
             {
-                sb.AppendLine(GetSystemPrompt() + " Analyze this Harmony patch conflict:");
+                sb.AppendLine(GetSystemPrompt());
+                sb.AppendLine("Harmony patch conflict analysis:");
                 sb.AppendLine();
                 sb.AppendLine($"Mod A: {conflict.ModNameA} ({conflict.ModPackageIdA})");
                 sb.AppendLine($"Mod B: {conflict.ModNameB} ({conflict.ModPackageIdB})");
                 sb.AppendLine($"Target: {conflict.TargetType}.{conflict.TargetMethod}");
-                sb.AppendLine($"Patch A type: {conflict.PatchTypeA}");
-                sb.AppendLine($"Patch B type: {conflict.PatchTypeB}");
+                sb.AppendLine($"Patch types: A={conflict.PatchTypeA}  B={conflict.PatchTypeB}");
                 sb.AppendLine($"Risk: {conflict.Risk}");
-                sb.AppendLine();
-                sb.AppendLine("Analyze:");
-                sb.AppendLine("1. What problem might this cause?");
-                sb.AppendLine("2. Which mod should load first?");
-                sb.AppendLine("3. Any known fix?");
-                sb.AppendLine("Keep it concise, under 150 words.");
+                sb.AppendLine(FormatEn);
             }
             return sb.ToString();
         }
 
-        /// <summary>
-        /// 为单个 Def 冲突构建分析 Prompt
-        /// </summary>
         public static string BuildDefConflictPrompt(DefConflict conflict, string language)
         {
             var sb = new StringBuilder();
             if (language == "zh")
             {
-                sb.AppendLine(GetSystemPrompt() + "请分析以下 Def 覆盖冲突：");
+                sb.AppendLine(GetSystemPrompt());
+                sb.AppendLine("Def 覆盖冲突分析：");
                 sb.AppendLine();
                 sb.AppendLine($"MOD A: {conflict.ModNameA} ({conflict.ModPackageIdA})");
                 sb.AppendLine($"MOD B: {conflict.ModNameB} ({conflict.ModPackageIdB})");
                 sb.AppendLine($"目标 Def: {conflict.DefType}/{conflict.DefName}");
-                sb.AppendLine($"MOD A xpath: {conflict.XPathA}");
-                sb.AppendLine($"MOD B xpath: {conflict.XPathB}");
-                sb.AppendLine();
-                sb.AppendLine("请简要分析这个冲突的影响和可能的解决方案。用中文回答，控制在 100 字以内。");
+                sb.AppendLine($"XPath A: {conflict.XPathA}");
+                sb.AppendLine($"XPath B: {conflict.XPathB}");
+                sb.AppendLine(FormatZh);
             }
             else
             {
-                sb.AppendLine(GetSystemPrompt() + " Analyze this Def override conflict:");
+                sb.AppendLine(GetSystemPrompt());
+                sb.AppendLine("Def override conflict analysis:");
                 sb.AppendLine();
                 sb.AppendLine($"Mod A: {conflict.ModNameA} ({conflict.ModPackageIdA})");
                 sb.AppendLine($"Mod B: {conflict.ModNameB} ({conflict.ModPackageIdB})");
                 sb.AppendLine($"Target Def: {conflict.DefType}/{conflict.DefName}");
                 sb.AppendLine($"XPath A: {conflict.XPathA}");
                 sb.AppendLine($"XPath B: {conflict.XPathB}");
-                sb.AppendLine();
-                sb.AppendLine("Briefly analyze impact and possible fix. Under 100 words.");
+                sb.AppendLine(FormatEn);
             }
             return sb.ToString();
         }
 
-        /// <summary>
-        /// 为错误日志构建分析 Prompt
-        /// </summary>
         public static string BuildErrorAnalysisPrompt(string errorStack, ConflictReport report, string language)
         {
             var sb = new StringBuilder();
             if (language == "zh")
             {
-                sb.AppendLine(GetSystemPrompt() + "请分析以下崩溃日志，并结合已检测到的 MOD 冲突给出诊断：");
+                sb.AppendLine(GetSystemPrompt());
+                sb.AppendLine("崩溃日志分析：");
                 sb.AppendLine();
                 sb.AppendLine("=== 崩溃日志 ===");
                 sb.AppendLine(errorStack);
@@ -103,12 +147,12 @@ namespace ModCompatChecker.AI
                 sb.AppendLine($"Harmony 冲突: {report.HarmonyConflicts.Count} 个");
                 sb.AppendLine($"Def 冲突: {report.DefConflicts.Count} 个");
                 sb.AppendLine($"依赖问题: {report.DependencyIssues.Count} 个");
-                sb.AppendLine();
-                sb.AppendLine("请：1) 诊断崩溃原因；2) 指出最可能相关的 MOD；3) 给出修复建议。用中文，简洁明了。");
+                sb.AppendLine(ErrFormatZh);
             }
             else
             {
-                sb.AppendLine(GetSystemPrompt() + " Diagnose this crash with conflict data:");
+                sb.AppendLine(GetSystemPrompt());
+                sb.AppendLine("Crash log analysis:");
                 sb.AppendLine();
                 sb.AppendLine("=== Crash Log ===");
                 sb.AppendLine(errorStack);
@@ -117,55 +161,41 @@ namespace ModCompatChecker.AI
                 sb.AppendLine($"Harmony: {report.HarmonyConflicts.Count}");
                 sb.AppendLine($"Def: {report.DefConflicts.Count}");
                 sb.AppendLine($"Dependency: {report.DependencyIssues.Count}");
-                sb.AppendLine();
-                sb.AppendLine("Diagnose, identify mods, suggest fix. Concise.");
+                sb.AppendLine(ErrFormatEn);
             }
             return sb.ToString();
         }
 
-        /// <summary>
-        /// 为依赖问题构建分析 Prompt
-        /// </summary>
         public static string BuildDependencyIssuePrompt(DependencyIssue issue, string language)
         {
             var sb = new StringBuilder();
             if (language == "zh")
             {
-                sb.AppendLine(GetSystemPrompt() + "请分析以下依赖问题并给出建议：");
+                sb.AppendLine(GetSystemPrompt());
+                sb.AppendLine("依赖问题分析：");
                 sb.AppendLine();
-                sb.AppendLine("=== 依赖问题 ===");
                 sb.AppendLine($"MOD: {issue.ModName ?? "未知"}");
                 sb.AppendLine($"PackageId: {issue.ModPackageId ?? "未知"}");
                 sb.AppendLine($"相关依赖: {issue.RelatedPackageId ?? "未知"}");
-                sb.AppendLine($"问题类型: {issue.Type}");
-                sb.AppendLine($"风险等级: {issue.Risk}");
+                sb.AppendLine($"类型: {issue.Type}  风险: {issue.Risk}");
                 sb.AppendLine($"详情: {issue.ExtraInfo ?? issue.Summary ?? "无"}");
-                sb.AppendLine();
-                sb.AppendLine("请：1) 解释此依赖问题的含义；2) 评估对游戏的影响；3) 给出解决建议（包括可能需要安装/卸载的 MOD）。用中文，简洁明了。");
+                sb.AppendLine(FormatZh);
             }
             else
             {
-                sb.AppendLine(GetSystemPrompt() + " Analyze this dependency issue:");
+                sb.AppendLine(GetSystemPrompt());
+                sb.AppendLine("Dependency issue analysis:");
                 sb.AppendLine();
-                sb.AppendLine("=== Dependency Issue ===");
                 sb.AppendLine($"Mod: {issue.ModName ?? "Unknown"}");
                 sb.AppendLine($"PackageId: {issue.ModPackageId ?? "Unknown"}");
                 sb.AppendLine($"Related: {issue.RelatedPackageId ?? "Unknown"}");
-                sb.AppendLine($"Type: {issue.Type}");
-                sb.AppendLine($"Risk: {issue.Risk}");
+                sb.AppendLine($"Type: {issue.Type}  Risk: {issue.Risk}");
                 sb.AppendLine($"Details: {issue.ExtraInfo ?? issue.Summary ?? "None"}");
-                sb.AppendLine();
-                sb.AppendLine("Explain, assess impact, suggest resolution. Concise.");
+                sb.AppendLine(FormatEn);
             }
             return sb.ToString();
         }
 
-        /// <summary>
-        /// 检测游戏语言并返回提示词语言代码 (zh/en)
-        /// </summary>
-                /// <summary>
-        /// 获取当前生效的系统预设指令（优先使用用户自定义，否则使用默认）
-        /// </summary>
         public static string GetSystemPrompt()
         {
             var settings = ModCompatChecker.ModCompatMod.Instance?.Settings;
@@ -188,4 +218,3 @@ namespace ModCompatChecker.AI
         }
     }
 }
-

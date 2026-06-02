@@ -19,7 +19,22 @@ namespace ModCompatChecker.UI
         private Vector2 _scroll = Vector2.zero;
         private readonly object _lock = new object();
         private bool _disposed; private static int _cachedWorldId = -1; private static int _worldCheckFrame;
-        private bool _showSettings, _showCompat, _showErrorSection, _showTools, _spamChecking, _showAdvanced;
+        private bool _showSettings, _showCompat, _showErrorSection, _showTools, _showOffline, _spamChecking, _showAdvanced;
+        private bool _showApiMonitor, _showBalanceCheck;
+        private Vector2 _apiMonitorScroll = Vector2.zero;
+        private Vector2 _balanceCheckScroll = Vector2.zero;
+        private string _offlineSearchQuery = "";
+        private readonly System.Collections.Generic.List<Core.ErrorEntry> _offlineSearchResults = new System.Collections.Generic.List<Core.ErrorEntry>();
+        private string _offlineAIResult = "";
+        private bool _offlineAIRunning, _offlineAICancel;
+        private Vector2 _encAIScroll = Vector2.zero;
+        private Vector2 _encScroll = Vector2.zero;
+        private Vector2 _encFupScroll = Vector2.zero;
+        private Vector2 _inputScroll = Vector2.zero;
+        private string _encFollowUpQuestion = "";
+        private string _encFollowUpResult = "";
+        private bool _encFollowUpOpen, _encFollowUpRunning, _encFollowUpCancel;
+        private Vector2 _followUpScroll = Vector2.zero;
         private readonly SharedSettingsUI.UIState _uiState = new SharedSettingsUI.UIState();
 
         public override Vector2 InitialSize
@@ -91,7 +106,11 @@ namespace ModCompatChecker.UI
                 SharedSettingsUI.DrawAPISettings(inner, settings, _uiState);
                 inner.Gap(6f);
                 SharedSettingsUI.DrawTestConnection(inner, settings, _uiState);
-                inner.Gap(14f);
+                inner.Gap(8f);
+                SharedSettingsUI.DrawBalanceCheck(inner, settings, ref _showBalanceCheck, ref _balanceCheckScroll);
+                inner.Gap(4f);
+                SharedSettingsUI.DrawApiMonitor(inner, ref _showApiMonitor, ref _apiMonitorScroll);
+                inner.Gap(10f);
             }
 
             DrawSectionHeader(inner, ref _showCompat, "ModCompatChecker.UI180".Translate(), new Color(0.28f, 0.38f, 0.18f));
@@ -106,7 +125,141 @@ namespace ModCompatChecker.UI
                 DrawErrorSection(inner, settings);
 
 
-            DrawSectionHeader(inner, ref _showTools, "ModCompatChecker.Tools".Translate(), new Color(0.35f, 0.25f, 0.50f));
+            DrawSectionHeader(inner, ref _showOffline, "ModCompatChecker.ErrorLookup".Translate(), new Color(0.20f, 0.45f, 0.45f));
+            if (_showOffline)
+            {
+                inner.Label("ModCompatChecker.ErrorLookupDesc".Translate(), -1);
+                inner.Gap(2f);
+                var allowRow = inner.GetRect(24f);
+                Widgets.CheckboxLabeled(allowRow, "ModCompatChecker.AllowAIDirSearch".Translate(), ref settings.AllowAIDirectorySearch);
+                inner.Gap(1f);
+                GUI.color = new Color(0.7f, 0.7f, 0.7f);
+                Widgets.Label(inner.GetRect(24f), "  " + "ModCompatChecker.AllowAIDirSearchHint".Translate());
+                GUI.color = new Color(1f, 0.75f, 0.3f);
+                Widgets.Label(inner.GetRect(36f), "  " + "ModCompatChecker.AllowAIDirSearchExplain".Translate());
+                GUI.color = Color.white;
+                inner.Gap(4f);
+                var inputRect = inner.GetRect(100f);
+                float inputContentH = Mathf.Max(100f, Text.CalcHeight(_offlineSearchQuery ?? "", inputRect.width - 16f) + 16f);
+                Widgets.DrawBoxSolid(inputRect, new Color(0.08f, 0.08f, 0.12f));
+                Widgets.BeginScrollView(new Rect(inputRect.x + 2f, inputRect.y + 2f, inputRect.width - 18f, inputRect.height - 4f), ref _inputScroll, new Rect(0f, 0f, inputRect.width - 18f, inputContentH));
+                _offlineSearchQuery = GUI.TextArea(new Rect(0f, 0f, inputRect.width - 18f, inputContentH), _offlineSearchQuery ?? "");
+                Widgets.EndScrollView();
+                inner.Gap(2f);
+                bool hasOffAI = settings.AllowAIDirectorySearch && settings.IsAIConfigured();
+                var srBtnRect = inner.GetRect(26f);
+                float srBtnW = hasOffAI ? srBtnRect.width * 0.48f : srBtnRect.width;
+                if (Widgets.ButtonText(new Rect(srBtnRect.x, srBtnRect.y, srBtnW, 24f), "ModCompatChecker.SearchEncyclopedia".Translate()))
+                {
+                    var matches = Core.ErrorEncyclopedia.MatchError(_offlineSearchQuery ?? "");
+                    _offlineSearchResults.Clear();
+                    foreach (var m in matches)
+                        _offlineSearchResults.Add(m.Entry);
+                }
+                if (hasOffAI)
+                {
+                    bool aiRunning; lock (_lock) { aiRunning = _offlineAIRunning; }
+                    string aiRes; lock (_lock) { aiRes = _offlineAIResult; }
+                    if (aiRunning)
+                    {
+                        var thinkRow = inner.GetRect(24f);
+                        GUI.color = new Color(0.55f, 0.55f, 0.55f);
+                        Widgets.Label(new Rect(thinkRow.x, thinkRow.y + 2f, thinkRow.width - 70f, 20f), "ModCompatChecker.Thinking".Translate());
+                        GUI.color = Color.white;
+                        if (Widgets.ButtonText(new Rect(thinkRow.x + thinkRow.width - 68f, thinkRow.y, 68f, 22f), "ModCompatChecker.ForceStop".Translate()))
+                            _offlineAICancel = true;
+                    }
+                    else if (!string.IsNullOrEmpty(aiRes))
+                    {
+                        inner.Gap(4f);
+                        var aiR = inner.GetRect(220f);
+                        Widgets.DrawBoxSolid(aiR, new Color(0.08f, 0.08f, 0.16f));
+                        float aiTextH = Text.CalcHeight(aiRes, aiR.width - 24f) + 8f;
+                        Widgets.BeginScrollView(new Rect(aiR.x + 4f, aiR.y + 4f, aiR.width - 20f, aiR.height - 8f), ref _encAIScroll, new Rect(0f, 0f, aiR.width - 24f, aiTextH));
+                        Widgets.Label(new Rect(0f, 0f, aiR.width - 24f, aiTextH), aiRes);
+                        Widgets.EndScrollView();
+                    }
+                    else
+                    {
+                        if (Widgets.ButtonText(new Rect(srBtnRect.x + srBtnW + 8f, srBtnRect.y, srBtnW, 24f), "ModCompatChecker.AIDirSearch".Translate()))
+                            StartAIDirSearch(settings, _offlineSearchQuery ?? "");
+                    }
+                }
+                if (hasOffAI && !string.IsNullOrEmpty(_offlineAIResult))
+                {
+                    inner.Gap(4f);
+                    if (Widgets.ButtonText(inner.GetRect(26f), (_encFollowUpOpen ? "▼ " : "▶ ") + "ModCompatChecker.EncyclopediaFollowUp".Translate()))
+                        _encFollowUpOpen = !_encFollowUpOpen;
+                    if (_encFollowUpOpen)
+                    {
+                        inner.Gap(2f);
+                        _encFollowUpQuestion = GUI.TextField(inner.GetRect(26f), _encFollowUpQuestion ?? "");
+                        inner.Gap(2f);
+                        bool running; lock (_lock) { running = _encFollowUpRunning; }
+                        if (running)
+                        {
+                            var thinkRow = inner.GetRect(24f);
+                            GUI.color = new Color(0.55f, 0.55f, 0.55f);
+                            Widgets.Label(new Rect(thinkRow.x, thinkRow.y + 2f, thinkRow.width - 70f, 20f), "ModCompatChecker.Thinking".Translate());
+                            GUI.color = Color.white;
+                            if (Widgets.ButtonText(new Rect(thinkRow.x + thinkRow.width - 68f, thinkRow.y, 68f, 22f), "ModCompatChecker.ForceStop".Translate()))
+                                _encFollowUpCancel = true;
+                        }
+                        else if (!settings.IsAIConfigured())
+                        {
+                            GUI.color = new Color(0.4f, 0.4f, 0.4f);
+                            inner.Label("ModCompatChecker.NeedAPIKey".Translate(), -1);
+                            GUI.color = Color.white;
+                        }
+                        else if (inner.ButtonText("ModCompatChecker.SendFollowUp".Translate()))
+                            StartEncFollowUp(settings);
+                        if (!string.IsNullOrEmpty(_encFollowUpResult))
+                        {
+                            inner.Gap(4f);
+                            var ar = inner.GetRect(120f);
+                            Widgets.DrawBoxSolid(ar, new Color(0.08f, 0.12f, 0.08f));
+                            float fupH = Text.CalcHeight(_encFollowUpResult, ar.width - 24f) + 8f;
+                            Widgets.BeginScrollView(new Rect(ar.x + 4f, ar.y + 4f, ar.width - 20f, ar.height - 8f), ref _encFupScroll, new Rect(0f, 0f, ar.width - 24f, fupH));
+                            Widgets.Label(new Rect(0f, 0f, ar.width - 24f, fupH), _encFollowUpResult);
+                            Widgets.EndScrollView();
+                        }
+                    }
+                }
+                if (_offlineSearchResults.Count > 0)
+                {
+                    inner.Gap(4f);
+                    GUI.color = new Color(0.5f, 0.8f, 0.5f);
+                    Widgets.Label(inner.GetRect(22f), "ModCompatChecker.FoundEntries".Translate() + _offlineSearchResults.Count);
+                    GUI.color = Color.white;
+                    inner.Gap(2f);
+                    float encH = Mathf.Min(380f, Mathf.Max(200f, _offlineSearchResults.Count * 72f + 24f));
+                    var encRect = inner.GetRect(encH);
+                    Widgets.DrawBoxSolid(encRect, new Color(0.06f, 0.06f, 0.12f));
+                    float encContentH = _offlineSearchResults.Count * 72f + 8f;
+                    Widgets.BeginScrollView(new Rect(encRect.x + 4f, encRect.y + 4f, encRect.width - 20f, encRect.height - 8f), ref _encScroll, new Rect(0f, 0f, encRect.width - 24f, encContentH));
+                    float ey = 0f;
+                    foreach (var entry in _offlineSearchResults)
+                    {
+                        var severityColor = Core.ErrorEncyclopedia.GetSeverityColor(entry.Severity);
+                        GUI.color = severityColor;
+                        Widgets.Label(new Rect(0f, ey, encRect.width - 28f, 22f), "[" + entry.Severity + "] " + entry.Keyword);
+                        ey += 22f;
+                        GUI.color = new Color(0.75f, 0.75f, 0.75f);
+                        string explanation = Core.ErrorEncyclopedia.GetExplanation(entry);
+                        float exh = Text.CalcHeight(explanation, encRect.width - 36f);
+                        Widgets.Label(new Rect(16f, ey, encRect.width - 36f, exh), explanation);
+                        ey += exh + 4f;
+                        GUI.color = new Color(0.4f, 0.6f, 0.9f);
+                        Widgets.Label(new Rect(16f, ey, encRect.width - 36f, 18f), entry.Category);
+                        ey += 22f;
+                    }
+                    GUI.color = Color.white;
+                    Widgets.EndScrollView();
+                }
+                inner.Gap(8f);
+            }
+
+                        DrawSectionHeader(inner, ref _showTools, "ModCompatChecker.Tools".Translate(), new Color(0.35f, 0.25f, 0.50f));
             if (_showTools)
             {
                 inner.Label("ModCompatChecker.AutoSpamToggle".Translate(), -1);
@@ -1038,6 +1191,7 @@ namespace ModCompatChecker.UI
             }
             new Thread(() =>
             {
+                var _salLog = Core.ApiLogMonitor.LogStart("AI单项分析");
                 try
                 {
                     string result;
@@ -1052,11 +1206,11 @@ namespace ModCompatChecker.UI
                             report.DefConflicts[key - 1000], ep.endpoint, settings.APIKey, mid, ep.provider);
                     else
                         result = "ModCompatChecker.InvalidRequest".Translate();
-                    if (!_disposed) lock (_lock) { _aiResults[key] = result; _pendingAI.Remove(key); _cachedAI[key] = result; }
+                    if (!_disposed) lock (_lock) { _aiResults[key] = result; _pendingAI.Remove(key); _cachedAI[key] = result; Core.ApiLogMonitor.LogComplete(_salLog, result.Substring(0, Math.Min(80, result.Length))); }
                 }
                 catch (Exception ex)
                 {
-                    if (!_disposed) lock (_lock) { var em = "ModCompatChecker.ErrorPrefix".Translate() + ex.Message; _aiResults[key] = em; _pendingAI.Remove(key); _cachedAI[key] = em; }
+                    if (!_disposed) lock (_lock) { var em = "ModCompatChecker.ErrorPrefix".Translate() + ex.Message; _aiResults[key] = em; _pendingAI.Remove(key); _cachedAI[key] = em; Core.ApiLogMonitor.LogFailed(_salLog, ex.Message); }
                 }
             }) { IsBackground = true }.Start();
         }
@@ -1079,6 +1233,7 @@ namespace ModCompatChecker.UI
             lock (_lock) { report = _report; if (report == null) { _isBatchAnalyzing = false; return; } }
             new Thread(() =>
             {
+                var _balLog = Core.ApiLogMonitor.LogStart("AI批量扫描");
                 int total = report.HarmonyConflicts.Count + report.DefConflicts.Count + report.DependencyIssues.Count;
                 int done = 0;
                 void UpdateStatus() { if (!_disposed) lock (_lock) { _batchStatus = "ModCompatChecker.AnalyzingSpace".Translate() + done + "/" + total; } }
@@ -1122,7 +1277,7 @@ namespace ModCompatChecker.UI
                     if (_disposed) break;
                     done++; UpdateStatus();
                 }
-                if (!_disposed) lock (_lock) { _isBatchAnalyzing = false; _batchStatus = "ModCompatChecker.Complete".Translate() + " (" + total + " " + "ModCompatChecker.Items".Translate() + ")"; }
+                if (!_disposed) lock (_lock) { _isBatchAnalyzing = false; _batchStatus = "ModCompatChecker.Complete".Translate() + " (" + total + " " + "ModCompatChecker.Items".Translate() + ")"; Core.ApiLogMonitor.LogComplete(_balLog, "Batch " + total + " items"); }
             }) { IsBackground = true }.Start();
         }
 
@@ -1137,6 +1292,7 @@ namespace ModCompatChecker.UI
             _followUpOpen = false;
             _steamSearchOpen = false;
             _analysisTimer.Restart();
+            var _errLog = Core.ApiLogMonitor.LogStart("报错日志分析");
 
             string errorText;
             if (_errorSource == ErrorSource.Clipboard)
@@ -1179,12 +1335,12 @@ namespace ModCompatChecker.UI
                         if (!_disposed) lock (_lock) { try { _encycloMatches = Core.ErrorEncyclopedia.MatchError(result); } catch { _encycloMatches = null; } }
                         if (_analysisTimer.Elapsed.TotalSeconds > settings.AnalysisTimeoutSeconds * 0.8)
                             ErrorResult += "\n\n耗时 " + _analysisTimer.Elapsed.TotalSeconds.ToString("F1") + "s";
-                        ErrorDeps = DependencyExtractor.Extract(errorText + "\n" + ErrorResult); _cachedErrorResult[_errorSource] = ErrorResult; _cachedDeps[_errorSource] = new List<string>(ErrorDeps);
+                        ErrorDeps = DependencyExtractor.Extract(errorText + "\n" + ErrorResult); _cachedErrorResult[_errorSource] = ErrorResult; _cachedDeps[_errorSource] = new List<string>(ErrorDeps); Core.ApiLogMonitor.LogComplete(_errLog, ErrorResult.Substring(0, Math.Min(80, ErrorResult.Length)));
                     }
                 }
                 catch (Exception ex)
                 {
-                    if (!_disposed) lock (_lock) { ErrorResult = "ModCompatChecker.FailedPrefix".Translate() + ex.Message; }
+                    if (!_disposed) lock (_lock) { ErrorResult = "ModCompatChecker.FailedPrefix".Translate() + ex.Message; Core.ApiLogMonitor.LogFailed(_errLog, ex.Message); }
                     _analysisTimer.Stop();
                 }
                 if (!_disposed) lock (_lock) { _isErrorAnalyzing = false; }
@@ -1196,6 +1352,7 @@ namespace ModCompatChecker.UI
         {
             if (string.IsNullOrEmpty(_followUpQuestion) || !settings.IsAIConfigured()) return;
             lock (_lock) { if (_followUpRunning) return; _followUpRunning = true; }
+            var _fuLog = Core.ApiLogMonitor.LogStart("追問分析(报错)");
             FollowUpResult = "";
             var mi = settings.GetSelectedModelInfo();
             var ep = settings.GetEndpointAndProvider(mi);
@@ -1208,11 +1365,11 @@ namespace ModCompatChecker.UI
                 {
                     var response = AIService.CallAPIWithTimeout(ep.endpoint, settings.APIKey, mid, prompt,
                         ep.provider, 15, ref cancel);
-                    if (!_disposed) lock (_lock) { FollowUpResult = response; }
+                    if (!_disposed) lock (_lock) { FollowUpResult = response; Core.ApiLogMonitor.LogComplete(_fuLog, response.Substring(0, Math.Min(80, response.Length))); }
                 }
                 catch (Exception ex)
                 {
-                    if (!_disposed) lock (_lock) { FollowUpResult = "ModCompatChecker.FailedPrefix".Translate() + ex.Message; }
+                    if (!_disposed) lock (_lock) { FollowUpResult = "ModCompatChecker.FailedPrefix".Translate() + ex.Message; Core.ApiLogMonitor.LogFailed(_fuLog, ex.Message); }
                 }
                 if (!_disposed) lock (_lock) { _followUpRunning = false; }
             }) { IsBackground = true }.Start();
@@ -1328,6 +1485,63 @@ namespace ModCompatChecker.UI
             if (text.Length > 80) return text.Substring(0, 80) + "...";
             return text;
         }
+
+        
+
+        private void StartAIDirSearch(ModCompatSettings settings, string query)
+        {
+            if (string.IsNullOrEmpty(query) || !settings.IsAIConfigured()) return;
+            _offlineAICancel = false;
+            lock (_lock) { if (_offlineAIRunning) return; _offlineAIRunning = true; }
+            _offlineAIResult = "";
+            var _aisLog = Core.ApiLogMonitor.LogStart("AI\u76ee\u5f55\u641c\u7d22");
+            var mi = settings.GetSelectedModelInfo();
+            var ep = settings.GetEndpointAndProvider(mi);
+            var mid = settings.IsCustomModel() ? settings.CustomModelId : mi.Id;
+            var prompt = "ModCompatChecker.AIDirSearchPrompt".Translate() + query;
+            new Thread(() =>
+            {
+                try
+                {
+                    var response = AIService.CallAPIWithTimeout(ep.endpoint, settings.APIKey, mid, prompt,
+                        ep.provider, Math.Min(30, settings.AnalysisTimeoutSeconds), ref _offlineAICancel);
+                    if (!_disposed) { lock (_lock) { _offlineAIResult = response; } Core.ApiLogMonitor.LogComplete(_aisLog, response.Substring(0, Math.Min(80, response.Length))); }
+                }
+                catch (Exception ex)
+                {
+                    if (!_disposed) { lock (_lock) { _offlineAIResult = "ModCompatChecker.FailedPrefix".Translate() + ex.Message; } Core.ApiLogMonitor.LogFailed(_aisLog, ex.Message); }
+                }
+                if (!_disposed) lock (_lock) { _offlineAIRunning = false; }
+            }) { IsBackground = true }.Start();
+        }
+
+        private void StartEncFollowUp(ModCompatSettings settings)
+        {
+            if (string.IsNullOrEmpty(_encFollowUpQuestion) || !settings.IsAIConfigured()) return;
+            _encFollowUpCancel = false;
+            lock (_lock) { if (_encFollowUpRunning) return; _encFollowUpRunning = true; }
+            _encFollowUpResult = "";
+            var _efuLog = Core.ApiLogMonitor.LogStart("\u8ffd\u554f\u5206\u6790(\u767e\u79d1)");
+            var mi = settings.GetSelectedModelInfo();
+            var ep = settings.GetEndpointAndProvider(mi);
+            var mid = settings.IsCustomModel() ? settings.CustomModelId : mi.Id;
+            var prompt = "ModCompatChecker.PreviousAnalysis".Translate() + _offlineAIResult + "\n\nFollow-up: " + _encFollowUpQuestion;
+            new Thread(() =>
+            {
+                try
+                {
+                    var response = AIService.CallAPIWithTimeout(ep.endpoint, settings.APIKey, mid, prompt,
+                        ep.provider, 15, ref _encFollowUpCancel);
+                    if (!_disposed) { lock (_lock) { _encFollowUpResult = response; } Core.ApiLogMonitor.LogComplete(_efuLog, response.Substring(0, Math.Min(80, response.Length))); }
+                }
+                catch (Exception ex)
+                {
+                    if (!_disposed) { lock (_lock) { _encFollowUpResult = "ModCompatChecker.FailedPrefix".Translate() + ex.Message; } Core.ApiLogMonitor.LogFailed(_efuLog, ex.Message); }
+                }
+                if (!_disposed) lock (_lock) { _encFollowUpRunning = false; }
+            }) { IsBackground = true }.Start();
+        }
+
 
         private class ErrorEntry
         {

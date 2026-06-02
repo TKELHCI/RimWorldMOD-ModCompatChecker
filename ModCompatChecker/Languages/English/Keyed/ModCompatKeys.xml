@@ -148,13 +148,32 @@
   <ModCompatChecker.LogSizeExplain>When enabled, automatically checks Player.log file size every 5 minutes. Turns orange if >50MB (prevents repeated errors from filling your drive). Default: OFF.</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PromptHint>Edit the AI system prompt below to customize analysis style</ModCompatChecker.PromptHint>
   <ModCompatChecker.PresetConcise>Concise Diagnosis</ModCompatChecker.PresetConcise>
-  <ModCompatChecker.LogSizeTitle>Log File Size Monitor</ModCompatChecker.LogSizeTitle>
-  <ModCompatChecker.LogSizeExplain>When enabled, checks Player.log size every 5 minutes. Turns orange if >50MB. Default: OFF.</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PresetRefs>Quick presets (click to apply):</ModCompatChecker.PresetRefs>
   <ModCompatChecker.PresetDetailed>Detailed Analysis</ModCompatChecker.PresetDetailed>
-  <ModCompatChecker.RefreshSize>Refresh</ModCompatChecker.RefreshSize>
   <ModCompatChecker.PresetBeginner>Beginner Friendly</ModCompatChecker.PresetBeginner>
   <ModCompatChecker.PresetBeginnerDesc>Plain language, beginner-friendly</ModCompatChecker.PresetBeginnerDesc>
   <ModCompatChecker.PresetConciseDesc>Key conflicts and fix suggestions only, concise</ModCompatChecker.PresetConciseDesc>
   <ModCompatChecker.PresetDetailedDesc>Root cause, impact, fix suggestions, load order</ModCompatChecker.PresetDetailedDesc>
+
+  <!-- === Offline Search === -->
+  <ModCompatChecker.SearchEncyclopedia>Search Encyclopedia</ModCompatChecker.SearchEncyclopedia>
+  <ModCompatChecker.AIDirSearch>AI Directory Search</ModCompatChecker.AIDirSearch>
+  <ModCompatChecker.FoundEntries>Found: </ModCompatChecker.FoundEntries>
+  <ModCompatChecker.AllowAIDirSearch>Allow AI to access game directory for search and analysis</ModCompatChecker.AllowAIDirSearch>
+  <ModCompatChecker.AllowAIDirSearchExplain>⚠ RISK: AI provider may receive your game directory file paths and names. Only enable with trusted API providers.</ModCompatChecker.AllowAIDirSearchExplain>
+  <ModCompatChecker.AIDirSearchPrompt>Search the RimWorld modding knowledge base for this error keyword: </ModCompatChecker.AIDirSearchPrompt>
+  <ModCompatChecker.AllowAIDirSearchHint>Also enable AI-powered search for unknown errors (requires API Key)</ModCompatChecker.AllowAIDirSearchHint>
+  <ModCompatChecker.EncyclopediaFollowUp>Follow-up Analysis</ModCompatChecker.EncyclopediaFollowUp>
+  <ModCompatChecker.ErrorLookup>📖 Error Analysis / Lookup</ModCompatChecker.ErrorLookup>
+  <ModCompatChecker.ErrorLookupDesc>Paste an error log or keyword. Search the built-in knowledge base or use AI to analyze unknown errors.</ModCompatChecker.ErrorLookupDesc>
+  <ModCompatChecker.Thinking>🤔 Thinking...</ModCompatChecker.Thinking>
+  <ModCompatChecker.ForceStop>Force Stop</ModCompatChecker.ForceStop>
+
+  <!-- === API Monitor === -->
+  <ModCompatChecker.APIMonitor>📡 API Monitor</ModCompatChecker.APIMonitor>
+  <ModCompatChecker.Running>(Running)</ModCompatChecker.Running>
+  <ModCompatChecker.ForceStopAll>Force Stop All</ModCompatChecker.ForceStopAll>
+  <ModCompatChecker.NoRunningOps>No running operations</ModCompatChecker.NoRunningOps>
+  <ModCompatChecker.ClearLog>Clear Log</ModCompatChecker.ClearLog>
+  <ModCompatChecker.NoApiLogs>No API log entries yet</ModCompatChecker.NoApiLogs>
 </LanguageData>

@@ -140,13 +140,24 @@
   <ModCompatChecker.LogSizeExplain>Wenn aktiviert, wird die Größe von Player.log alle 5 Minuten automatisch geprüft. Wird orange bei >50MB (verhindert, dass wiederholte Fehler das Laufwerk füllen). Standard: AUS.</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PromptHint>System-Prompt unten bearbeiten</ModCompatChecker.PromptHint>
   <ModCompatChecker.PresetConcise>Prägnant</ModCompatChecker.PresetConcise>
-  <ModCompatChecker.LogSizeTitle>Log-Größenüberwachung</ModCompatChecker.LogSizeTitle>
-  <ModCompatChecker.LogSizeExplain>Prüft Player.log alle 5min. Orange bei >50MB. Standard: AUS.</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PresetRefs>Voreinstellungen:</ModCompatChecker.PresetRefs>
   <ModCompatChecker.PresetDetailed>Detailliert</ModCompatChecker.PresetDetailed>
-  <ModCompatChecker.RefreshSize>Aktualisieren</ModCompatChecker.RefreshSize>
   <ModCompatChecker.PresetBeginner>Einsteiger</ModCompatChecker.PresetBeginner>
   <ModCompatChecker.PresetBeginnerDesc>Einfache Sprache, einsteigerfreundlich</ModCompatChecker.PresetBeginnerDesc>
   <ModCompatChecker.PresetConciseDesc>Nur Kernkonflikte und Lösungen, prägnant</ModCompatChecker.PresetConciseDesc>
   <ModCompatChecker.PresetDetailedDesc>Ursache, Auswirkung, Lösungen, Ladereihenfolge</ModCompatChecker.PresetDetailedDesc>
+
+  <!-- === Offline-Suche === -->
+  <ModCompatChecker.SearchEncyclopedia>Enzyklopadie durchsuchen</ModCompatChecker.SearchEncyclopedia>
+  <ModCompatChecker.AIDirSearch>KI-Verzeichnissuche</ModCompatChecker.AIDirSearch>
+  <ModCompatChecker.FoundEntries>Gefunden: </ModCompatChecker.FoundEntries>
+  <ModCompatChecker.AllowAIDirSearch>KI-Zugriff auf Spielverzeichnis erlauben</ModCompatChecker.AllowAIDirSearch>
+  <ModCompatChecker.AllowAIDirSearchExplain>⚠ RISIKO: KI kann Dateipfade lesen. Nur aktivieren wenn Sie dem Anbieter vertrauen.</ModCompatChecker.AllowAIDirSearchExplain>
+  <ModCompatChecker.AIDirSearchPrompt>Durchsuchen Sie die RimWorld-Modding-Wissensdatenbank nach diesem Fehler: </ModCompatChecker.AIDirSearchPrompt>
+  <ModCompatChecker.AllowAIDirSearchHint>KI-Suche für unbekannte Fehler aktivieren (API-Key nötig)</ModCompatChecker.AllowAIDirSearchHint>
+  <ModCompatChecker.EncyclopediaFollowUp>Folgeanalyse</ModCompatChecker.EncyclopediaFollowUp>
+  <ModCompatChecker.ErrorLookup>📖 Fehleranalyse / Suche</ModCompatChecker.ErrorLookup>
+  <ModCompatChecker.ErrorLookupDesc>Fehlerlog oder Schlüsselwort einfügen. Durchsuche die integrierte Datenbank oder nutze KI.</ModCompatChecker.ErrorLookupDesc>
+  <ModCompatChecker.Thinking>🤔 Denkt nach...</ModCompatChecker.Thinking>
+  <ModCompatChecker.ForceStop>Abbrechen</ModCompatChecker.ForceStop>
 </LanguageData>

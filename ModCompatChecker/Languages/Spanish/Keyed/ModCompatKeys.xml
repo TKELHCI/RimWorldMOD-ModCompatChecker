@@ -140,13 +140,24 @@
   <ModCompatChecker.LogSizeExplain>Cuando está activado, comprueba automáticamente el tamaño de Player.log cada 5 minutos. Se vuelve naranja si >50MB (evita que errores repetidos llenen el disco). Desactivado por defecto.</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PromptHint>Editar el prompt del sistema</ModCompatChecker.PromptHint>
   <ModCompatChecker.PresetConcise>Diagnóstico conciso</ModCompatChecker.PresetConcise>
-  <ModCompatChecker.LogSizeTitle>Monitor tamaño registro</ModCompatChecker.LogSizeTitle>
-  <ModCompatChecker.LogSizeExplain>Verifica Player.log cada 5min. Naranja si >50MB. Desactivado por defecto.</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PresetRefs>Preajustes rápidos:</ModCompatChecker.PresetRefs>
   <ModCompatChecker.PresetDetailed>Análisis detallado</ModCompatChecker.PresetDetailed>
-  <ModCompatChecker.RefreshSize>Actualizar</ModCompatChecker.RefreshSize>
   <ModCompatChecker.PresetBeginner>Principiante</ModCompatChecker.PresetBeginner>
   <ModCompatChecker.PresetBeginnerDesc>Lenguaje sencillo, para principiantes</ModCompatChecker.PresetBeginnerDesc>
   <ModCompatChecker.PresetConciseDesc>Solo conflictos clave y soluciones, conciso</ModCompatChecker.PresetConciseDesc>
   <ModCompatChecker.PresetDetailedDesc>Causa, impacto, soluciones, orden de carga</ModCompatChecker.PresetDetailedDesc>
+
+  <!-- === Busqueda sin conexion === -->
+  <ModCompatChecker.SearchEncyclopedia>Buscar enciclopedia</ModCompatChecker.SearchEncyclopedia>
+  <ModCompatChecker.AIDirSearch>Busqueda IA</ModCompatChecker.AIDirSearch>
+  <ModCompatChecker.FoundEntries>Encontrado: </ModCompatChecker.FoundEntries>
+  <ModCompatChecker.AllowAIDirSearch>Permitir que IA acceda al directorio del juego</ModCompatChecker.AllowAIDirSearch>
+  <ModCompatChecker.AllowAIDirSearchExplain>⚠ RIESGO: IA puede leer rutas de archivos. Active solo si confia en el proveedor.</ModCompatChecker.AllowAIDirSearchExplain>
+  <ModCompatChecker.AIDirSearchPrompt>Buscar en la base de conocimientos de RimWorld esta palabra clave de error: </ModCompatChecker.AIDirSearchPrompt>
+  <ModCompatChecker.AllowAIDirSearchHint>Activar búsqueda IA para errores desconocidos (requiere API Key)</ModCompatChecker.AllowAIDirSearchHint>
+  <ModCompatChecker.EncyclopediaFollowUp>Análisis complementario</ModCompatChecker.EncyclopediaFollowUp>
+  <ModCompatChecker.ErrorLookup>📖 Análisis / Búsqueda</ModCompatChecker.ErrorLookup>
+  <ModCompatChecker.ErrorLookupDesc>Pegue un registro de errores o palabra clave. Busque en la base integrada o use IA.</ModCompatChecker.ErrorLookupDesc>
+  <ModCompatChecker.Thinking>🤔 Pensando...</ModCompatChecker.Thinking>
+  <ModCompatChecker.ForceStop>Forzar parada</ModCompatChecker.ForceStop>
 </LanguageData>

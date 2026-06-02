@@ -17,7 +17,12 @@ namespace ModCompatChecker
         public int AnalysisTimeoutSeconds = 20;
         public bool AutoSpamDetect = false;
         public bool ShowLogSizeMonitor = false;
+        public bool AllowAIDirectorySearch = false;
+        public bool EnableBalanceCheck = false;
+        public float BalanceWarningThreshold = 1.0f;
+        public string BalanceCheckEndpoint = "";
 
+        public bool ShowAdvancedPrompt = false;
         public bool UseCustomSystemPrompt = false;
         public string CustomSystemPrompt = "";
         public const string DefaultSystemPromptZh = "你是 RimWorld MOD 兼容性分析专家。请基于你的知识分析以下 MOD 兼容性问题，给出专业、简洁的诊断和建议。";
@@ -87,8 +92,14 @@ namespace ModCompatChecker
             Scribe_Values.Look(ref AutoSpamDetect, "AutoSpamDetect", false);
             Scribe_Values.Look(ref ShowLogSizeMonitor, "ShowLogSizeMonitor", false);
 
+            Scribe_Values.Look(ref AllowAIDirectorySearch, "AllowAIDirectorySearch", false);
             Scribe_Values.Look(ref UseCustomSystemPrompt, "UseCustomSystemPrompt", false);
+            Scribe_Values.Look(ref ShowAdvancedPrompt, "ShowAdvancedPrompt", false);
             Scribe_Values.Look(ref CustomSystemPrompt, "CustomSystemPrompt", "");
+            Scribe_Values.Look(ref EnableBalanceCheck, "EnableBalanceCheck", false);
+            Scribe_Values.Look(ref BalanceWarningThreshold, "BalanceWarningThreshold", 1.0f);
+            Scribe_Values.Look(ref BalanceCheckEndpoint, "BalanceCheckEndpoint", "");
         }
     }
 }
+

@@ -140,13 +140,24 @@
   <ModCompatChecker.LogSizeExplain>啟用後每5分鐘自動檢查Player.log檔案大小，超過50MB時變橙色警告（防止循環報錯寫滿C槽）。預設關閉。</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PromptHint>可編輯下方AI預設指令，自訂AI分析風格</ModCompatChecker.PromptHint>
   <ModCompatChecker.PresetConcise>簡潔診斷</ModCompatChecker.PresetConcise>
-  <ModCompatChecker.LogSizeTitle>日誌檔案大小監控</ModCompatChecker.LogSizeTitle>
-  <ModCompatChecker.LogSizeExplain>啟用後每5分鐘自動檢查Player.log檔案大小，超過50MB時變橙色警告。預設關閉。</ModCompatChecker.LogSizeExplain>
   <ModCompatChecker.PresetRefs>快捷預設（點擊替換）：</ModCompatChecker.PresetRefs>
   <ModCompatChecker.PresetDetailed>詳細分析</ModCompatChecker.PresetDetailed>
-  <ModCompatChecker.RefreshSize>重新整理大小</ModCompatChecker.RefreshSize>
   <ModCompatChecker.PresetBeginner>新手友善</ModCompatChecker.PresetBeginner>
   <ModCompatChecker.PresetBeginnerDesc>用通俗語言解釋，適合MOD新手</ModCompatChecker.PresetBeginnerDesc>
   <ModCompatChecker.PresetConciseDesc>只輸出關鍵衝突和修復建議，簡潔明瞭</ModCompatChecker.PresetConciseDesc>
   <ModCompatChecker.PresetDetailedDesc>包含衝突原因、影響範圍、修復方案、排序建議</ModCompatChecker.PresetDetailedDesc>
+
+  <!-- === 離線層搜尋 === -->
+  <ModCompatChecker.SearchEncyclopedia>搜尋百科</ModCompatChecker.SearchEncyclopedia>
+  <ModCompatChecker.AIDirSearch>AI 目錄搜尋</ModCompatChecker.AIDirSearch>
+  <ModCompatChecker.FoundEntries>找到: </ModCompatChecker.FoundEntries>
+  <ModCompatChecker.AllowAIDirSearch>允許 AI 存取遊戲目錄進行搜尋分析</ModCompatChecker.AllowAIDirSearch>
+  <ModCompatChecker.AllowAIDirSearchExplain>⚠ 風險提示：AI 可能會讀取檔案路徑和目錄結構。僅在信任 AI 服務商不會濫用系統資訊時啟用。</ModCompatChecker.AllowAIDirSearchExplain>
+  <ModCompatChecker.AIDirSearchPrompt>在 RimWorld 模組知識庫中搜尋以下錯誤關鍵字: </ModCompatChecker.AIDirSearchPrompt>
+  <ModCompatChecker.AllowAIDirSearchHint>同時啟用 AI 搜尋未知錯誤（需設定 API Key）</ModCompatChecker.AllowAIDirSearchHint>
+  <ModCompatChecker.EncyclopediaFollowUp>追問分析</ModCompatChecker.EncyclopediaFollowUp>
+  <ModCompatChecker.ErrorLookup>📖 錯誤分析/查找</ModCompatChecker.ErrorLookup>
+  <ModCompatChecker.ErrorLookupDesc>貼上報錯日誌或關鍵字，搜尋內建知識庫或使用 AI 分析未知錯誤。</ModCompatChecker.ErrorLookupDesc>
+  <ModCompatChecker.Thinking>🤔 思考中...</ModCompatChecker.Thinking>
+  <ModCompatChecker.ForceStop>強制終止</ModCompatChecker.ForceStop>
 </LanguageData>
