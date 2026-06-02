@@ -19,7 +19,7 @@ namespace ModCompatChecker.UI
         private Vector2 _scroll = Vector2.zero;
         private readonly object _lock = new object();
         private bool _disposed; private static int _cachedWorldId = -1; private static int _worldCheckFrame;
-        private bool _showSettings = true, _showCompat = true, _showErrorSection;
+        private bool _showSettings = true, _showCompat = true, _showErrorSection, _showTools, _spamChecking;
         private readonly SharedSettingsUI.UIState _uiState = new SharedSettingsUI.UIState();
 
         public override Vector2 InitialSize
@@ -105,6 +105,15 @@ namespace ModCompatChecker.UI
             if (_showErrorSection)
                 DrawErrorSection(inner, settings);
 
+            DrawSectionHeader(inner, ref _showTools, "ModCompatChecker.Tools".Translate(), new Color(0.35f, 0.25f, 0.50f));
+            if (_showTools) {
+                listing.Label("ModCompatChecker.SpamDetect".Translate(), -1);
+                if (Widgets.ButtonText(listing.GetRect(28f), "ModCompatChecker.CheckSpam".Translate())) { Core.SpamDetector.CheckForSpam(); _spamChecking = true; }
+                if (_spamChecking && Core.SpamDetector.ActiveAlerts.Count > 0) { foreach (var a in Core.SpamDetector.ActiveAlerts) { GUI.color = Color.red; Widgets.Label(listing.GetRect(20f), "[" + a.Count + "x] " + a.NormalizedMessage); GUI.color = Color.white; } }
+                listing.Gap(4f);
+                if (Widgets.ButtonText(listing.GetRect(24f), "ModCompatChecker.OpenLogFolder".Translate())) { var p = Core.SpamDetector.GetLogFolderPath(); if (p.Length > 0) System.Diagnostics.Process.Start("explorer.exe", p); }
+                listing.Gap(8f);
+            }
             inner.End();
             Widgets.EndScrollView();
 

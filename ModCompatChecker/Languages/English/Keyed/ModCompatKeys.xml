@@ -289,4 +289,9 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.RelDefConflict>Def Conflicts</ModCompatChecker.RelDefConflict>
   <ModCompatChecker.RelLoadOrder>Load Order</ModCompatChecker.RelLoadOrder>
   <ModCompatChecker.RelMissing>Missing Dependencies</ModCompatChecker.RelMissing>
+  <ModCompatChecker.Tools>Tools</ModCompatChecker.Tools>
+  <ModCompatChecker.SpamDetect>Spam Detection</ModCompatChecker.SpamDetect>
+  <ModCompatChecker.CheckSpam>Check for Repeated Errors</ModCompatChecker.CheckSpam>
+  <ModCompatChecker.OpenLogFolder>Open Log Folder</ModCompatChecker.OpenLogFolder>
+  <ModCompatChecker.SpamWarning>Spam detected! Same error repeated many times.</ModCompatChecker.SpamWarning>
 </LanguageData>

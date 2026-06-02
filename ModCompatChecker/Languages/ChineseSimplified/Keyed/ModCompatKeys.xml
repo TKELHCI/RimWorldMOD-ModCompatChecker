@@ -272,4 +272,9 @@
   <ModCompatChecker.RelDefConflict>Def 冲突</ModCompatChecker.RelDefConflict>
   <ModCompatChecker.RelLoadOrder>加载顺序</ModCompatChecker.RelLoadOrder>
   <ModCompatChecker.RelMissing>缺失依赖</ModCompatChecker.RelMissing>
+  <ModCompatChecker.Tools>工具箱</ModCompatChecker.Tools>
+  <ModCompatChecker.SpamDetect>重复报错检测</ModCompatChecker.SpamDetect>
+  <ModCompatChecker.CheckSpam>检测重复报错</ModCompatChecker.CheckSpam>
+  <ModCompatChecker.OpenLogFolder>打开日志文件夹</ModCompatChecker.OpenLogFolder>
+  <ModCompatChecker.SpamWarning>检测到刷屏报错！同一报错大量重复。</ModCompatChecker.SpamWarning>
 </LanguageData>
