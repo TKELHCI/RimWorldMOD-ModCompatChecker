@@ -15,6 +15,8 @@ namespace ModCompatChecker
         public string CustomModelId = "";
         public int SelectedModelIndex = 0;
         public int AnalysisTimeoutSeconds = 20;
+        public bool AutoSpamDetect = false;
+
         public bool UseCustomSystemPrompt = false;
         public string CustomSystemPrompt = "";
         public const string DefaultSystemPromptZh = "你是 RimWorld MOD 兼容性分析专家。请基于你的知识分析以下 MOD 兼容性问题，给出专业、简洁的诊断和建议。";
@@ -75,6 +77,8 @@ namespace ModCompatChecker
             Scribe_Values.Look(ref CustomModelId, "CustomModelId", "");
             Scribe_Values.Look(ref SelectedModelIndex, "SelectedModelIndex", 0);
             Scribe_Values.Look(ref AnalysisTimeoutSeconds, "AnalysisTimeoutSeconds", 20);
+            Scribe_Values.Look(ref AutoSpamDetect, "AutoSpamDetect", false);
+
             Scribe_Values.Look(ref UseCustomSystemPrompt, "UseCustomSystemPrompt", false);
             Scribe_Values.Look(ref CustomSystemPrompt, "CustomSystemPrompt", "");
         }

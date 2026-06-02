@@ -25,7 +25,7 @@ namespace ModCompatChecker.Core
         private const int SpamThreshold = 50;
         private const float AlertCooldown = 120f; // Same alert won't fire again within 2 min
 
-        public static bool AutoDetectEnabled = true;
+        public static bool AutoDetectEnabled = false;
         public static readonly List<SpamAlert> ActiveAlerts = new List<SpamAlert>();
 
         public static void Reset()

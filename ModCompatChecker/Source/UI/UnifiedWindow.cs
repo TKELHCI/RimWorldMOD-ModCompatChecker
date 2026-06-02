@@ -105,10 +105,17 @@ namespace ModCompatChecker.UI
             if (_showErrorSection)
                 DrawErrorSection(inner, settings);
 
-            DrawSectionHeader(inner, ref _showTools, "ModCompatChecker.Tools".Translate(), new Color(0.35f, 0.25f, 0.50f));
             if (_showTools) {
-                listing.Label("ModCompatChecker.SpamDetect".Translate(), -1);
-                if (Widgets.ButtonText(listing.GetRect(28f), "ModCompatChecker.CheckSpam".Translate())) { Core.SpamDetector.CheckForSpam(); _spamChecking = true; }
+                listing.Label("ModCompatChecker.AutoSpamToggle".Translate(), -1);
+                var togRect = listing.GetRect(22f);
+                Widgets.CheckboxLabeled(togRect, "ModCompatChecker.EnableAutoSpam".Translate(), ref settings.AutoSpamDetect);
+                Core.SpamDetector.AutoDetectEnabled = settings.AutoSpamDetect;
+                listing.Gap(2f);
+                GUI.color = new Color(0.6f, 0.6f, 0.6f);
+                Widgets.Label(listing.GetRect(36f), "ModCompatChecker.SpamExplain".Translate());
+                GUI.color = Color.white;
+                listing.Gap(4f);
+                if (listing.ButtonText("ModCompatChecker.CheckSpam".Translate())) { Core.SpamDetector.CheckForSpam(); _spamChecking = true; }
                 if (_spamChecking && Core.SpamDetector.ActiveAlerts.Count > 0) { foreach (var a in Core.SpamDetector.ActiveAlerts) { GUI.color = Color.red; Widgets.Label(listing.GetRect(20f), "[" + a.Count + "x] " + a.NormalizedMessage); GUI.color = Color.white; } }
                 listing.Gap(4f);
                 if (Widgets.ButtonText(listing.GetRect(24f), "ModCompatChecker.OpenLogFolder".Translate())) { var p = Core.SpamDetector.GetLogFolderPath(); if (p.Length > 0) System.Diagnostics.Process.Start("explorer.exe", p); }
