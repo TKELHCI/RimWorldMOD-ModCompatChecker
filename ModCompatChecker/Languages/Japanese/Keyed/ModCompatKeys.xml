@@ -261,37 +261,37 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.UI131>(?:depends|依赖|requires?)[^\n]{0,30}?[：:\s]*</ModCompatChecker.UI131>
   <ModCompatChecker.UI150>]?\s*(?:not\s+(?:loaded|found|installed)|not found)</ModCompatChecker.UI150>
   <ModCompatChecker.UI171>\b(Error|错误|Exception|异常):</ModCompatChecker.UI171>
-  <ModCompatChecker.ErrorEncyclopedia>Error Encyclopedia</ModCompatChecker.ErrorEncyclopedia>
-  <ModCompatChecker.CrashRisk>Crash Risk</ModCompatChecker.CrashRisk>
-  <ModCompatChecker.WarningInfo>Warning</ModCompatChecker.WarningInfo>
-  <ModCompatChecker.CompatIssue>Compatibility</ModCompatChecker.CompatIssue>
-  <ModCompatChecker.PerfIssue>Performance</ModCompatChecker.PerfIssue>
-  <ModCompatChecker.CheckUpdates>Check for Updates</ModCompatChecker.CheckUpdates>
-  <ModCompatChecker.UpdateCheckResult>Update Check</ModCompatChecker.UpdateCheckResult>
-  <ModCompatChecker.UpdatesAvailable>Updates available:</ModCompatChecker.UpdatesAvailable>
-  <ModCompatChecker.CriticalImpact>Critical</ModCompatChecker.CriticalImpact>
-  <ModCompatChecker.HighImpact>High Impact</ModCompatChecker.HighImpact>
-  <ModCompatChecker.MediumImpact>Medium Impact</ModCompatChecker.MediumImpact>
-  <ModCompatChecker.LowImpact>Low Impact</ModCompatChecker.LowImpact>
-  <ModCompatChecker.RelationshipChain>Relationship Chain</ModCompatChecker.RelationshipChain>
-  <ModCompatChecker.ModRelationTitle>Mod Relationship</ModCompatChecker.ModRelationTitle>
-  <ModCompatChecker.RelDependsOn>Depends On</ModCompatChecker.RelDependsOn>
-  <ModCompatChecker.RelDependedBy>Depended By</ModCompatChecker.RelDependedBy>
-  <ModCompatChecker.RelHarmonyConflict>Harmony Conflicts</ModCompatChecker.RelHarmonyConflict>
-  <ModCompatChecker.RelDefConflict>Def Conflicts</ModCompatChecker.RelDefConflict>
-  <ModCompatChecker.RelLoadOrder>Load Order</ModCompatChecker.RelLoadOrder>
-  <ModCompatChecker.RelMissing>Missing Dependencies</ModCompatChecker.RelMissing>
-  <ModCompatChecker.Tools>Tools</ModCompatChecker.Tools>
-  <ModCompatChecker.SpamDetect>Spam Detection</ModCompatChecker.SpamDetect>
-  <ModCompatChecker.CheckSpam>Check for Repeated Errors</ModCompatChecker.CheckSpam>
-  <ModCompatChecker.OpenLogFolder>Open Log Folder</ModCompatChecker.OpenLogFolder>
-  <ModCompatChecker.SpamWarning>Spam detected! Same error repeated many times.</ModCompatChecker.SpamWarning>
-  <ModCompatChecker.Advanced>Advanced</ModCompatChecker.Advanced>
-  <ModCompatChecker.SystemPrompt>AI System Prompt</ModCompatChecker.SystemPrompt>
-  <ModCompatChecker.UseCustomPrompt>Use Custom Prompt</ModCompatChecker.UseCustomPrompt>
-  <ModCompatChecker.RestoreDefault>Restore Default</ModCompatChecker.RestoreDefault>
-  <ModCompatChecker.SpamAlert>Spam Detection: repeated error detected</ModCompatChecker.SpamAlert>
-  <ModCompatChecker.AutoSpamToggle>Auto-detect spam errors (every 60s)</ModCompatChecker.AutoSpamToggle>
-  <ModCompatChecker.EnableAutoSpam>Enable auto-detection</ModCompatChecker.EnableAutoSpam>
-  <ModCompatChecker.SpamExplain>Checks every 60s for repeated errors. Detects spam that may fill up Player.log (GBs in hours). Alert pops up like a raid notification. Does NOT affect game performance.</ModCompatChecker.SpamExplain>
+  <ModCompatChecker.ErrorEncyclopedia>エラー百科事典</ModCompatChecker.ErrorEncyclopedia>
+  <ModCompatChecker.CrashRisk>クラッシュリスク</ModCompatChecker.CrashRisk>
+  <ModCompatChecker.WarningInfo>警告</ModCompatChecker.WarningInfo>
+  <ModCompatChecker.CompatIssue>互換性</ModCompatChecker.CompatIssue>
+  <ModCompatChecker.PerfIssue>パフォーマンス</ModCompatChecker.PerfIssue>
+  <ModCompatChecker.CheckUpdates>MOD更新を確認</ModCompatChecker.CheckUpdates>
+  <ModCompatChecker.UpdateCheckResult>更新チェック</ModCompatChecker.UpdateCheckResult>
+  <ModCompatChecker.UpdatesAvailable>利用可能な更新:</ModCompatChecker.UpdatesAvailable>
+  <ModCompatChecker.CriticalImpact>重大</ModCompatChecker.CriticalImpact>
+  <ModCompatChecker.HighImpact>高影響</ModCompatChecker.HighImpact>
+  <ModCompatChecker.MediumImpact>中影響</ModCompatChecker.MediumImpact>
+  <ModCompatChecker.LowImpact>低影響</ModCompatChecker.LowImpact>
+  <ModCompatChecker.RelationshipChain>関係チェーン分析</ModCompatChecker.RelationshipChain>
+  <ModCompatChecker.ModRelationTitle>MOD関係</ModCompatChecker.ModRelationTitle>
+  <ModCompatChecker.RelDependsOn>依存先</ModCompatChecker.RelDependsOn>
+  <ModCompatChecker.RelDependedBy>被依存</ModCompatChecker.RelDependedBy>
+  <ModCompatChecker.RelHarmonyConflict>Harmony競合</ModCompatChecker.RelHarmonyConflict>
+  <ModCompatChecker.RelDefConflict>Def競合</ModCompatChecker.RelDefConflict>
+  <ModCompatChecker.RelLoadOrder>読み込み順</ModCompatChecker.RelLoadOrder>
+  <ModCompatChecker.RelMissing>不足している依存</ModCompatChecker.RelMissing>
+  <ModCompatChecker.Tools>ツール</ModCompatChecker.Tools>
+  <ModCompatChecker.SpamDetect>スパム検出</ModCompatChecker.SpamDetect>
+  <ModCompatChecker.CheckSpam>繰り返しエラーを検出</ModCompatChecker.CheckSpam>
+  <ModCompatChecker.OpenLogFolder>ログフォルダを開く</ModCompatChecker.OpenLogFolder>
+  <ModCompatChecker.SpamWarning>スパム検出！同じエラーが大量に繰り返されています。</ModCompatChecker.SpamWarning>
+  <ModCompatChecker.Advanced>詳細設定</ModCompatChecker.Advanced>
+  <ModCompatChecker.SystemPrompt>AIシステムプロンプト</ModCompatChecker.SystemPrompt>
+  <ModCompatChecker.UseCustomPrompt>カスタムプロンプト</ModCompatChecker.UseCustomPrompt>
+  <ModCompatChecker.RestoreDefault>デフォルトに戻す</ModCompatChecker.RestoreDefault>
+  <ModCompatChecker.SpamAlert>スパム検出：繰り返しエラーを検出しました</ModCompatChecker.SpamAlert>
+  <ModCompatChecker.AutoSpamToggle>自動検出（60秒毎）</ModCompatChecker.AutoSpamToggle>
+  <ModCompatChecker.EnableAutoSpam>自動検出を有効化</ModCompatChecker.EnableAutoSpam>
+  <ModCompatChecker.SpamExplain>60秒毎に確認。Player.logの肥大化を防止。イベント通知で警告。パフォーマンスに影響なし。</ModCompatChecker.SpamExplain>
 </LanguageData>

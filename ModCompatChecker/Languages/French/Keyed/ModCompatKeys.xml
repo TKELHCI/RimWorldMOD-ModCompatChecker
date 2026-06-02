@@ -261,37 +261,37 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.UI131>(?:depends|依赖|requires?)[^\n]{0,30}?[：:\s]*</ModCompatChecker.UI131>
   <ModCompatChecker.UI150>]?\s*(?:not\s+(?:loaded|found|installed)|not found)</ModCompatChecker.UI150>
   <ModCompatChecker.UI171>\b(Error|错误|Exception|异常):</ModCompatChecker.UI171>
-  <ModCompatChecker.ErrorEncyclopedia>Error Encyclopedia</ModCompatChecker.ErrorEncyclopedia>
-  <ModCompatChecker.CrashRisk>Crash Risk</ModCompatChecker.CrashRisk>
-  <ModCompatChecker.WarningInfo>Warning</ModCompatChecker.WarningInfo>
-  <ModCompatChecker.CompatIssue>Compatibility</ModCompatChecker.CompatIssue>
+  <ModCompatChecker.ErrorEncyclopedia>Encyclopédie d'erreurs</ModCompatChecker.ErrorEncyclopedia>
+  <ModCompatChecker.CrashRisk>Risque de crash</ModCompatChecker.CrashRisk>
+  <ModCompatChecker.WarningInfo>Avertissement</ModCompatChecker.WarningInfo>
+  <ModCompatChecker.CompatIssue>Compatibilité</ModCompatChecker.CompatIssue>
   <ModCompatChecker.PerfIssue>Performance</ModCompatChecker.PerfIssue>
-  <ModCompatChecker.CheckUpdates>Check for Updates</ModCompatChecker.CheckUpdates>
-  <ModCompatChecker.UpdateCheckResult>Update Check</ModCompatChecker.UpdateCheckResult>
-  <ModCompatChecker.UpdatesAvailable>Updates available:</ModCompatChecker.UpdatesAvailable>
-  <ModCompatChecker.CriticalImpact>Critical</ModCompatChecker.CriticalImpact>
-  <ModCompatChecker.HighImpact>High Impact</ModCompatChecker.HighImpact>
-  <ModCompatChecker.MediumImpact>Medium Impact</ModCompatChecker.MediumImpact>
-  <ModCompatChecker.LowImpact>Low Impact</ModCompatChecker.LowImpact>
-  <ModCompatChecker.RelationshipChain>Relationship Chain</ModCompatChecker.RelationshipChain>
-  <ModCompatChecker.ModRelationTitle>Mod Relationship</ModCompatChecker.ModRelationTitle>
-  <ModCompatChecker.RelDependsOn>Depends On</ModCompatChecker.RelDependsOn>
-  <ModCompatChecker.RelDependedBy>Depended By</ModCompatChecker.RelDependedBy>
-  <ModCompatChecker.RelHarmonyConflict>Harmony Conflicts</ModCompatChecker.RelHarmonyConflict>
-  <ModCompatChecker.RelDefConflict>Def Conflicts</ModCompatChecker.RelDefConflict>
-  <ModCompatChecker.RelLoadOrder>Load Order</ModCompatChecker.RelLoadOrder>
-  <ModCompatChecker.RelMissing>Missing Dependencies</ModCompatChecker.RelMissing>
-  <ModCompatChecker.Tools>Tools</ModCompatChecker.Tools>
-  <ModCompatChecker.SpamDetect>Spam Detection</ModCompatChecker.SpamDetect>
-  <ModCompatChecker.CheckSpam>Check for Repeated Errors</ModCompatChecker.CheckSpam>
-  <ModCompatChecker.OpenLogFolder>Open Log Folder</ModCompatChecker.OpenLogFolder>
-  <ModCompatChecker.SpamWarning>Spam detected! Same error repeated many times.</ModCompatChecker.SpamWarning>
-  <ModCompatChecker.Advanced>Advanced</ModCompatChecker.Advanced>
-  <ModCompatChecker.SystemPrompt>AI System Prompt</ModCompatChecker.SystemPrompt>
-  <ModCompatChecker.UseCustomPrompt>Use Custom Prompt</ModCompatChecker.UseCustomPrompt>
-  <ModCompatChecker.RestoreDefault>Restore Default</ModCompatChecker.RestoreDefault>
-  <ModCompatChecker.SpamAlert>Spam Detection: repeated error detected</ModCompatChecker.SpamAlert>
-  <ModCompatChecker.AutoSpamToggle>Auto-detect spam errors (every 60s)</ModCompatChecker.AutoSpamToggle>
-  <ModCompatChecker.EnableAutoSpam>Enable auto-detection</ModCompatChecker.EnableAutoSpam>
-  <ModCompatChecker.SpamExplain>Checks every 60s for repeated errors. Detects spam that may fill up Player.log (GBs in hours). Alert pops up like a raid notification. Does NOT affect game performance.</ModCompatChecker.SpamExplain>
+  <ModCompatChecker.CheckUpdates>Vérifier les mises à jour</ModCompatChecker.CheckUpdates>
+  <ModCompatChecker.UpdateCheckResult>Vérification</ModCompatChecker.UpdateCheckResult>
+  <ModCompatChecker.UpdatesAvailable>Mises à jour disponibles:</ModCompatChecker.UpdatesAvailable>
+  <ModCompatChecker.CriticalImpact>Critique</ModCompatChecker.CriticalImpact>
+  <ModCompatChecker.HighImpact>Impact élevé</ModCompatChecker.HighImpact>
+  <ModCompatChecker.MediumImpact>Impact moyen</ModCompatChecker.MediumImpact>
+  <ModCompatChecker.LowImpact>Impact faible</ModCompatChecker.LowImpact>
+  <ModCompatChecker.RelationshipChain>Chaîne de relations</ModCompatChecker.RelationshipChain>
+  <ModCompatChecker.ModRelationTitle>Relations du MOD</ModCompatChecker.ModRelationTitle>
+  <ModCompatChecker.RelDependsOn>Dépend de</ModCompatChecker.RelDependsOn>
+  <ModCompatChecker.RelDependedBy>Requis par</ModCompatChecker.RelDependedBy>
+  <ModCompatChecker.RelHarmonyConflict>Conflits Harmony</ModCompatChecker.RelHarmonyConflict>
+  <ModCompatChecker.RelDefConflict>Conflits Def</ModCompatChecker.RelDefConflict>
+  <ModCompatChecker.RelLoadOrder>Ordre de chargement</ModCompatChecker.RelLoadOrder>
+  <ModCompatChecker.RelMissing>Dépendances manquantes</ModCompatChecker.RelMissing>
+  <ModCompatChecker.Tools>Outils</ModCompatChecker.Tools>
+  <ModCompatChecker.SpamDetect>Détection de spam</ModCompatChecker.SpamDetect>
+  <ModCompatChecker.CheckSpam>Détecter erreurs répétées</ModCompatChecker.CheckSpam>
+  <ModCompatChecker.OpenLogFolder>Ouvrir dossier logs</ModCompatChecker.OpenLogFolder>
+  <ModCompatChecker.SpamWarning>Spam détecté ! Même erreur répétée.</ModCompatChecker.SpamWarning>
+  <ModCompatChecker.Advanced>Avancé</ModCompatChecker.Advanced>
+  <ModCompatChecker.SystemPrompt>Prompt système IA</ModCompatChecker.SystemPrompt>
+  <ModCompatChecker.UseCustomPrompt>Prompt personnalisé</ModCompatChecker.UseCustomPrompt>
+  <ModCompatChecker.RestoreDefault>Restaurer défaut</ModCompatChecker.RestoreDefault>
+  <ModCompatChecker.SpamAlert>Détection spam : erreur répétée détectée</ModCompatChecker.SpamAlert>
+  <ModCompatChecker.AutoSpamToggle>Détection auto (toutes les 60s)</ModCompatChecker.AutoSpamToggle>
+  <ModCompatChecker.EnableAutoSpam>Activer détection auto</ModCompatChecker.EnableAutoSpam>
+  <ModCompatChecker.SpamExplain>Vérifie toutes les 60s. Empêche Player.log de gonfler. Alerte par notification. Sans impact perf.</ModCompatChecker.SpamExplain>
 </LanguageData>

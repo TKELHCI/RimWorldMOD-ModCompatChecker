@@ -261,37 +261,37 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.UI131>(?:depends|依赖|requires?)[^\n]{0,30}?[：:\s]*</ModCompatChecker.UI131>
   <ModCompatChecker.UI150>]?\s*(?:not\s+(?:loaded|found|installed)|not found)</ModCompatChecker.UI150>
   <ModCompatChecker.UI171>\b(Error|错误|Exception|异常):</ModCompatChecker.UI171>
-  <ModCompatChecker.ErrorEncyclopedia>Error Encyclopedia</ModCompatChecker.ErrorEncyclopedia>
-  <ModCompatChecker.CrashRisk>Crash Risk</ModCompatChecker.CrashRisk>
-  <ModCompatChecker.WarningInfo>Warning</ModCompatChecker.WarningInfo>
-  <ModCompatChecker.CompatIssue>Compatibility</ModCompatChecker.CompatIssue>
-  <ModCompatChecker.PerfIssue>Performance</ModCompatChecker.PerfIssue>
-  <ModCompatChecker.CheckUpdates>Check for Updates</ModCompatChecker.CheckUpdates>
-  <ModCompatChecker.UpdateCheckResult>Update Check</ModCompatChecker.UpdateCheckResult>
-  <ModCompatChecker.UpdatesAvailable>Updates available:</ModCompatChecker.UpdatesAvailable>
-  <ModCompatChecker.CriticalImpact>Critical</ModCompatChecker.CriticalImpact>
-  <ModCompatChecker.HighImpact>High Impact</ModCompatChecker.HighImpact>
-  <ModCompatChecker.MediumImpact>Medium Impact</ModCompatChecker.MediumImpact>
-  <ModCompatChecker.LowImpact>Low Impact</ModCompatChecker.LowImpact>
-  <ModCompatChecker.RelationshipChain>Relationship Chain</ModCompatChecker.RelationshipChain>
-  <ModCompatChecker.ModRelationTitle>Mod Relationship</ModCompatChecker.ModRelationTitle>
-  <ModCompatChecker.RelDependsOn>Depends On</ModCompatChecker.RelDependsOn>
-  <ModCompatChecker.RelDependedBy>Depended By</ModCompatChecker.RelDependedBy>
-  <ModCompatChecker.RelHarmonyConflict>Harmony Conflicts</ModCompatChecker.RelHarmonyConflict>
-  <ModCompatChecker.RelDefConflict>Def Conflicts</ModCompatChecker.RelDefConflict>
-  <ModCompatChecker.RelLoadOrder>Load Order</ModCompatChecker.RelLoadOrder>
-  <ModCompatChecker.RelMissing>Missing Dependencies</ModCompatChecker.RelMissing>
-  <ModCompatChecker.Tools>Tools</ModCompatChecker.Tools>
-  <ModCompatChecker.SpamDetect>Spam Detection</ModCompatChecker.SpamDetect>
-  <ModCompatChecker.CheckSpam>Check for Repeated Errors</ModCompatChecker.CheckSpam>
-  <ModCompatChecker.OpenLogFolder>Open Log Folder</ModCompatChecker.OpenLogFolder>
-  <ModCompatChecker.SpamWarning>Spam detected! Same error repeated many times.</ModCompatChecker.SpamWarning>
-  <ModCompatChecker.Advanced>Advanced</ModCompatChecker.Advanced>
-  <ModCompatChecker.SystemPrompt>AI System Prompt</ModCompatChecker.SystemPrompt>
-  <ModCompatChecker.UseCustomPrompt>Use Custom Prompt</ModCompatChecker.UseCustomPrompt>
-  <ModCompatChecker.RestoreDefault>Restore Default</ModCompatChecker.RestoreDefault>
-  <ModCompatChecker.SpamAlert>Spam Detection: repeated error detected</ModCompatChecker.SpamAlert>
-  <ModCompatChecker.AutoSpamToggle>Auto-detect spam errors (every 60s)</ModCompatChecker.AutoSpamToggle>
-  <ModCompatChecker.EnableAutoSpam>Enable auto-detection</ModCompatChecker.EnableAutoSpam>
-  <ModCompatChecker.SpamExplain>Checks every 60s for repeated errors. Detects spam that may fill up Player.log (GBs in hours). Alert pops up like a raid notification. Does NOT affect game performance.</ModCompatChecker.SpamExplain>
+  <ModCompatChecker.ErrorEncyclopedia>Fehler-Enzyklopädie</ModCompatChecker.ErrorEncyclopedia>
+  <ModCompatChecker.CrashRisk>Absturzrisiko</ModCompatChecker.CrashRisk>
+  <ModCompatChecker.WarningInfo>Warnung</ModCompatChecker.WarningInfo>
+  <ModCompatChecker.CompatIssue>Kompatibilität</ModCompatChecker.CompatIssue>
+  <ModCompatChecker.PerfIssue>Leistung</ModCompatChecker.PerfIssue>
+  <ModCompatChecker.CheckUpdates>Updates prüfen</ModCompatChecker.CheckUpdates>
+  <ModCompatChecker.UpdateCheckResult>Update-Prüfung</ModCompatChecker.UpdateCheckResult>
+  <ModCompatChecker.UpdatesAvailable>Updates verfügbar:</ModCompatChecker.UpdatesAvailable>
+  <ModCompatChecker.CriticalImpact>Kritisch</ModCompatChecker.CriticalImpact>
+  <ModCompatChecker.HighImpact>Hohe Auswirkung</ModCompatChecker.HighImpact>
+  <ModCompatChecker.MediumImpact>Mittlere Auswirkung</ModCompatChecker.MediumImpact>
+  <ModCompatChecker.LowImpact>Geringe Auswirkung</ModCompatChecker.LowImpact>
+  <ModCompatChecker.RelationshipChain>Beziehungskette</ModCompatChecker.RelationshipChain>
+  <ModCompatChecker.ModRelationTitle>MOD-Beziehungen</ModCompatChecker.ModRelationTitle>
+  <ModCompatChecker.RelDependsOn>Abhängig von</ModCompatChecker.RelDependsOn>
+  <ModCompatChecker.RelDependedBy>Benötigt von</ModCompatChecker.RelDependedBy>
+  <ModCompatChecker.RelHarmonyConflict>Harmony-Konflikte</ModCompatChecker.RelHarmonyConflict>
+  <ModCompatChecker.RelDefConflict>Def-Konflikte</ModCompatChecker.RelDefConflict>
+  <ModCompatChecker.RelLoadOrder>Ladereihenfolge</ModCompatChecker.RelLoadOrder>
+  <ModCompatChecker.RelMissing>Fehlende Abhängigkeiten</ModCompatChecker.RelMissing>
+  <ModCompatChecker.Tools>Werkzeuge</ModCompatChecker.Tools>
+  <ModCompatChecker.SpamDetect>Spam-Erkennung</ModCompatChecker.SpamDetect>
+  <ModCompatChecker.CheckSpam>Wiederholte Fehler prüfen</ModCompatChecker.CheckSpam>
+  <ModCompatChecker.OpenLogFolder>Log-Ordner öffnen</ModCompatChecker.OpenLogFolder>
+  <ModCompatChecker.SpamWarning>Spam erkannt! Gleicher Fehler wiederholt.</ModCompatChecker.SpamWarning>
+  <ModCompatChecker.Advanced>Erweitert</ModCompatChecker.Advanced>
+  <ModCompatChecker.SystemPrompt>KI-System-Prompt</ModCompatChecker.SystemPrompt>
+  <ModCompatChecker.UseCustomPrompt>Eigenen Prompt nutzen</ModCompatChecker.UseCustomPrompt>
+  <ModCompatChecker.RestoreDefault>Standard wiederherstellen</ModCompatChecker.RestoreDefault>
+  <ModCompatChecker.SpamAlert>Spam-Erkennung: wiederholter Fehler</ModCompatChecker.SpamAlert>
+  <ModCompatChecker.AutoSpamToggle>Auto-Erkennung (alle 60s)</ModCompatChecker.AutoSpamToggle>
+  <ModCompatChecker.EnableAutoSpam>Auto-Erkennung aktivieren</ModCompatChecker.EnableAutoSpam>
+  <ModCompatChecker.SpamExplain>Prüft alle 60s. Verhindert Aufblähen von Player.log. Benachrichtigt per Event. Keine Leistungseinbußen.</ModCompatChecker.SpamExplain>
 </LanguageData>
