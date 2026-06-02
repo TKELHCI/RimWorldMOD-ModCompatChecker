@@ -294,4 +294,15 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.AutoSpamToggle>Détection auto (toutes les 60s)</ModCompatChecker.AutoSpamToggle>
   <ModCompatChecker.EnableAutoSpam>Activer détection auto</ModCompatChecker.EnableAutoSpam>
   <ModCompatChecker.SpamExplain>Vérifie toutes les 60s. Empêche Player.log de gonfler. Alerte par notification. Sans impact perf.</ModCompatChecker.SpamExplain>
+  <ModCompatChecker.EncycloManager>Encyclopedia Manager</ModCompatChecker.EncycloManager>
+  <ModCompatChecker.Edit>Edit</ModCompatChecker.Edit>
+  <ModCompatChecker.EditingEntry>Editing:</ModCompatChecker.EditingEntry>
+  <ModCompatChecker.Keyword>Keyword</ModCompatChecker.Keyword>
+  <ModCompatChecker.Pattern>Pattern</ModCompatChecker.Pattern>
+  <ModCompatChecker.ExplanationZh>Chinese Explanation</ModCompatChecker.ExplanationZh>
+  <ModCompatChecker.ExplanationEn>English Explanation</ModCompatChecker.ExplanationEn>
+  <ModCompatChecker.Save>Save</ModCompatChecker.Save>
+  <ModCompatChecker.Cancel>Cancel</ModCompatChecker.Cancel>
+  <ModCompatChecker.AddEntry>Add New Entry</ModCompatChecker.AddEntry>
+  <ModCompatChecker.RestoreAllDefaults>Restore All Defaults</ModCompatChecker.RestoreAllDefaults>
 </LanguageData>

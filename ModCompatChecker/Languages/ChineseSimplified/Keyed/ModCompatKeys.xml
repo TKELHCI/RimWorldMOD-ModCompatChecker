@@ -285,4 +285,15 @@
   <ModCompatChecker.AutoSpamToggle>自动检测刷屏报错（每60秒）</ModCompatChecker.AutoSpamToggle>
   <ModCompatChecker.EnableAutoSpam>启用自动检测</ModCompatChecker.EnableAutoSpam>
   <ModCompatChecker.SpamExplain>每60秒检测一次重复报错。防止循环报错撑爆 Player.log（几小时内可达数GB）。发现后以事件弹窗提醒。不影响游戏性能。</ModCompatChecker.SpamExplain>
+  <ModCompatChecker.EncycloManager>报错百科管理</ModCompatChecker.EncycloManager>
+  <ModCompatChecker.Edit>编辑</ModCompatChecker.Edit>
+  <ModCompatChecker.EditingEntry>编辑中:</ModCompatChecker.EditingEntry>
+  <ModCompatChecker.Keyword>关键词</ModCompatChecker.Keyword>
+  <ModCompatChecker.Pattern>匹配模式</ModCompatChecker.Pattern>
+  <ModCompatChecker.ExplanationZh>中文解释</ModCompatChecker.ExplanationZh>
+  <ModCompatChecker.ExplanationEn>英文解释</ModCompatChecker.ExplanationEn>
+  <ModCompatChecker.Save>保存</ModCompatChecker.Save>
+  <ModCompatChecker.Cancel>取消</ModCompatChecker.Cancel>
+  <ModCompatChecker.AddEntry>添加条目</ModCompatChecker.AddEntry>
+  <ModCompatChecker.RestoreAllDefaults>恢复全部默认</ModCompatChecker.RestoreAllDefaults>
 </LanguageData>

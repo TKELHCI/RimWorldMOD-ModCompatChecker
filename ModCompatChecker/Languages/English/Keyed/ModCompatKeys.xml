@@ -302,4 +302,15 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.AutoSpamToggle>Auto-detect spam errors (every 60s)</ModCompatChecker.AutoSpamToggle>
   <ModCompatChecker.EnableAutoSpam>Enable auto-detection</ModCompatChecker.EnableAutoSpam>
   <ModCompatChecker.SpamExplain>Checks every 60s for repeated errors. Detects spam that may fill up Player.log (GBs in hours). Alert pops up like a raid notification. Does NOT affect game performance.</ModCompatChecker.SpamExplain>
+  <ModCompatChecker.EncycloManager>Encyclopedia Manager</ModCompatChecker.EncycloManager>
+  <ModCompatChecker.Edit>Edit</ModCompatChecker.Edit>
+  <ModCompatChecker.EditingEntry>Editing:</ModCompatChecker.EditingEntry>
+  <ModCompatChecker.Keyword>Keyword</ModCompatChecker.Keyword>
+  <ModCompatChecker.Pattern>Pattern</ModCompatChecker.Pattern>
+  <ModCompatChecker.ExplanationZh>Chinese Explanation</ModCompatChecker.ExplanationZh>
+  <ModCompatChecker.ExplanationEn>English Explanation</ModCompatChecker.ExplanationEn>
+  <ModCompatChecker.Save>Save</ModCompatChecker.Save>
+  <ModCompatChecker.Cancel>Cancel</ModCompatChecker.Cancel>
+  <ModCompatChecker.AddEntry>Add New Entry</ModCompatChecker.AddEntry>
+  <ModCompatChecker.RestoreAllDefaults>Restore All Defaults</ModCompatChecker.RestoreAllDefaults>
 </LanguageData>

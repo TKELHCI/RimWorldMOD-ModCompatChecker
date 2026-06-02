@@ -294,4 +294,15 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.AutoSpamToggle>自動検出（60秒毎）</ModCompatChecker.AutoSpamToggle>
   <ModCompatChecker.EnableAutoSpam>自動検出を有効化</ModCompatChecker.EnableAutoSpam>
   <ModCompatChecker.SpamExplain>60秒毎に確認。Player.logの肥大化を防止。イベント通知で警告。パフォーマンスに影響なし。</ModCompatChecker.SpamExplain>
+  <ModCompatChecker.EncycloManager>Encyclopedia Manager</ModCompatChecker.EncycloManager>
+  <ModCompatChecker.Edit>Edit</ModCompatChecker.Edit>
+  <ModCompatChecker.EditingEntry>Editing:</ModCompatChecker.EditingEntry>
+  <ModCompatChecker.Keyword>Keyword</ModCompatChecker.Keyword>
+  <ModCompatChecker.Pattern>Pattern</ModCompatChecker.Pattern>
+  <ModCompatChecker.ExplanationZh>Chinese Explanation</ModCompatChecker.ExplanationZh>
+  <ModCompatChecker.ExplanationEn>English Explanation</ModCompatChecker.ExplanationEn>
+  <ModCompatChecker.Save>Save</ModCompatChecker.Save>
+  <ModCompatChecker.Cancel>Cancel</ModCompatChecker.Cancel>
+  <ModCompatChecker.AddEntry>Add New Entry</ModCompatChecker.AddEntry>
+  <ModCompatChecker.RestoreAllDefaults>Restore All Defaults</ModCompatChecker.RestoreAllDefaults>
 </LanguageData>

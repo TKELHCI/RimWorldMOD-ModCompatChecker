@@ -294,4 +294,15 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.AutoSpamToggle>自動檢測刷屏報錯（每60秒）</ModCompatChecker.AutoSpamToggle>
   <ModCompatChecker.EnableAutoSpam>啟用自動檢測</ModCompatChecker.EnableAutoSpam>
   <ModCompatChecker.SpamExplain>每60秒檢測一次重複報錯。防止循環報錯撐爆 Player.log。發現後以事件彈窗提醒。不影響遊戲效能。</ModCompatChecker.SpamExplain>
+  <ModCompatChecker.EncycloManager>Encyclopedia Manager</ModCompatChecker.EncycloManager>
+  <ModCompatChecker.Edit>Edit</ModCompatChecker.Edit>
+  <ModCompatChecker.EditingEntry>Editing:</ModCompatChecker.EditingEntry>
+  <ModCompatChecker.Keyword>Keyword</ModCompatChecker.Keyword>
+  <ModCompatChecker.Pattern>Pattern</ModCompatChecker.Pattern>
+  <ModCompatChecker.ExplanationZh>Chinese Explanation</ModCompatChecker.ExplanationZh>
+  <ModCompatChecker.ExplanationEn>English Explanation</ModCompatChecker.ExplanationEn>
+  <ModCompatChecker.Save>Save</ModCompatChecker.Save>
+  <ModCompatChecker.Cancel>Cancel</ModCompatChecker.Cancel>
+  <ModCompatChecker.AddEntry>Add New Entry</ModCompatChecker.AddEntry>
+  <ModCompatChecker.RestoreAllDefaults>Restore All Defaults</ModCompatChecker.RestoreAllDefaults>
 </LanguageData>

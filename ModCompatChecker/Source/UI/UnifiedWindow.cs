@@ -19,7 +19,7 @@ namespace ModCompatChecker.UI
         private Vector2 _scroll = Vector2.zero;
         private readonly object _lock = new object();
         private bool _disposed; private static int _cachedWorldId = -1; private static int _worldCheckFrame;
-        private bool _showSettings = true, _showCompat = true, _showErrorSection, _showTools, _spamChecking, _showAdvanced;
+        private bool _showSettings = true, _showCompat = true, _showErrorSection, _showTools, _spamChecking, _showAdvanced; private string _editingEncyclo, _encycloEditKeyword, _encycloEditPattern, _encycloEditZh, _encycloEditEn, _encycloEditSev, _encycloEditCat; private Vector2 _encycloScroll;
         private readonly SharedSettingsUI.UIState _uiState = new SharedSettingsUI.UIState();
 
         public override Vector2 InitialSize
@@ -145,6 +145,79 @@ namespace ModCompatChecker.UI
                     }
                 }
                 listing.Gap(8f);
+                // ── Encyclopedia Manager ──
+                GUI.color = new Color(0.25f, 0.25f, 0.35f);
+                Widgets.DrawBoxSolid(listing.GetRect(2f), GUI.color);
+                GUI.color = Color.white;
+                listing.Gap(4f);
+                listing.Label("ModCompatChecker.EncycloManager".Translate(), -1);
+                listing.Gap(2f);
+                var ents = Core.ErrorEncyclopedia.Entries;
+                if (ents != null && ents.Count > 0)
+                {
+                    var encRect = listing.GetRect(Mathf.Min(ents.Count * 52f, 280f));
+                    Widgets.BeginScrollView(encRect, ref _encycloScroll, new Rect(0f, 0f, encRect.width - 28f, ents.Count * 52f));
+                    float ey = 0f;
+                    var toReset = new List<string>();
+                    foreach (var ent in ents)
+                    {
+                        GUI.color = Core.ErrorEncyclopedia.GetSeverityColor(ent.Severity);
+                        Widgets.Label(new Rect(4f, ey, encRect.width - 90f, 18f), "[" + ent.Severity + "] " + ent.Keyword);
+                        GUI.color = Color.white;
+                        if (Widgets.ButtonText(new Rect(encRect.width - 84f, ey, 52f, 18f), "ModCompatChecker.Edit".Translate()))
+                        {
+                            _editingEncyclo = ent.Id;
+                            _encycloEditKeyword = ent.Keyword;
+                            _encycloEditPattern = ent.Pattern;
+                            _encycloEditZh = ent.ExplanationZh;
+                            _encycloEditEn = ent.ExplanationEn;
+                            _encycloEditSev = ent.Severity;
+                            _encycloEditCat = ent.Category;
+                        }
+                        if (Widgets.ButtonText(new Rect(encRect.width - 30f, ey, 26f, 18f), "R"))
+                            toReset.Add(ent.Id);
+                        Widgets.Label(new Rect(8f, ey + 20f, encRect.width - 90f, 28f), Core.ErrorEncyclopedia.GetExplanation(ent));
+                        ey += 52f;
+                    }
+                    Widgets.EndScrollView();
+                    foreach (var id in toReset) Core.ErrorEncyclopedia.ResetEntry(id);
+                }
+                listing.Gap(4f);
+                if (_editingEncyclo != null)
+                {
+                    listing.Label("ModCompatChecker.EditingEntry".Translate() + " " + _editingEncyclo, -1);
+                    listing.Gap(2f);
+                    listing.Label("ModCompatChecker.Keyword".Translate(), -1);
+                    _encycloEditKeyword = listing.TextEntry(_encycloEditKeyword);
+                    listing.Label("ModCompatChecker.Pattern".Translate(), -1);
+                    _encycloEditPattern = listing.TextEntry(_encycloEditPattern);
+                    listing.Label("ModCompatChecker.ExplanationZh".Translate(), -1);
+                    _encycloEditZh = listing.TextEntry(_encycloEditZh);
+                    listing.Label("ModCompatChecker.ExplanationEn".Translate(), -1);
+                    _encycloEditEn = listing.TextEntry(_encycloEditEn);
+                    listing.Gap(2f);
+                    if (listing.ButtonText("ModCompatChecker.Save".Translate()))
+                    {
+                        Core.ErrorEncyclopedia.SaveEntry(new Core.ErrorEntry { Id = _editingEncyclo, Keyword = _encycloEditKeyword, Pattern = _encycloEditPattern, ExplanationZh = _encycloEditZh, ExplanationEn = _encycloEditEn, Severity = _encycloEditSev ?? "medium", Category = _encycloEditCat ?? "warning" });
+                        Core.ErrorEncyclopedia.LoadFromJson();
+                        _editingEncyclo = null;
+                    }
+                    if (listing.ButtonText("ModCompatChecker.Cancel".Translate()))
+                        _editingEncyclo = null;
+                }
+                listing.Gap(4f);
+                if (listing.ButtonText("ModCompatChecker.AddEntry".Translate()))
+                {
+                    var newId = "user_" + DateTime.Now.Ticks;
+                    Core.ErrorEncyclopedia.SaveEntry(new Core.ErrorEntry { Id = newId, Keyword = "New Keyword", Pattern = "NewPattern", ExplanationZh = "说明", ExplanationEn = "Description", Severity = "medium", Category = "warning" });
+                    Core.ErrorEncyclopedia.LoadFromJson();
+                }
+                if (listing.ButtonText("ModCompatChecker.RestoreAllDefaults".Translate()))
+                {
+                    try { File.Delete(Core.ErrorEncyclopedia.UserOverridesPath ?? ""); } catch { }
+                    Core.ErrorEncyclopedia.LoadFromJson();
+                }
+
             }
 
             inner.End();
@@ -816,7 +889,6 @@ namespace ModCompatChecker.UI
         private bool _showUpdates;
         private Vector2 _updateScroll = Vector2.zero;
 
-        private Vector2 _encycloScroll = Vector2.zero;
         private List<(Core.ErrorEntry Entry, System.Text.RegularExpressions.Match Match)> _encycloMatches;
 
         private void DrawErrorSection(Listing_Standard listing, ModCompatSettings settings)
