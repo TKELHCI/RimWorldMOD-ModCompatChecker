@@ -300,8 +300,47 @@ namespace ModCompatChecker.UI
                     else if (busy)
                         Widgets.Label(new Rect(btnRect.x + 120f, btnRect.y + 4f, 200f, 20f), status);
                     else if (Widgets.ButtonText(new Rect(btnRect.x + 120f, btnRect.y, 130f, 26f), "AI 批量分析"))
+            listing.Gap(4f);
+            if (listing.ButtonText("ModCompatChecker.CheckUpdates".Translate()))
+            {
+                _updateVersions = Core.UpdateChecker.GetLocalModVersions();
+                Core.UpdateChecker.CheckWorkshopUpdates(_updateVersions, (result) => { if (!_disposed) lock (_lock) { _updateVersions = result; _showUpdates = true; } });
+                _showUpdates = true;
+            }
+
                         StartBatchAnalysis(settings);
                 }
+            }
+
+
+            // === Update Check Result ===
+            if (_showUpdates && _updateVersions != null)
+            {
+                listing.Gap(4f);
+                GUI.color = new Color(0.25f, 0.4f, 0.6f);
+                Widgets.DrawBoxSolid(listing.GetRect(2f), GUI.color);
+                GUI.color = Color.white;
+                listing.Gap(4f);
+                listing.Label("ModCompatChecker.UpdateCheckResult".Translate() + " (" + _updateVersions.Count + " MOD)", -1);
+                var updatesFound = _updateVersions.FindAll(v => v.HasUpdate);
+                if (updatesFound.Count > 0)
+                {
+                    GUI.color = new Color(0.9f, 0.6f, 0.1f);
+                    listing.Label("ModCompatChecker.UpdatesAvailable".Translate() + " " + updatesFound.Count, -1);
+                    GUI.color = Color.white;
+                }
+                var ulRect = listing.GetRect(Mathf.Min(_updateVersions.Count * 24f, 200f));
+                Widgets.BeginScrollView(ulRect, ref _updateScroll, new Rect(0f, 0f, ulRect.width - 20f, _updateVersions.Count * 24f));
+                float uy = 0f;
+                foreach (var v in _updateVersions)
+                {
+                    string status = v.HasUpdate ? "[!]" : "[OK]";
+                    GUI.color = v.HasUpdate ? new Color(1f, 0.6f, 0.2f) : new Color(0.4f, 0.7f, 0.4f);
+                    Widgets.Label(new Rect(4f, uy, ulRect.width - 30f, 22f), status + " " + v.Name + "   v" + v.LocalVersion + (v.HasUpdate ? " -> " + v.WorkshopVersion : ""));
+                    GUI.color = Color.white;
+                    uy += 24f;
+                }
+                Widgets.EndScrollView();
             }
 
             listing.Gap(6f);
@@ -648,6 +687,17 @@ namespace ModCompatChecker.UI
         private string _followUpQuestion = "";
         private bool _followUpOpen, _followUpRunning, _steamSearchOpen;
         private bool _needsRefresh = true; private string _quickAsk = "", _quickAnswer = ""; private bool _quickRunning; private Vector2 _quickScroll;
+
+
+        // === Encyclopedia fields ===
+        // === Update checker fields ===
+        private List<Core.ModVersionInfo> _updateVersions;
+        private bool _showUpdates;
+        private Vector2 _updateScroll = Vector2.zero;
+
+        private bool _encyclopediaOpen;
+        private Vector2 _encycloScroll = Vector2.zero;
+        private List<(Core.ErrorEntry Entry, System.Text.RegularExpressions.Match Match)> _encycloMatches;
 
         private void DrawErrorSection(Listing_Standard listing, ModCompatSettings settings)
         {
@@ -1094,6 +1144,7 @@ namespace ModCompatChecker.UI
                     if (!_disposed) lock (_lock)
                     {
                         ErrorResult = _errorCancelled ? "ModCompatChecker.AnalysisCancelledNL".Translate() + result : result;
+                        if (!_disposed) lock (_lock) { try { _encycloMatches = Core.ErrorEncyclopedia.MatchError(result); } catch { _encycloMatches = null; } }
                         if (_analysisTimer.Elapsed.TotalSeconds > settings.AnalysisTimeoutSeconds * 0.8)
                             ErrorResult += "\n\n耗时 " + _analysisTimer.Elapsed.TotalSeconds.ToString("F1") + "s";
                         ErrorDeps = DependencyExtractor.Extract(errorText + "\n" + ErrorResult); _cachedErrorResult[_errorSource] = ErrorResult; _cachedDeps[_errorSource] = new List<string>(ErrorDeps);
@@ -1253,10 +1304,6 @@ namespace ModCompatChecker.UI
         }
     }
 }
-
-
-
-
 
 
 

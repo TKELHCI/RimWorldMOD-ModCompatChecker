@@ -252,4 +252,16 @@
   <ModCompatChecker.RateLimit>请求过于频繁，请稍后再试</ModCompatChecker.RateLimit>
   <ModCompatChecker.ServerError>服务器错误</ModCompatChecker.ServerError>
   <ModCompatChecker.ModelOllama>Ollama 本地 (Llama 3.2)</ModCompatChecker.ModelOllama>
-  <ModCompatChecker.ModName>Mod 兼容性检查器</ModCompatChecker.ModName>`n</LanguageData>
+  <ModCompatChecker.ErrorEncyclopedia>报错百科</ModCompatChecker.ErrorEncyclopedia>
+  <ModCompatChecker.CrashRisk>崩溃风险</ModCompatChecker.CrashRisk>
+  <ModCompatChecker.WarningInfo>警告信息</ModCompatChecker.WarningInfo>
+  <ModCompatChecker.CompatIssue>兼容问题</ModCompatChecker.CompatIssue>
+  <ModCompatChecker.PerfIssue>性能影响</ModCompatChecker.PerfIssue>
+  <ModCompatChecker.CheckUpdates>检测 MOD 更新</ModCompatChecker.CheckUpdates>
+  <ModCompatChecker.UpdateCheckResult>更新检测</ModCompatChecker.UpdateCheckResult>
+  <ModCompatChecker.UpdatesAvailable>发现可更新:</ModCompatChecker.UpdatesAvailable>
+  <ModCompatChecker.CriticalImpact>严重</ModCompatChecker.CriticalImpact>
+  <ModCompatChecker.HighImpact>高影响</ModCompatChecker.HighImpact>
+  <ModCompatChecker.MediumImpact>中等</ModCompatChecker.MediumImpact>
+  <ModCompatChecker.LowImpact>低影响</ModCompatChecker.LowImpact>
+</LanguageData>

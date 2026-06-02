@@ -269,4 +269,16 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.UI131>(?:depends|依赖|requires?)[^\n]{0,30}?[：:\s]*</ModCompatChecker.UI131>
   <ModCompatChecker.UI150>]?\s*(?:not\s+(?:loaded|found|installed)|not found)</ModCompatChecker.UI150>
   <ModCompatChecker.UI171>\b(Error|错误|Exception|异常):</ModCompatChecker.UI171>
+  <ModCompatChecker.ErrorEncyclopedia>Error Encyclopedia</ModCompatChecker.ErrorEncyclopedia>
+  <ModCompatChecker.CrashRisk>Crash Risk</ModCompatChecker.CrashRisk>
+  <ModCompatChecker.WarningInfo>Warning</ModCompatChecker.WarningInfo>
+  <ModCompatChecker.CompatIssue>Compatibility</ModCompatChecker.CompatIssue>
+  <ModCompatChecker.PerfIssue>Performance</ModCompatChecker.PerfIssue>
+  <ModCompatChecker.CheckUpdates>Check for Updates</ModCompatChecker.CheckUpdates>
+  <ModCompatChecker.UpdateCheckResult>Update Check</ModCompatChecker.UpdateCheckResult>
+  <ModCompatChecker.UpdatesAvailable>Updates available:</ModCompatChecker.UpdatesAvailable>
+  <ModCompatChecker.CriticalImpact>Critical</ModCompatChecker.CriticalImpact>
+  <ModCompatChecker.HighImpact>High Impact</ModCompatChecker.HighImpact>
+  <ModCompatChecker.MediumImpact>Medium Impact</ModCompatChecker.MediumImpact>
+  <ModCompatChecker.LowImpact>Low Impact</ModCompatChecker.LowImpact>
 </LanguageData>
