@@ -79,6 +79,7 @@
     <Compile Include="Core\ConflictReport.cs" />
     <Compile Include="Core\ErrorEncyclopedia.cs" />
     <Compile Include="Core\UpdateChecker.cs" />
+    <Compile Include="Core\RelationshipAnalyzer.cs" />
     <Compile Include="Core\HarmonyAnalyzer.cs" />
     <Compile Include="Core\DefAnalyzer.cs" />
     <Compile Include="Core\DependencyChecker.cs" />

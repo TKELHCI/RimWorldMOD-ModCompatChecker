@@ -264,4 +264,12 @@
   <ModCompatChecker.HighImpact>高影响</ModCompatChecker.HighImpact>
   <ModCompatChecker.MediumImpact>中等</ModCompatChecker.MediumImpact>
   <ModCompatChecker.LowImpact>低影响</ModCompatChecker.LowImpact>
+  <ModCompatChecker.RelationshipChain>关系链分析</ModCompatChecker.RelationshipChain>
+  <ModCompatChecker.ModRelationTitle>MOD 关系</ModCompatChecker.ModRelationTitle>
+  <ModCompatChecker.RelDependsOn>依赖</ModCompatChecker.RelDependsOn>
+  <ModCompatChecker.RelDependedBy>被依赖</ModCompatChecker.RelDependedBy>
+  <ModCompatChecker.RelHarmonyConflict>Harmony 冲突</ModCompatChecker.RelHarmonyConflict>
+  <ModCompatChecker.RelDefConflict>Def 冲突</ModCompatChecker.RelDefConflict>
+  <ModCompatChecker.RelLoadOrder>加载顺序</ModCompatChecker.RelLoadOrder>
+  <ModCompatChecker.RelMissing>缺失依赖</ModCompatChecker.RelMissing>
 </LanguageData>

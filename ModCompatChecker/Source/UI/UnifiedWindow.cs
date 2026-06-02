@@ -61,6 +61,10 @@ namespace ModCompatChecker.UI
             if (settings == null) return;
             if (_worldCheckFrame != Time.frameCount) CheckCache();
 
+            // Wider scrollbars for better usability
+            GUI.skin.verticalScrollbar.fixedWidth = 24f;
+            GUI.skin.verticalScrollbarThumb.fixedWidth = 20f;
+
             var listing = new Listing_Standard();
             listing.Begin(inRect);
 
@@ -313,6 +317,38 @@ namespace ModCompatChecker.UI
             }
 
 
+
+            // === Relationship Chain ===
+            listing.Gap(4f);
+            GUI.color = new Color(0.2f, 0.4f, 0.6f);
+            if (Widgets.ButtonText(listing.GetRect(28f), "ModCompatChecker.RelationshipChain".Translate()))
+            {
+                ConflictReport repR; lock (_lock) { repR = _report; }
+                if (repR != null && repR.HasConflicts)
+                {
+                    var conflictMods = Core.RelationshipAnalyzer.GetAllConflictingMods(repR);
+                    var modList = new List<string>(conflictMods);
+                    modList.Sort();
+                    var floatOpts = new List<FloatMenuOption>();
+                    foreach (var m in modList)
+                    {
+                        string mn = m;
+                        floatOpts.Add(new FloatMenuOption(mn, () => {
+                            ConflictReport rep; lock (_lock) { rep = _report; }
+                            if (rep != null)
+                            {
+                                _relationship = Core.RelationshipAnalyzer.Analyze(mn, rep);
+                                _relSelectedMod = mn;
+                                _relOpen = true;
+                                _relDepends = true; _relDepended = true; _relHarmony = true; _relDef = true; _relOrder = true;
+                            }
+                        }));
+                    }
+                    if (floatOpts.Count > 0) Find.WindowStack.Add(new FloatMenu(floatOpts));
+                }
+            }
+            GUI.color = Color.white;
+
             // === Update Check Result ===
             if (_showUpdates && _updateVersions != null)
             {
@@ -338,6 +374,44 @@ namespace ModCompatChecker.UI
                     GUI.color = v.HasUpdate ? new Color(1f, 0.6f, 0.2f) : new Color(0.4f, 0.7f, 0.4f);
                     Widgets.Label(new Rect(4f, uy, ulRect.width - 30f, 22f), status + " " + v.Name + "   v" + v.LocalVersion + (v.HasUpdate ? " -> " + v.WorkshopVersion : ""));
                     GUI.color = Color.white;
+
+            // === Relationship Display ===
+            if (_relOpen && _relationship != null)
+            {
+                listing.Gap(4f);
+                GUI.color = new Color(0.25f, 0.45f, 0.65f);
+                Widgets.DrawBoxSolid(listing.GetRect(2f), GUI.color);
+                GUI.color = Color.white;
+                listing.Gap(4f);
+                Widgets.Label(listing.GetRect(24f), "ModCompatChecker.ModRelationTitle".Translate() + "  " + Truncate(_relationship.ModName, 50));
+
+                var relContentHeight = 0f;
+                if (_relDepends && _relationship.DependsOn.Count > 0) relContentHeight += 22f + _relationship.DependsOn.Count * 20f;
+                if (_relDepended && _relationship.DependedBy.Count > 0) relContentHeight += 22f + _relationship.DependedBy.Count * 20f;
+                if (_relHarmony && _relationship.HarmonyConflictsWith.Count > 0) relContentHeight += 22f + _relationship.HarmonyConflictsWith.Count * 20f;
+                if (_relDef && _relationship.DefConflictsWith.Count > 0) relContentHeight += 22f + _relationship.DefConflictsWith.Count * 20f;
+                if (_relOrder && (_relationship.LoadBefore.Count > 0 || _relationship.LoadAfter.Count > 0)) relContentHeight += 22f + (_relationship.LoadBefore.Count + _relationship.LoadAfter.Count) * 20f;
+                if (_relationship.MissingDeps.Count > 0) relContentHeight += 22f + _relationship.MissingDeps.Count * 20f;
+                if (_relationship.VersionIssues.Count > 0) relContentHeight += 22f + _relationship.VersionIssues.Count * 20f;
+
+                if (relContentHeight > 0)
+                {
+                    var rlHeight = Mathf.Min(relContentHeight + 10f, 300f);
+                    var rlRect = listing.GetRect(rlHeight);
+                    Widgets.BeginScrollView(rlRect, ref _relScroll, new Rect(0f, 0f, rlRect.width - 24f, relContentHeight + 10f));
+                    float ry = 0f;
+
+                    DrawRelSection("ModCompatChecker.RelDependsOn".Translate(), ref _relDepends, _relationship.DependsOn, Color.green, ref ry, rlRect.width - 30f);
+                    DrawRelSection("ModCompatChecker.RelDependedBy".Translate(), ref _relDepended, _relationship.DependedBy, new Color(0.3f, 0.7f, 1f), ref ry, rlRect.width - 30f);
+                    DrawRelSection("ModCompatChecker.RelHarmonyConflict".Translate(), ref _relHarmony, _relationship.HarmonyConflictsWith, new Color(1f, 0.5f, 0.2f), ref ry, rlRect.width - 30f);
+                    DrawRelSection("ModCompatChecker.RelDefConflict".Translate(), ref _relDef, _relationship.DefConflictsWith, new Color(0.9f, 0.3f, 0.3f), ref ry, rlRect.width - 30f);
+                    DrawRelSection("ModCompatChecker.RelLoadOrder".Translate(), ref _relOrder, _relationship.LoadBefore.Select(l => "-> before " + l).Concat(_relationship.LoadAfter.Select(l => "after -> " + l)).ToList(), new Color(0.8f, 0.8f, 0.3f), ref ry, rlRect.width - 30f);
+                    if (_relationship.MissingDeps.Count > 0) DrawRelSection("ModCompatChecker.RelMissing".Translate(), ref _relDepends, _relationship.MissingDeps, Color.red, ref ry, rlRect.width - 30f);
+
+                    Widgets.EndScrollView();
+                }
+            }
+
                     uy += 24f;
                 }
                 Widgets.EndScrollView();
@@ -691,6 +765,12 @@ namespace ModCompatChecker.UI
 
         // === Encyclopedia fields ===
         // === Update checker fields ===
+        // === Relationship analyzer fields ===
+        private string _relSelectedMod = null;
+        private Core.ModRelationship _relationship;
+        private bool _relOpen, _relDepends, _relDepended, _relHarmony, _relDef, _relOrder;
+        private Vector2 _relScroll = Vector2.zero;
+
         private List<Core.ModVersionInfo> _updateVersions;
         private bool _showUpdates;
         private Vector2 _updateScroll = Vector2.zero;
@@ -1302,15 +1382,25 @@ namespace ModCompatChecker.UI
             public string Level, Time, Brief, Full;
             public bool Selected;
         }
+
+        private void DrawRelSection(string title, ref bool open, List<string> items, Color col, ref float y, float width)
+        {
+            if (items == null || items.Count == 0) return;
+            var headerRect = new Rect(0f, y, width, 20f);
+            GUI.color = col;
+            string arrow = open ? "v" : ">";
+            Widgets.Label(headerRect, arrow + " " + title + " (" + items.Count + ")");
+            GUI.color = Color.white;
+            if (Widgets.ButtonInvisible(headerRect)) open = !open;
+            y += 22f;
+            if (open)
+            {
+                foreach (var item in items)
+                {
+                    Widgets.Label(new Rect(16f, y, width - 20f, 18f), item);
+                    y += 20f;
+                }
+            }
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-

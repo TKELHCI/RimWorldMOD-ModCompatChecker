@@ -281,4 +281,12 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.HighImpact>High Impact</ModCompatChecker.HighImpact>
   <ModCompatChecker.MediumImpact>Medium Impact</ModCompatChecker.MediumImpact>
   <ModCompatChecker.LowImpact>Low Impact</ModCompatChecker.LowImpact>
+  <ModCompatChecker.RelationshipChain>Relationship Chain</ModCompatChecker.RelationshipChain>
+  <ModCompatChecker.ModRelationTitle>Mod Relationship</ModCompatChecker.ModRelationTitle>
+  <ModCompatChecker.RelDependsOn>Depends On</ModCompatChecker.RelDependsOn>
+  <ModCompatChecker.RelDependedBy>Depended By</ModCompatChecker.RelDependedBy>
+  <ModCompatChecker.RelHarmonyConflict>Harmony Conflicts</ModCompatChecker.RelHarmonyConflict>
+  <ModCompatChecker.RelDefConflict>Def Conflicts</ModCompatChecker.RelDefConflict>
+  <ModCompatChecker.RelLoadOrder>Load Order</ModCompatChecker.RelLoadOrder>
+  <ModCompatChecker.RelMissing>Missing Dependencies</ModCompatChecker.RelMissing>
 </LanguageData>
