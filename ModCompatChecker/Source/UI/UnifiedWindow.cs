@@ -121,6 +121,14 @@ namespace ModCompatChecker.UI
                 if (listing.ButtonText("ModCompatChecker.CheckSpam".Translate())) { Core.SpamDetector.CheckForSpam(); _spamChecking = true; }
                 if (_spamChecking && Core.SpamDetector.ActiveAlerts.Count > 0) { foreach (var a in Core.SpamDetector.ActiveAlerts) { GUI.color = Color.red; Widgets.Label(listing.GetRect(20f), "[" + a.Count + "x] " + a.NormalizedMessage); GUI.color = Color.white; } }
                 listing.Gap(4f);
+                // Log file size
+                Core.SpamDetector.RefreshLogSize();
+                var sizeStr = Core.SpamDetector.GetLogSizeDisplay();
+                var logPath = Core.SpamDetector.LogFilePath;
+                GUI.color = long.TryParse(sizeStr.Replace(" KB","").Replace(" MB","").Replace(" GB","").Replace(" B",""), out long sb) && sb > 50*1024*1024 ? new Color(1f, 0.5f, 0.2f) : new Color(0.5f, 0.7f, 0.5f);
+                Widgets.Label(listing.GetRect(20f), ("ModCompatChecker.LogFileSize".Translate() + " " + sizeStr + (!string.IsNullOrEmpty(logPath) ? "" : " (" + "ModCompatChecker.NotAvailable".Translate().ToString() + ")")).ToString());
+                GUI.color = Color.white;
+
                 if (Widgets.ButtonText(listing.GetRect(24f), "ModCompatChecker.OpenLogFolder".Translate())) { var p = Core.SpamDetector.GetLogFolderPath(); if (p.Length > 0) System.Diagnostics.Process.Start("explorer.exe", p); }
                 listing.Gap(8f);
             }

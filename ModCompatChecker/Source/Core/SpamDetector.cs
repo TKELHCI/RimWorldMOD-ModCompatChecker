@@ -121,6 +121,58 @@ namespace ModCompatChecker.Core
             if (string.IsNullOrEmpty(t)) return "";
             t = t.Replace('\n', ' ').Replace('\r', ' ');
             return t.Length > 100 ? t.Substring(0, 97) + "..." : t;
+        }        // ── Log file size monitoring ──
+        private static float _lastSizeCheck;
+        private static long _logFileSize;
+        private const float SizeCheckInterval = 300f; // 5 minutes
+
+        public static string LogFilePath
+        {
+            get
+            {
+                try
+                {
+                    var dir = GetLogFolderPath();
+                    if (string.IsNullOrEmpty(dir)) return "";
+                    var path = Path.Combine(dir, "Player.log");
+                    if (File.Exists(path)) return path;
+                    // Try Player-prev.log
+                    path = Path.Combine(dir, "Player-prev.log");
+                    return File.Exists(path) ? path : "";
+                }
+                catch { return ""; }
+            }
+        }
+
+        public static string GetLogSizeDisplay()
+        {
+            try
+            {
+                var now = Time.realtimeSinceStartup;
+                if (now - _lastSizeCheck > SizeCheckInterval || _logFileSize == 0)
+                {
+                    _lastSizeCheck = now;
+                    var path = LogFilePath;
+                    if (!string.IsNullOrEmpty(path) && File.Exists(path))
+                        _logFileSize = new FileInfo(path).Length;
+                }
+                return FormatSize(_logFileSize);
+            }
+            catch { return "?"; }
+        }
+
+        public static void RefreshLogSize()
+        {
+            _lastSizeCheck = 0f;
+            _logFileSize = 0;
+        }
+
+        private static string FormatSize(long bytes)
+        {
+            if (bytes < 1024) return bytes + " B";
+            if (bytes < 1024 * 1024) return (bytes / 1024.0).ToString("F1") + " KB";
+            if (bytes < 1024 * 1024 * 1024) return (bytes / (1024.0 * 1024)).ToString("F2") + " MB";
+            return (bytes / (1024.0 * 1024 * 1024)).ToString("F3") + " GB";
         }
 
         public static string GetLogFolderPath()

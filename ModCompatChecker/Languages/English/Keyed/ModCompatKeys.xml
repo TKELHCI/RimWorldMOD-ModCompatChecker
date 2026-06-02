@@ -313,4 +313,6 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.Cancel>Cancel</ModCompatChecker.Cancel>
   <ModCompatChecker.AddEntry>Add New Entry</ModCompatChecker.AddEntry>
   <ModCompatChecker.RestoreAllDefaults>Restore All Defaults</ModCompatChecker.RestoreAllDefaults>
+  <ModCompatChecker.LogFileSize>Player.log size:</ModCompatChecker.LogFileSize>
+  <ModCompatChecker.NotAvailable>N/A</ModCompatChecker.NotAvailable>
 </LanguageData>

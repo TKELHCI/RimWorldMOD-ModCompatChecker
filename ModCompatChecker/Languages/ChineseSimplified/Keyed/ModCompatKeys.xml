@@ -296,4 +296,6 @@
   <ModCompatChecker.Cancel>取消</ModCompatChecker.Cancel>
   <ModCompatChecker.AddEntry>添加条目</ModCompatChecker.AddEntry>
   <ModCompatChecker.RestoreAllDefaults>恢复全部默认</ModCompatChecker.RestoreAllDefaults>
+  <ModCompatChecker.LogFileSize>Player.log 大小:</ModCompatChecker.LogFileSize>
+  <ModCompatChecker.NotAvailable>不可用</ModCompatChecker.NotAvailable>
 </LanguageData>
