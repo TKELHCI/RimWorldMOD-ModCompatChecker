@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Mod 兼容性检查器</name>
+  <name>ModCompatChecker.ModName</name>
   <author>秋羽雪绪</author>
   <packageId>modcompatchecker.main</packageId>
   <description>

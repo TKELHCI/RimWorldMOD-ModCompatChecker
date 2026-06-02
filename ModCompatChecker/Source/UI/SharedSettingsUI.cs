@@ -98,6 +98,8 @@ namespace ModCompatChecker.UI
 
             listing.Label("ModCompatChecker.APIKey".Translate(), -1);
             settings.APIKey = listing.TextEntry(settings.APIKey);
+            // Persist immediately so API key survives restart without save
+            try { if (ModCompatChecker.ModCompatMod.Instance != null) ModCompatChecker.ModCompatMod.Instance.WriteSettings(); } catch { }
             listing.Gap(3f);
 
             listing.Label("ModCompatChecker.AnalysisTimeout".Translate() + settings.AnalysisTimeoutSeconds + "ModCompatChecker.SecondsUnit".Translate(), -1);

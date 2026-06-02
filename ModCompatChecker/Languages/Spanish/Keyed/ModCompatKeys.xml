@@ -132,4 +132,5 @@ Time: </ModCompatChecker.TimeCostNL>
   <ModCompatChecker.RateLimit>Demasiadas solicitudes</ModCompatChecker.RateLimit>
   <ModCompatChecker.ServerError>Error del servidor</ModCompatChecker.ServerError>
   <ModCompatChecker.ModelOllama>Ollama Local (Llama 3.2)</ModCompatChecker.ModelOllama>
+  <ModCompatChecker.ModName>Comprobador de Compatibilidad de Mods</ModCompatChecker.ModName>
 </LanguageData>
