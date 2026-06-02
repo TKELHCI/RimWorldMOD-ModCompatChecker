@@ -160,4 +160,21 @@
   <ModCompatChecker.ErrorLookupDesc>エラーログやキーワードを貼り付け。内蔵データベースを検索またはAIで分析。</ModCompatChecker.ErrorLookupDesc>
   <ModCompatChecker.Thinking>🤔 考え中...</ModCompatChecker.Thinking>
   <ModCompatChecker.ForceStop>強制停止</ModCompatChecker.ForceStop>
+  <ModCompatChecker.ForceStopAll>すべて強制停止</ModCompatChecker.ForceStopAll>
+  <ModCompatChecker.ClearLog>ログをクリア</ModCompatChecker.ClearLog>
+  <ModCompatChecker.NoApiLogs>APIログはありません</ModCompatChecker.NoApiLogs>
+  <ModCompatChecker.NoRunningOps>実行中の操作はありません</ModCompatChecker.NoRunningOps>
+  <ModCompatChecker.APIMonitor>API モニター</ModCompatChecker.APIMonitor>
+  <ModCompatChecker.Running>実行中</ModCompatChecker.Running>
+  <ModCompatChecker.BlockAllAPI>このMODからの後続のAPI呼び出しをすべてブロック</ModCompatChecker.BlockAllAPI>
+<ModCompatChecker.EnableSelfAudit>AI応答の自己審査を有効に</ModCompatChecker.EnableSelfAudit>
+<ModCompatChecker.SelfAuditExplain>有効にすると、各AI応答が危険な変更提案（ファイル書き込み、コード実行など）を含むか自動スキャンします。検出時はイベントで警告。誤検出の可能性あり。デフォルトはオフ。</ModCompatChecker.SelfAuditExplain>
+<ModCompatChecker.SelfAuditWarningTitle>AI応答セキュリティ警告</ModCompatChecker.SelfAuditWarningTitle>
+<ModCompatChecker.APIDataNotice>注意：AI分析リクエストは設定したAPIエンドポイントに送信されます。カスタムシステムプロンプトはデフォルトの安全指示を完全に置き換えます。</ModCompatChecker.APIDataNotice>
+<ModCompatChecker.TestAuditWarning>セキュリティ警告をテスト (デモ)</ModCompatChecker.TestAuditWarning>
+<ModCompatChecker.EnableTestMode>テストモードを有効に</ModCompatChecker.EnableTestMode>
+<ModCompatChecker.TestModeHint>テストモードがオンです：デモボタンが表示され、手動で警告をトリガーできます。</ModCompatChecker.TestModeHint>
+<ModCompatChecker.TestSpamAlert>スパム警告をテスト (デモ)</ModCompatChecker.TestSpamAlert>
+<ModCompatChecker.SpamAlertTitle>スパムエラー警告</ModCompatChecker.SpamAlertTitle>
+<ModCompatChecker.TestSpamBody>以下はシミュレーションされたスパムエラーのデモです：</ModCompatChecker.TestSpamBody>
 </LanguageData>

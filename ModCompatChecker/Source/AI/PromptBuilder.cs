@@ -141,7 +141,7 @@ Fix Suggestions:
                 sb.AppendLine("崩溃日志分析：");
                 sb.AppendLine();
                 sb.AppendLine("=== 崩溃日志 ===");
-                sb.AppendLine(errorStack);
+                sb.AppendLine(SanitizeErrorLog(errorStack));
                 sb.AppendLine();
                 sb.AppendLine("=== 已检测到的 MOD 冲突 ===");
                 sb.AppendLine($"Harmony 冲突: {report.HarmonyConflicts.Count} 个");
@@ -155,7 +155,7 @@ Fix Suggestions:
                 sb.AppendLine("Crash log analysis:");
                 sb.AppendLine();
                 sb.AppendLine("=== Crash Log ===");
-                sb.AppendLine(errorStack);
+                sb.AppendLine(SanitizeErrorLog(errorStack));
                 sb.AppendLine();
                 sb.AppendLine("=== Detected Conflicts ===");
                 sb.AppendLine($"Harmony: {report.HarmonyConflicts.Count}");
@@ -194,6 +194,26 @@ Fix Suggestions:
                 sb.AppendLine(FormatEn);
             }
             return sb.ToString();
+        }
+
+        /// <summary>Sanitize user-provided error logs to prevent prompt injection.</summary>
+        private static string SanitizeErrorLog(string errorText)
+        {
+            if (string.IsNullOrEmpty(errorText)) return errorText;
+            // Truncate very long logs
+            if (errorText.Length > 8000)
+                errorText = errorText.Substring(0, 8000) + "\n... (truncated)";
+            // Neutralize common injection patterns
+            errorText = System.Text.RegularExpressions.Regex.Replace(errorText,
+                @"(ignore|forget|disregard)\s+(all\s+)?(previous|prior|above|earlier)\s+(instructions?|prompts?|context)",
+                "[FILTERED: $1 $3 instructions]", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            errorText = System.Text.RegularExpressions.Regex.Replace(errorText,
+                @"(you\s+are\s+now|from\s+now\s+on\s+you|your\s+new\s+(role|identity|persona|task)\s+is)",
+                "[FILTERED: role reassignment]", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            errorText = System.Text.RegularExpressions.Regex.Replace(errorText,
+                @"<\|im_start\|>|<\|im_end\|>|\[SYSTEM\]|\[INST\]|<<SYS>>|<\/SYS>>",
+                "[FILTERED: system token]", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            return errorText;
         }
 
         public static string GetSystemPrompt()

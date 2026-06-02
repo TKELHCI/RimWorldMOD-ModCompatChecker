@@ -17,10 +17,13 @@ namespace ModCompatChecker.Core
     {
         private static readonly List<ApiLogEntry> _entries = new List<ApiLogEntry>();
         private static readonly object _lock = new object();
-        private const int MaxEntries = 100;
+        private const int MaxEntries = 40;
 
         /// <summary>Global cancel flag — when set, all API calls should abort.</summary>
         public static bool GlobalCancel;
+
+        /// <summary>Block ALL subsequent API calls from this mod. Persistent until user unchecks.</summary>
+        public static bool ApiBlocked;
 
         /// <summary>Thread-safe snapshot of entries for UI rendering.</summary>
         public static List<ApiLogEntry> GetEntries()
@@ -103,10 +106,25 @@ namespace ModCompatChecker.Core
             new Thread(() => { Thread.Sleep(500); GlobalCancel = false; }) { IsBackground = true }.Start();
         }
 
+        /// <summary>Toggle blocking of all subsequent API calls from this mod.</summary>
+        public static void SetApiBlocked(bool blocked)
+        {
+            ApiBlocked = blocked;
+            if (blocked) ForceStopAll();
+        }
+
         /// <summary>Clear all log entries.</summary>
         public static void ClearLog()
         {
             lock (_lock) { _entries.Clear(); }
+        }
+
+        /// <summary>Reset on game lifecycle change (new game, load save, return to menu).</summary>
+        public static void Reset()
+        {
+            lock (_lock) { _entries.Clear(); }
+            ApiBlocked = false;
+            GlobalCancel = false;
         }
 
         private static string Truncate(string text, int maxLen)

@@ -92,6 +92,7 @@
         <Compile Include="UI\SharedSettingsUI.cs" />
 <Compile Include="Patches\LogCapture.cs" />
     <Compile Include="UI\ErrorAnalysisWindow.cs" />    <Compile Include="Core\ApiLogMonitor.cs" />
+    <Compile Include="Core\AIResponseAuditor.cs" />
     <Compile Include="Core\ApiBalanceChecker.cs" />
 
     <Compile Include="Core\StackTraceAnalyzer.cs" />

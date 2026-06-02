@@ -100,6 +100,11 @@ namespace ModCompatChecker.UI
             listing.Label("ModCompatChecker.APIKey".Translate(), -1);
             settings.APIKey = listing.TextEntry(settings.APIKey);
             try { if (ModCompatChecker.ModCompatMod.Instance != null) ModCompatChecker.ModCompatMod.Instance.WriteSettings(); } catch { }
+            listing.Gap(2f);
+            // Privacy / data flow notice
+            GUI.color = new Color(0.65f, 0.65f, 0.45f);
+            Widgets.Label(listing.GetRect(36f), "ModCompatChecker.APIDataNotice".Translate());
+            GUI.color = Color.white;
             listing.Gap(3f);
 
             listing.Label("ModCompatChecker.AnalysisTimeout".Translate() + settings.AnalysisTimeoutSeconds + "ModCompatChecker.SecondsUnit".Translate(), -1);
@@ -300,25 +305,33 @@ namespace ModCompatChecker.UI
             {
                 listing.Gap(2f);
 
+                // Row 1: Force stop + Clear log (always visible)
                 var stopRect = listing.GetRect(26f);
                 if (running > 0)
                 {
                     GUI.color = new Color(0.9f, 0.3f, 0.3f);
-                    if (Widgets.ButtonText(new Rect(stopRect.x, stopRect.y, 140f, 24f), "ModCompatChecker.ForceStopAll".Translate()))
-                    {
-                        ApiLogMonitor.ForceStopAll();
-                    }
-                    GUI.color = Color.white;
                 }
                 else
                 {
-                    GUI.color = new Color(0.4f, 0.4f, 0.4f);
-                    Widgets.Label(new Rect(stopRect.x, stopRect.y, 140f, 24f), "ModCompatChecker.NoRunningOps".Translate());
-                    GUI.color = Color.white;
+                    GUI.color = new Color(0.5f, 0.3f, 0.3f);
                 }
+                if (Widgets.ButtonText(new Rect(stopRect.x, stopRect.y, 160f, 24f), "ModCompatChecker.ForceStopAll".Translate()))
+                {
+                    ApiLogMonitor.ForceStopAll();
+                }
+                GUI.color = Color.white;
 
-                if (Widgets.ButtonText(new Rect(stopRect.x + 148f, stopRect.y, 80f, 24f), "ModCompatChecker.ClearLog".Translate()))
+                if (Widgets.ButtonText(new Rect(stopRect.x + 168f, stopRect.y, 80f, 24f), "ModCompatChecker.ClearLog".Translate()))
                     ApiLogMonitor.ClearLog();
+
+                // Row 2: Block all subsequent API checkbox
+                var blockRect = listing.GetRect(26f);
+                bool wasBlocked = ApiLogMonitor.ApiBlocked;
+                Widgets.CheckboxLabeled(blockRect, "ModCompatChecker.BlockAllAPI".Translate(), ref ApiLogMonitor.ApiBlocked);
+                if (ApiLogMonitor.ApiBlocked && !wasBlocked)
+                    ApiLogMonitor.SetApiBlocked(true);
+                else if (!ApiLogMonitor.ApiBlocked && wasBlocked)
+                    ApiLogMonitor.ApiBlocked = false;
 
                 listing.Gap(4f);
 
@@ -330,11 +343,19 @@ namespace ModCompatChecker.UI
                 else
                 {
                     float entryHeight = 20f;
-                    float totalH = Math.Max(200f, entries.Count * entryHeight + 8f);
+                    // Calculate actual content height accounting for detail sub-lines
+                    float actualH = 0f;
+                    foreach (var ent in entries)
+                    {
+                        actualH += entryHeight;
+                        if (!string.IsNullOrEmpty(ent.Detail) && ent.Detail != "User cancelled" && ent.Detail != "Force stopped")
+                            actualH += entryHeight;
+                    }
+                    float totalH = Math.Max(200f, actualH + 8f);
                     var scrollRect = listing.GetRect(Math.Min(300f, totalH));
 
                     Widgets.DrawBoxSolid(scrollRect, new Color(0.06f, 0.06f, 0.1f));
-                    float contentH = entries.Count * entryHeight + 4f;
+                    float contentH = actualH + 4f;
                     Widgets.BeginScrollView(
                         new Rect(scrollRect.x + 4f, scrollRect.y + 4f, scrollRect.width - 20f, scrollRect.height - 8f),
                         ref monitorScroll,

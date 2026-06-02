@@ -160,4 +160,21 @@
   <ModCompatChecker.ErrorLookupDesc>Вставьте лог ошибок или ключевое слово. Поиск по базе или AI-анализ.</ModCompatChecker.ErrorLookupDesc>
   <ModCompatChecker.Thinking>🤔 Думаю...</ModCompatChecker.Thinking>
   <ModCompatChecker.ForceStop>Стоп</ModCompatChecker.ForceStop>
+  <ModCompatChecker.ForceStopAll>Принудительная остановка всех</ModCompatChecker.ForceStopAll>
+  <ModCompatChecker.ClearLog>Очистить журнал</ModCompatChecker.ClearLog>
+  <ModCompatChecker.NoApiLogs>Нет записей API</ModCompatChecker.NoApiLogs>
+  <ModCompatChecker.NoRunningOps>Нет активных операций</ModCompatChecker.NoRunningOps>
+  <ModCompatChecker.APIMonitor>API Монитор</ModCompatChecker.APIMonitor>
+  <ModCompatChecker.Running>Выполняется</ModCompatChecker.Running>
+  <ModCompatChecker.BlockAllAPI>Блокировать все последующие API-запросы этого мода</ModCompatChecker.BlockAllAPI>
+<ModCompatChecker.EnableSelfAudit>Включить самоаудит ответов ИИ</ModCompatChecker.EnableSelfAudit>
+<ModCompatChecker.SelfAuditExplain>При включении каждый ответ ИИ автоматически проверяется на опасные предложения. Возможны ложные срабатывания. По умолчанию выключено.</ModCompatChecker.SelfAuditExplain>
+<ModCompatChecker.SelfAuditWarningTitle>Предупреждение безопасности ИИ</ModCompatChecker.SelfAuditWarningTitle>
+<ModCompatChecker.APIDataNotice>Внимание: Запросы анализа ИИ отправляются на ваш API-эндпоинт.</ModCompatChecker.APIDataNotice>
+<ModCompatChecker.TestAuditWarning>Тест предупреждения (Демо)</ModCompatChecker.TestAuditWarning>
+<ModCompatChecker.EnableTestMode>Включить тестовый режим</ModCompatChecker.EnableTestMode>
+<ModCompatChecker.TestModeHint>Тестовый режим включен: демо-кнопки отображаются для ручного запуска предупреждений.</ModCompatChecker.TestModeHint>
+<ModCompatChecker.TestSpamAlert>Тест предупреждения о спаме (Демо)</ModCompatChecker.TestSpamAlert>
+<ModCompatChecker.SpamAlertTitle>Предупреждение о спам-ошибке</ModCompatChecker.SpamAlertTitle>
+<ModCompatChecker.TestSpamBody>Это демонстрация спам-ошибок:</ModCompatChecker.TestSpamBody>
 </LanguageData>

@@ -167,6 +167,7 @@
   <ModCompatChecker.ForceStopAll>强制终止全部</ModCompatChecker.ForceStopAll>
   <ModCompatChecker.NoRunningOps>无运行中操作</ModCompatChecker.NoRunningOps>
   <ModCompatChecker.ClearLog>清除日志</ModCompatChecker.ClearLog>
+  <ModCompatChecker.BlockAllAPI>阻止此MOD所有后续API访问</ModCompatChecker.BlockAllAPI>
   <ModCompatChecker.NoApiLogs>暂无API日志记录</ModCompatChecker.NoApiLogs>
 
   <!-- === 余额检测 === -->
@@ -183,4 +184,14 @@
   <ModCompatChecker.BalanceCheckParseError>无法解析余额响应</ModCompatChecker.BalanceCheckParseError>
   <ModCompatChecker.BalanceWarningTitle>API 余额不足</ModCompatChecker.BalanceWarningTitle>
   <ModCompatChecker.BalanceWarningLetter>您的 API 余额不足！当前余额：</ModCompatChecker.BalanceWarningLetter>
+<ModCompatChecker.EnableSelfAudit>启用 AI 响应自我审查</ModCompatChecker.EnableSelfAudit>
+<ModCompatChecker.SelfAuditExplain>启用后，每次AI回复会自动检测是否包含危险的修改建议（如文件写入、代码执行等）。如检测到则以事件通知。可能产生误报和少量额外消耗。默认关闭。</ModCompatChecker.SelfAuditExplain>
+<ModCompatChecker.SelfAuditWarningTitle>AI响应安全警告</ModCompatChecker.SelfAuditWarningTitle>
+<ModCompatChecker.APIDataNotice>注意：AI分析请求将发送至您配置的API端点。自定义系统提示词会完全替代默认安全提示。请勿在不可信端点输入API Key。</ModCompatChecker.APIDataNotice>
+<ModCompatChecker.TestAuditWarning>测试安全警告（演示）</ModCompatChecker.TestAuditWarning>
+<ModCompatChecker.EnableTestMode>启用测试模式</ModCompatChecker.EnableTestMode>
+<ModCompatChecker.TestModeHint>测试模式已开启：显示演示按钮，可手动触发安全警告和循环报错提示以预览效果。</ModCompatChecker.TestModeHint>
+<ModCompatChecker.TestSpamAlert>测试循环报错警告（演示）</ModCompatChecker.TestSpamAlert>
+<ModCompatChecker.SpamAlertTitle>循环报错警告</ModCompatChecker.SpamAlertTitle>
+<ModCompatChecker.TestSpamBody>以下为模拟的循环报错演示：</ModCompatChecker.TestSpamBody>
 </LanguageData>

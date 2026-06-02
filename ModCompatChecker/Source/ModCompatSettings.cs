@@ -24,6 +24,8 @@ namespace ModCompatChecker
 
         public bool ShowAdvancedPrompt = false;
         public bool UseCustomSystemPrompt = false;
+        public bool EnableSelfAudit = false;
+        public bool EnableTestMode = false;  // Show test buttons for spam/audit warnings  // Self-audit AI responses for dangerous suggestions (default OFF)
         public string CustomSystemPrompt = "";
         public const string DefaultSystemPromptZh = "你是 RimWorld MOD 兼容性分析专家。请基于你的知识分析以下 MOD 兼容性问题，给出专业、简洁的诊断和建议。";
         public const string DefaultSystemPromptEn = "You are a RimWorld mod compatibility expert. Based on your knowledge, analyze the following mod compatibility issues and provide professional, concise diagnosis and suggestions.";
@@ -98,6 +100,8 @@ namespace ModCompatChecker
             Scribe_Values.Look(ref CustomSystemPrompt, "CustomSystemPrompt", "");
             Scribe_Values.Look(ref EnableBalanceCheck, "EnableBalanceCheck", false);
             Scribe_Values.Look(ref BalanceWarningThreshold, "BalanceWarningThreshold", 1.0f);
+            Scribe_Values.Look(ref EnableSelfAudit, "EnableSelfAudit", false);
+            Scribe_Values.Look(ref EnableTestMode, "EnableTestMode", false);
             Scribe_Values.Look(ref BalanceCheckEndpoint, "BalanceCheckEndpoint", "");
         }
     }

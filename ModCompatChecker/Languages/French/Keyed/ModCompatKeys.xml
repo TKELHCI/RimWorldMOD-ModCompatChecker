@@ -160,4 +160,21 @@
   <ModCompatChecker.ErrorLookupDesc>Collez un journal d'erreur ou un mot-clé. Recherchez dans la base intégrée ou utilisez l'IA.</ModCompatChecker.ErrorLookupDesc>
   <ModCompatChecker.Thinking>🤔 Réflexion...</ModCompatChecker.Thinking>
   <ModCompatChecker.ForceStop>Arrêter</ModCompatChecker.ForceStop>
+  <ModCompatChecker.ForceStopAll>Forcer l'arrêt de tout</ModCompatChecker.ForceStopAll>
+  <ModCompatChecker.ClearLog>Effacer le journal</ModCompatChecker.ClearLog>
+  <ModCompatChecker.NoApiLogs>Aucun journal API</ModCompatChecker.NoApiLogs>
+  <ModCompatChecker.NoRunningOps>Aucune opération en cours</ModCompatChecker.NoRunningOps>
+  <ModCompatChecker.APIMonitor>Moniteur API</ModCompatChecker.APIMonitor>
+  <ModCompatChecker.Running>En cours</ModCompatChecker.Running>
+  <ModCompatChecker.BlockAllAPI>Bloquer tous les appels API suivants de ce mod</ModCompatChecker.BlockAllAPI>
+<ModCompatChecker.EnableSelfAudit>Activer l'auto-audit des réponses IA</ModCompatChecker.EnableSelfAudit>
+<ModCompatChecker.SelfAuditExplain>Lorsqu'activé, chaque réponse IA est analysée pour détecter les suggestions dangereuses (écriture de fichiers, exécution de code, etc.). Si détecté, un avertissement est émis. Peut produire des faux positifs. Désactivé par défaut.</ModCompatChecker.SelfAuditExplain>
+<ModCompatChecker.SelfAuditWarningTitle>Avertissement de sécurité IA</ModCompatChecker.SelfAuditWarningTitle>
+<ModCompatChecker.APIDataNotice>Note : Les requêtes d'analyse IA sont envoyées à votre endpoint API configuré. Les prompts système personnalisés remplacent complètement les instructions de sécurité par défaut.</ModCompatChecker.APIDataNotice>
+<ModCompatChecker.TestAuditWarning>Tester l'alerte de sécurité (Démo)</ModCompatChecker.TestAuditWarning>
+<ModCompatChecker.EnableTestMode>Activer le mode test</ModCompatChecker.EnableTestMode>
+<ModCompatChecker.TestModeHint>Mode test activé : les boutons de démo sont affichés pour déclencher manuellement les alertes.</ModCompatChecker.TestModeHint>
+<ModCompatChecker.TestSpamAlert>Tester l'alerte de spam (Démo)</ModCompatChecker.TestSpamAlert>
+<ModCompatChecker.SpamAlertTitle>Alerte d'erreur répétitive</ModCompatChecker.SpamAlertTitle>
+<ModCompatChecker.TestSpamBody>Ceci est une simulation d'erreurs répétitives :</ModCompatChecker.TestSpamBody>
 </LanguageData>

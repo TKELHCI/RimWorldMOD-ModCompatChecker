@@ -12,6 +12,13 @@ namespace ModCompatChecker
 
         public ModCompatGameComponent(Game game) { }
 
+        public override void FinalizeInit()
+        {
+            base.FinalizeInit();
+            Core.ApiLogMonitor.Reset();
+            Core.ApiBalanceChecker.Reset();
+        }
+
         public override void GameComponentTick()
         {
             base.GameComponentTick();

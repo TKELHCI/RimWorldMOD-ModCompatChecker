@@ -113,6 +113,9 @@ namespace ModCompatChecker.UI
                 inner.Gap(10f);
             }
 
+            // Section divider
+            { var r = inner.GetRect(5f); Widgets.DrawBoxSolid(new Rect(r.x + 4f, r.y + 1f, r.width - 8f, 3f), new Color(0.7f, 0.15f, 0.15f)); }
+
             DrawSectionHeader(inner, ref _showCompat, "ModCompatChecker.UI180".Translate(), new Color(0.28f, 0.38f, 0.18f));
             if (_showCompat)
             {
@@ -120,10 +123,16 @@ namespace ModCompatChecker.UI
                 inner.Gap(14f);
             }
 
+            // Section divider
+            { var r = inner.GetRect(5f); Widgets.DrawBoxSolid(new Rect(r.x + 4f, r.y + 1f, r.width - 8f, 3f), new Color(0.7f, 0.15f, 0.15f)); }
+
             DrawSectionHeader(inner, ref _showErrorSection, "ModCompatChecker.UI181".Translate(), new Color(0.50f, 0.28f, 0.18f));
             if (_showErrorSection)
                 DrawErrorSection(inner, settings);
 
+
+            // Section divider
+            { var r = inner.GetRect(5f); Widgets.DrawBoxSolid(new Rect(r.x + 4f, r.y + 1f, r.width - 8f, 3f), new Color(0.7f, 0.15f, 0.15f)); }
 
             DrawSectionHeader(inner, ref _showOffline, "ModCompatChecker.ErrorLookup".Translate(), new Color(0.20f, 0.45f, 0.45f));
             if (_showOffline)
@@ -259,6 +268,9 @@ namespace ModCompatChecker.UI
                 inner.Gap(8f);
             }
 
+            // Section divider
+            { var r = inner.GetRect(5f); Widgets.DrawBoxSolid(new Rect(r.x + 4f, r.y + 1f, r.width - 8f, 3f), new Color(0.7f, 0.15f, 0.15f)); }
+
                         DrawSectionHeader(inner, ref _showTools, "ModCompatChecker.Tools".Translate(), new Color(0.35f, 0.25f, 0.50f));
             if (_showTools)
             {
@@ -272,11 +284,24 @@ namespace ModCompatChecker.UI
                 GUI.color = Color.white;
                 inner.Gap(4f);
                 if (inner.ButtonText("ModCompatChecker.CheckSpam".Translate())) { Core.SpamDetector.CheckForSpam(); _spamChecking = true; }
+                // Test spam alert (only in test mode)
+                if (settings.EnableTestMode)
+                {
+                    inner.Gap(2f);
+                    if (inner.ButtonText("ModCompatChecker.TestSpamAlert".Translate()))
+                    {
+                        Verse.Find.LetterStack.ReceiveLetter(
+                            "ModCompatChecker.SpamAlertTitle".Translate(),
+                            "ModCompatChecker.TestSpamBody".Translate() + "\n[50x] System.NullReferenceException: Object reference not set to an instance of an object\n[50x] System.MissingMethodException: Method not found\n[50x] UnityEngine.Debug:LogError",
+                            RimWorld.LetterDefOf.NegativeEvent,
+                            null, 0, true);
+                    }
+                }
                 if (_spamChecking && Core.SpamDetector.ActiveAlerts.Count > 0) { foreach (var a in Core.SpamDetector.ActiveAlerts) { GUI.color = Color.red; Widgets.Label(inner.GetRect(20f), "[" + a.Count + "x] " + a.NormalizedMessage); GUI.color = Color.white; } }
                 inner.Gap(4f);
                 // Log file size monitoring
                 inner.Gap(4f);
-                if (Widgets.ButtonText(inner.GetRect(26f), (settings.ShowLogSizeMonitor ? "▼ " : "? ") + "ModCompatChecker.LogSizeTitle".Translate()))
+                if (Widgets.ButtonText(inner.GetRect(26f), (settings.ShowLogSizeMonitor ? "▼ " : "▶ ") + "ModCompatChecker.LogSizeTitle".Translate()))
                     settings.ShowLogSizeMonitor = !settings.ShowLogSizeMonitor;
                 if (settings.ShowLogSizeMonitor)
                 {
@@ -294,9 +319,22 @@ namespace ModCompatChecker.UI
                 inner.Gap(8f);
             }
 
+            // Section divider
+            { var r = inner.GetRect(5f); Widgets.DrawBoxSolid(new Rect(r.x + 4f, r.y + 1f, r.width - 8f, 3f), new Color(0.7f, 0.15f, 0.15f)); }
+
             DrawSectionHeader(inner, ref _showAdvanced, "ModCompatChecker.Advanced".Translate(), new Color(0.45f, 0.20f, 0.45f));
             if (_showAdvanced)
             {
+                // Test mode toggle
+                var testModeRow = inner.GetRect(24f);
+                Widgets.CheckboxLabeled(testModeRow, "ModCompatChecker.EnableTestMode".Translate(), ref settings.EnableTestMode);
+                if (settings.EnableTestMode)
+                {
+                    GUI.color = new Color(0.9f, 0.7f, 0.2f);
+                    Widgets.Label(inner.GetRect(18f), "  " + "ModCompatChecker.TestModeHint".Translate());
+                    GUI.color = Color.white;
+                }
+                inner.Gap(6f);
                 inner.Label("ModCompatChecker.SystemPrompt".Translate(), -1);
                 inner.Gap(2f);
                 GUI.color = new Color(0.6f, 0.6f, 0.6f);
@@ -330,6 +368,34 @@ namespace ModCompatChecker.UI
                 Widgets.Label(inner.GetRect(18f), "  " + "ModCompatChecker.PresetBeginnerDesc".Translate());
                 GUI.color = Color.white;
                 inner.Gap(8f);
+                // Self-audit toggle
+                var auditRow = inner.GetRect(24f);
+                bool wasAudit = settings.EnableSelfAudit;
+                Widgets.CheckboxLabeled(auditRow, "ModCompatChecker.EnableSelfAudit".Translate(), ref settings.EnableSelfAudit);
+                inner.Gap(1f);
+                GUI.color = new Color(0.75f, 0.75f, 0.3f);
+                Widgets.Label(inner.GetRect(42f), "  " + "ModCompatChecker.SelfAuditExplain".Translate());
+                GUI.color = Color.white;
+                // Test button (only visible in test mode)
+                if (settings.EnableTestMode)
+                {
+                var testRow = inner.GetRect(26f);
+                if (Widgets.ButtonText(new Rect(testRow.x, testRow.y, 160f, 24f), "ModCompatChecker.TestAuditWarning".Translate()))
+                {
+                    var testFindings = new System.Collections.Generic.List<Core.AuditFinding>
+                    {
+                        new Core.AuditFinding { Rule = new Core.AuditRule("test_file_write", Core.AuditSeverity.Critical, "", "Suggested file write operation"), MatchedText = "File.WriteAllText(...)", Timestamp = System.DateTime.Now },
+                        new Core.AuditFinding { Rule = new Core.AuditRule("test_code_exec", Core.AuditSeverity.Critical, "", "Suggested code/process execution"), MatchedText = "Process.Start(\"cmd.exe\", ...)", Timestamp = System.DateTime.Now },
+                        new Core.AuditFinding { Rule = new Core.AuditRule("test_harmony", Core.AuditSeverity.High, "", "Suggested Harmony patch injection"), MatchedText = "Harmony.CreateAndPatch(...)", Timestamp = System.DateTime.Now }
+                    };
+                    var warningText = Core.AIResponseAuditor.BuildAuditWarning(testFindings);
+                    Verse.Find.LetterStack.ReceiveLetter(
+                        "ModCompatChecker.SelfAuditWarningTitle".Translate(),
+                        warningText,
+                        RimWorld.LetterDefOf.NegativeEvent,
+                        null, 0, true);
+                }
+                } // end test mode
             }
             inner.End();
             Widgets.EndScrollView();
@@ -375,7 +441,7 @@ namespace ModCompatChecker.UI
             Widgets.DrawBoxSolid(rect, GUI.color);
             GUI.color = Color.white;
             Widgets.Label(new Rect(rect.x + 10f, rect.y + 5f, rect.width - 20f, 20f),
-                (expanded ? "▼ " : "? ") + title);
+                (expanded ? "▼ " : "▶ ") + title);
             if (Widgets.ButtonInvisible(rect))
                 expanded = !expanded;
             if (expanded)
@@ -1175,6 +1241,35 @@ namespace ModCompatChecker.UI
             }) { IsBackground = true }.Start();
         }
 
+
+        /// <summary>Run self-audit on AI response if enabled, send letter on danger (thread-safe).</summary>
+        private void AuditAndWarn(string response, ModCompatSettings settings)
+        {
+            if (!settings.EnableSelfAudit || string.IsNullOrEmpty(response)) return;
+            try
+            {
+                var findings = Core.AIResponseAuditor.Audit(response);
+                if (findings.Count > 0)
+                {
+                    var warningText = Core.AIResponseAuditor.BuildAuditWarning(findings);
+                    // Dispatch to main thread for UI operations
+                    Verse.LongEventHandler.ExecuteWhenFinished(() =>
+                    {
+                        try
+                        {
+                            Verse.Find.LetterStack.ReceiveLetter(
+                                "ModCompatChecker.SelfAuditWarningTitle".Translate(),
+                                warningText,
+                                RimWorld.LetterDefOf.NegativeEvent,
+                                null, 0, true);
+                        }
+                        catch { }
+                    });
+                }
+            }
+            catch { /* audit failure should never block normal operation */ }
+        }
+
         // ── Thread: Single AI Analysis ──
         private void StartSingleAnalysis(int key, ModCompatSettings settings)
         {
@@ -1206,7 +1301,7 @@ namespace ModCompatChecker.UI
                             report.DefConflicts[key - 1000], ep.endpoint, settings.APIKey, mid, ep.provider);
                     else
                         result = "ModCompatChecker.InvalidRequest".Translate();
-                    if (!_disposed) lock (_lock) { _aiResults[key] = result; _pendingAI.Remove(key); _cachedAI[key] = result; Core.ApiLogMonitor.LogComplete(_salLog, result.Substring(0, Math.Min(80, result.Length))); }
+                    if (!_disposed) lock (_lock) { _aiResults[key] = result; _pendingAI.Remove(key); _cachedAI[key] = result; Core.ApiLogMonitor.LogComplete(_salLog, result.Substring(0, Math.Min(80, result.Length))); AuditAndWarn(result, settings); }
                 }
                 catch (Exception ex)
                 {
@@ -1332,7 +1427,8 @@ namespace ModCompatChecker.UI
                     if (!_disposed) lock (_lock)
                     {
                         ErrorResult = _errorCancelled ? "ModCompatChecker.AnalysisCancelledNL".Translate() + result : result;
-                        if (!_disposed) lock (_lock) { try { _encycloMatches = Core.ErrorEncyclopedia.MatchError(result); } catch { _encycloMatches = null; } }
+                        AuditAndWarn(ErrorResult, settings);
+                        try { _encycloMatches = Core.ErrorEncyclopedia.MatchError(result); } catch { _encycloMatches = null; }
                         if (_analysisTimer.Elapsed.TotalSeconds > settings.AnalysisTimeoutSeconds * 0.8)
                             ErrorResult += "\n\n耗时 " + _analysisTimer.Elapsed.TotalSeconds.ToString("F1") + "s";
                         ErrorDeps = DependencyExtractor.Extract(errorText + "\n" + ErrorResult); _cachedErrorResult[_errorSource] = ErrorResult; _cachedDeps[_errorSource] = new List<string>(ErrorDeps); Core.ApiLogMonitor.LogComplete(_errLog, ErrorResult.Substring(0, Math.Min(80, ErrorResult.Length)));

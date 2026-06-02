@@ -175,5 +175,16 @@
   <ModCompatChecker.ForceStopAll>Force Stop All</ModCompatChecker.ForceStopAll>
   <ModCompatChecker.NoRunningOps>No running operations</ModCompatChecker.NoRunningOps>
   <ModCompatChecker.ClearLog>Clear Log</ModCompatChecker.ClearLog>
+  <ModCompatChecker.BlockAllAPI>Block all subsequent API calls from this mod</ModCompatChecker.BlockAllAPI>
   <ModCompatChecker.NoApiLogs>No API log entries yet</ModCompatChecker.NoApiLogs>
+<ModCompatChecker.EnableSelfAudit>Enable AI response self-audit</ModCompatChecker.EnableSelfAudit>
+<ModCompatChecker.SelfAuditExplain>When enabled, each AI response is automatically scanned for dangerous modification suggestions (file writes, code execution, etc.). If detected, a letter event warns you. May produce false positives and minor extra CPU cost. Off by default.</ModCompatChecker.SelfAuditExplain>
+<ModCompatChecker.SelfAuditWarningTitle>AI Response Safety Warning</ModCompatChecker.SelfAuditWarningTitle>
+<ModCompatChecker.APIDataNotice>Note: AI analysis requests are sent to your configured API endpoint. Custom system prompts completely override default safety instructions. Do not enter API Keys for untrusted endpoints.</ModCompatChecker.APIDataNotice>
+<ModCompatChecker.TestAuditWarning>Test Safety Warning (Demo)</ModCompatChecker.TestAuditWarning>
+<ModCompatChecker.EnableTestMode>Enable Test Mode</ModCompatChecker.EnableTestMode>
+<ModCompatChecker.TestModeHint>Test mode is ON: demo buttons are shown to manually trigger safety warnings and spam alerts for preview.</ModCompatChecker.TestModeHint>
+<ModCompatChecker.TestSpamAlert>Test Spam Alert (Demo)</ModCompatChecker.TestSpamAlert>
+<ModCompatChecker.SpamAlertTitle>Spam Error Warning</ModCompatChecker.SpamAlertTitle>
+<ModCompatChecker.TestSpamBody>The following is a simulated spam error demo:</ModCompatChecker.TestSpamBody>
 </LanguageData>

@@ -160,4 +160,21 @@
   <ModCompatChecker.ErrorLookupDesc>Fehlerlog oder Schlüsselwort einfügen. Durchsuche die integrierte Datenbank oder nutze KI.</ModCompatChecker.ErrorLookupDesc>
   <ModCompatChecker.Thinking>🤔 Denkt nach...</ModCompatChecker.Thinking>
   <ModCompatChecker.ForceStop>Abbrechen</ModCompatChecker.ForceStop>
+  <ModCompatChecker.ForceStopAll>Alle erzwingen stoppen</ModCompatChecker.ForceStopAll>
+  <ModCompatChecker.ClearLog>Protokoll löschen</ModCompatChecker.ClearLog>
+  <ModCompatChecker.NoApiLogs>Keine API-Protokolle</ModCompatChecker.NoApiLogs>
+  <ModCompatChecker.NoRunningOps>Keine laufenden Vorgänge</ModCompatChecker.NoRunningOps>
+  <ModCompatChecker.APIMonitor>API-Monitor</ModCompatChecker.APIMonitor>
+  <ModCompatChecker.Running>Läuft</ModCompatChecker.Running>
+  <ModCompatChecker.BlockAllAPI>Alle nachfolgenden API-Aufrufe dieses Mods blockieren</ModCompatChecker.BlockAllAPI>
+<ModCompatChecker.EnableSelfAudit>KI-Antwort-Selbstprüfung aktivieren</ModCompatChecker.EnableSelfAudit>
+<ModCompatChecker.SelfAuditExplain>Wenn aktiviert, wird jede KI-Antwort automatisch auf gefährliche Änderungsvorschläge (Dateischreiben, Codeausführung usw.) gescannt. Bei Erkennung erfolgt eine Ereigniswarnung. Kann Fehlalarme auslösen. Standardmäßig aus.</ModCompatChecker.SelfAuditExplain>
+<ModCompatChecker.SelfAuditWarningTitle>KI-Antwort Sicherheitswarnung</ModCompatChecker.SelfAuditWarningTitle>
+<ModCompatChecker.APIDataNotice>Hinweis: KI-Analyseanfragen werden an Ihren konfigurierten API-Endpunkt gesendet. Benutzerdefinierte System-Prompts ersetzen die Standard-Sicherheitsanweisungen vollständig.</ModCompatChecker.APIDataNotice>
+<ModCompatChecker.TestAuditWarning>Sicherheitswarnung testen (Demo)</ModCompatChecker.TestAuditWarning>
+<ModCompatChecker.EnableTestMode>Testmodus aktivieren</ModCompatChecker.EnableTestMode>
+<ModCompatChecker.TestModeHint>Testmodus ist AN: Demo-Schaltflächen werden angezeigt, um Warnungen manuell auszulösen.</ModCompatChecker.TestModeHint>
+<ModCompatChecker.TestSpamAlert>Spam-Warnung testen (Demo)</ModCompatChecker.TestSpamAlert>
+<ModCompatChecker.SpamAlertTitle>Spam-Fehlerwarnung</ModCompatChecker.SpamAlertTitle>
+<ModCompatChecker.TestSpamBody>Dies ist eine simulierte Spam-Fehlerdemo:</ModCompatChecker.TestSpamBody>
 </LanguageData>

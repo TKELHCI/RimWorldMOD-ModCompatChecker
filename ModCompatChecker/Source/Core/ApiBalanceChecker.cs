@@ -24,6 +24,20 @@ namespace ModCompatChecker.Core
         public static bool IsChecking { get { lock (_lock) return _isChecking; } }
         public static bool WarningSent { get; set; }
 
+        /// <summary>Reset state on game lifecycle change.</summary>
+        public static void Reset()
+        {
+            lock (_lock)
+            {
+                _lastBalance = -1f;
+                _lastCurrency = "";
+                _lastError = "";
+                _lastCheckTime = DateTime.MinValue;
+                _isChecking = false;
+            }
+            WarningSent = false;
+        }
+
         public static void CheckBalance(string apiEndpoint, string apiKey)
         {
             lock (_lock)

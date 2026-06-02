@@ -88,7 +88,7 @@ namespace ModCompatChecker.AI
             int waited = 0;
             while (!asyncResult.IsCompleted)
             {
-                if (cancelFlag || Core.ApiLogMonitor.GlobalCancel) { TryAbort(request); return "ModCompatChecker.AnalysisCancelled".Translate(); }
+                if (cancelFlag || Core.ApiLogMonitor.GlobalCancel || Core.ApiLogMonitor.ApiBlocked) { TryAbort(request); return "ModCompatChecker.AnalysisCancelled".Translate(); }
                 Thread.Sleep(100);
                 waited += 100;
                 if (waited > timeoutSeconds * 1000)
@@ -102,7 +102,7 @@ namespace ModCompatChecker.AI
             waited = 0;
             while (!respResult.IsCompleted)
             {
-                if (cancelFlag || Core.ApiLogMonitor.GlobalCancel) { TryAbort(request); return "ModCompatChecker.AnalysisCancelled".Translate(); }
+                if (cancelFlag || Core.ApiLogMonitor.GlobalCancel || Core.ApiLogMonitor.ApiBlocked) { TryAbort(request); return "ModCompatChecker.AnalysisCancelled".Translate(); }
                 Thread.Sleep(100);
                 waited += 100;
                 if (waited > timeoutSeconds * 1000)
@@ -119,7 +119,7 @@ namespace ModCompatChecker.AI
             }
             catch (WebException wex)
             {
-                if (cancelFlag || Core.ApiLogMonitor.GlobalCancel) return "ModCompatChecker.AnalysisCancelled".Translate();
+                if (cancelFlag || Core.ApiLogMonitor.GlobalCancel || Core.ApiLogMonitor.ApiBlocked) return "ModCompatChecker.AnalysisCancelled".Translate();
                 var httpResp = wex.Response as HttpWebResponse;
                 if (httpResp != null)
                 {
