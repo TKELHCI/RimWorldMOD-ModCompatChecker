@@ -98,8 +98,10 @@ namespace ModCompatChecker.UI
             listing.Gap(3f);
 
             listing.Label("ModCompatChecker.APIKey".Translate(), -1);
-            settings.APIKey = listing.TextEntry(settings.APIKey);
-            try { if (ModCompatChecker.ModCompatMod.Instance != null) ModCompatChecker.ModCompatMod.Instance.WriteSettings(); } catch { }
+            var prevKey = settings.APIKey;
+            var newKey = listing.TextEntry(settings.APIKey);
+            if (newKey != prevKey) { settings.APIKey = newKey; try { ModCompatChecker.ModCompatMod.Instance?.WriteSettings(); } catch { } }
+            else settings.APIKey = newKey;
             listing.Gap(2f);
             // Privacy / data flow notice
             GUI.color = new Color(0.65f, 0.65f, 0.45f);

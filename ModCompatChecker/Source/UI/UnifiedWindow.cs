@@ -19,7 +19,7 @@ namespace ModCompatChecker.UI
         private Vector2 _scroll = Vector2.zero;
         private readonly object _lock = new object();
         private bool _disposed; private static int _cachedWorldId = -1; private static int _worldCheckFrame;
-        private bool _showSettings, _showCompat, _showErrorSection, _showTools, _showOffline, _spamChecking, _showAdvanced;
+        private bool _showSettings, _showApiDetails, _showCompat, _showErrorSection, _showTools, _showOffline, _spamChecking, _showAdvanced;
         private bool _showApiMonitor, _showBalanceCheck;
         private Vector2 _apiMonitorScroll = Vector2.zero;
         private Vector2 _balanceCheckScroll = Vector2.zero;
@@ -61,6 +61,7 @@ namespace ModCompatChecker.UI
             draggable = true;
             resizeable = true;
             layer = WindowLayer.Dialog;
+            forcePause = true;
         }
 
         public override void PreClose()
@@ -101,11 +102,15 @@ namespace ModCompatChecker.UI
             DrawSectionHeader(inner, ref _showSettings, "ModCompatChecker.UI179".Translate(), new Color(0.18f, 0.38f, 0.55f));
             if (_showSettings)
             {
-                SharedSettingsUI.DrawModelSelector(inner, settings, _uiState);
-                inner.Gap(8f);
-                SharedSettingsUI.DrawAPISettings(inner, settings, _uiState);
-                inner.Gap(6f);
-                SharedSettingsUI.DrawTestConnection(inner, settings, _uiState);
+                DrawSectionHeader(inner, ref _showApiDetails, "ModCompatChecker.ApiDetails".Translate(), new Color(0.22f, 0.42f, 0.48f));
+                if (_showApiDetails)
+                {
+                    SharedSettingsUI.DrawModelSelector(inner, settings, _uiState);
+                    inner.Gap(8f);
+                    SharedSettingsUI.DrawAPISettings(inner, settings, _uiState);
+                    inner.Gap(6f);
+                    SharedSettingsUI.DrawTestConnection(inner, settings, _uiState);
+                }
                 inner.Gap(8f);
                 SharedSettingsUI.DrawBalanceCheck(inner, settings, ref _showBalanceCheck, ref _balanceCheckScroll);
                 inner.Gap(4f);
@@ -331,14 +336,16 @@ namespace ModCompatChecker.UI
                 if (settings.EnableTestMode)
                 {
                     GUI.color = new Color(0.9f, 0.7f, 0.2f);
-                    Widgets.Label(inner.GetRect(18f), "  " + "ModCompatChecker.TestModeHint".Translate());
+                    var testHintText = "ModCompatChecker.TestModeHint".Translate();
+                    Widgets.Label(inner.GetRect(Text.CalcHeight(testHintText, inner.ColumnWidth - 20f) + 4f), "  " + testHintText);
                     GUI.color = Color.white;
                 }
                 inner.Gap(6f);
                 inner.Label("ModCompatChecker.SystemPrompt".Translate(), -1);
                 inner.Gap(2f);
                 GUI.color = new Color(0.6f, 0.6f, 0.6f);
-                Widgets.Label(inner.GetRect(28f), "ModCompatChecker.PromptHint".Translate());
+                var promptHintText = "ModCompatChecker.PromptHint".Translate();
+                Widgets.Label(inner.GetRect(Text.CalcHeight(promptHintText, inner.ColumnWidth - 20f) + 4f), promptHintText);
                 GUI.color = Color.white;
                 // Resolve current prompt
                 var prompt = string.IsNullOrEmpty(settings.CustomSystemPrompt) ? (AI.PromptBuilder.GetPromptLanguage() == "zh" ? ModCompatSettings.DefaultSystemPromptZh : ModCompatSettings.DefaultSystemPromptEn) : settings.CustomSystemPrompt;
@@ -355,17 +362,17 @@ namespace ModCompatChecker.UI
                 if (inner.ButtonText("ModCompatChecker.PresetConcise".Translate()))
                     { settings.CustomSystemPrompt = AI.PromptBuilder.GetPromptLanguage() == "zh" ? ModCompatSettings.PresetConciseZh : ModCompatSettings.PresetConciseEn; settings.UseCustomSystemPrompt = true; }
                 GUI.color = new Color(0.5f, 0.5f, 0.5f);
-                Widgets.Label(inner.GetRect(18f), "  " + "ModCompatChecker.PresetConciseDesc".Translate());
+                var _PresetConciseDesc_text = "ModCompatChecker.PresetConciseDesc".Translate(); Widgets.Label(inner.GetRect(Text.CalcHeight(_PresetConciseDesc_text, inner.ColumnWidth - 20f) + 4f), "  " + _PresetConciseDesc_text);
                 GUI.color = Color.white;
                 if (inner.ButtonText("ModCompatChecker.PresetDetailed".Translate()))
                     { settings.CustomSystemPrompt = AI.PromptBuilder.GetPromptLanguage() == "zh" ? ModCompatSettings.PresetDetailedZh : ModCompatSettings.PresetDetailedEn; settings.UseCustomSystemPrompt = true; }
                 GUI.color = new Color(0.5f, 0.5f, 0.5f);
-                Widgets.Label(inner.GetRect(18f), "  " + "ModCompatChecker.PresetDetailedDesc".Translate());
+                var _PresetDetailedDesc_text = "ModCompatChecker.PresetDetailedDesc".Translate(); Widgets.Label(inner.GetRect(Text.CalcHeight(_PresetDetailedDesc_text, inner.ColumnWidth - 20f) + 4f), "  " + _PresetDetailedDesc_text);
                 GUI.color = Color.white;
                 if (inner.ButtonText("ModCompatChecker.PresetBeginner".Translate()))
                     { settings.CustomSystemPrompt = AI.PromptBuilder.GetPromptLanguage() == "zh" ? ModCompatSettings.PresetBeginnerZh : ModCompatSettings.PresetBeginnerEn; settings.UseCustomSystemPrompt = true; }
                 GUI.color = new Color(0.5f, 0.5f, 0.5f);
-                Widgets.Label(inner.GetRect(18f), "  " + "ModCompatChecker.PresetBeginnerDesc".Translate());
+                var _PresetBeginnerDesc_text = "ModCompatChecker.PresetBeginnerDesc".Translate(); Widgets.Label(inner.GetRect(Text.CalcHeight(_PresetBeginnerDesc_text, inner.ColumnWidth - 20f) + 4f), "  " + _PresetBeginnerDesc_text);
                 GUI.color = Color.white;
                 inner.Gap(8f);
                 // Self-audit toggle
@@ -374,7 +381,8 @@ namespace ModCompatChecker.UI
                 Widgets.CheckboxLabeled(auditRow, "ModCompatChecker.EnableSelfAudit".Translate(), ref settings.EnableSelfAudit);
                 inner.Gap(1f);
                 GUI.color = new Color(0.75f, 0.75f, 0.3f);
-                Widgets.Label(inner.GetRect(42f), "  " + "ModCompatChecker.SelfAuditExplain".Translate());
+                var auditExplainText = "ModCompatChecker.SelfAuditExplain".Translate();
+                Widgets.Label(inner.GetRect(Text.CalcHeight(auditExplainText, inner.ColumnWidth - 20f) + 4f), "  " + auditExplainText);
                 GUI.color = Color.white;
                 // Test button (only visible in test mode)
                 if (settings.EnableTestMode)

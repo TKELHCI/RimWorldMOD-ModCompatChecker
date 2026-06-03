@@ -187,4 +187,9 @@
 <ModCompatChecker.TestSpamAlert>Test Spam Alert (Demo)</ModCompatChecker.TestSpamAlert>
 <ModCompatChecker.SpamAlertTitle>Spam Error Warning</ModCompatChecker.SpamAlertTitle>
 <ModCompatChecker.TestSpamBody>The following is a simulated spam error demo:</ModCompatChecker.TestSpamBody>
+<ModCompatChecker.ApiDetails>API Details</ModCompatChecker.ApiDetails>
+<ModCompatChecker.SelfAuditHeader>AI response may contain dangerous suggestions:</ModCompatChecker.SelfAuditHeader>
+<ModCompatChecker.SelfAuditBody>AI response may contain the following dangerous suggestions:</ModCompatChecker.SelfAuditBody>
+<ModCompatChecker.SelfAuditFooter1>The above are AI suggestions only — no actual modifications were made by this mod.</ModCompatChecker.SelfAuditFooter1>
+<ModCompatChecker.SelfAuditFooter2>Verify before taking any action.</ModCompatChecker.SelfAuditFooter2>
 </LanguageData>

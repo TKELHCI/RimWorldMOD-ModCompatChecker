@@ -194,4 +194,9 @@
 <ModCompatChecker.TestSpamAlert>测试循环报错警告（演示）</ModCompatChecker.TestSpamAlert>
 <ModCompatChecker.SpamAlertTitle>循环报错警告</ModCompatChecker.SpamAlertTitle>
 <ModCompatChecker.TestSpamBody>以下为模拟的循环报错演示：</ModCompatChecker.TestSpamBody>
+<ModCompatChecker.ApiDetails>API详细设置</ModCompatChecker.ApiDetails>
+<ModCompatChecker.SelfAuditHeader>AI响应可能包含危险建议：</ModCompatChecker.SelfAuditHeader>
+<ModCompatChecker.SelfAuditBody>AI响应可能包含以下危险建议：</ModCompatChecker.SelfAuditBody>
+<ModCompatChecker.SelfAuditFooter1>以上仅为AI建议——本MOD未进行任何实际修改。</ModCompatChecker.SelfAuditFooter1>
+<ModCompatChecker.SelfAuditFooter2>采取任何操作前请自行验证。</ModCompatChecker.SelfAuditFooter2>
 </LanguageData>

@@ -4,7 +4,7 @@
   <author>秋羽雪绪</author>
   <packageId>modcompatchecker.main</packageId>
   <description>
-自动扫描已加载 MOD 的 Harmony 补丁冲突、XML Def 覆盖冲突、依赖缺失和加载顺序问题。可接入 AI API（兼容 DeepSeek/OpenAI/Anthropic），将技术性冲突描述翻译成易于理解的诊断和修复建议。
+自动扫描已加载 MOD 的 Harmony 补丁冲突、XML Def 覆盖冲突、依赖缺失和加载顺序问题。内置报错百科、循环报错检测、日志文件大小监控。可接入 AI API（兼容 DeepSeek/OpenAI/Anthropic），将技术性冲突翻译为易于理解的诊断和修复建议。包含 API 监控面板、余额检测、AI 响应自我审查（本地检测危险建议并事件警告）。
 
 ━━━━━━━━━━━━━━━━━━━━━━
 网络与隐私声明

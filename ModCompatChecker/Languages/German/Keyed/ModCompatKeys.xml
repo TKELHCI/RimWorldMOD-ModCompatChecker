@@ -177,4 +177,9 @@
 <ModCompatChecker.TestSpamAlert>Spam-Warnung testen (Demo)</ModCompatChecker.TestSpamAlert>
 <ModCompatChecker.SpamAlertTitle>Spam-Fehlerwarnung</ModCompatChecker.SpamAlertTitle>
 <ModCompatChecker.TestSpamBody>Dies ist eine simulierte Spam-Fehlerdemo:</ModCompatChecker.TestSpamBody>
+<ModCompatChecker.ApiDetails>API-Details</ModCompatChecker.ApiDetails>
+<ModCompatChecker.SelfAuditHeader>KI-Antwort kann gefährliche Vorschläge enthalten:</ModCompatChecker.SelfAuditHeader>
+<ModCompatChecker.SelfAuditBody>KI-Antwort kann folgende gefährliche Vorschläge enthalten:</ModCompatChecker.SelfAuditBody>
+<ModCompatChecker.SelfAuditFooter1>Das Obige sind nur KI-Vorschläge — es wurden keine tatsächlichen Änderungen vorgenommen.</ModCompatChecker.SelfAuditFooter1>
+<ModCompatChecker.SelfAuditFooter2>Vor dem Handeln überprüfen.</ModCompatChecker.SelfAuditFooter2>
 </LanguageData>

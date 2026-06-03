@@ -91,10 +91,13 @@
     <Compile Include="UI\UnifiedWindow.cs" />
         <Compile Include="UI\SharedSettingsUI.cs" />
 <Compile Include="Patches\LogCapture.cs" />
-    <Compile Include="UI\ErrorAnalysisWindow.cs" />    <Compile Include="Core\ApiLogMonitor.cs" />
+        <Compile Include="UI\ErrorAnalysisWindow.cs" />
+    <Compile Include="Core\ApiLogMonitor.cs" />
     <Compile Include="Core\AIResponseAuditor.cs" />
     <Compile Include="Core\ApiBalanceChecker.cs" />
 
+        <Compile Include="Core\RelationshipAnalyzer.cs" />
+    <Compile Include="Core\UpdateChecker.cs" />
     <Compile Include="Core\StackTraceAnalyzer.cs" />
   </ItemGroup>
 

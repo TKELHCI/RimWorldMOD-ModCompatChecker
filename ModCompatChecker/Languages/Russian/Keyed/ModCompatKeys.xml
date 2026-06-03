@@ -177,4 +177,9 @@
 <ModCompatChecker.TestSpamAlert>Тест предупреждения о спаме (Демо)</ModCompatChecker.TestSpamAlert>
 <ModCompatChecker.SpamAlertTitle>Предупреждение о спам-ошибке</ModCompatChecker.SpamAlertTitle>
 <ModCompatChecker.TestSpamBody>Это демонстрация спам-ошибок:</ModCompatChecker.TestSpamBody>
+<ModCompatChecker.ApiDetails>Подробности API</ModCompatChecker.ApiDetails>
+<ModCompatChecker.SelfAuditHeader>Ответ ИИ может содержать опасные предложения:</ModCompatChecker.SelfAuditHeader>
+<ModCompatChecker.SelfAuditBody>Ответ ИИ может содержать следующие опасные предложения:</ModCompatChecker.SelfAuditBody>
+<ModCompatChecker.SelfAuditFooter1>Вышеуказанное — только предложения ИИ, никаких фактических изменений не внесено.</ModCompatChecker.SelfAuditFooter1>
+<ModCompatChecker.SelfAuditFooter2>Проверьте перед выполнением любых действий.</ModCompatChecker.SelfAuditFooter2>
 </LanguageData>

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Verse;
 
 namespace ModCompatChecker.Core
 {
@@ -91,14 +92,14 @@ namespace ModCompatChecker.Core
         {
             if (findings.Count == 0) return "";
             var sb = new System.Text.StringBuilder();
-            sb.AppendLine("[ModCompatChecker Self-Audit]");
-            sb.AppendLine("AI response may contain dangerous suggestions:");
+            sb.AppendLine("[ModCompatChecker] " + "ModCompatChecker.SelfAuditHeader".Translate());
+            sb.AppendLine("ModCompatChecker.SelfAuditBody".Translate());
             foreach (var f in findings)
             {
-                sb.AppendLine($"  [{f.Rule.Severity}] {f.Rule.Description}: \"{f.MatchedText}\"");
+                sb.AppendLine(string.Format("  [{0}] {1}: \"{2}\"", f.Rule.Severity, f.Rule.Description, f.MatchedText));
             }
-            sb.AppendLine("These are suggestions from AI only — no changes have been made.");
-            sb.AppendLine("Verify before taking any action.");
+            sb.AppendLine("ModCompatChecker.SelfAuditFooter1".Translate());
+            sb.AppendLine("ModCompatChecker.SelfAuditFooter2".Translate());
             return sb.ToString();
         }
 

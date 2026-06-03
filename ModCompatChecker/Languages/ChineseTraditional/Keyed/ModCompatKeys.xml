@@ -177,4 +177,9 @@
 <ModCompatChecker.TestSpamAlert>測試循環報錯警告（演示）</ModCompatChecker.TestSpamAlert>
 <ModCompatChecker.SpamAlertTitle>循環報錯警告</ModCompatChecker.SpamAlertTitle>
 <ModCompatChecker.TestSpamBody>以下為模擬的循環報錯演示：</ModCompatChecker.TestSpamBody>
+<ModCompatChecker.ApiDetails>API詳細設置</ModCompatChecker.ApiDetails>
+<ModCompatChecker.SelfAuditHeader>AI回應可能包含危險建議：</ModCompatChecker.SelfAuditHeader>
+<ModCompatChecker.SelfAuditBody>AI回應可能包含以下危險建議：</ModCompatChecker.SelfAuditBody>
+<ModCompatChecker.SelfAuditFooter1>以上僅為AI建議——本MOD未進行任何實際修改。</ModCompatChecker.SelfAuditFooter1>
+<ModCompatChecker.SelfAuditFooter2>採取任何操作前請自行驗證。</ModCompatChecker.SelfAuditFooter2>
 </LanguageData>

@@ -177,4 +177,9 @@
 <ModCompatChecker.TestSpamAlert>Tester l'alerte de spam (Démo)</ModCompatChecker.TestSpamAlert>
 <ModCompatChecker.SpamAlertTitle>Alerte d'erreur répétitive</ModCompatChecker.SpamAlertTitle>
 <ModCompatChecker.TestSpamBody>Ceci est une simulation d'erreurs répétitives :</ModCompatChecker.TestSpamBody>
+<ModCompatChecker.ApiDetails>Détails API</ModCompatChecker.ApiDetails>
+<ModCompatChecker.SelfAuditHeader>La réponse IA peut contenir des suggestions dangereuses :</ModCompatChecker.SelfAuditHeader>
+<ModCompatChecker.SelfAuditBody>La réponse IA peut contenir les suggestions dangereuses suivantes :</ModCompatChecker.SelfAuditBody>
+<ModCompatChecker.SelfAuditFooter1>Ce qui précède ne sont que des suggestions — aucune modification réelle n'a été effectuée.</ModCompatChecker.SelfAuditFooter1>
+<ModCompatChecker.SelfAuditFooter2>Vérifiez avant d'entreprendre toute action.</ModCompatChecker.SelfAuditFooter2>
 </LanguageData>

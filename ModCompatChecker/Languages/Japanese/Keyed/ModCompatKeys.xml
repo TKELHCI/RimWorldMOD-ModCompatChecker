@@ -177,4 +177,9 @@
 <ModCompatChecker.TestSpamAlert>スパム警告をテスト (デモ)</ModCompatChecker.TestSpamAlert>
 <ModCompatChecker.SpamAlertTitle>スパムエラー警告</ModCompatChecker.SpamAlertTitle>
 <ModCompatChecker.TestSpamBody>以下はシミュレーションされたスパムエラーのデモです：</ModCompatChecker.TestSpamBody>
+<ModCompatChecker.ApiDetails>API詳細設定</ModCompatChecker.ApiDetails>
+<ModCompatChecker.SelfAuditHeader>AI応答には危険な提案が含まれる可能性があります：</ModCompatChecker.SelfAuditHeader>
+<ModCompatChecker.SelfAuditBody>AI応答には以下の危険な提案が含まれています：</ModCompatChecker.SelfAuditBody>
+<ModCompatChecker.SelfAuditFooter1>上記はAIの提案のみです——実際の変更は行われていません。</ModCompatChecker.SelfAuditFooter1>
+<ModCompatChecker.SelfAuditFooter2>操作前に必ず確認してください。</ModCompatChecker.SelfAuditFooter2>
 </LanguageData>
