@@ -182,4 +182,19 @@
 <ModCompatChecker.SelfAuditBody>AI回應可能包含以下危險建議：</ModCompatChecker.SelfAuditBody>
 <ModCompatChecker.SelfAuditFooter1>以上僅為AI建議——本MOD未進行任何實際修改。</ModCompatChecker.SelfAuditFooter1>
 <ModCompatChecker.SelfAuditFooter2>採取任何操作前請自行驗證。</ModCompatChecker.SelfAuditFooter2>
+  <ModCompatChecker.BalanceLow>⚠ 餘額不足 - 建議儲值！</ModCompatChecker.BalanceLow>
+  <ModCompatChecker.BalanceCheckParseError>無法解析餘額回應</ModCompatChecker.BalanceCheckParseError>
+  <ModCompatChecker.BalanceCheckNotSupported>此提供商不支援餘額檢測</ModCompatChecker.BalanceCheckNotSupported>
+  <ModCompatChecker.CurrentBalance>當前餘額：</ModCompatChecker.CurrentBalance>
+  <ModCompatChecker.EnableBalanceCheck>啟用定時餘額檢測（約每5分鐘）</ModCompatChecker.EnableBalanceCheck>
+  <ModCompatChecker.CheckBalanceNow>立即檢測</ModCompatChecker.CheckBalanceNow>
+  <ModCompatChecker.BalanceWarningTitle>API 餘額不足</ModCompatChecker.BalanceWarningTitle>
+  <ModCompatChecker.LastCheck>上次檢測：</ModCompatChecker.LastCheck>
+  <ModCompatChecker.BalanceCheckHint>餘額檢測使用相同的 API 端點。目前僅支援 DeepSeek / OpenAI 自動解析餘額。</ModCompatChecker.BalanceCheckHint>
+  <ModCompatChecker.CheckingBalance>正在檢測餘額...</ModCompatChecker.CheckingBalance>
+  <ModCompatChecker.BalanceCheck>💰 API 餘額檢測</ModCompatChecker.BalanceCheck>
+  <ModCompatChecker.BalanceWarningLetter>您的 API 餘額不足！當前餘額：</ModCompatChecker.BalanceWarningLetter>
+  <ModCompatChecker.BalanceWarningThreshold>警告閾值：</ModCompatChecker.BalanceWarningThreshold>
+  <ModCompatChecker.RetryAnalysis>重新分析</ModCompatChecker.RetryAnalysis>
+  <ModCompatChecker.Refresh>刷新</ModCompatChecker.Refresh>
 </LanguageData>

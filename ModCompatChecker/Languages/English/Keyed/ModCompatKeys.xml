@@ -192,4 +192,19 @@
 <ModCompatChecker.SelfAuditBody>AI response may contain the following dangerous suggestions:</ModCompatChecker.SelfAuditBody>
 <ModCompatChecker.SelfAuditFooter1>The above are AI suggestions only — no actual modifications were made by this mod.</ModCompatChecker.SelfAuditFooter1>
 <ModCompatChecker.SelfAuditFooter2>Verify before taking any action.</ModCompatChecker.SelfAuditFooter2>
+  <ModCompatChecker.BalanceLow>⚠ Low balance - consider topping up!</ModCompatChecker.BalanceLow>
+  <ModCompatChecker.BalanceCheckParseError>Could not parse balance response</ModCompatChecker.BalanceCheckParseError>
+  <ModCompatChecker.BalanceCheckNotSupported>Balance check not supported for this provider</ModCompatChecker.BalanceCheckNotSupported>
+  <ModCompatChecker.CurrentBalance>Current balance:</ModCompatChecker.CurrentBalance>
+  <ModCompatChecker.EnableBalanceCheck>Enable periodic balance check (~every 5 min)</ModCompatChecker.EnableBalanceCheck>
+  <ModCompatChecker.CheckBalanceNow>Check Now</ModCompatChecker.CheckBalanceNow>
+  <ModCompatChecker.BalanceWarningTitle>API Balance Low</ModCompatChecker.BalanceWarningTitle>
+  <ModCompatChecker.LastCheck>Last check:</ModCompatChecker.LastCheck>
+  <ModCompatChecker.BalanceCheckHint>Balance check uses the same API endpoint. Currently supports DeepSeek / OpenAI auto-parsing.</ModCompatChecker.BalanceCheckHint>
+  <ModCompatChecker.CheckingBalance>Checking balance...</ModCompatChecker.CheckingBalance>
+  <ModCompatChecker.BalanceCheck>💰 API Balance Check</ModCompatChecker.BalanceCheck>
+  <ModCompatChecker.BalanceWarningLetter>Your API balance is low! Current balance: </ModCompatChecker.BalanceWarningLetter>
+  <ModCompatChecker.BalanceWarningThreshold>Warning threshold:</ModCompatChecker.BalanceWarningThreshold>
+  <ModCompatChecker.RetryAnalysis>Re-analyze</ModCompatChecker.RetryAnalysis>
+  <ModCompatChecker.Refresh>Refresh</ModCompatChecker.Refresh>
 </LanguageData>

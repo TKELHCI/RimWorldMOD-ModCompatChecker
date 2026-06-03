@@ -182,4 +182,19 @@
 <ModCompatChecker.SelfAuditBody>KI-Antwort kann folgende gefährliche Vorschläge enthalten:</ModCompatChecker.SelfAuditBody>
 <ModCompatChecker.SelfAuditFooter1>Das Obige sind nur KI-Vorschläge — es wurden keine tatsächlichen Änderungen vorgenommen.</ModCompatChecker.SelfAuditFooter1>
 <ModCompatChecker.SelfAuditFooter2>Vor dem Handeln überprüfen.</ModCompatChecker.SelfAuditFooter2>
+  <ModCompatChecker.BalanceLow>⚠ Guthaben niedrig - bitte aufladen!</ModCompatChecker.BalanceLow>
+  <ModCompatChecker.BalanceCheckParseError>Antwort konnte nicht ausgewertet werden</ModCompatChecker.BalanceCheckParseError>
+  <ModCompatChecker.BalanceCheckNotSupported>Guthabenprüfung für diesen Anbieter nicht verfügbar</ModCompatChecker.BalanceCheckNotSupported>
+  <ModCompatChecker.CurrentBalance>Aktuelles Guthaben:</ModCompatChecker.CurrentBalance>
+  <ModCompatChecker.EnableBalanceCheck>Periodische Prüfung aktivieren (~alle 5 Min.)</ModCompatChecker.EnableBalanceCheck>
+  <ModCompatChecker.CheckBalanceNow>Jetzt prüfen</ModCompatChecker.CheckBalanceNow>
+  <ModCompatChecker.BalanceWarningTitle>API-Guthaben niedrig</ModCompatChecker.BalanceWarningTitle>
+  <ModCompatChecker.LastCheck>Letzte Prüfung:</ModCompatChecker.LastCheck>
+  <ModCompatChecker.BalanceCheckHint>Nutzt denselben API-Endpunkt. Derzeit DeepSeek / OpenAI unterstützt.</ModCompatChecker.BalanceCheckHint>
+  <ModCompatChecker.CheckingBalance>Guthaben wird geprüft...</ModCompatChecker.CheckingBalance>
+  <ModCompatChecker.BalanceCheck>💰 API-Guthabenprüfung</ModCompatChecker.BalanceCheck>
+  <ModCompatChecker.BalanceWarningLetter>Ihr API-Guthaben ist niedrig! Aktuelles Guthaben: </ModCompatChecker.BalanceWarningLetter>
+  <ModCompatChecker.BalanceWarningThreshold>Warnschwelle:</ModCompatChecker.BalanceWarningThreshold>
+  <ModCompatChecker.RetryAnalysis>Neu analysieren</ModCompatChecker.RetryAnalysis>
+  <ModCompatChecker.Refresh>Aktualisieren</ModCompatChecker.Refresh>
 </LanguageData>

@@ -182,4 +182,19 @@
 <ModCompatChecker.SelfAuditBody>La respuesta de IA puede contener las siguientes sugerencias peligrosas:</ModCompatChecker.SelfAuditBody>
 <ModCompatChecker.SelfAuditFooter1>Lo anterior son solo sugerencias de IA — no se realizaron modificaciones reales.</ModCompatChecker.SelfAuditFooter1>
 <ModCompatChecker.SelfAuditFooter2>Verifique antes de realizar cualquier acción.</ModCompatChecker.SelfAuditFooter2>
+  <ModCompatChecker.BalanceLow>⚠ Saldo bajo - ¡recargue!</ModCompatChecker.BalanceLow>
+  <ModCompatChecker.BalanceCheckParseError>No se pudo analizar la respuesta de saldo</ModCompatChecker.BalanceCheckParseError>
+  <ModCompatChecker.BalanceCheckNotSupported>Verificación no soportada para este proveedor</ModCompatChecker.BalanceCheckNotSupported>
+  <ModCompatChecker.CurrentBalance>Saldo actual:</ModCompatChecker.CurrentBalance>
+  <ModCompatChecker.EnableBalanceCheck>Activar verificación periódica (~cada 5 min)</ModCompatChecker.EnableBalanceCheck>
+  <ModCompatChecker.CheckBalanceNow>Verificar ahora</ModCompatChecker.CheckBalanceNow>
+  <ModCompatChecker.BalanceWarningTitle>Saldo API bajo</ModCompatChecker.BalanceWarningTitle>
+  <ModCompatChecker.LastCheck>Última verificación:</ModCompatChecker.LastCheck>
+  <ModCompatChecker.BalanceCheckHint>Usa el mismo endpoint API. Actualmente compatible con DeepSeek / OpenAI.</ModCompatChecker.BalanceCheckHint>
+  <ModCompatChecker.CheckingBalance>Verificando saldo...</ModCompatChecker.CheckingBalance>
+  <ModCompatChecker.BalanceCheck>💰 Verificación de saldo API</ModCompatChecker.BalanceCheck>
+  <ModCompatChecker.BalanceWarningLetter>¡Su saldo API es bajo! Saldo actual: </ModCompatChecker.BalanceWarningLetter>
+  <ModCompatChecker.BalanceWarningThreshold>Umbral de aviso:</ModCompatChecker.BalanceWarningThreshold>
+  <ModCompatChecker.RetryAnalysis>Re-analizar</ModCompatChecker.RetryAnalysis>
+  <ModCompatChecker.Refresh>Actualizar</ModCompatChecker.Refresh>
 </LanguageData>

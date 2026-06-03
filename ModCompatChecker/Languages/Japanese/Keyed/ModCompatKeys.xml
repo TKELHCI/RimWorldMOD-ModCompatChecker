@@ -182,4 +182,19 @@
 <ModCompatChecker.SelfAuditBody>AI応答には以下の危険な提案が含まれています：</ModCompatChecker.SelfAuditBody>
 <ModCompatChecker.SelfAuditFooter1>上記はAIの提案のみです——実際の変更は行われていません。</ModCompatChecker.SelfAuditFooter1>
 <ModCompatChecker.SelfAuditFooter2>操作前に必ず確認してください。</ModCompatChecker.SelfAuditFooter2>
+  <ModCompatChecker.BalanceLow>⚠ 残高不足 - チャージをお勧めします！</ModCompatChecker.BalanceLow>
+  <ModCompatChecker.BalanceCheckParseError>残高レスポンスを解析できません</ModCompatChecker.BalanceCheckParseError>
+  <ModCompatChecker.BalanceCheckNotSupported>このプロバイダーでは残高確認に対応していません</ModCompatChecker.BalanceCheckNotSupported>
+  <ModCompatChecker.CurrentBalance>現在の残高：</ModCompatChecker.CurrentBalance>
+  <ModCompatChecker.EnableBalanceCheck>定期的な残高確認を有効にする（約5分毎）</ModCompatChecker.EnableBalanceCheck>
+  <ModCompatChecker.CheckBalanceNow>今すぐ確認</ModCompatChecker.CheckBalanceNow>
+  <ModCompatChecker.BalanceWarningTitle>API残高不足</ModCompatChecker.BalanceWarningTitle>
+  <ModCompatChecker.LastCheck>最終確認：</ModCompatChecker.LastCheck>
+  <ModCompatChecker.BalanceCheckHint>同じAPIエンドポイントを使用します。現在DeepSeek / OpenAIに対応。</ModCompatChecker.BalanceCheckHint>
+  <ModCompatChecker.CheckingBalance>残高を確認中...</ModCompatChecker.CheckingBalance>
+  <ModCompatChecker.BalanceCheck>💰 API 残高確認</ModCompatChecker.BalanceCheck>
+  <ModCompatChecker.BalanceWarningLetter>API残高が不足しています！現在の残高：</ModCompatChecker.BalanceWarningLetter>
+  <ModCompatChecker.BalanceWarningThreshold>警告しきい値：</ModCompatChecker.BalanceWarningThreshold>
+  <ModCompatChecker.RetryAnalysis>再分析</ModCompatChecker.RetryAnalysis>
+  <ModCompatChecker.Refresh>更新</ModCompatChecker.Refresh>
 </LanguageData>

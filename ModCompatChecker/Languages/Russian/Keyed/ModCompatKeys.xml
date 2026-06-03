@@ -182,4 +182,19 @@
 <ModCompatChecker.SelfAuditBody>Ответ ИИ может содержать следующие опасные предложения:</ModCompatChecker.SelfAuditBody>
 <ModCompatChecker.SelfAuditFooter1>Вышеуказанное — только предложения ИИ, никаких фактических изменений не внесено.</ModCompatChecker.SelfAuditFooter1>
 <ModCompatChecker.SelfAuditFooter2>Проверьте перед выполнением любых действий.</ModCompatChecker.SelfAuditFooter2>
+  <ModCompatChecker.BalanceLow>⚠ Низкий баланс - пополните!</ModCompatChecker.BalanceLow>
+  <ModCompatChecker.BalanceCheckParseError>Не удалось разобрать ответ о балансе</ModCompatChecker.BalanceCheckParseError>
+  <ModCompatChecker.BalanceCheckNotSupported>Проверка баланса не поддерживается для этого провайдера</ModCompatChecker.BalanceCheckNotSupported>
+  <ModCompatChecker.CurrentBalance>Текущий баланс:</ModCompatChecker.CurrentBalance>
+  <ModCompatChecker.EnableBalanceCheck>Включить периодическую проверку (~каждые 5 мин)</ModCompatChecker.EnableBalanceCheck>
+  <ModCompatChecker.CheckBalanceNow>Проверить сейчас</ModCompatChecker.CheckBalanceNow>
+  <ModCompatChecker.BalanceWarningTitle>Низкий баланс API</ModCompatChecker.BalanceWarningTitle>
+  <ModCompatChecker.LastCheck>Последняя проверка:</ModCompatChecker.LastCheck>
+  <ModCompatChecker.BalanceCheckHint>Использует тот же API-эндпоинт. Поддерживается DeepSeek / OpenAI.</ModCompatChecker.BalanceCheckHint>
+  <ModCompatChecker.CheckingBalance>Проверка баланса...</ModCompatChecker.CheckingBalance>
+  <ModCompatChecker.BalanceCheck>💰 Проверка баланса API</ModCompatChecker.BalanceCheck>
+  <ModCompatChecker.BalanceWarningLetter>Ваш баланс API низкий! Текущий баланс: </ModCompatChecker.BalanceWarningLetter>
+  <ModCompatChecker.BalanceWarningThreshold>Порог предупреждения:</ModCompatChecker.BalanceWarningThreshold>
+  <ModCompatChecker.RetryAnalysis>Повторный анализ</ModCompatChecker.RetryAnalysis>
+  <ModCompatChecker.Refresh>Обновить</ModCompatChecker.Refresh>
 </LanguageData>

@@ -10,6 +10,7 @@ namespace ModCompatChecker.AI
 {
     public static class AIService
     {
+        public static System.Net.HttpWebRequest CurrentRequest;
         public static string AnalyzeHarmonyConflict(
             HarmonyConflict conflict, string apiEndpoint, string apiKey,
             string modelId, ModelConfig.ApiProvider provider)
@@ -66,7 +67,7 @@ namespace ModCompatChecker.AI
                 ? BuildAnthropicBody(modelId, userMessage)
                 : BuildOpenAIBody(modelId, userMessage);
 
-            var request = (HttpWebRequest)WebRequest.Create(endpoint);
+            var request = (HttpWebRequest)WebRequest.Create(endpoint); CurrentRequest = request;
             request.Method = "POST";
             request.ContentType = "application/json";
             request.Timeout = timeoutSeconds * 1000;
@@ -133,11 +134,12 @@ namespace ModCompatChecker.AI
                 }
                 return "ModCompatChecker.NetworkError".Translate() + wex.Message;
             }
+            finally { CurrentRequest = null; }
         }
 
         private static void TryAbort(HttpWebRequest request)
         {
-            try { request.Abort(); } catch { }
+            try { request.Abort(); CurrentRequest = null; } catch { }
         }
 
         private static string BuildOpenAIBody(string model, string userMessage)

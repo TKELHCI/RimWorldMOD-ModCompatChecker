@@ -181,7 +181,7 @@ namespace ModCompatChecker.UI
                         Widgets.Label(new Rect(thinkRow.x, thinkRow.y + 2f, thinkRow.width - 70f, 20f), "ModCompatChecker.Thinking".Translate());
                         GUI.color = Color.white;
                         if (Widgets.ButtonText(new Rect(thinkRow.x + thinkRow.width - 68f, thinkRow.y, 68f, 22f), "ModCompatChecker.ForceStop".Translate()))
-                            _offlineAICancel = true;
+                            { _offlineAICancel = true; if (AIService.CurrentRequest != null) { try { AIService.CurrentRequest.Abort(); } catch { } } }
                     }
                     else if (!string.IsNullOrEmpty(aiRes))
                     {
@@ -193,6 +193,12 @@ namespace ModCompatChecker.UI
                         Widgets.Label(new Rect(0f, 0f, aiR.width - 24f, aiTextH), aiRes);
                         Widgets.EndScrollView();
                     }
+                        inner.Gap(2f);
+                        if (Widgets.ButtonText(inner.GetRect(24f), "ModCompatChecker.RetryAnalysis".Translate()))
+                        {
+                            _offlineAIResult = "";
+                            StartAIDirSearch(settings, _offlineSearchQuery ?? "");
+                        }
                     else
                     {
                         if (Widgets.ButtonText(new Rect(srBtnRect.x + srBtnW + 8f, srBtnRect.y, srBtnW, 24f), "ModCompatChecker.AIDirSearch".Translate()))
@@ -1150,6 +1156,7 @@ namespace ModCompatChecker.UI
             string qLabel = _presetCount > 0 ? _presetCount.ToString() : (_customCount.ToString() + "+");
             if (Widgets.ButtonText(new Rect(qr.x + 55f, qr.y, 70f, 24f), qLabel))
                 _showQuantityPicker = !_showQuantityPicker;
+            if (Widgets.ButtonText(new Rect(qr.x + 130f, qr.y, 60f, 24f), "ModCompatChecker.Refresh".Translate())) _needsRefresh = true;
 
             if (_showQuantityPicker)
             {

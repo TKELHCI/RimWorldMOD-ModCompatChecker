@@ -91,6 +91,8 @@ namespace ModCompatChecker.Core
         public static void ForceStopAll()
         {
             GlobalCancel = true;
+            // Abort the current HTTP request immediately
+            try { AI.AIService.CurrentRequest?.Abort(); } catch { }
             lock (_lock)
             {
                 foreach (var e in _entries)
@@ -102,8 +104,8 @@ namespace ModCompatChecker.Core
                     }
                 }
             }
-            // Reset after a short delay so future calls can proceed
-            new Thread(() => { Thread.Sleep(500); GlobalCancel = false; }) { IsBackground = true }.Start();
+            // Reset after delay so future calls can proceed
+            new Thread(() => { Thread.Sleep(3000); GlobalCancel = false; }) { IsBackground = true }.Start();
         }
 
         /// <summary>Toggle blocking of all subsequent API calls from this mod.</summary>
