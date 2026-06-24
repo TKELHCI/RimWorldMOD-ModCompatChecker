@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ModCompatChecker.AIAnalysisFailed>AI Analysis failed: </ModCompatChecker.AIAnalysisFailed>
+  <ModCompatChecker.AIAnalyze>AI Analyze</ModCompatChecker.AIAnalyze>
+  <ModCompatChecker.AINeedsAPIKey>AI requires API Key</ModCompatChecker.AINeedsAPIKey>
+  <ModCompatChecker.AINeedsAPIKeyDetail>AI Analysis requires API Key configured in Settings</ModCompatChecker.AINeedsAPIKeyDetail>
+  <ModCompatChecker.APIEndpoint>API Endpoint:</ModCompatChecker.APIEndpoint>
+  <ModCompatChecker.APISettings>Настройки API</ModCompatChecker.APISettings>
+  <ModCompatChecker.APISettingsLabel>API Settings</ModCompatChecker.APISettingsLabel>
+  <ModCompatChecker.AnalysisCancelled>Analysis cancelled by user</ModCompatChecker.AnalysisCancelled>
+  <ModCompatChecker.AnalysisTimeout>Analysis Timeout: </ModCompatChecker.AnalysisTimeout>
+  <ModCompatChecker.Analyzing>Анализ...</ModCompatChecker.Analyzing>
+  <ModCompatChecker.AnalyzingSpace>Analyzing </ModCompatChecker.AnalyzingSpace>
+  <ModCompatChecker.CancelAnalysis>Отменить</ModCompatChecker.CancelAnalysis>
+  <ModCompatChecker.Clipboard>Буфер обмена</ModCompatChecker.Clipboard>
+  <ModCompatChecker.ClipboardEmpty>Clipboard is empty</ModCompatChecker.ClipboardEmpty>
+  <ModCompatChecker.CompatAnalysis>Анализ совместимости</ModCompatChecker.CompatAnalysis>
+  <ModCompatChecker.Complete>Complete</ModCompatChecker.Complete>
+  <ModCompatChecker.CopyResult>Копировать</ModCompatChecker.CopyResult>
+  <ModCompatChecker.CostEstimate>Cost Estimate</ModCompatChecker.CostEstimate>
+  <ModCompatChecker.CurrentModel>Current Model:</ModCompatChecker.CurrentModel>
+  <ModCompatChecker.Custom>Custom</ModCompatChecker.Custom>
+  <ModCompatChecker.CustomModel>Custom Model</ModCompatChecker.CustomModel>
+  <ModCompatChecker.CustomModelId>Custom Model ID:</ModCompatChecker.CustomModelId>
+  <ModCompatChecker.CustomQuantity>Custom Count:</ModCompatChecker.CustomQuantity>
+  <ModCompatChecker.Def>Def</ModCompatChecker.Def>
+  <ModCompatChecker.DefLabel>Def: </ModCompatChecker.DefLabel>
+  <ModCompatChecker.DetectedMissingMods>Detected potentially missing MODs:</ModCompatChecker.DetectedMissingMods>
+  <ModCompatChecker.Error>Error: </ModCompatChecker.Error>
+  <ModCompatChecker.ErrorLogTitle>Анализ логов ошибок</ModCompatChecker.ErrorLogTitle>
+  <ModCompatChecker.Failed>Failed: </ModCompatChecker.Failed>
+  <ModCompatChecker.Features>Features</ModCompatChecker.Features>
+  <ModCompatChecker.FollowUpAnalysis>Доп.анализ</ModCompatChecker.FollowUpAnalysis>
+  <ModCompatChecker.InvalidRequest>Invalid request</ModCompatChecker.InvalidRequest>
+  <ModCompatChecker.LogFile>Файл лога</ModCompatChecker.LogFile>
+  <ModCompatChecker.MainTitle>MOD Проверка совместимости</ModCompatChecker.MainTitle>
+  <ModCompatChecker.ModCountSep> MOD · </ModCompatChecker.ModCountSep>
+  <ModCompatChecker.NeedAPI>API Key Required</ModCompatChecker.NeedAPI>
+  <ModCompatChecker.NeedAPIKey>API Key Required</ModCompatChecker.NeedAPIKey>
+  <ModCompatChecker.NoDefConflict>No Def override conflicts found</ModCompatChecker.NoDefConflict>
+  <ModCompatChecker.NoDepIssue>No dependency issues found</ModCompatChecker.NoDepIssue>
+  <ModCompatChecker.NoErrorContent>No analyzable error content</ModCompatChecker.NoErrorContent>
+  <ModCompatChecker.NoHarmonyConflict>No Harmony patch conflicts found</ModCompatChecker.NoHarmonyConflict>
+  <ModCompatChecker.OpenCompatChecker>Open Compatibility Checker</ModCompatChecker.OpenCompatChecker>
+  <ModCompatChecker.OpenUnifiedWindow>Open Unified Window</ModCompatChecker.OpenUnifiedWindow>
+  <ModCompatChecker.Patch>Patch: </ModCompatChecker.Patch>
+  <ModCompatChecker.PleaseConfigAIKey>Please configure AI API Key in MOD Settings</ModCompatChecker.PleaseConfigAIKey>
+  <ModCompatChecker.PleaseConfigAPI>Please configure Key in API Settings</ModCompatChecker.PleaseConfigAPI>
+  <ModCompatChecker.ProblemCount> issues</ModCompatChecker.ProblemCount>
+  <ModCompatChecker.Quantity>Count:</ModCompatChecker.Quantity>
+  <ModCompatChecker.QuickAsk>Быстрый вопрос</ModCompatChecker.QuickAsk>
+  <ModCompatChecker.QuickEntry>Quick Entry (same as bottom tab bar):</ModCompatChecker.QuickEntry>
+  <ModCompatChecker.ReadClipboard>Читать буфер</ModCompatChecker.ReadClipboard>
+  <ModCompatChecker.Rescan>Пересканировать</ModCompatChecker.Rescan>
+  <ModCompatChecker.RiskHigh>⚠ High Risk</ModCompatChecker.RiskHigh>
+  <ModCompatChecker.RiskLow>ℹ Low Risk</ModCompatChecker.RiskLow>
+  <ModCompatChecker.RiskMedium>⚡ Medium Risk</ModCompatChecker.RiskMedium>
+  <ModCompatChecker.RuntimeLog>Лог выполнения</ModCompatChecker.RuntimeLog>
+  <ModCompatChecker.ScanComplete>Сканирование завершено</ModCompatChecker.ScanComplete>
+  <ModCompatChecker.ScanCompleteDetail>Scan Complete · </ModCompatChecker.ScanCompleteDetail>
+  <ModCompatChecker.ScanHint>Click 「Start Scan」 to detect MOD compatibility issues</ModCompatChecker.ScanHint>
+  <ModCompatChecker.Scanning>Сканирование...</ModCompatChecker.Scanning>
+  <ModCompatChecker.SearchRequiredMod>Поиск MOD</ModCompatChecker.SearchRequiredMod>
+  <ModCompatChecker.Seconds> sec</ModCompatChecker.Seconds>
+  <ModCompatChecker.SelectAll>Select All</ModCompatChecker.SelectAll>
+  <ModCompatChecker.Send>Отправить</ModCompatChecker.Send>
+  <ModCompatChecker.SendFollowUp>Отправить</ModCompatChecker.SendFollowUp>
+  <ModCompatChecker.StartAIAnalysis>Начать AI-анализ</ModCompatChecker.StartAIAnalysis>
+  <ModCompatChecker.StartScan>Сканировать</ModCompatChecker.StartScan>
+  <ModCompatChecker.Target>Target: </ModCompatChecker.Target>
+  <ModCompatChecker.TestConnection>Тест подключения</ModCompatChecker.TestConnection>
+  <ModCompatChecker.Type>Type: </ModCompatChecker.Type>
+  <ModCompatChecker.ViewOnSteam>В Steam</ModCompatChecker.ViewOnSteam>
+  <ModCompatChecker.WebSearch>Web Search</ModCompatChecker.WebSearch>
+  <ModCompatChecker.XPath>xpath: </ModCompatChecker.XPath>
+  <ModCompatChecker.TimeCost>Time: </ModCompatChecker.TimeCost>
+  <ModCompatChecker.SecondsLabel> sec</ModCompatChecker.SecondsLabel>
+  <ModCompatChecker.Items> items</ModCompatChecker.Items>
+  <ModCompatChecker.SecondsUnit> sec</ModCompatChecker.SecondsUnit>
+  <ModCompatChecker.ErrorPrefix>Error: </ModCompatChecker.ErrorPrefix>
+  <ModCompatChecker.FailedPrefix>Failed: </ModCompatChecker.FailedPrefix>
+  <ModCompatChecker.NetworkError>Network error: </ModCompatChecker.NetworkError>
+  <ModCompatChecker.RequestTimeout>Request timeout (</ModCompatChecker.RequestTimeout>
+  <ModCompatChecker.AutoCancelled>s), automatically cancelled.</ModCompatChecker.AutoCancelled>
+  <ModCompatChecker.ResponseTimeout>Response timeout (</ModCompatChecker.ResponseTimeout>
+  <ModCompatChecker.AnalysisCancelledNL>Analysis cancelled
+</ModCompatChecker.AnalysisCancelledNL>
+
+  <ModCompatChecker.AIAnalysisFailedPrefix>AI Analysis failed: </ModCompatChecker.AIAnalysisFailedPrefix>
+  <ModCompatChecker.FollowUpFailed>Follow-up failed: </ModCompatChecker.FollowUpFailed>
+  <ModCompatChecker.UserQuestion>User question: </ModCompatChecker.UserQuestion>
+  <ModCompatChecker.CurrentScanResult>Current scan results: </ModCompatChecker.CurrentScanResult>
+  <ModCompatChecker.RecentErrorAnalysis>Recent error analysis: </ModCompatChecker.RecentErrorAnalysis>
+  <ModCompatChecker.QuickAskPrompt>Answer concisely based on context. If insufficient, answer directly.</ModCompatChecker.QuickAskPrompt>
+  <ModCompatChecker.ConciselyAnswer>Answer concisely.</ModCompatChecker.ConciselyAnswer>
+  <ModCompatChecker.PreviousAnalysis>Previous analysis:
+</ModCompatChecker.PreviousAnalysis>
+  <ModCompatChecker.FollowUpQuestion>Follow-up: </ModCompatChecker.FollowUpQuestion>
+  <ModCompatChecker.PreviousAnalysisResult>Previous analysis result:
+</ModCompatChecker.PreviousAnalysisResult>
+  <ModCompatChecker.UserFollowUp>User follow-up:</ModCompatChecker.UserFollowUp>
+  <ModCompatChecker.FollowUpPrompt>Answer concisely, within 100 words.</ModCompatChecker.FollowUpPrompt>
+  <ModCompatChecker.ClipboardHint>Click Read Clipboard or paste manually</ModCompatChecker.ClipboardHint>
+  <ModCompatChecker.ClipboardEmptyDetail>Clipboard is empty, please copy error content first</ModCompatChecker.ClipboardEmptyDetail>
+  <ModCompatChecker.NotSet>Не задано</ModCompatChecker.NotSet>
+  <ModCompatChecker.Testing>Тестирование...</ModCompatChecker.Testing>
+  <ModCompatChecker.EnterAPIKey>Сначала введите API ключ</ModCompatChecker.EnterAPIKey>
+  <ModCompatChecker.ConnectionSuccess>Подключение успешно!</ModCompatChecker.ConnectionSuccess>
+  <ModCompatChecker.ConnectionFailed>Ошибка подключения: </ModCompatChecker.ConnectionFailed>
+  <ModCompatChecker.APIKey>API Key</ModCompatChecker.APIKey>
+  <ModCompatChecker.MaxOf>Макс. </ModCompatChecker.MaxOf>
+  <ModCompatChecker.UI179>⚙ Настройки API</ModCompatChecker.UI179>
+  <ModCompatChecker.UI180>[*] Анализ совместимости</ModCompatChecker.UI180>
+  <ModCompatChecker.UI181>[!] Анализ ошибок</ModCompatChecker.UI181>
+  <ModCompatChecker.UI182>[?] Быстрый вопрос</ModCompatChecker.UI182>
+  <ModCompatChecker.SettingsCategory>Проверка совместимости</ModCompatChecker.SettingsCategory>
+  <ModCompatChecker.AuthError>Неверный API Key</ModCompatChecker.AuthError>
+  <ModCompatChecker.RateLimit>Слишком много запросов</ModCompatChecker.RateLimit>
+  <ModCompatChecker.ServerError>Ошибка сервера</ModCompatChecker.ServerError>  <ModCompatChecker.ModelDeepSeekChat>DeepSeek V4 Flash (Recommended, Fast, Cheap)</ModCompatChecker.ModelDeepSeekChat>
+  <ModCompatChecker.ModelDeepSeekReasoner>DeepSeek V4 Pro (Deep Reasoning)</ModCompatChecker.ModelDeepSeekReasoner>
+  <ModCompatChecker.ModelGPT4o>GPT-4o (Best Quality)</ModCompatChecker.ModelGPT4o>
+  <ModCompatChecker.ModelGPT4oMini>GPT-4o-mini (Cheap, Fast)</ModCompatChecker.ModelGPT4oMini>
+  <ModCompatChecker.ModelGPT41Nano>GPT-4.1 Nano (Cheapest)</ModCompatChecker.ModelGPT41Nano>
+  <ModCompatChecker.ModelGPT41Mini>GPT-4.1 Mini (Balanced)</ModCompatChecker.ModelGPT41Mini>
+  <ModCompatChecker.ModelClaude35Haiku>Claude 3.5 Haiku (Fastest)</ModCompatChecker.ModelClaude35Haiku>
+  <ModCompatChecker.ModelClaude35Sonnet>Claude 3.5 Sonnet (Balanced)</ModCompatChecker.ModelClaude35Sonnet>
+  <ModCompatChecker.ModelClaudeSonnet4>Claude Sonnet 4 (Latest Flagship)</ModCompatChecker.ModelClaudeSonnet4>
+  <ModCompatChecker.ModelGemini25Flash>Gemini 2.5 Flash (Fast)</ModCompatChecker.ModelGemini25Flash>
+  <ModCompatChecker.ModelGemini25Pro>Gemini 2.5 Pro (Powerful)</ModCompatChecker.ModelGemini25Pro>
+  <ModCompatChecker.ModelKimi8K>Kimi (8K Context)</ModCompatChecker.ModelKimi8K>
+  <ModCompatChecker.ModelKimi32K>Kimi (32K Context)</ModCompatChecker.ModelKimi32K>
+  <ModCompatChecker.ModelQwenPlus>Qwen Plus (Balanced)</ModCompatChecker.ModelQwenPlus>
+  <ModCompatChecker.ModelQwen37Max>Qwen 3.7 Max (Flagship)</ModCompatChecker.ModelQwen37Max>
+  <ModCompatChecker.ModelGLM4Flash>GLM-4 Flash (Free/Fast)</ModCompatChecker.ModelGLM4Flash>
+  <ModCompatChecker.ModelGLM4Plus>GLM-4 Plus (Flagship)</ModCompatChecker.ModelGLM4Plus>
+  <ModCompatChecker.ModelORGPT4o>OpenRouter: GPT-4o</ModCompatChecker.ModelORGPT4o>
+  <ModCompatChecker.ModelORClaudeSonnet4>OpenRouter: Claude Sonnet 4</ModCompatChecker.ModelORClaudeSonnet4>
+  <ModCompatChecker.ModelORGemini25Flash>OpenRouter: Gemini 2.5 Flash</ModCompatChecker.ModelORGemini25Flash>
+  <ModCompatChecker.Tools>Инструменты</ModCompatChecker.Tools>
+  <ModCompatChecker.CheckSpam>Проверить повтор ошибок</ModCompatChecker.CheckSpam>
+  <ModCompatChecker.OpenLogFolder>Открыть папку логов</ModCompatChecker.OpenLogFolder>
+  <ModCompatChecker.Advanced>Расширенные</ModCompatChecker.Advanced>
+  <ModCompatChecker.SystemPrompt>Системный промпт ИИ</ModCompatChecker.SystemPrompt>
+  <ModCompatChecker.RestoreDefault>Восстановить по умолчанию</ModCompatChecker.RestoreDefault>
+  <ModCompatChecker.SpamAlert>Обнаружение спама: повторяющаяся ошибка</ModCompatChecker.SpamAlert>
+  <ModCompatChecker.AutoSpamToggle>Автообнаружение (каждые 60с)</ModCompatChecker.AutoSpamToggle>
+  <ModCompatChecker.EnableAutoSpam>Включить автообнаружение</ModCompatChecker.EnableAutoSpam>
+  <ModCompatChecker.SpamExplain>Проверка каждые 60с. Предотвращает раздувание Player.log. Уведомление событием. Без влияния на производительность.</ModCompatChecker.SpamExplain>
+  <ModCompatChecker.Cancel>Cancel</ModCompatChecker.Cancel>
+  <ModCompatChecker.LogFileSize>Player.log size:</ModCompatChecker.LogFileSize>
+  <ModCompatChecker.RefreshSize>Обновить</ModCompatChecker.RefreshSize>
+  <ModCompatChecker.LogSizeTitle>Мониторинг размера лога</ModCompatChecker.LogSizeTitle>
+  <ModCompatChecker.LogSizeExplain>При включении автоматически проверяет размер Player.log каждые 5 минут. Становится оранжевым при >50МБ (предотвращает заполнение диска повторяющимися ошибками). По умолчанию ВЫКЛ.</ModCompatChecker.LogSizeExplain>
+  <ModCompatChecker.PromptHint>Редактировать системный промпт</ModCompatChecker.PromptHint>
+  <ModCompatChecker.PresetConcise>Кратко</ModCompatChecker.PresetConcise>
+  <ModCompatChecker.PresetRefs>Быстрые пресеты:</ModCompatChecker.PresetRefs>
+  <ModCompatChecker.PresetDetailed>Подробно</ModCompatChecker.PresetDetailed>
+  <ModCompatChecker.PresetBeginner>Для новичков</ModCompatChecker.PresetBeginner>
+  <ModCompatChecker.PresetBeginnerDesc>Простым языком, для новичков</ModCompatChecker.PresetBeginnerDesc>
+  <ModCompatChecker.PresetConciseDesc>Только ключевые конфликты и решения, кратко</ModCompatChecker.PresetConciseDesc>
+  <ModCompatChecker.PresetDetailedDesc>Причина, влияние, решения, порядок загрузки</ModCompatChecker.PresetDetailedDesc>
+
+  <!-- === Офлайн-поиск === -->
+  <ModCompatChecker.SearchEncyclopedia>Поиск в энциклопедии</ModCompatChecker.SearchEncyclopedia>
+  <ModCompatChecker.AIDirSearch>AI-поиск</ModCompatChecker.AIDirSearch>
+  <ModCompatChecker.FoundEntries>Найдено: </ModCompatChecker.FoundEntries>
+  <ModCompatChecker.AllowAIDirSearch>Разрешить AI доступ к каталогу игры</ModCompatChecker.AllowAIDirSearch>
+  <ModCompatChecker.AllowAIDirSearchExplain>⚠ РИСК: AI может читать пути к файлам. Включайте только если доверяете провайдеру.</ModCompatChecker.AllowAIDirSearchExplain>
+  <ModCompatChecker.AIDirSearchPrompt>Поиск в базе знаний RimWorld по ключевому слову ошибки: </ModCompatChecker.AIDirSearchPrompt>
+  <ModCompatChecker.AllowAIDirSearchHint>Включить AI-поиск для неизвестных ошибок (нужен API-ключ)</ModCompatChecker.AllowAIDirSearchHint>
+  <ModCompatChecker.EncyclopediaFollowUp>Уточняющий анализ</ModCompatChecker.EncyclopediaFollowUp>
+  <ModCompatChecker.ErrorLookup>📖 Анализ / Поиск ошибок</ModCompatChecker.ErrorLookup>
+  <ModCompatChecker.ErrorLookupDesc>Вставьте лог ошибок или ключевое слово. Поиск по базе или AI-анализ.</ModCompatChecker.ErrorLookupDesc>
+  <ModCompatChecker.Thinking>🤔 Думаю...</ModCompatChecker.Thinking>
+  <ModCompatChecker.ForceStop>Стоп</ModCompatChecker.ForceStop>
+  <ModCompatChecker.ForceStopAll>Принудительная остановка всех</ModCompatChecker.ForceStopAll>
+  <ModCompatChecker.ClearLog>Очистить журнал</ModCompatChecker.ClearLog>
+  <ModCompatChecker.NoApiLogs>Нет записей API</ModCompatChecker.NoApiLogs>
+  <ModCompatChecker.NoRunningOps>Нет активных операций</ModCompatChecker.NoRunningOps>
+  <ModCompatChecker.APIMonitor>API Монитор</ModCompatChecker.APIMonitor>
+  <ModCompatChecker.Running>Выполняется</ModCompatChecker.Running>
+  <ModCompatChecker.BlockAllAPI>Блокировать все последующие API-запросы этого мода</ModCompatChecker.BlockAllAPI>
+<ModCompatChecker.EnableSelfAudit>Включить самоаудит ответов ИИ</ModCompatChecker.EnableSelfAudit>
+<ModCompatChecker.SelfAuditExplain>При включении каждый ответ ИИ автоматически проверяется на опасные предложения. Возможны ложные срабатывания. По умолчанию выключено.</ModCompatChecker.SelfAuditExplain>
+<ModCompatChecker.SelfAuditWarningTitle>Предупреждение безопасности ИИ</ModCompatChecker.SelfAuditWarningTitle>
+<ModCompatChecker.APIDataNotice>Внимание: Запросы анализа ИИ отправляются на ваш API-эндпоинт.</ModCompatChecker.APIDataNotice>
+<ModCompatChecker.TestAuditWarning>Тест предупреждения (Демо)</ModCompatChecker.TestAuditWarning>
+<ModCompatChecker.EnableTestMode>Включить тестовый режим</ModCompatChecker.EnableTestMode>
+<ModCompatChecker.TestModeHint>Тестовый режим включен: демо-кнопки отображаются для ручного запуска предупреждений.</ModCompatChecker.TestModeHint>
+<ModCompatChecker.TestSpamAlert>Тест предупреждения о спаме (Демо)</ModCompatChecker.TestSpamAlert>
+<ModCompatChecker.SpamAlertTitle>Предупреждение о спам-ошибке</ModCompatChecker.SpamAlertTitle>
+<ModCompatChecker.TestSpamBody>Это демонстрация спам-ошибок:</ModCompatChecker.TestSpamBody>
+<ModCompatChecker.ApiDetails>Подробности API</ModCompatChecker.ApiDetails>
+<ModCompatChecker.SelfAuditHeader>Ответ ИИ может содержать опасные предложения:</ModCompatChecker.SelfAuditHeader>
+<ModCompatChecker.SelfAuditBody>Ответ ИИ может содержать следующие опасные предложения:</ModCompatChecker.SelfAuditBody>
+<ModCompatChecker.SelfAuditFooter1>Вышеуказанное — только предложения ИИ, никаких фактических изменений не внесено.</ModCompatChecker.SelfAuditFooter1>
+<ModCompatChecker.SelfAuditFooter2>Проверьте перед выполнением любых действий.</ModCompatChecker.SelfAuditFooter2>
+  <ModCompatChecker.BalanceLow>⚠ Низкий баланс - пополните!</ModCompatChecker.BalanceLow>
+  <ModCompatChecker.BalanceCheckParseError>Не удалось разобрать ответ о балансе</ModCompatChecker.BalanceCheckParseError>
+  <ModCompatChecker.BalanceCheckNotSupported>Проверка баланса не поддерживается для этого провайдера</ModCompatChecker.BalanceCheckNotSupported>
+  <ModCompatChecker.CurrentBalance>Текущий баланс:</ModCompatChecker.CurrentBalance>
+  <ModCompatChecker.EnableBalanceCheck>Включить периодическую проверку (~каждые 5 мин)</ModCompatChecker.EnableBalanceCheck>
+  <ModCompatChecker.CheckBalanceNow>Проверить сейчас</ModCompatChecker.CheckBalanceNow>
+  <ModCompatChecker.BalanceWarningTitle>Низкий баланс API</ModCompatChecker.BalanceWarningTitle>
+  <ModCompatChecker.LastCheck>Последняя проверка:</ModCompatChecker.LastCheck>
+  <ModCompatChecker.BalanceCheckHint>Использует тот же API-эндпоинт. Поддерживается DeepSeek / OpenAI.</ModCompatChecker.BalanceCheckHint>
+  <ModCompatChecker.CheckingBalance>Проверка баланса...</ModCompatChecker.CheckingBalance>
+  <ModCompatChecker.BalanceCheck>💰 Проверка баланса API</ModCompatChecker.BalanceCheck>
+  <ModCompatChecker.BalanceWarningLetter>Ваш баланс API низкий! Текущий баланс: </ModCompatChecker.BalanceWarningLetter>
+  <ModCompatChecker.BalanceWarningThreshold>Порог предупреждения:</ModCompatChecker.BalanceWarningThreshold>
+  <ModCompatChecker.RetryAnalysis>Повторный анализ</ModCompatChecker.RetryAnalysis>
+  <ModCompatChecker.Refresh>Обновить</ModCompatChecker.Refresh>
+  <ModCompatChecker.SaveModCheck>Save Add/Remove Mod Impact Detection</ModCompatChecker.SaveModCheck>
+  <ModCompatChecker.RemoveModCheck>Remove Mod Impact Detection</ModCompatChecker.RemoveModCheck>
+  <ModCompatChecker.AddModCheck>Add Mod Impact Detection</ModCompatChecker.AddModCheck>
+  <ModCompatChecker.TargetMod>Target Mod:</ModCompatChecker.TargetMod>
+  <ModCompatChecker.ExpandSelectMod>▼ Expand to Select Mod</ModCompatChecker.ExpandSelectMod>
+  <ModCompatChecker.SaveFileLabel>Save File:</ModCompatChecker.SaveFileLabel>
+  <ModCompatChecker.ExpandSelectSave>▼ Expand to Select Save</ModCompatChecker.ExpandSelectSave>
+  <ModCompatChecker.SafeResult>🟢 Safe: No residual mod data in save, safe to remove</ModCompatChecker.SafeResult>
+  <ModCompatChecker.WarningResult>🟡 Warning: Found {0} residues, proceed with caution</ModCompatChecker.WarningResult>
+  <ModCompatChecker.DangerResult>🔴 Danger: Critical data residues found, removing mod will break save!</ModCompatChecker.DangerResult>
+  <ModCompatChecker.EnableModTimer>Enable Mod Load Timer (Default: Off)</ModCompatChecker.EnableModTimer>
+  <ModCompatChecker.EnableTestFeatures>Enable Test Mode (Experimental features run when checked)</ModCompatChecker.EnableTestFeatures>
+  <ModCompatChecker.ExportModList>Export Mod List to Desktop</ModCompatChecker.ExportModList>
+  <ModCompatChecker.ExportModListBtn>Export Your Mod List to Desktop</ModCompatChecker.ExportModListBtn>
+  <ModCompatChecker.ModLoadTime>MOD Load Time Analysis</ModCompatChecker.ModLoadTime>
+  <ModCompatChecker.TestDesc>From "I tell AI what to do and just watch" to "I propose ideas, AI gives the structure, I try to write and learn - but mostly still AI-generated"</ModCompatChecker.TestDesc>
+  <ModCompatChecker.TestFoldable>Test Functions (Experimental/Unstable)</ModCompatChecker.TestFoldable>
+  <ModCompatChecker.TestSection>Test Functions (AI-guided human)</ModCompatChecker.TestSection>
+  <ModCompatChecker.DepVersionMismatch>{0} requires game version {1}, current is {2}</ModCompatChecker.DepVersionMismatch>
+
+  <ModCompatChecker.BatchAnalyze>AI Batch Analyze</ModCompatChecker.BatchAnalyze>
+
+  <ModCompatChecker.DepLoadBefore>{0} should load before {1}</ModCompatChecker.DepLoadBefore>
+
+  <ModCompatChecker.CopyAllResults>Copy All Results</ModCompatChecker.CopyAllResults>
+
+  <ModCompatChecker.DepMissing>{0} depends on {1}, which is not loaded</ModCompatChecker.DepMissing>
+
+  <ModCompatChecker.DepCheckToggle>Enable Dependency Check</ModCompatChecker.DepCheckToggle>
+
+  <ModCompatChecker.DepLoadAfter>{0} should load after {1}</ModCompatChecker.DepLoadAfter>
+
+  <ModCompatChecker.DepCheckDisabled>Dependency Check Disabled</ModCompatChecker.DepCheckDisabled>
+
+  <ModCompatChecker.HarmonyConflictSummary>{0} and {1} both patch {2}.{3}</ModCompatChecker.HarmonyConflictSummary>
+
+  <ModCompatChecker.BatchResultTitle>=== ModCompatChecker AI Batch Analysis Results ===</ModCompatChecker.BatchResultTitle>
+
+  <ModCompatChecker.TimeoutHint>Maximum wait time per AI request. Request is terminated on timeout. Recommended: 60-120 seconds. Increase if network is slow.</ModCompatChecker.TimeoutHint>
+
+  <ModCompatChecker.EnableAnalysisTimeout>Enable Analysis Timeout</ModCompatChecker.EnableAnalysisTimeout>
+
+  <!-- Glossary -->
+  <ModCompatChecker.AllowCustomGlossary>Allow custom glossary (e.g. DLL decompilation info)</ModCompatChecker.AllowCustomGlossary>
+  <ModCompatChecker.AllowBuiltInGlossary>Allow AI to use built-in glossary</ModCompatChecker.AllowBuiltInGlossary>
+  <ModCompatChecker.OpenGlossaryFolder>Open glossary folder</ModCompatChecker.OpenGlossaryFolder>
+  <ModCompatChecker.GlossaryTitle>AI Glossary</ModCompatChecker.GlossaryTitle>
+  <ModCompatChecker.GlossaryDescription>The glossary is automatically appended to prompts during AI analysis to help understand RimWorld terminology.</ModCompatChecker.GlossaryDescription>
+  <ModCompatChecker.DeepDiag.Title>深度诊断</ModCompatChecker.DeepDiag.Title>
+  <ModCompatChecker.DeepDiag.Description>本地静态扫描 + AI 语义分析双引擎诊断。先跑免费快速的本地扫描（秒级），再按需调用 AI 深度分析。</ModCompatChecker.DeepDiag.Description>
+  <ModCompatChecker.DeepDiag.EnableAIFileScan>启用AI翻文件分析</ModCompatChecker.DeepDiag.EnableAIFileScan>
+  <ModCompatChecker.DeepDiag.AIFileDisclaimerHeader>AI翻文件分析 免责声明与确认</ModCompatChecker.DeepDiag.AIFileDisclaimerHeader>
+  <ModCompatChecker.DeepDiag.AIFileScanEnabled>AI翻文件分析已启用（功能开发中）</ModCompatChecker.DeepDiag.AIFileScanEnabled>
+  <ModCompatChecker.DeepDiag.AISearchFileScan>AI搜索文件分析（功能开发中）</ModCompatChecker.DeepDiag.AISearchFileScan>
+  <ModCompatChecker.DeepDiag.ConfirmEnable>确认启用</ModCompatChecker.DeepDiag.ConfirmEnable>
+  <ModCompatChecker.DeepDiag.Cancel>取消</ModCompatChecker.DeepDiag.Cancel>
+  <ModCompatChecker.DeepDiag.LocalScan>本地静态扫描（免费，秒级）</ModCompatChecker.DeepDiag.LocalScan>
+  <ModCompatChecker.DeepDiag.DemoError>演示报错</ModCompatChecker.DeepDiag.DemoError>
+  <ModCompatChecker.DeepDiag.AIDeepAnalysis>AI 深度分析（已勾选 Mod，消耗 Token）</ModCompatChecker.DeepDiag.AIDeepAnalysis>
+  <ModCompatChecker.DeepDiag.AIAnalyzing>AI 分析中...</ModCompatChecker.DeepDiag.AIAnalyzing>
+  <ModCompatChecker.DeepDiag.CancelAnalysis>取消分析</ModCompatChecker.DeepDiag.CancelAnalysis>
+  <ModCompatChecker.DeepDiag.ScanComplete>扫描完成：</ModCompatChecker.DeepDiag.ScanComplete>
+  <ModCompatChecker.DeepDiag.CopyAll>复制全部</ModCompatChecker.DeepDiag.CopyAll>
+  <ModCompatChecker.DeepDiag.CopiedPrefix>已复制 </ModCompatChecker.DeepDiag.CopiedPrefix>
+  <ModCompatChecker.DeepDiag.CopiedSuffix> 条发现到剪贴板</ModCompatChecker.DeepDiag.CopiedSuffix>
+  <ModCompatChecker.DeepDiag.NoIssues>  未发现问题</ModCompatChecker.DeepDiag.NoIssues>
+  <ModCompatChecker.DeepDiag.AIResultTitle>AI 深度分析结果：</ModCompatChecker.DeepDiag.AIResultTitle>
+  <ModCompatChecker.DeepDiag.SelectAll>全选</ModCompatChecker.DeepDiag.SelectAll>
+  <ModCompatChecker.DeepDiag.DeselectAll>取消全选</ModCompatChecker.DeepDiag.DeselectAll>
+  <ModCompatChecker.DeepDiag.FollowUpTitle>追问分析（基于AI结果进一步提问）</ModCompatChecker.DeepDiag.FollowUpTitle>
+  <ModCompatChecker.DeepDiag.SendFollowUp>发送追问</ModCompatChecker.DeepDiag.SendFollowUp>
+  <ModCompatChecker.DeepDiag.AIFileDisclaimer>AI翻文件分析免责声明
+
+此功能会将您已启用的Mod源文件（XML/C#等）发送至AI服务商进行分析。
+
+请注意：
+• Mod源代码将被上传到第三方AI服务器
+• 分析质量取决于AI模型能力，结果仅供参考
+• 可能消耗较多API Token</ModCompatChecker.DeepDiag.AIFileDisclaimer>
+  <ModCompatChecker.DeepDiag.LogStart>深度诊断AI分析</ModCompatChecker.DeepDiag.LogStart>
+  <ModCompatChecker.DeepDiag.FollowUpLog>深度诊断追问</ModCompatChecker.DeepDiag.FollowUpLog>
+  <ModCompatChecker.DeepDiag.ScanSummary>=== 本地静态扫描结果摘要 ===</ModCompatChecker.DeepDiag.ScanSummary>
+  <ModCompatChecker.DeepDiag.ScanModCount>扫描Mod数: </ModCompatChecker.DeepDiag.ScanModCount>
+  <ModCompatChecker.DeepDiag.TotalIssues>总发现问题: </ModCompatChecker.DeepDiag.TotalIssues>
+  <ModCompatChecker.DeepDiag.DefIssues>Def完整性问题: </ModCompatChecker.DeepDiag.DefIssues>
+  <ModCompatChecker.DeepDiag.TexAudioIssues>贴图/音频问题: </ModCompatChecker.DeepDiag.TexAudioIssues>
+  <ModCompatChecker.DeepDiag.HarmonyIssues>Harmony冲突: </ModCompatChecker.DeepDiag.HarmonyIssues>
+  <ModCompatChecker.DeepDiag.Fatal>FATAL</ModCompatChecker.DeepDiag.Fatal>
+  <ModCompatChecker.DeepDiag.Error>ERROR</ModCompatChecker.DeepDiag.Error>
+  <ModCompatChecker.DeepDiag.Warning>WARNING</ModCompatChecker.DeepDiag.Warning>
+  <ModCompatChecker.DeepDiag.AIPrompt>请分析以上问题，给出：1) 问题原因 2) 潜在影响 3) 修复建议</ModCompatChecker.DeepDiag.AIPrompt>
+  <ModCompatChecker.DeepDiag.PrevAnalysis>=== 之前的AI深度分析结果 ===
+</ModCompatChecker.DeepDiag.PrevAnalysis>
+  <ModCompatChecker.DeepDiag.UserFollowUp>
+
+=== 用户追问 ===
+</ModCompatChecker.DeepDiag.UserFollowUp>
+</LanguageData>

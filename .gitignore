@@ -1,4 +1,4 @@
-﻿# Compiled binaries
+﻿# Compiled binaries (excluded from tracking)
 *.dll
 *.exe
 *.pdb
@@ -23,3 +23,7 @@ Desktop.ini
 *temp*
 *.bak
 *.tmp
+
+# Source build artifacts
+Source/obj/
+Source/.vscode/

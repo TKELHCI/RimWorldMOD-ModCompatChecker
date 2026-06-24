@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Mod 兼容性检查器 (Mod Compatibility Checker)</name>
+  <author>秋羽雪绪</author>
+  <packageId>modcompatchecker.main</packageId>
+  <description>
+自动扫描已加载 MOD 的 Harmony 补丁冲突、XML Def 覆盖冲突、依赖缺失和加载顺序问题。
+内置报错百科、循环报错检测、日志文件大小监控、存档增删 MOD 安全检测、MOD 加载耗时分析。
+可接入 AI API（兼容 DeepSeek/OpenAI/Anthropic），将技术性冲突翻译为易于理解的诊断和修复建议。
+包含 API 监控面板、余额检测、AI 响应自我审查（本地检测危险建议并事件警告）。
+
+━━━━━━━━━━━━━━━━━━━━━━
+网络与隐私声明
+━━━━━━━━━━━━━━━━━━━━━━
+• 本 MOD 不会自动收集或上传任何数据
+• AI 分析功能完全可选，仅在玩家手动点击「AI 分析」且已配置 API Key 时触发
+• 分析请求仅发送至玩家自行填写的 API 端点（如 api.deepseek.com）
+• API Key 存储在本地 RimWorld 配置目录，不会随 mod 文件分发
+• 不接入 API 时，本 MOD 完全离线运行，不产生任何网络流量
+
+━━━━━━━━━━━━━━━━━━━━━━
+AI 分析免责声明
+━━━━━━━━━━━━━━━━━━━━━━
+• AI 分析结果仅供参考，不保证准确性和完整性
+• 玩家应自行判断 AI 建议的合理性，据此操作（禁用/排序/删除 MOD）可能影响存档
+• 强烈建议在测试存档中进行 MOD 调整，而非主存档
+• AI 分析可能产生 API 调用费用，费用由用户自行承担
+
+━━━━━━━━━━━━━━━━━━━━━━
+⚠ 实验性项目 · 可能存在未知 bug · 请备份存档
+━━━━━━━━━━━━━━━━━━━━━━
+
+源码与独立崩溃分析工具 CrashAnalyzer：https://github.com/TKELHCI/RimWorldMOD-ModCompatChecker
+
+━━━━━━━━━━━━━━━━━━━━━━
+本 MOD 由秋羽雪绪主导需求与迭代方向，Codex（OpenAI 的 AI 编码助手）生成代码框架，人工负责测试调试与优化。
+————开发者的一些废话————（写这个的时候是凌晨4点）
+好吧客套话说完了该说说我自己的想法了
+一切的起因，只是我玩塔可夫等待匹配时无聊所以去找AI聊天
+我问它未来的趋势比如有什么
+由于我之前发了一段环世界的报错给他
+所以它有提到"AI + 游戏开发"
+跟他聊了聊，谈到了模组兼容性
+然后它给我指了条路
+然后我搜了下好像还真缺少这么个"中间值"
+我照着走下去了
+然后就有了这个mod
+有点抽象（ ）
+对于他会引发什么潜在的问题我也没底
+但我确实是有每添加一些功能就让他自己复查修bug
+大概就是它只是分析不负责修（毕竟我也不想它自己去修然后出问题你们找上我）
+但应该不会有问题的吧
+不接入API也能保留大部分功能
+就这样先吧（ ）再写感觉你们也看不到了
+至于为什么AI申明放最后面，呃，我觉得你们应该明白吧（ ）
+但我这mod不是粗制滥造的就是（ ）
+然后实际上有在游戏打不开的情况下的检测工具
+会放GitHub上
+</description>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+</ModMetaData>

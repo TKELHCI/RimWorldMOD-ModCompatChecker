@@ -1,0 +1,37 @@
+﻿=== Harmony 补丁机制 ===
+Prefix = 在原方法执行前插入代码，可阻止原方法执行
+Postfix = 在原方法执行后插入代码，可修改返回值
+Transpiler = 直接修改原方法的 IL 中间代码，最强大也最危险
+Finalizer = 在 try-catch-finally 的 finally 块中执行，用于异常处理
+Reverse Patch = 让 mod 调用原版 private 方法的技巧
+
+=== 常见 Def 类型 ===
+ThingDef = 定义物品/建筑/植物等实体
+PawnKindDef = 定义生物种类（种族、装备、行为）
+HediffDef = 定义健康状态（伤口、疾病、增益）
+RecipeDef = 定义制作配方
+ResearchProjectDef = 定义科技树节点
+FactionDef = 定义派系
+IdeoDef = 定义文化/意识形态
+QuestScriptDef = 定义任务脚本
+SoundDef = 定义音效
+DamageDef = 定义伤害类型
+
+=== XML Def 冲突 ===
+xpath = XML 路径表达式，用于定位和修改 Def 节点
+PatchOperation = RimWorld 的 XML 补丁操作类型（Add/Remove/Replace/Sequence）
+LoadOrder = mod 加载顺序，决定谁先打补丁，后来者可能覆盖前者
+Abstract = 抽象 Def 父类，mod 可能继承后修改
+
+=== 常见报错类型 ===
+Could not resolve cross-reference = Def 引用了不存在的对象（通常是缺少前置 mod）
+Exception ticking = 某个对象的每帧 Tick 方法抛异常
+Pushing more GUIClips than popping = UI 绘制中 Begin/End 不配对（通常是别的 mod 的 bug）
+NullReferenceException = 空指针，访问了不存在的对象
+MissingMethodException = 方法不存在（Harmony 补丁目标丢失）
+TypeLoadException = 类型加载失败（DLL 版本不匹配或缺少依赖）
+
+=== 存档相关 ===
+.rws = RimWorld 存档文件格式（XML 或 gzip 压缩的 XML）
+Def 残留 = 存档中保存了已移除 mod 的 Def 引用，加载时会报错
+WorldPawns = 世界小人数据，存档中常驻，即使小人已死
